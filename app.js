@@ -1,21 +1,36 @@
 import {patterns, SOURCE} from './data/patterns.js';
 import {normalize, defaults, encode, decode, buildScene} from './model.js';
 import {renderScene} from './scene.js';
+import {createWalk} from './walk.js';
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let {state,error}=decode(location.hash),focus=115,angle=-35,plan=false,cutaway=true,catalog=[],saved=null;
+let walking=false,walker=null;
 const STORAGE='pwe-pattern-language:v1';
 const presets={garden:defaults,quiet:{...defaults,ids:[105,112,127,159,179,180]},social:{...defaults,ids:[105,106,112,115,159,163,171]},blank:{...defaults,ids:[]}};
 try{const v=localStorage.getItem(STORAGE);if(v){const parsed=decode(v);if(parsed.error)error='本机保存的方案已损坏，请重新保存。';else saved=parsed.state;}}catch{error='浏览器未开放本机存储；仍可使用分享链接保存方案。';}
 const say=text=>{$('status').textContent=text;};
 function draw(){
- $('scene').innerHTML=renderScene(state,{angle,plan,cutaway,focus});
+ $('scene').hidden=walking;$('walk-scene').hidden=!walking;
+ if(walking){
+  try{
+   if(!walker)walker=createWalk($('walk-canvas'),message=>{say(message);$('walk-location').textContent=message;},pose=>{
+    const inside=pose.x>=0&&pose.x<=state.width&&pose.y>=0&&pose.y<=state.depth;
+    const garden=state.ids.includes(115)&&pose.x>state.width-state.court&&(state.ids.includes(105)?pose.y>state.depth-state.court:pose.y<state.court);
+    const compass=['北','东北','东','东南','南','西南','西','西北'][((Math.round(pose.yaw/(Math.PI/4))%8)+8)%8];
+    $('walk-location').textContent='眼高 1.65 m · 朝'+compass+' · '+(inside&&!garden?'室内':'户外');
+   });
+   walker.update(buildScene(state));walker.start();
+  }catch(e){walking=false;say(e.message);$('scene').hidden=false;$('walk-scene').hidden=true;}
+ }
+ if(!walking){walker?.stop();$('scene').innerHTML=renderScene(state,{angle,plan,cutaway,focus});}
  const m=buildScene(state).metrics;
  $('area-value').textContent=m.indoorArea;$('garden-value').textContent=Number(m.courtArea.toFixed(2));$('mode-value').textContent=m.selected;
  $('selected-count').textContent=m.selected+' / 10';$('scheme-number').textContent=String(m.selected).padStart(2,'0');
- $('scene-hint').textContent=plan?'平面视图 · 上北下南':'拖动旋转 · ← → 调整视角';
+ $('scene-hint').textContent=walking?'WASD 行走 · 拖动 / 方向键转头 · Esc 停止':plan?'平面视图 · 上北下南':'拖动旋转 · ← → 调整视角';
  $('scene').setAttribute('aria-label',plan?'建筑平面视图。':'建筑视图。左右方向键旋转视角。');
- $('view-3d').setAttribute('aria-pressed',!plan);$('view-plan').setAttribute('aria-pressed',plan);$('cutaway').disabled=plan;
+ $('view-3d').setAttribute('aria-pressed',!plan&&!walking);$('view-plan').setAttribute('aria-pressed',plan&&!walking);$('view-walk').setAttribute('aria-pressed',walking);$('cutaway').disabled=plan||walking;
+ $('reset-view').textContent=walking?'回到入口 ↺':'视角复位 ↺';
  $('compare').disabled=!saved;
 }
 function renderList(){
@@ -42,12 +57,23 @@ $('pattern-list').addEventListener('change',e=>{const id=Number(e.target.dataset
 document.addEventListener('click',e=>{const target=e.target.closest('[data-focus]');if(target)setFocus(Number(target.dataset.focus));const close=e.target.closest('[data-close]');if(close)$(close.dataset.close).close();});
 $('preset').addEventListener('change',()=>{const key=$('preset').value;if(!presets[key])return;state=normalize(presets[key]);update();$('preset').value=key;say('已载入组合。勾选模式继续探索。');});
 for(const key of ['width','depth','court','seat'])$(key).addEventListener('input',()=>{state[key]=Number($(key).value);update();});
-$('view-3d').onclick=()=>{plan=false;draw();};$('view-plan').onclick=()=>{plan=true;draw();};$('cutaway').onchange=()=>{cutaway=$('cutaway').checked;draw();};$('reset-view').onclick=()=>{angle=-35;draw();};
+$('view-3d').onclick=()=>{walking=false;plan=false;draw();};$('view-plan').onclick=()=>{walking=false;plan=true;draw();};
+$('view-walk').onclick=()=>{walking=true;plan=false;draw();if(walking)$('walk-canvas').focus({preventScroll:true});};$('cutaway').onchange=()=>{cutaway=$('cutaway').checked;draw();};$('reset-view').onclick=()=>{angle=-35;if(walking){walker?.reset();$('walk-canvas').focus({preventScroll:true});}draw();};
+$('walk-home').onclick=()=>{walker?.reset();$('walk-canvas').focus({preventScroll:true});};
+document.addEventListener('fullscreenchange',()=>{$('walk-fullscreen').textContent=document.fullscreenElement?'退出全屏':'全屏 ⛶';});
+$('walk-fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('walk-scene').requestFullscreen();$('walk-canvas').focus({preventScroll:true});}catch{say('当前浏览器不支持全屏；可继续在工作台内漫游。');}};
+for(const button of document.querySelectorAll('[data-walk-key]')){
+ const key=button.dataset.walkKey;
+ button.addEventListener('pointerdown',e=>{button.focus({preventScroll:true});button.setPointerCapture(e.pointerId);walker?.key(key,true);});
+ for(const event of ['pointerup','pointercancel','lostpointercapture','blur'])button.addEventListener(event,()=>walker?.key(key,false));
+ button.addEventListener('click',e=>{if(e.detail===0)walker?.step(key);});
+}
+
 let drag=null;
-$('scene').addEventListener('pointerdown',e=>{if(plan)return;drag={x:e.clientX,angle};$('scene').setPointerCapture(e.pointerId);});
+$('scene').addEventListener('pointerdown',e=>{if(plan||walking)return;drag={x:e.clientX,angle};$('scene').setPointerCapture(e.pointerId);});
 $('scene').addEventListener('pointermove',e=>{if(!drag)return;angle=drag.angle+(e.clientX-drag.x)*.35;draw();});
 for(const ev of ['pointerup','pointercancel','lostpointercapture'])$('scene').addEventListener(ev,()=>drag=null);
-$('scene').addEventListener('keydown',e=>{if(plan)return;if(['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();angle+=e.key==='ArrowLeft'?-10:10;draw();}});
+$('scene').addEventListener('keydown',e=>{if(plan||walking)return;if(['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();angle+=e.key==='ArrowLeft'?-10:10;draw();}});
 $('save').onclick=()=>{try{localStorage.setItem(STORAGE,encode(state));saved=normalize(state);draw();say('已保存到本机，可与接下来的组合比较。');}catch{say('保存失败：本机存储不可用。请使用分享链接保留方案。');}};
 $('compare').onclick=()=>{
  if(!saved)return;

@@ -43,10 +43,11 @@ export function buildScene(raw){
  }
  horizontal(0,0,w); vertical(0,0,houseD);vertical(w-.18,0,courtyard?d-c:houseD);
  if(courtyard){horizontal(gx,d-c,c,115);vertical(gx-.18,d-c,c,115);}
- const frontLen=courtyard?w-c:w;
+ const frontLen=w-c;
  horizontal(0,houseD-.18,Math.max(1.8,frontLen-1.35));
  add(frontLen-.3,houseD-.18,.15,.3,.18,2.65,wall,0,'wall');
  add(frontLen-1.35,houseD-.18,2.4,1.05,.18,.4,wall,0,'wall');
+ if(!courtyard)horizontal(frontLen,houseD-.18,w-frontLen);
  if(courtyard) { // Replace a section of the courtyard sill with a traversable opening.
   // A separate open portal at the end of the west wing connects daily circulation to the court.
   const index=boxes.findIndex(b=>b.x===gx-.18&&b.pattern===115&&b.kind==='wall');
@@ -71,7 +72,7 @@ export function buildScene(raw){
  }
  if(has(163)){
   add(gx+.35,gy+.35,.2,c-1.1,c-1.1,.1,wood,163,'deck');
-  for(const x of [gx+.4,w-.7])for(const y of [gy+.4,gy+c-.7])add(x,y,.3,.12,.12,2.6,wood,163,'post');
+  for(const x of [gx+.4,w-.7])for(const y of [gy+.4,gy+c-1.25])add(x,y,.3,.12,.12,2.6,wood,163,'post');
   for(let i=0;i<9;i++)add(gx+.4,gy+.4+i*(c-1.1)/8,2.9,c-.98,.07,.1,wood,163,'pergola');
   add(gx+1.1,gy+1.1,.3,.85,.85,.65,'#e8dfca',163,'furniture');
   for(const y of [gy+.65,gy+2.1])add(gx+1.25,y,.3,.5,.4,.45,'#e8dfca',163,'furniture');
