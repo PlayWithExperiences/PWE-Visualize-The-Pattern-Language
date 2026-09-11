@@ -20,3 +20,14 @@
 .walk-tools{display:flex;gap:5px}
 .walk-help{position:absolute;bottom:18px;right:14px;pointer-events:none;text-align:right;background:#f8f6eede;padding:8px 10px;font-size:9px;line-height:1.8;border-radius:3px}
 @media(max-width:720px){.walk-help{font-size:8px;max-width:calc(100% - 170px);right:10px;bottom:15px;padding:6px}.walk-top{gap:4px}.walk-tools{gap:3px}.walk-top span{max-width:60%}}
+.sun-panel{position:absolute;right:14px;top:55px;width:238px;max-width:calc(100% - 28px);z-index:3;font-size:11px;color:#303d35;background:#f7f5edf5;border:1px solid #c7cebc;border-radius:4px;box-shadow:0 3px 15px #26382a18}
+.sun-panel summary{cursor:pointer;padding:10px 12px;user-select:none}
+.sun-body{padding:0 12px 10px;max-height:270px;overflow:auto}
+.sun-body label{display:block;font-size:10px;margin-top:12px}
+.sun-body output{float:right;color:#5c6758}
+.sun-body select{display:block;width:100%;margin-top:6px;border:1px solid #cbd0bf;background:#fffdf7;border-radius:3px;padding:6px;font-size:11px}
+.sun-body input{display:block;accent-color:#3c5549;width:100%;margin:9px 0}
+.sun-body button{border:1px solid #b5c0aa;border-radius:3px;padding:8px 12px;background:#e6ebdd;font-size:10px;margin-top:3px}
+.sun-body p{font-size:9px;line-height:1.7;color:#667060;margin:9px 0 0}
+.canvas-toolbar{flex-wrap:wrap}
+@media(max-width:720px){.sun-panel{right:10px;top:51px;width:224px}.sun-body{max-height:218px}.sun-panel summary{padding:8px 10px}.walk-top span{font-size:8px}.walk-tools button{font-size:8px}.segmented button{padding:7px 8px}}

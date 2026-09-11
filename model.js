@@ -1,11 +1,12 @@
-import {patterns} from './data/patterns.js?v=7cf58ddf4371';
+import {patterns} from './data/patterns.js?v=4d00a0c4441a';
+import {normalizeSun,defaultSun} from './sun.js?v=4d00a0c4441a';
 export const allowed = patterns.map(p=>p.id);
-export const defaults = {ids:[105,106,112,115,163,171,180],width:12,depth:10,court:4,seat:0.65};
+export const defaults = {ids:[105,106,112,115,163,171,180],width:12,depth:10,court:4,seat:0.65,sun:defaultSun};
 const clamp=(n,a,b,f)=>Number.isFinite(Number(n))?Math.min(b,Math.max(a,Number(n))):f;
 export function normalize(raw={}) {
- return {ids:[...new Set((Array.isArray(raw.ids)?raw.ids:defaults.ids).filter(id=>allowed.includes(id)))].sort((a,b)=>a-b),width:clamp(raw.width,10,16,12),depth:clamp(raw.depth,9,14,10),court:clamp(raw.court,3,5,4),seat:clamp(raw.seat,.45,1,.65)};
+ return {ids:[...new Set((Array.isArray(raw.ids)?raw.ids:defaults.ids).filter(id=>allowed.includes(id)))].sort((a,b)=>a-b),width:clamp(raw.width,10,16,12),depth:clamp(raw.depth,9,14,10),court:clamp(raw.court,3,5,4),seat:clamp(raw.seat,.45,1,.65),sun:normalizeSun(raw.sun)};
 }
-export function encode(state){return '#v1='+encodeURIComponent(JSON.stringify(normalize(state)));}
+export function encode(state){const normalized=normalize(state);normalized.sun.playing=false;return '#v1='+encodeURIComponent(JSON.stringify(normalized));}
 export function decode(hash){
  if(!hash) return {state:normalize(defaults),error:null};
  try {if(!hash.startsWith('#v1='))throw Error();const v=JSON.parse(decodeURIComponent(hash.slice(4)));if(!v||typeof v!=='object'||Array.isArray(v)||!Array.isArray(v.ids))throw Error();return {state:normalize(v),error:null};}
