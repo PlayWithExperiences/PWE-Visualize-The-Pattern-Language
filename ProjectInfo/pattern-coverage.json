@@ -1,18 +1,19 @@
 {
-  "updatedAt": "2026-09-11T18:18:29.908Z",
-  "scope": "253 independently authored guides and conceptual combinations; 25 retained detailed home3d demos. Ten contexts are teaching groups, not the original-book taxonomy.",
+  "updatedAt": "2026-09-11T19:26:38.159Z",
+  "scope": "253 independently authored guides, conceptual diagrams and spatial 3D rules; 25 retained classic home demos. Ten contexts are teaching groups, not the original-book taxonomy.",
   "evidenceLimits": [
     "Standalone and pairwise geometry tests do not prove semantic fidelity or collision-free layouts.",
     "Original solution sections and relevant body text were read; this is not a complete page-by-page textual edition review.",
     "Pattern 163 printed page 767 is missing; available neighboring text used.",
-    "All 253 are not detailed 3D models or one unified building generator.",
+    "All 253 have spatial 3D concept implementations; background buildings may be exterior masses and this is not one unified building generator.",
     "Only explicit cross-context influences propagate; other selections remain stored in their own contexts."
   ],
   "totals": {
     "catalog": 253,
     "sourceLinkedGuides": 253,
     "standaloneConceptDiagrams": 253,
-    "home3d": 25,
+    "spatial3d": 253,
+    "classicHome3d": 25,
     "pendingConceptRuntime": 0
   },
   "groups": [
@@ -98,8 +99,9 @@
       "operation": "regionalAutonomy",
       "activeScene": "region",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -121,8 +123,9 @@
       "operation": "distributedSettlementSizes",
       "activeScene": "region",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -144,8 +147,9 @@
       "operation": "interlockingLandFingers",
       "activeScene": "region",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -165,8 +169,9 @@
       "operation": "protectValleys",
       "activeScene": "region",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -187,8 +192,9 @@
       "operation": "countryRoadLace",
       "activeScene": "region",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -208,8 +214,9 @@
       "operation": "selfContainedTowns",
       "activeScene": "region",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -232,8 +239,9 @@
       "operation": "countrysideStewardship",
       "activeScene": "region",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -259,8 +267,9 @@
       "operation": "subcultureMosaic",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -284,8 +293,9 @@
       "operation": "scatterWorkplaces",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -307,8 +317,9 @@
       "operation": "distributedCityCenters",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -332,8 +343,9 @@
       "operation": "localTransportCells",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -355,8 +367,9 @@
       "operation": "communityGovernance",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -378,8 +391,9 @@
       "operation": "sharedBoundaryBand",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -402,8 +416,9 @@
       "operation": "identifiableNeighborhoods",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -426,8 +441,9 @@
       "operation": "neighborhoodThresholds",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -448,8 +464,9 @@
       "operation": "interchangeNetwork",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -469,8 +486,9 @@
       "operation": "openRingRoads",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -492,8 +510,9 @@
       "operation": "learningNetwork",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -516,8 +535,9 @@
       "operation": "fillRetailGaps",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -538,8 +558,9 @@
       "operation": "demandResponsiveFeeders",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -562,8 +583,9 @@
       "operation": "fourStoryLimit",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -586,8 +608,9 @@
       "operation": "parkingAreaCap",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -609,8 +632,9 @@
       "operation": "parallelOneWayRoads",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -631,8 +655,9 @@
       "operation": "protectedMeaningfulSites",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -653,8 +678,9 @@
       "operation": "publicWaterfront",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -678,8 +704,9 @@
       "operation": "completeLifeCycle",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -700,8 +727,9 @@
       "operation": "inclusiveParticipation",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -724,8 +752,9 @@
       "operation": "eccentricNuclei",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -749,8 +778,9 @@
       "operation": "densityRings",
       "activeScene": "city",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -772,8 +802,9 @@
       "operation": "activityNodes",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -796,8 +827,9 @@
       "operation": "promenade",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -819,8 +851,9 @@
       "operation": "shoppingStreet",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -841,8 +874,9 @@
       "operation": "nightCenters",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -864,8 +898,9 @@
       "operation": "compactInterchange",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -886,8 +921,9 @@
       "operation": "householdMix",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -909,8 +945,9 @@
       "operation": "publicnessGradient",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -934,8 +971,9 @@
       "operation": "houseClusters",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -957,8 +995,9 @@
       "operation": "shallowRowHouses",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -981,8 +1020,9 @@
       "operation": "housingTerraces",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1006,8 +1046,9 @@
       "operation": "integratedElderHousing",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1029,8 +1070,9 @@
       "operation": "workCourtyardClusters",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1051,8 +1093,9 @@
       "operation": "industrialRibbon",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1074,8 +1117,9 @@
       "operation": "universityMarketplace",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1098,8 +1142,9 @@
       "operation": "localTownHall",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1120,8 +1165,9 @@
       "operation": "communityProjectFrontage",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1144,8 +1190,9 @@
       "operation": "manyShopMarket",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1166,8 +1213,9 @@
       "operation": "neighborhoodHealthCenters",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1188,8 +1236,9 @@
       "operation": "housingInBetween",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1210,8 +1259,9 @@
       "operation": "localRoadLoops",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1230,8 +1280,9 @@
       "operation": "tJunctions",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1252,8 +1303,9 @@
       "operation": "greenLocalStreets",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1276,8 +1328,9 @@
       "operation": "orthogonalPathNetwork",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1298,8 +1351,9 @@
       "operation": "mainGateways",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1321,8 +1375,9 @@
       "operation": "raisedCrossings",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1343,8 +1398,9 @@
       "operation": "raisedWalk",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1365,8 +1421,9 @@
       "operation": "bikeNetworkAndRacks",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1388,8 +1445,9 @@
       "operation": "childExplorationRoute",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1409,8 +1467,9 @@
       "operation": "carnivalStreet",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1430,8 +1489,9 @@
       "operation": "quietBacks",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1454,8 +1514,9 @@
       "operation": "accessibleGreens",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1477,8 +1538,9 @@
       "operation": "smallPublicSquares",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1499,8 +1561,9 @@
       "operation": "climbableLandmark",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1520,8 +1583,9 @@
       "operation": "streetDancePlatform",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1544,8 +1608,9 @@
       "operation": "connectedWatercourses",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1565,8 +1630,9 @@
       "operation": "familyBirthPlace",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1588,8 +1654,9 @@
       "operation": "nestedSacredThresholds",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1611,8 +1678,9 @@
       "operation": "sharedCommonLand",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1636,8 +1704,9 @@
       "operation": "connectedPlayGround",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1659,8 +1728,9 @@
       "operation": "publicOutdoorRoom",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1682,8 +1752,9 @@
       "operation": "localMemorialSites",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1705,8 +1776,9 @@
       "operation": "gradedStillWater",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1727,8 +1799,9 @@
       "operation": "visibleLocalSports",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1749,8 +1822,9 @@
       "operation": "adventurePlayground",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1772,8 +1846,9 @@
       "operation": "animalCommons",
       "activeScene": "neighborhood",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1795,8 +1870,9 @@
       "operation": "extendedHousehold",
       "activeScene": "institution",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1817,8 +1893,9 @@
       "operation": "smallFamilyRealms",
       "activeScene": "institution",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1839,8 +1916,9 @@
       "operation": "coupleAndIndividualRealms",
       "activeScene": "institution",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1860,8 +1938,9 @@
       "operation": "singlePersonStudio",
       "activeScene": "institution",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1884,8 +1963,9 @@
       "operation": "residentControl",
       "activeScene": "institution",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1908,8 +1988,9 @@
       "operation": "autonomousWorkshops",
       "activeScene": "institution",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1930,8 +2011,9 @@
       "operation": "directServiceFronts",
       "activeScene": "institution",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1952,8 +2034,9 @@
       "operation": "officeContactDistances",
       "activeScene": "institution",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1974,8 +2057,9 @@
       "operation": "apprenticeshipClusters",
       "activeScene": "institution",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -1996,8 +2080,9 @@
       "operation": "teenageSelfOrganization",
       "activeScene": "institution",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2020,8 +2105,9 @@
       "operation": "shopfrontSchools",
       "activeScene": "institution",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2044,8 +2130,9 @@
       "operation": "childrensSecondHome",
       "activeScene": "institution",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2066,8 +2153,9 @@
       "operation": "independentSmallShops",
       "activeScene": "institution",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2088,8 +2176,9 @@
       "operation": "streetCafeTerrace",
       "activeScene": "institution",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2110,8 +2199,9 @@
       "operation": "cornerGrocery",
       "activeScene": "institution",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2132,8 +2222,9 @@
       "operation": "crossingActivityHall",
       "activeScene": "institution",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2153,8 +2244,9 @@
       "operation": "travelersInnCommons",
       "activeScene": "institution",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2174,8 +2266,9 @@
       "operation": "busStopPlace",
       "activeScene": "institution",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2195,8 +2288,9 @@
       "operation": "foodStandsAtCrossings",
       "activeScene": "institution",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2224,8 +2318,9 @@
       "operation": "publicRestingPlaces",
       "activeScene": "institution",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2247,8 +2342,9 @@
       "operation": "buildingComplex",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2269,8 +2365,9 @@
       "operation": "programBasedStories",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2290,8 +2387,9 @@
       "operation": "shieldedParking",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2313,8 +2411,9 @@
       "operation": "circulationRealms",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2334,8 +2433,9 @@
       "operation": "mainBuilding",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2356,8 +2456,9 @@
       "operation": "pedestrianBuildingStreet",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2381,8 +2482,9 @@
       "operation": "buildingThoroughfare",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2403,8 +2505,9 @@
       "operation": "entranceFamily",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2426,8 +2529,9 @@
       "operation": "smallParkingLots",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2449,8 +2553,9 @@
       "operation": "siteRepair",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2471,8 +2576,9 @@
       "operation": "southFacingOutdoors",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2496,8 +2602,9 @@
       "operation": "positiveOutdoorSpace",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2521,8 +2628,9 @@
       "operation": "narrowLightWings",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2543,8 +2651,9 @@
       "operation": "connectedBuildings",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2566,8 +2675,9 @@
       "operation": "longThinBuilding",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2589,8 +2699,9 @@
       "operation": "visibleMainEntrance",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2610,8 +2721,9 @@
       "operation": "halfHiddenGarden",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2633,8 +2745,9 @@
       "operation": "entranceTransition",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2655,8 +2768,9 @@
       "operation": "carToMainEntrance",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2677,8 +2791,9 @@
       "operation": "openSpaceHierarchy",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2699,8 +2814,9 @@
       "operation": "livingCourtyard",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2721,8 +2837,9 @@
       "operation": "cascadingRoofs",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2745,8 +2862,9 @@
       "operation": "shelteringRoof",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2768,8 +2886,9 @@
       "operation": "usableRoofGarden",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2791,8 +2910,9 @@
       "operation": "connectingArcades",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2813,8 +2933,9 @@
       "operation": "pathsBetweenGoals",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2835,8 +2956,9 @@
       "operation": "bulgingPath",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2856,8 +2978,9 @@
       "operation": "alignedBuildingFronts",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2877,8 +3000,9 @@
       "operation": "pedestrianCapacityFit",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2899,8 +3023,9 @@
       "operation": "edgeActivityPockets",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2920,8 +3045,9 @@
       "operation": "stairSeats",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2942,8 +3068,9 @@
       "operation": "roughlyCentralFocus",
       "activeScene": "site",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2964,8 +3091,9 @@
       "operation": "intimacyGradient",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -2986,8 +3114,9 @@
       "operation": "sunOrientedRooms",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3008,8 +3137,9 @@
       "operation": "commonsAtHeart",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3031,8 +3161,9 @@
       "operation": "entranceRoom",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3054,8 +3185,9 @@
       "operation": "flowThroughRooms",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3077,8 +3209,9 @@
       "operation": "shortRoomlikePassages",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3099,8 +3232,9 @@
       "operation": "staircaseStage",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3120,8 +3254,9 @@
       "operation": "glimpsedView",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3142,8 +3277,9 @@
       "operation": "lightDarkSequence",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3163,8 +3299,9 @@
       "operation": "couplesRealm",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3186,8 +3323,9 @@
       "operation": "childrensRealm",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3208,8 +3346,9 @@
       "operation": "eastFacingBeds",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3230,8 +3369,9 @@
       "operation": "farmhouseKitchen",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3252,8 +3392,9 @@
       "operation": "privateStreetTerrace",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3275,8 +3416,9 @@
       "operation": "individualRetreats",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3296,8 +3438,9 @@
       "operation": "sittingSpaceSequence",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3319,8 +3462,9 @@
       "operation": "bedCluster",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3343,8 +3487,9 @@
       "operation": "bathingRoom",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3364,8 +3509,9 @@
       "operation": "plannedBulkStorage",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3388,8 +3534,9 @@
       "operation": "flexibleOfficeBays",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3411,8 +3558,9 @@
       "operation": "communalEating",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3433,8 +3581,9 @@
       "operation": "smallWorkGroups",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3453,8 +3602,9 @@
       "operation": "welcomingReception",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3476,8 +3626,9 @@
       "operation": "positiveWaiting",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3499,8 +3650,9 @@
       "operation": "smallMeetingRooms",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3520,8 +3672,9 @@
       "operation": "halfPrivateOffice",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3541,8 +3694,9 @@
       "operation": "independentRentableRoom",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3565,8 +3719,9 @@
       "operation": "teenagersCottage",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3587,8 +3742,9 @@
       "operation": "olderPersonsCottage",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3609,8 +3765,9 @@
       "operation": "settledPersonalWork",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3630,8 +3787,9 @@
       "operation": "homeWorkshop",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3654,8 +3812,9 @@
       "operation": "openExternalStairs",
       "activeScene": "plan",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3678,8 +3837,9 @@
       "operation": "twoSidedDaylight",
       "activeScene": "edge",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3701,8 +3861,9 @@
       "operation": "inhabitedBuildingEdge",
       "activeScene": "edge",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3723,8 +3884,9 @@
       "operation": "shelteredSunnyPlace",
       "activeScene": "edge",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3744,8 +3906,9 @@
       "operation": "northSideCascade",
       "activeScene": "edge",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3768,8 +3931,9 @@
       "operation": "outdoorLivingRoom",
       "activeScene": "edge",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3790,8 +3954,9 @@
       "operation": "streetWatchingWindows",
       "activeScene": "edge",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3812,8 +3977,9 @@
       "operation": "openStreetFront",
       "activeScene": "edge",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3834,8 +4000,9 @@
       "operation": "inhabitedGalleryEdge",
       "activeScene": "edge",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3856,8 +4023,9 @@
       "operation": "deepUsableBalcony",
       "activeScene": "edge",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3879,8 +4047,9 @@
       "operation": "groundConnection",
       "activeScene": "edge",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3901,8 +4070,9 @@
       "operation": "contourTerraces",
       "activeScene": "edge",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3922,8 +4092,9 @@
       "operation": "communityFruitTrees",
       "activeScene": "edge",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3944,8 +4115,9 @@
       "operation": "treeFormedPlaces",
       "activeScene": "edge",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3966,8 +4138,9 @@
       "operation": "wildGrowingGarden",
       "activeScene": "edge",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -3988,8 +4161,9 @@
       "operation": "protectiveGardenWall",
       "activeScene": "edge",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4009,8 +4183,9 @@
       "operation": "trellisedWalk",
       "activeScene": "edge",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4030,8 +4205,9 @@
       "operation": "connectedGreenhouse",
       "activeScene": "edge",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4051,8 +4227,9 @@
       "operation": "quietGardenSeat",
       "activeScene": "edge",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4073,8 +4250,9 @@
       "operation": "vegetableGarden",
       "activeScene": "edge",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4097,8 +4275,9 @@
       "operation": "compostCycle",
       "activeScene": "edge",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4120,8 +4299,9 @@
       "operation": "edgeAlcoves",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4143,8 +4323,9 @@
       "operation": "windowPlace",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4167,8 +4348,9 @@
       "operation": "sharedFireFocus",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4187,8 +4369,9 @@
       "operation": "eatingAtmosphere",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4212,8 +4395,9 @@
       "operation": "workspaceEnclosure",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4234,8 +4418,9 @@
       "operation": "cookingWorkTriangle",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4256,8 +4441,9 @@
       "operation": "looseSittingCircle",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4277,8 +4463,9 @@
       "operation": "optionalCommunalSleeping",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4299,8 +4486,9 @@
       "operation": "intimateBedAnchor",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4321,8 +4509,9 @@
       "operation": "bedAlcoves",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4343,8 +4532,9 @@
       "operation": "dressingBetweenBedAndBath",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4368,8 +4558,9 @@
       "operation": "gradedCeilingHeights",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4392,8 +4583,9 @@
       "operation": "coherentRoomShapes",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4414,8 +4606,9 @@
       "operation": "windowsOverlookingLife",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4436,8 +4629,9 @@
       "operation": "halfOpenBoundaries",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4457,8 +4651,9 @@
       "operation": "interiorWindows",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4479,8 +4674,9 @@
       "operation": "stairVolume",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4501,8 +4697,9 @@
       "operation": "cornerDoors",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4524,8 +4721,9 @@
       "operation": "inhabitedThickWalls",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4545,8 +4743,9 @@
       "operation": "closetBuffers",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4566,8 +4765,9 @@
       "operation": "sunnyKitchenCounter",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4587,8 +4787,9 @@
       "operation": "oneDeepOpenShelves",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4607,8 +4808,9 @@
       "operation": "waistHighLedges",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4628,8 +4830,9 @@
       "operation": "testedBuiltInSeat",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4649,8 +4852,9 @@
       "operation": "childScaleCaves",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4677,8 +4881,9 @@
       "operation": "privateMemoryNiche",
       "activeScene": "room",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4701,8 +4906,9 @@
       "operation": "structureFollowsRooms",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4728,8 +4934,9 @@
       "operation": "continuousCompressionSystem",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4753,8 +4960,9 @@
       "operation": "adaptableMaterialPalette",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4779,8 +4987,9 @@
       "operation": "gradualStiffening",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4805,8 +5014,9 @@
       "operation": "socialRoofHierarchy",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4828,8 +5038,9 @@
       "operation": "coordinatedFloorCeilings",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4852,8 +5063,9 @@
       "operation": "thickenedOuterEdges",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4876,8 +5088,9 @@
       "operation": "columnsAtSpaceCorners",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4905,8 +5118,9 @@
       "operation": "gradedColumnSpacing",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4926,8 +5140,9 @@
       "operation": "rootlikeFoundation",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4947,8 +5162,9 @@
       "operation": "groundSlabEdge",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4971,8 +5187,9 @@
       "operation": "hollowColumnCore",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -4994,8 +5211,9 @@
       "operation": "continuousPerimeterBeam",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5016,8 +5234,9 @@
       "operation": "layeredWallMembrane",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5043,8 +5262,9 @@
       "operation": "floorCeilingVault",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5071,8 +5291,9 @@
       "operation": "curvedRoofVault",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5093,8 +5314,9 @@
       "operation": "siteFittedOpenings",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5114,8 +5336,9 @@
       "operation": "lowWindowSills",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5135,8 +5358,9 @@
       "operation": "splayedDeepReveals",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5156,8 +5380,9 @@
       "operation": "deliberateLowDoorway",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5179,8 +5404,9 @@
       "operation": "thickenedOpeningFrames",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5201,8 +5427,9 @@
       "operation": "inhabitedColumnPlace",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5224,8 +5451,9 @@
       "operation": "columnBeamTransitions",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5245,8 +5473,9 @@
       "operation": "stairVault",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5265,8 +5494,9 @@
       "operation": "serviceDuctRoutes",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5286,8 +5516,9 @@
       "operation": "radiantSurfaceHeat",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5307,8 +5538,9 @@
       "operation": "inhabitableDormer",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5329,8 +5561,9 @@
       "operation": "roofCrowning",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5352,8 +5585,9 @@
       "operation": "floorMaterialZones",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5373,8 +5607,9 @@
       "operation": "repairableLappedCladding",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5395,8 +5630,9 @@
       "operation": "softInteriorSurfaces",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5416,8 +5652,9 @@
       "operation": "wideOpeningCasements",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5436,8 +5673,9 @@
       "operation": "glazedSolidDoors",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5457,8 +5695,9 @@
       "operation": "filteredLightEdges",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5479,8 +5718,9 @@
       "operation": "smallWindowPanes",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5503,8 +5743,9 @@
       "operation": "fineJointTrim",
       "activeScene": "construction",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5524,8 +5765,9 @@
       "operation": "climateAwareSeatSpots",
       "activeScene": "finish",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5545,8 +5787,9 @@
       "operation": "frontDoorBench",
       "activeScene": "finish",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5567,8 +5810,9 @@
       "operation": "sittingBoundaryWalls",
       "activeScene": "finish",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5589,8 +5833,9 @@
       "operation": "retractableCanvasCover",
       "activeScene": "finish",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5610,8 +5855,9 @@
       "operation": "raisedFlowerEdges",
       "activeScene": "finish",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5631,8 +5877,9 @@
       "operation": "climbingPlantFrames",
       "activeScene": "finish",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5652,8 +5899,9 @@
       "operation": "plantedPavingJoints",
       "activeScene": "finish",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5675,8 +5923,9 @@
       "operation": "wearingTileAndBrick",
       "activeScene": "finish",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5700,8 +5949,9 @@
       "operation": "ornamentAtSeams",
       "activeScene": "finish",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5722,8 +5972,9 @@
       "operation": "warmReflectedLight",
       "activeScene": "finish",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5743,8 +5994,9 @@
       "operation": "variedChairs",
       "activeScene": "finish",
       "standaloneVisualEffect": true,
-      "home3d": true,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": true,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5765,8 +6017,9 @@
       "operation": "separatePoolsOfLight",
       "activeScene": "finish",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     },
     {
@@ -5786,8 +6039,9 @@
       "operation": "personalLifeObjects",
       "activeScene": "finish",
       "standaloneVisualEffect": true,
-      "home3d": false,
-      "status": "concept_diagram_implemented",
+      "spatial3d": true,
+      "classicHome3d": false,
+      "status": "diagram_and_spatial_3d_implemented",
       "engineeringValidation": "not_performed"
     }
   ]

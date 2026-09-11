@@ -1,4 +1,4 @@
-import {worldOverview,safeSpawn,observationPose} from './world/navigation.js';
+import {worldOverview,safeSpawn,observationPose,reconcilePerson} from './world/navigation.js';
 import {EYE_HEIGHT,floorHeight,canStand,entryPose,movePlayer} from './walk-physics.js';
 import {multiply,vertexSource,fragmentSource,createSunlight} from './lighting.js';
 import {normalizeSun,advanceSun,sampleSun} from './sun.js';
@@ -6,15 +6,15 @@ import {overviewPose,moveFree} from './free-camera.js';
 const dot=(a,b)=>a.reduce((s,n,i)=>s+n*b[i],0);
 const cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
 const unit=a=>{const n=Math.hypot(...a);return a.map(v=>v/n);};
-function cameraMatrix(pose,eyeHeight,aspect,far=250){
+function cameraMatrix(pose,eyeHeight,aspect,far=250,near=.06){
  const forward=[Math.sin(pose.yaw)*Math.cos(pose.pitch),Math.sin(pose.pitch),-Math.cos(pose.yaw)*Math.cos(pose.pitch)];
  const eye=[pose.x,eyeHeight,pose.y], right=unit(cross(forward,[0,1,0])),up=cross(right,forward);
  const view=[right[0],up[0],-forward[0],0,right[1],up[1],-forward[1],0,right[2],up[2],-forward[2],0,-dot(right,eye),-dot(up,eye),dot(forward,eye),1];
- const near=.06,f=1/Math.tan(65*Math.PI/360);
+ const f=1/Math.tan(65*Math.PI/360);
  const projection=[f/aspect,0,0,0,0,f,0,0,0,0,(far+near)/(near-far),-1,0,0,2*far*near/(near-far),0];
  return multiply(projection,view);
 }
-export function createWalk(canvas,onError,onPose,onLight){
+export function createWalk(canvas,onError,onPose,onLight,options={}){
  const gl=canvas.getContext('webgl',{antialias:true,alpha:false});
  if(!gl)throw Error('此浏览器无法启用三维漫游。请使用轴测或平面视图。');
  const compile=(type,source)=>{
@@ -31,23 +31,24 @@ export function createWalk(canvas,onError,onPose,onLight){
  const normalAttribute=gl.getAttribLocation(program,'aNormal'),materialAttribute=gl.getAttribLocation(program,'aMaterial');
  const sunUniform=gl.getUniformLocation(program,'uSunMatrix'),shadowUniform=gl.getUniformLocation(program,'uShadow');
  const texelUniform=gl.getUniformLocation(program,'uShadowTexel'),eyeUniform=gl.getUniformLocation(program,'uEye'),directionUniform=gl.getUniformLocation(program,'uSunDirection');
- const sunlight=createSunlight(gl,compile);
+ const sunlight=createSunlight(gl,compile,options);
+ const packedShadowUniform=gl.getUniformLocation(program,'uPackedShadow'),fogRangeUniform=gl.getUniformLocation(program,'uFogRange');canvas.dataset.shadowStorage=sunlight.packed?'rgba-packed':'native-depth';
  const lampPositions=gl.getUniformLocation(program,'uLampPosition[0]'),lampColors=gl.getUniformLocation(program,'uLampColor[0]');
  let lampPositionData=new Float32Array(32),lampColorData=new Float32Array(24),speedMultiplier=1;
  const skyUniform=gl.getUniformLocation(program,'uSkyColor'),sunColorUniform=gl.getUniformLocation(program,'uSunColor');
  const dayUniform=gl.getUniformLocation(program,'uDaylight'),strengthUniform=gl.getUniformLocation(program,'uSunStrength');
  let free=false,personPose=null,flyingPose=null,lightSettings=normalizeSun(),light=sampleSun(lightSettings),shadowDirty=false,shadowAt=0;
 
- let scene=null,pose=null,opaque=[],glass=[],active=false,frame=0,last=0,lastReadout=0,drag=null;
+ let scene=null,pose=null,opaque=[],shadowVertices=[],glass=[],active=false,frame=0,last=0,lastReadout=0,drag=null;
  const keys=new Set(), cleanup=[];
  const listen=(target,event,fn,options)=>{target.addEventListener(event,fn,options);cleanup.push(()=>target.removeEventListener(event,fn,options));};
  const faces=[[[0,1,2,3],[0,0,-1]],[[4,7,6,5],[0,0,1]],[[0,4,5,1],[0,-1,0]],[[3,2,6,7],[0,1,0]],[[0,3,7,4],[-1,0,0]],[[1,5,6,2],[1,0,0]]];
  function geometry(){
-  opaque=[];glass=[];
+  opaque=[];shadowVertices=[];glass=[];
   // A simple level ceiling completes the enclosure for the person-height view.
   const ceilings=scene.autoCeiling===false?[]:scene.boxes.filter(b=>b.kind==='floor').map(b=>({...b,z:2.8,dz:.12,color:'#e8e3d7',kind:'ceiling'}));
   for(const b of [...scene.boxes,...ceilings]){
-   if(b.collisionOnly)continue;
+   if(b.collisionOnly||(scene.cutaway&&['roof','ceiling'].includes(b.kind)&&b.pattern!==scene.focus&&!b.patterns?.includes(scene.focus)))continue;
    const {x,y,z,dx,dy,dz}=b;
    const points=[[x,y,z],[x+dx,y,z],[x+dx,y+dy,z],[x,y+dy,z],[x,y,z+dz],[x+dx,y,z+dz],[x+dx,y+dy,z+dz],[x,y+dy,z+dz]];
    const rgb=b.color.slice(1).match(/../g).map(c=>parseInt(c,16)/255);
@@ -59,19 +60,20 @@ export function createWalk(canvas,onError,onPose,onLight){
      const [px,py,pz]=points[indices[i]];
      vertices.push(px,pz,py,...rgb,isGlass?.23:1,normal[0],normal[2],normal[1],material);
     }
-    if(isGlass)glass.push({vertices,center:[x+dx/2,y+dy/2,z+dz/2]});else opaque.push(...vertices);
+    if(isGlass)glass.push({vertices,center:[x+dx/2,y+dy/2,z+dz/2]});else {opaque.push(...vertices);if(b.kind!=='ground'&&!(['floor','path','garden','deck'].includes(b.kind)&&b.z+b.dz<=.3))shadowVertices.push(...vertices);}
    }
   }
   for(const mesh of scene.meshes||[]){
+   if(scene.cutaway&&['roof','ceiling'].includes(mesh.kind)&&mesh.pattern!==scene.focus&&!mesh.patterns?.includes(scene.focus))continue;
    const p=mesh.points,u=p[1].map((v,i)=>v-p[0][i]),v=p[2].map((v,i)=>v-p[0][i]);const n=cross(u,v),length=Math.hypot(...n);if(length<1e-9)continue;
    const normal=n.map(v=>v/length),rgb=mesh.color.slice(1).match(/../g).map(c=>parseInt(c,16)/255),isGlass=mesh.kind==='window';
-   const material=mesh.kind==='emissive'?4:isGlass?3:['roof','beam','wood'].includes(mesh.kind)?2:0;
+   const material=mesh.kind==='emissive'?4:isGlass?3:['beam','wood'].includes(mesh.kind)?2:0;
    const vertices=p.flatMap(([x,y,z])=>[x,z,y,...rgb,isGlass?.23:1,-normal[0],-normal[2],-normal[1],material]);
-   if(isGlass)glass.push({vertices,center:[0,1,2].map(i=>(p[0][i]+p[1][i]+p[2][i])/3)});else opaque.push(...vertices);
+   if(isGlass)glass.push({vertices,center:[0,1,2].map(i=>(p[0][i]+p[1][i]+p[2][i])/3)});else {opaque.push(...vertices);if(!['path','floor','water','emissive'].includes(mesh.kind))shadowVertices.push(...vertices);}
   }
   lampPositionData=new Float32Array(32);lampColorData=new Float32Array(24);
   for(const [i,lamp]of (scene.lights||[]).slice(0,8).entries()){lampPositionData.set([lamp.x,lamp.z,lamp.y,lamp.radius],i*4);lampColorData.set(lamp.color.slice(1).match(/../g).map(c=>parseInt(c,16)/255*(lamp.intensity||1)),i*3);}
-  sunlight.update(scene,opaque,light.direction);shadowDirty=false;shadowAt=performance.now();
+  sunlight.update(scene,shadowVertices,light.direction);shadowDirty=false;shadowAt=performance.now();
  }
  function drawBatch(data){
   gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(data),gl.DYNAMIC_DRAW);gl.drawArrays(gl.TRIANGLES,0,data.length/11);
@@ -82,7 +84,7 @@ export function createWalk(canvas,onError,onPose,onLight){
   if(!scene||!pose)return;
   const elapsed=Math.min(.25,(now-last)/1000||0),dt=Math.min(.045,elapsed);last=now;
   if(lightSettings.playing&&!document.hidden&&!document.querySelector('dialog[open]')){lightSettings=advanceSun(lightSettings,elapsed);shadowDirty=true;}
-  if(shadowDirty&&now-shadowAt>=66){light=sampleSun(lightSettings);sunlight.update(scene,opaque,light.direction);shadowDirty=false;shadowAt=now;}
+  if(shadowDirty&&now-shadowAt>=66){light=sampleSun(lightSettings);sunlight.update(scene,shadowVertices,light.direction);shadowDirty=false;shadowAt=now;}
   const editing=document.activeElement!==canvas&&!document.activeElement?.closest('.walk-buttons');
   const paused=document.hidden||document.querySelector('dialog[open]')||editing;
   if(paused)keys.clear();
@@ -103,11 +105,11 @@ export function createWalk(canvas,onError,onPose,onLight){
   gl.enableVertexAttribArray(normalAttribute);gl.vertexAttribPointer(normalAttribute,3,gl.FLOAT,false,44,28);
   gl.enableVertexAttribArray(materialAttribute);gl.vertexAttribPointer(materialAttribute,1,gl.FLOAT,false,44,40);
   gl.uniformMatrix4fv(sunUniform,false,sunlight.matrix);
-  gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,sunlight.texture);gl.uniform1i(shadowUniform,0);gl.uniform2f(texelUniform,1/sunlight.size,1/sunlight.size);
+  gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,sunlight.texture);gl.uniform1i(shadowUniform,0);gl.uniform1f(packedShadowUniform,sunlight.packed?1:0);gl.uniform2f(texelUniform,1/sunlight.size,1/sunlight.size);
   gl.uniform3f(eyeUniform,pose.x,eye,pose.y);gl.uniform3fv(directionUniform,light.direction);
-  gl.uniform3fv(skyUniform,light.sky);gl.uniform3fv(sunColorUniform,light.color);gl.uniform1f(dayUniform,light.daylight);gl.uniform1f(strengthUniform,light.strength);
+  gl.uniform3fv(skyUniform,light.sky);gl.uniform3fv(sunColorUniform,scene.navigation?.world?light.color.map(v=>v*.8):light.color);gl.uniform2f(fogRangeUniform,scene.navigation?.world?Math.max(40,scene.state.width*.7):22,scene.navigation?.world?Math.max(120,scene.state.width*2):80);gl.uniform1f(dayUniform,light.daylight);gl.uniform1f(strengthUniform,light.strength);
   gl.uniform4fv(lampPositions,lampPositionData);gl.uniform3fv(lampColors,lampColorData);
-  gl.uniformMatrix4fv(matrix,false,cameraMatrix(pose,eye,width/height,scene.navigation?.far||250));
+  gl.uniformMatrix4fv(matrix,false,cameraMatrix(pose,eye,width/height,scene.navigation?.far||250,scene.navigation?.world&&free?Math.max(.06,Math.min(1,eye/50)):.06));
   gl.disable(gl.BLEND);gl.depthMask(true);drawBatch(opaque);
   gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);gl.depthMask(false);
   glass.sort((a,b)=>Math.hypot(b.center[0]-pose.x,b.center[1]-pose.y,b.center[2]-eye)-Math.hypot(a.center[0]-pose.x,a.center[1]-pose.y,a.center[2]-eye));
@@ -127,10 +129,12 @@ export function createWalk(canvas,onError,onPose,onLight){
  for(const ev of ['pointerup','pointercancel','lostpointercapture'])listen(canvas,ev,()=>drag=null);
  listen(canvas,'webglcontextlost',e=>{e.preventDefault();stop();onError('三维显示连接已中断，请切换回轴测视图，或刷新页面后重试。');});
  return {
-  update(next,{freeMode=false}={}){
-   const changedWorld=scene?.key!==next.key;scene=next;if(changedWorld){pose=null;personPose=null;flyingPose=null;}lightSettings=normalizeSun(next.state.sun);light=sampleSun(lightSettings);
+  update(next,{freeMode=false,resetView=false}={}){
+   const changedWorld=resetView||scene?.key!==next.key;scene=next;if(changedWorld){pose=null;personPose=null;flyingPose=null;}lightSettings=normalizeSun(next.state.sun);light=sampleSun(lightSettings);
+   if(scene.navigation?.world&&personPose)personPose=reconcilePerson(scene,personPose);
    if(freeMode!==free){if(free)flyingPose=pose;else personPose=pose;free=freeMode;pose=free?flyingPose:personPose;}
    if(!pose||(!free&&!canStand(scene.boxes,pose.x,pose.y,pose.feet??Infinity)))reset();
+   if(scene.navigation?.world&&!free)pose=reconcilePerson(scene,pose);
    geometry();onPose?.(pose,free);
   },
   setSpeed(multiplier){speedMultiplier=Math.max(.25,Math.min(20,Number(multiplier)||1));},
@@ -150,6 +154,6 @@ export function createWalk(canvas,onError,onPose,onLight){
    onPose?.(pose,free);
   },
   key(key,down){if(down)keys.add(key);else keys.delete(key);},
-  dispose(){stop();cleanup.forEach(fn=>fn());sunlight.dispose();gl.deleteBuffer(buffer);gl.deleteProgram(program);},
+  dispose(){stop();cleanup.forEach(fn=>fn());sunlight.dispose();gl.deleteBuffer(buffer);gl.deleteProgram(program);gl.getExtension('WEBGL_lose_context')?.loseContext();},
  };
 }

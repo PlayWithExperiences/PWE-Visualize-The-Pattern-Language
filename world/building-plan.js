@@ -16,7 +16,7 @@ export function buildPlan(ids){
  if(any(133,158)){const s=w.boxes.length,m=w.meshes.length;w.steps(35,31,2.2,20,133,.16,.3);w.slab(34,37,3.2,3,133,p.stone,3.2);w.room(28,34,6,6,133,{z:3.2,roof:false,sideDoor:true});w.roof(27.7,33.7,6.6,6.6,133,6.12,1);rail(w,34,39.9,3.2,133,3.32);share(w,[133,158],s,m);w.state.upperAccess={steps:20,rise:3.2,landing:[35,37],door:[33.8,37]};}
  if(h(133)){w.steps(34.5,30.4,3.2,2,133,.16,.3);w.bench(31,31,133);}
  if(h(134)){w.wall(11,18,2,.2,2.7,134);w.wall(14,18,2,.2,2.7,134);w.wall(13,18,1,.2,.8,134);w.wall(13,18,1,.2,.6,134,2.22);w.tree(13.5,3,134);w.path([[17,19],[13.5,19]],1.2,134,p.stone,.13);}
- if(h(135)){w.box(19,26,2.5,5,3,.1,p.wood,135,'ceiling');for(const [x,y]of [[22,28],[25,19],[18,16]])w.box(x,y,2.85,.7,.7,.08,p.warm,135,'light');w.state.lightSequence='顶棚暗段与入口、转折处灯具；未模拟照度';}
+ if(h(135)){w.box(19,26,2.5,5,3,.1,p.wood,135,'ceiling');for(const [x,y]of [[22,28],[25,19],[18,16]]){w.box(x,y,2.85,.7,.7,.08,p.warm,135,'emissive');w.light(x+.35,y+.35,2.8,135,{intensity:1.8,radius:4});}w.state.lightSequence='顶棚暗段与入口、转折处局部点光；未作照度验算';}
  if(h(136)){w.chair(15,12.5,136,1);w.wall(17,12,.15,2,1.7,136);}
  if(h(137)){w.box(21,12,.15,1.4,1.4,.06,p.warm,137,'play-mat');w.path([[22,15],[25,16],[31,18],[36,18],[40,18]],1.4,137);w.box(39,17,.15,2,2,.3,p.soil,137,'sand-play');}
  if(h(138)){// Replace the bedroom east wall with a real glazed opening.

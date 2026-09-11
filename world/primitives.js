@@ -1,5 +1,5 @@
 // Geometry is authored in metres, x/y ground plane and z up. No SVG extrusion.
-export const palette={wall:'#e8ddc9',wood:'#aa825c',roof:'#ad876c',glass:'#aacbd1',stone:'#cac4b5',ground:'#b9c7a6',plant:'#708d64',soil:'#9e8564',water:'#79afb9',metal:'#697b77',warm:'#e3bd87'};
+export const palette={wall:'#e8ddc9',wood:'#aa825c',roof:'#ad876c',glass:'#aacbd1',stone:'#cac4b5',ground:'#8b9e75',plant:'#617e55',soil:'#9e8564',water:'#79afb9',metal:'#697b77',warm:'#e3bd87'};
 export class World{
  constructor(key,width,depth,ids){this.key=key;this.ids=new Set(ids);this.boxes=[];this.meshes=[];this.lights=[];this.landmarks=[];this.applied=new Set();this.state={width,depth,court:0,ids:[...this.ids]};this.navigation={world:true,bounds:Math.max(width,depth)*2,maxHeight:Math.max(80,width),far:Math.max(250,width*5),speed:Math.max(4,width/18)};this.autoCeiling=false;this.box(-15,-15,-.3,width+30,depth+30,.3,palette.ground,0,'ground');this.spawn={x:width/2,y:depth+5,yaw:0,pitch:0,feet:0};this.overview={x:width*1.15,y:depth*1.3,z:Math.max(10,width*.7),yaw:-.6,pitch:-.6};}
  has(id){return this.ids.has(id);}

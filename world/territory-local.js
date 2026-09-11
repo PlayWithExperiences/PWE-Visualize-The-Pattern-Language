@@ -5,7 +5,7 @@ export function buildLocalPattern(ctx){const {w,id,x,y,box,path,room,house,tree,
  case 30: slab(1,10,9,10);room(1,2,9,6);bench(2,17);path([[0,23],[5,15],[13,23],[27,23]],2);room(19,16,8,6);break;
  case 31: path([[5,1],[5,26]],3);pergola(1,1,8,4);slab(1,21,8,6);for(const b of [8,14]){bench(1,b);tree(9,b);}break;
  case 32: path([[5,0],[5,26]],3);for(const b of [1,10,19])room(18,b,8,6);slab(1,2,3,6,P.metal);path([[7,25],[25,25]],2);break;
- case 33: room(1,2,9,7);room(19,2,8,7);slab(1,12,9,12);table(2,15);for(const a of [1,9,19,26]){box(a,11,0,.12,.12,3,P.metal,'lamp');box(a-.15,11,3,.45,.45,.4,P.warm,'light');}break;
+ case 33: room(1,2,9,7);room(19,2,8,7);slab(1,12,9,12);table(2,15);for(const a of [1,9,19,26]){box(a,11,0,.12,.12,3,P.metal,'lamp');box(a-.15,11,3,.45,.45,.4,P.warm,'emissive');w.light(x+a+.075,y+11.2,2.95,id,{intensity:2.2,radius:8});}break;
  case 34: station(1,2);station(1,8);path([[5,5],[5,15],[26,15]],2);room(19,2,8,7);house(19,18,8,7,3);break;
  case 35: room(1,1,6,5);room(18,1,9,7);room(1,17,9,9);w.bed(x+2,y+18,id);w.bed(x+5,y+18,id);house(20,18,7,7,2);break;
  case 36: path([[0,26],[28,26]],3);room(1,18,9,6);room(19,9,8,6);room(1,1,8,6);path([[23,17],[23,26]],1.5);garden(18,18,9,6);break;

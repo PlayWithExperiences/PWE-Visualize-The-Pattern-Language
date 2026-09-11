@@ -24,3 +24,13 @@ test('landmark projection hides points behind the camera',()=>{
  assert.equal(projectMarker({x:0,y:3,z:1.65},{x:0,y:0,yaw:0,pitch:0},1.65,1000,600),null);
  assert.equal(projectMarker({x:0,y:-3,z:1.65},{x:0,y:0,yaw:0,pitch:0},1.65,1000,600).x,500);
 });
+test('removing and restoring an upper floor does not teleport a grounded person upward',async()=>{
+ const {buildWorld}=await import('../world/index.js');const {reconcilePerson}=await import('../world/navigation.js');
+ const on=buildWorld('edge',[166]),off=buildWorld('edge',[]),pose={x:16,y:17,feet:3.32,yaw:0,pitch:0};
+ const grounded=reconcilePerson(off,pose);assert.ok(grounded.feet<.3);assert.ok(reconcilePerson(on,grounded).feet<.3);
+});
+test('single-pattern overview aims at the local scene and the construction stair can be entered',async()=>{
+ const {buildWorld}=await import('../world/index.js');
+ for(const [key,id]of [['neighborhood',30],['neighborhood',46],['institution',75]]){const scene=buildWorld(key,[id]),pose=worldOverview(scene),mark=scene.landmarks[0];assert.ok(projectMarker(mark,pose,pose.z,1000,640));}
+ const scene=buildWorld('construction',[228]),pose=movePlayer(scene.boxes,{x:20.8,y:19.5,feet:0,yaw:Math.PI,pitch:0},0,5.5);assert.ok(pose.y>24.8);assert.ok(pose.feet>2.5);
+});

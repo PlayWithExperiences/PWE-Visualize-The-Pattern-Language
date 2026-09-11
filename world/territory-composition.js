@@ -53,11 +53,11 @@ function city(ids){
   const floors=has(21)?Math.min(4,desired):desired;
   const owner=has(9)?9:has(29)?29:has(21)?21:0;
   const a=lot.x+35,b=lot.y;
-  w.house(a,b,8,8,owner,{floors,roof:false});
+  w.house(a,b,24,20,owner,{floors,roof:false});
   // Height limitation replaces roof mass at the actual capped building elevation.
-  w.roof(a-.2,b-.2,8.4,8.4,has(21)?21:has(29)?29:owner,floors*3,.7);
-  if(has(9)){w.room(a,b+10,8,7,9);w.table(a+1,b+12,9);}
-  if(has(29))w.box(a,b+8.05,.12,8,.8,.12,P.stone,29,'density-frontage');
+  w.roof(a-.2,b-.2,24.4,20.4,has(21)?21:has(29)?29:owner,floors*3,.7);
+  if(has(9)){w.room(a,b+22,24,8,9);w.table(a+2,b+24,9);w.table(a+13,b+24,9);}
+  if(has(29))w.box(a,b+30.1,.12,24,.8,.12,P.stone,29,'density-frontage');
   buildings.push({index:i,x:a,y:b,floors,requestedFloors:desired,uses:has(9)?['housing','workplace']:['housing'],distanceToCore:d});
  }
  // Auxiliary public uses occupy the free half of the same mixed city blocks.
@@ -80,7 +80,7 @@ function city(ids){
  if(has(17)){w.path([[270,0],[270,288]],5,17,P.metal);for(let y=5;y<280;y+=8)w.box(264,y,0,2,5,1.8,P.ground,17,'noise-berm');}
  const parking=[];
  for(const x of [10,74,138,202]){const width=has(22)?5:19,depth=has(22)?6:12;w.slab(x,274,width,depth,has(22)?22:0,P.metal);for(let n=0;n<(has(22)?2:7);n++)w.box(x+.4+n*2.5,275,0,1.8,4,1.3,P.wood,has(22)?22:0,'parked-car');parking.push({x,y:274,width,depth});}
- for(const id of ids)mark(w,id,4+((id-8)%5)*51,286-Math.floor((id-8)/5)*2,'shared mixed city blocks and transport skeleton');
+ for(const id of ids){const lot=utilityLots.get(id),point=lot?[lot.x+14,lot.y+29]:id===22?[20,282]:[28,29,10].includes(id)?[core.x,core.y]:id===23?[132,135]:id===17?[268,150]:[buildings[0].x+12,buildings[0].y+33];mark(w,id,...point,'shared mixed city blocks and transport skeleton');}
  if(ids.length===1&&utilityLots.has(ids[0])){const focus=utilityLots.get(ids[0]);w.spawn={x:focus.x+14,y:focus.y+31,yaw:0,pitch:0,feet:0};w.overview={x:focus.x+42,y:focus.y+48,z:30,yaw:-.6,pitch:-.6};}
  w.state.cityBuildings=buildings;w.state.core=core;w.state.cityRoads=roads;w.state.parkingArea=parking.reduce((a,p)=>a+p.width*p.depth,0);w.state.heightLimit=has(21)?4:null;w.state.patterns[29]&&(w.state.patterns[29].relation='density derives from the same active core');
  return w.finish();

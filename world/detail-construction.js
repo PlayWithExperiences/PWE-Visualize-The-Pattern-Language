@@ -58,8 +58,8 @@ export function buildConstruction(ids){
  if(has(227)){for(const x of [6.15,17.85])for(const dir of [x<10?1:-1]){w.beam([x,6.15,2.65],[x+dir*.9,6.15,3.6],.12,p.wood,227);w.box(x-.22,5.93,3.35,.44,.44,.25,p.stone,227,'capital');}mark(227,7,5,'柱头和斜撑连接梁柱转角');}
  if(has(228)){
   // Open undercroft: individual treads above a sloping curved shell, not solid wedges.
-  for(let i=0;i<15;i++){const yy=20+i*.32,zz=.2+i*.18;w.box(20,yy,zz,1.6,.32,.12,p.stone,228,'step');const z2=.2+(i+1)*.18,under=zz-.08-.16*Math.sin(Math.PI*i/15),under2=z2-.08-.16*Math.sin(Math.PI*(i+1)/15);w.quad([20,yy,under],[21.6,yy,under],[21.6,yy+.32,under2],[20,yy+.32,under2],p.wall,228,'stair-shell');}
-  w.bench(20.2,23,228,1.1);w.slab(20,24.8,1.6,1,228,p.stone,2.84);mark(228,22.5,23,'壳托踏步与可用梯下凹室 · 未验算');
+  for(let i=0;i<15;i++){const yy=20+i*.32,zz=.04+i*.18;w.box(20,yy,zz,1.6,.32,.12,p.stone,228,'step');const z2=.04+(i+1)*.18,under=zz-.08-.16*Math.sin(Math.PI*i/15),under2=z2-.08-.16*Math.sin(Math.PI*(i+1)/15);w.quad([20,yy,under],[21.6,yy,under],[21.6,yy+.32,under2],[20,yy+.32,under2],p.wall,228,'stair-shell');}
+  w.bench(20.2,23,228,1.1);w.slab(20,24.8,1.6,1,228,p.stone,2.68);mark(228,22.5,23,'壳托踏步与可用梯下凹室 · 未验算');
  }
  if(has(229)){for(const [n,col]of ['#a3b4b7','#a87564'].entries()){w.beam([17.3,6.5,.2],[17.3,6.5,3.3+n*.15],.045,col,229);w.beam([17.3,6.5,3.3+n*.15],[17.3,15,3.3+n*.15],.045,col,229);}w.box(17,6.15,1.2,.6,.06,.7,p.wood,229,'open-access-panel');mark(229,16.6,7,'角部竖井接水平管线 · 检修盖展开');}
  if(has(230)){w.box(20.5,8.3,.15,4,.2,1.3,'#d1a17c',230,'radiant-panel');for(let x=20.8;x<24.5;x+=.5)w.beam([x,8.52,.4],[x,8.52,1.25],.018,'#bb7f66',230);w.bench(21,10,230,2.5);mark(230,23,10.8,'座位面向温暖辐射表面 · 未模拟温度');}

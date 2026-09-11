@@ -1,7 +1,7 @@
 import {palette as P} from './primitives.js';
 import {buildLocalPattern} from './territory-local.js';
 import {buildInstitutionPattern} from './territory-institution.js';
-const localModifiers=new Set([31,49,50,52,54,60,67,68]);
+const localModifiers=new Set([30,31,49,50,52,53,54,60,67,68]);
 const institutionModifiers=new Set([75,76,77,78,79,80,82,83]);
 function base(w,builder,id,x,y){const b=w.boxes.length,m=w.meshes.length;builder({w,id,x,y,s:28});for(const v of w.boxes.slice(b))v.pattern=0;for(const v of w.meshes.slice(m))v.pattern=0;w.applied.delete(id);}
 export function composeLocal(w,ids){
@@ -11,6 +11,8 @@ export function composeLocal(w,ids){
  // A modifier always has an actual dwelling group to modify, even when viewed alone.
  if(!active.length&&overridden.size)base(w,buildLocalPattern,37,66,34);
  w.state.residentialGroups=groups;w.state.sharedResidentialBounds={x:62,y:30,width:96,depth:40};
+ if(has(30)){w.slab(98,66,12,9,30);w.pergola(98,66,4,3,30);w.bench(103,67,30,4);w.path([[104,75],[104,62]],2,30);}
+ if(has(53)){for(const x of [109,115])w.box(x,77,0,.25,.25,3.1,P.wood,53,'gateway');w.box(109,77,3.1,6.25,.25,.25,P.wood,53,'gateway');w.path([[112,82],[112,62]],2.4,53);}
  if(has(31)){const path=[[62,62],[158,62]];w.path(path,3,31);for(const g of groups){w.path([[g.x+5,g.y+26],[g.x+5,62]],1.6,31);w.bench(g.x+10,57,31,3);}w.state.promenade={points:path,serves:groups.map(g=>g.id)};}
  if(has(49)||has(50)){
   const loop=has(50)?[[[62,30],[62,64]],[[62,64],[158,64]]]:[[[62,30],[62,64],[158,64],[158,30]],[[158,30],[146,30]]];
@@ -23,7 +25,7 @@ export function composeLocal(w,ids){
  if(has(60))for(const g of groups){w.slab(g.x+1,24,8,5,60,P.ground);w.tree(g.x+2,25,60);w.bench(g.x+3,28,60);w.path([[g.x+8,29],[g.x+12,29],[g.x+12,61]],1.2,60);}
  if(has(67))for(const g of groups){w.slab(g.x+10,g.y+8,8,17,67,P.ground);w.bench(g.x+11,g.y+9,67,4);w.path([[g.x+14,g.y+25],[g.x+14,62]],1.8,67);}
  if(has(68)){const points=[[62,60],[158,60]];w.path(points,2,68,P.warm);for(const g of groups){w.path([[g.x+14,g.y+14],[g.x+14,60]],1.4,68,P.warm);w.box(g.x+10,g.y+16,0,1.2,1.2,.35,P.wood,68,'shared-play-material');}w.state.childrenRoute={points,serves:groups.map(g=>g.id),sharesCommons:has(67)};}
- for(const id of overridden){w.marker(id,62,62+(id%4)*2,`#${id}`);w.state.patterns[id]={geometry:true,relation:'shared residential groups',groups:groups.map(g=>g.id)};}
+ for(const id of overridden){w.marker(id,id===30?104:id===53?112:62,id===30?72:id===53?80:62+(id%4)*2,`#${id}`);w.state.patterns[id]={geometry:true,relation:'shared residential groups',groups:groups.map(g=>g.id)};}
  return overridden;
 }
 export function composeInstitution(w,ids){
