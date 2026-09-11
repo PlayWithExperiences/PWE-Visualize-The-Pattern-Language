@@ -66,3 +66,11 @@ Pages 提交 6f02b85062a5c2e79aa8994013ed037601cece29 已 built，首页读取�
 官方用量说明已核对 https://learn.chatgpt.com/docs/pricing ：模型、上下文、推理、工具、检索与缓存影响实际额度，不能从固定token数直接推定套餐百分比。
 
 原始对话：同上 session 01a08eee-e5f3-7130-b158-5ef69bce264e 的 transcript。
+
+## 2104 相机／时间公网验收
+
+决策：無涘 ｜ 记录：Codex
+
+Pages 发布 8b31e5b5978a3c6c101649f0226b5d019905d7d7 已 built；公网首页加载资源版本4d00a0c4441a。浏览器确认自由相机上升读数10.5m、00:00无直射暗场、恢复15:00、控制台无错误。源码759b716，19项测试通过。
+
+原始对话：同上 session 01a08eee-e5f3-7130-b158-5ef69bce264e 的 transcript。
