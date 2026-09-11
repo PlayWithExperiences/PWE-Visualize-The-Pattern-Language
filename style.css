@@ -31,3 +31,7 @@
 .sun-body p{font-size:9px;line-height:1.7;color:#667060;margin:9px 0 0}
 .canvas-toolbar{flex-wrap:wrap}
 @media(max-width:720px){.sun-panel{right:10px;top:51px;width:224px}.sun-body{max-height:218px}.sun-panel summary{padding:8px 10px}.walk-top span{font-size:8px}.walk-tools button{font-size:8px}.segmented button{padding:7px 8px}}
+.pattern-filter-label{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:9px;color:var(--muted);margin:0 0 10px}
+.pattern-filter-label select{font-size:10px;color:var(--green);background:#f7f5ed;border:1px solid var(--line);border-radius:3px;padding:7px;min-width:0}
+#pattern-list{max-height:530px;overflow-y:auto;overscroll-behavior:contain;padding-left:11px;margin-left:-11px;scrollbar-width:thin;scrollbar-color:#b6bfa9 transparent}
+@media(max-width:720px){#pattern-list{max-height:405px;padding-left:0;margin-left:0}.pattern-filter-label{font-size:10px}.pattern-filter-label select{padding:9px;font-size:11px}}

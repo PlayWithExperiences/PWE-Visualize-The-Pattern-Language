@@ -49,7 +49,7 @@ export function createWalk(canvas,onError,onPose,onLight){
    const rgb=b.color.slice(1).match(/../g).map(c=>parseInt(c,16)/255);
    const isGlass=b.kind==='window';
    for(const [indices,normal] of faces){
-    const material=isGlass?3:['deck','post','pergola','window-seat','bench','trunk','furniture'].includes(b.kind)?2:b.kind==='floor'?1:0;
+    const material=isGlass?3:['deck','post','pergola','window-seat','bench','trunk','furniture','filter','mullion','ceiling-panel'].includes(b.kind)?2:b.kind==='floor'?1:0;
     const vertices=[];
     for(const i of [0,1,2,0,2,3]){
      const [px,py,pz]=points[indices[i]];

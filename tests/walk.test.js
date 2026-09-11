@@ -1,3 +1,4 @@
+import {scenarios} from './scenarios.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {buildScene,defaults,allowed} from '../model.js';
@@ -10,9 +11,9 @@ test('eye height is 1.65m above the surface underfoot',()=>{
  assert.ok(Math.abs(floorHeight(scene.boxes,8.5,6.5)-.3)<1e-9);
 });
 
-test('entrance is clear and traversable in all 1024 combinations at size extremes',()=>{
- for(let mask=0;mask<1024;mask++){
-  const ids=allowed.filter((_,i)=>mask&(1<<i));
+test('entrance is traversable in legacy, pairwise and mixed scenarios at size extremes',()=>{
+ for(const ids of scenarios(allowed)){
+  const mask=ids.join(',');
   for(const sizes of [{width:10,depth:9,court:5},{width:16,depth:14,court:3}]){
    const scene=buildScene({...defaults,...sizes,ids}),start=entryPose(scene);
    assert.ok(canStand(scene.boxes,start.x,start.y),'spawn '+mask);

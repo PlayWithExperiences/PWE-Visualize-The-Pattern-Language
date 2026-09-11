@@ -1,3 +1,4 @@
+import {scenarios} from './scenarios.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -30,9 +31,9 @@ test('every supported pattern changes geometry when used alone',()=>{
  const baseline=JSON.stringify(buildScene({...defaults,ids:[]}).boxes);
  for(const id of allowed)assert.notEqual(JSON.stringify(buildScene({...defaults,ids:[id]}).boxes),baseline,`pattern ${id}`);
 });
-test('all 1024 pattern combinations produce finite positive geometry',()=>{
- for(let bits=0;bits<1024;bits++){
-  const ids=allowed.filter((_,i)=>bits&(1<<i));
+test('legacy exhaustive, all-pairs and mixed scenarios produce valid geometry',()=>{
+ for(const ids of scenarios(allowed)){
+  const bits=ids.join(',');
   for(const dimensions of [{width:10,depth:9,court:5,seat:1},{width:16,depth:14,court:3,seat:.45}]){
    const s=buildScene({...dimensions,ids});
    for(const b of s.boxes){for(const k of ['x','y','z','dx','dy','dz'])assert.ok(Number.isFinite(b[k]),`${bits} ${k}`);for(const k of ['dx','dy','dz'])assert.ok(b[k]>0,`${bits} ${k}`);}
