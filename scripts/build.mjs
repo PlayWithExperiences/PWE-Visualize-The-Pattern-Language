@@ -1,8 +1,9 @@
+import './compile-guides.mjs';
 import {mkdir,cp,rm,readdir,readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 await rm('dist',{recursive:true,force:true});
 await mkdir('dist');
-for(const name of ['index.html','style.css','app.js','model.js','scene.js','walk.js','lighting.js','sun.js','free-camera.js','walk-physics.js','data']){
+for(const name of ['index.html','home.html','atlas.css','atlas-app.js','atlas','style.css','app.js','model.js','scene.js','walk.js','lighting.js','sun.js','free-camera.js','walk-physics.js','data']){
  await cp(name,'dist/'+name,{recursive:true});
 }
 async function files(dir){

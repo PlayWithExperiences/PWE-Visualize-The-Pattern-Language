@@ -58,3 +58,8 @@ test('expanded test scenarios cover every pair and full/leave-one-out combinatio
  assert.ok(keys.has(allowed.join(',')));
  for(const id of allowed)assert.ok(keys.has(allowed.filter(n=>n!==id).join(',')));
 });
+test('farmhouse kitchen stays on the communal side of the privacy partition',()=>{
+ const scene=buildScene({...defaults,ids:[105,127,139]});
+ const kitchen=scene.boxes.filter(b=>b.pattern===139&&b.z>.88);
+ assert.ok(kitchen.length>0);assert.ok(kitchen.every(b=>b.x+b.dx<scene.state.width*.53));
+});

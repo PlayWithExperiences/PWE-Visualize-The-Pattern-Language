@@ -1,0 +1,3698 @@
+{
+  "sourceId": "apl-1977-user-pdf",
+  "paginationNotes": [
+    "PDF pages 575–578 are in reverse printed-page order.",
+    "PDF page 811 repeats printed page 765; printed page 767 is missing in this scan.",
+    "Chapter boundaries are provisional; precise solution PDF pages are recorded separately."
+  ],
+  "patterns": [
+    {
+      "id": 1,
+      "printedStartCandidate": 10,
+      "printedEndCandidate": 15,
+      "pdfPages": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "solutionPdfPage": 58,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 2,
+      "printedStartCandidate": 16,
+      "printedEndCandidate": 20,
+      "pdfPages": [
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "solutionPdfPage": 63,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 3,
+      "printedStartCandidate": 21,
+      "printedEndCandidate": 25,
+      "pdfPages": [
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "solutionPdfPage": 69,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 4,
+      "printedStartCandidate": 26,
+      "printedEndCandidate": 28,
+      "pdfPages": [
+        70,
+        71,
+        72
+      ],
+      "solutionPdfPage": 71,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 5,
+      "printedStartCandidate": 29,
+      "printedEndCandidate": 32,
+      "pdfPages": [
+        73,
+        74,
+        75,
+        76
+      ],
+      "solutionPdfPage": 75,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 6,
+      "printedStartCandidate": 33,
+      "printedEndCandidate": 35,
+      "pdfPages": [
+        77,
+        78,
+        79
+      ],
+      "solutionPdfPage": 79,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 7,
+      "printedStartCandidate": 36,
+      "printedEndCandidate": 41,
+      "pdfPages": [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85
+      ],
+      "solutionPdfPage": 83,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 8,
+      "printedStartCandidate": 42,
+      "printedEndCandidate": 50,
+      "pdfPages": [
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94
+      ],
+      "solutionPdfPage": 94,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 9,
+      "printedStartCandidate": 51,
+      "printedEndCandidate": 57,
+      "pdfPages": [
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101
+      ],
+      "solutionPdfPage": 100,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 10,
+      "printedStartCandidate": 58,
+      "printedEndCandidate": 62,
+      "pdfPages": [
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "solutionPdfPage": 106,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 11,
+      "printedStartCandidate": 63,
+      "printedEndCandidate": 69,
+      "pdfPages": [
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "solutionPdfPage": 112,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 12,
+      "printedStartCandidate": 70,
+      "printedEndCandidate": 74,
+      "pdfPages": [
+        114,
+        115,
+        116,
+        117,
+        118
+      ],
+      "solutionPdfPage": 117,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 13,
+      "printedStartCandidate": 75,
+      "printedEndCandidate": 79,
+      "pdfPages": [
+        119,
+        120,
+        121,
+        122,
+        123
+      ],
+      "solutionPdfPage": 122,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 14,
+      "printedStartCandidate": 80,
+      "printedEndCandidate": 85,
+      "pdfPages": [
+        124,
+        125,
+        126,
+        127,
+        128,
+        129
+      ],
+      "solutionPdfPage": 128,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 15,
+      "printedStartCandidate": 86,
+      "printedEndCandidate": 91,
+      "pdfPages": [
+        130,
+        131,
+        132,
+        133,
+        134,
+        135
+      ],
+      "solutionPdfPage": 133,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 16,
+      "printedStartCandidate": 92,
+      "printedEndCandidate": 95,
+      "pdfPages": [
+        136,
+        137,
+        138,
+        139
+      ],
+      "solutionPdfPage": 138,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 17,
+      "printedStartCandidate": 96,
+      "printedEndCandidate": 98,
+      "pdfPages": [
+        140,
+        141,
+        142
+      ],
+      "solutionPdfPage": 142,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 18,
+      "printedStartCandidate": 99,
+      "printedEndCandidate": 103,
+      "pdfPages": [
+        143,
+        144,
+        145,
+        146,
+        147
+      ],
+      "solutionPdfPage": 146,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 19,
+      "printedStartCandidate": 104,
+      "printedEndCandidate": 109,
+      "pdfPages": [
+        148,
+        149,
+        150,
+        151,
+        152,
+        153
+      ],
+      "solutionPdfPage": 152,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 20,
+      "printedStartCandidate": 110,
+      "printedEndCandidate": 113,
+      "pdfPages": [
+        154,
+        155,
+        156,
+        157
+      ],
+      "solutionPdfPage": 156,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 21,
+      "printedStartCandidate": 114,
+      "printedEndCandidate": 119,
+      "pdfPages": [
+        158,
+        159,
+        160,
+        161,
+        162,
+        163
+      ],
+      "solutionPdfPage": 163,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 22,
+      "printedStartCandidate": 120,
+      "printedEndCandidate": 125,
+      "pdfPages": [
+        164,
+        165,
+        166,
+        167,
+        168,
+        169
+      ],
+      "solutionPdfPage": 168,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 23,
+      "printedStartCandidate": 126,
+      "printedEndCandidate": 130,
+      "pdfPages": [
+        170,
+        171,
+        172,
+        173,
+        174
+      ],
+      "solutionPdfPage": 174,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 24,
+      "printedStartCandidate": 131,
+      "printedEndCandidate": 134,
+      "pdfPages": [
+        175,
+        176,
+        177,
+        178
+      ],
+      "solutionPdfPage": 177,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 25,
+      "printedStartCandidate": 135,
+      "printedEndCandidate": 138,
+      "pdfPages": [
+        179,
+        180,
+        181,
+        182
+      ],
+      "solutionPdfPage": 181,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 26,
+      "printedStartCandidate": 139,
+      "printedEndCandidate": 145,
+      "pdfPages": [
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189
+      ],
+      "solutionPdfPage": 189,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 27,
+      "printedStartCandidate": 146,
+      "printedEndCandidate": 149,
+      "pdfPages": [
+        190,
+        191,
+        192,
+        193
+      ],
+      "solutionPdfPage": 191,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 28,
+      "printedStartCandidate": 150,
+      "printedEndCandidate": 155,
+      "pdfPages": [
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ],
+      "solutionPdfPage": 198,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 29,
+      "printedStartCandidate": 156,
+      "printedEndCandidate": 162,
+      "pdfPages": [
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206
+      ],
+      "solutionPdfPage": 206,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 30,
+      "printedStartCandidate": 163,
+      "printedEndCandidate": 167,
+      "pdfPages": [
+        207,
+        208,
+        209,
+        210,
+        211
+      ],
+      "solutionPdfPage": 210,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 31,
+      "printedStartCandidate": 168,
+      "printedEndCandidate": 173,
+      "pdfPages": [
+        212,
+        213,
+        214,
+        215,
+        216,
+        217
+      ],
+      "solutionPdfPage": 217,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 32,
+      "printedStartCandidate": 174,
+      "printedEndCandidate": 178,
+      "pdfPages": [
+        218,
+        219,
+        220,
+        221,
+        222
+      ],
+      "solutionPdfPage": 221,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 33,
+      "printedStartCandidate": 179,
+      "printedEndCandidate": 182,
+      "pdfPages": [
+        223,
+        224,
+        225,
+        226
+      ],
+      "solutionPdfPage": 226,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 34,
+      "printedStartCandidate": 183,
+      "printedEndCandidate": 187,
+      "pdfPages": [
+        227,
+        228,
+        229,
+        230,
+        231
+      ],
+      "solutionPdfPage": 229,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 35,
+      "printedStartCandidate": 188,
+      "printedEndCandidate": 191,
+      "pdfPages": [
+        232,
+        233,
+        234,
+        235
+      ],
+      "solutionPdfPage": 234,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 36,
+      "printedStartCandidate": 192,
+      "printedEndCandidate": 196,
+      "pdfPages": [
+        236,
+        237,
+        238,
+        239,
+        240
+      ],
+      "solutionPdfPage": 239,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 37,
+      "printedStartCandidate": 197,
+      "printedEndCandidate": 203,
+      "pdfPages": [
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247
+      ],
+      "solutionPdfPage": 246,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 38,
+      "printedStartCandidate": 204,
+      "printedEndCandidate": 208,
+      "pdfPages": [
+        248,
+        249,
+        250,
+        251,
+        252
+      ],
+      "solutionPdfPage": 251,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 39,
+      "printedStartCandidate": 209,
+      "printedEndCandidate": 214,
+      "pdfPages": [
+        253,
+        254,
+        255,
+        256,
+        257,
+        258
+      ],
+      "solutionPdfPage": 257,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 40,
+      "printedStartCandidate": 215,
+      "printedEndCandidate": 221,
+      "pdfPages": [
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265
+      ],
+      "solutionPdfPage": 263,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 41,
+      "printedStartCandidate": 222,
+      "printedEndCandidate": 226,
+      "pdfPages": [
+        266,
+        267,
+        268,
+        269,
+        270
+      ],
+      "solutionPdfPage": 269,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 42,
+      "printedStartCandidate": 227,
+      "printedEndCandidate": 230,
+      "pdfPages": [
+        271,
+        272,
+        273,
+        274
+      ],
+      "solutionPdfPage": 274,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 43,
+      "printedStartCandidate": 231,
+      "printedEndCandidate": 235,
+      "pdfPages": [
+        275,
+        276,
+        277,
+        278,
+        279
+      ],
+      "solutionPdfPage": 278,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 44,
+      "printedStartCandidate": 236,
+      "printedEndCandidate": 241,
+      "pdfPages": [
+        280,
+        281,
+        282,
+        283,
+        284,
+        285
+      ],
+      "solutionPdfPage": 284,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 45,
+      "printedStartCandidate": 242,
+      "printedEndCandidate": 245,
+      "pdfPages": [
+        286,
+        287,
+        288,
+        289
+      ],
+      "solutionPdfPage": 288,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 46,
+      "printedStartCandidate": 246,
+      "printedEndCandidate": 251,
+      "pdfPages": [
+        290,
+        291,
+        292,
+        293,
+        294,
+        295
+      ],
+      "solutionPdfPage": 294,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 47,
+      "printedStartCandidate": 252,
+      "printedEndCandidate": 255,
+      "pdfPages": [
+        296,
+        297,
+        298,
+        299
+      ],
+      "solutionPdfPage": 299,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 48,
+      "printedStartCandidate": 256,
+      "printedEndCandidate": 259,
+      "pdfPages": [
+        300,
+        301,
+        302,
+        303
+      ],
+      "solutionPdfPage": 302,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 49,
+      "printedStartCandidate": 260,
+      "printedEndCandidate": 263,
+      "pdfPages": [
+        304,
+        305,
+        306,
+        307
+      ],
+      "solutionPdfPage": 307,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 50,
+      "printedStartCandidate": 264,
+      "printedEndCandidate": 265,
+      "pdfPages": [
+        308,
+        309
+      ],
+      "solutionPdfPage": 309,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 51,
+      "printedStartCandidate": 266,
+      "printedEndCandidate": 269,
+      "pdfPages": [
+        310,
+        311,
+        312,
+        313
+      ],
+      "solutionPdfPage": 313,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 52,
+      "printedStartCandidate": 270,
+      "printedEndCandidate": 275,
+      "pdfPages": [
+        314,
+        315,
+        316,
+        317,
+        318,
+        319
+      ],
+      "solutionPdfPage": 318,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 53,
+      "printedStartCandidate": 276,
+      "printedEndCandidate": 279,
+      "pdfPages": [
+        320,
+        321,
+        322,
+        323
+      ],
+      "solutionPdfPage": 322,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 54,
+      "printedStartCandidate": 280,
+      "printedEndCandidate": 284,
+      "pdfPages": [
+        324,
+        325,
+        326,
+        327,
+        328
+      ],
+      "solutionPdfPage": 327,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 55,
+      "printedStartCandidate": 285,
+      "printedEndCandidate": 288,
+      "pdfPages": [
+        329,
+        330,
+        331,
+        332
+      ],
+      "solutionPdfPage": 332,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 56,
+      "printedStartCandidate": 289,
+      "printedEndCandidate": 292,
+      "pdfPages": [
+        333,
+        334,
+        335,
+        336
+      ],
+      "solutionPdfPage": 335,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 57,
+      "printedStartCandidate": 293,
+      "printedEndCandidate": 297,
+      "pdfPages": [
+        337,
+        338,
+        339,
+        340,
+        341
+      ],
+      "solutionPdfPage": 339,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 58,
+      "printedStartCandidate": 298,
+      "printedEndCandidate": 300,
+      "pdfPages": [
+        342,
+        343,
+        344
+      ],
+      "solutionPdfPage": 344,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 59,
+      "printedStartCandidate": 301,
+      "printedEndCandidate": 303,
+      "pdfPages": [
+        345,
+        346,
+        347
+      ],
+      "solutionPdfPage": 347,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 60,
+      "printedStartCandidate": 304,
+      "printedEndCandidate": 309,
+      "pdfPages": [
+        348,
+        349,
+        350,
+        351,
+        352,
+        353
+      ],
+      "solutionPdfPage": 352,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 61,
+      "printedStartCandidate": 310,
+      "printedEndCandidate": 314,
+      "pdfPages": [
+        354,
+        355,
+        356,
+        357,
+        358
+      ],
+      "solutionPdfPage": 357,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 62,
+      "printedStartCandidate": 315,
+      "printedEndCandidate": 318,
+      "pdfPages": [
+        359,
+        360,
+        361,
+        362
+      ],
+      "solutionPdfPage": 361,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 63,
+      "printedStartCandidate": 319,
+      "printedEndCandidate": 321,
+      "pdfPages": [
+        363,
+        364,
+        365
+      ],
+      "solutionPdfPage": 365,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 64,
+      "printedStartCandidate": 322,
+      "printedEndCandidate": 327,
+      "pdfPages": [
+        366,
+        367,
+        368,
+        369,
+        370,
+        371
+      ],
+      "solutionPdfPage": 370,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 65,
+      "printedStartCandidate": 328,
+      "printedEndCandidate": 330,
+      "pdfPages": [
+        372,
+        373,
+        374
+      ],
+      "solutionPdfPage": 374,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 66,
+      "printedStartCandidate": 331,
+      "printedEndCandidate": 335,
+      "pdfPages": [
+        375,
+        376,
+        377,
+        378,
+        379
+      ],
+      "solutionPdfPage": 378,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 67,
+      "printedStartCandidate": 336,
+      "printedEndCandidate": 340,
+      "pdfPages": [
+        380,
+        381,
+        382,
+        383,
+        384
+      ],
+      "solutionPdfPage": 383,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 68,
+      "printedStartCandidate": 341,
+      "printedEndCandidate": 347,
+      "pdfPages": [
+        385,
+        386,
+        387,
+        388,
+        389,
+        390,
+        391
+      ],
+      "solutionPdfPage": 390,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 69,
+      "printedStartCandidate": 348,
+      "printedEndCandidate": 352,
+      "pdfPages": [
+        392,
+        393,
+        394,
+        395,
+        396
+      ],
+      "solutionPdfPage": 395,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 70,
+      "printedStartCandidate": 353,
+      "printedEndCandidate": 357,
+      "pdfPages": [
+        397,
+        398,
+        399,
+        400,
+        401
+      ],
+      "solutionPdfPage": 400,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 71,
+      "printedStartCandidate": 358,
+      "printedEndCandidate": 362,
+      "pdfPages": [
+        402,
+        403,
+        404,
+        405,
+        406
+      ],
+      "solutionPdfPage": null,
+      "missingPrintedPages": [],
+      "reviewBasis": "available-body-needs-review"
+    },
+    {
+      "id": 72,
+      "printedStartCandidate": 363,
+      "printedEndCandidate": 366,
+      "pdfPages": [
+        407,
+        408,
+        409,
+        410
+      ],
+      "solutionPdfPage": 409,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 73,
+      "printedStartCandidate": 367,
+      "printedEndCandidate": 370,
+      "pdfPages": [
+        411,
+        412,
+        413,
+        414
+      ],
+      "solutionPdfPage": 413,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 74,
+      "printedStartCandidate": 371,
+      "printedEndCandidate": 375,
+      "pdfPages": [
+        415,
+        416,
+        417,
+        418,
+        419
+      ],
+      "solutionPdfPage": 417,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 75,
+      "printedStartCandidate": 376,
+      "printedEndCandidate": 380,
+      "pdfPages": [
+        420,
+        421,
+        422,
+        423,
+        424
+      ],
+      "solutionPdfPage": 424,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 76,
+      "printedStartCandidate": 381,
+      "printedEndCandidate": 384,
+      "pdfPages": [
+        425,
+        426,
+        427,
+        428
+      ],
+      "solutionPdfPage": 428,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 77,
+      "printedStartCandidate": 385,
+      "printedEndCandidate": 388,
+      "pdfPages": [
+        429,
+        430,
+        431,
+        432
+      ],
+      "solutionPdfPage": 431,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 78,
+      "printedStartCandidate": 389,
+      "printedEndCandidate": 391,
+      "pdfPages": [
+        433,
+        434,
+        435
+      ],
+      "solutionPdfPage": 435,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 79,
+      "printedStartCandidate": 392,
+      "printedEndCandidate": 397,
+      "pdfPages": [
+        436,
+        437,
+        438,
+        439,
+        440,
+        441
+      ],
+      "solutionPdfPage": 439,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 80,
+      "printedStartCandidate": 398,
+      "printedEndCandidate": 403,
+      "pdfPages": [
+        442,
+        443,
+        444,
+        445,
+        446,
+        447
+      ],
+      "solutionPdfPage": 446,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 81,
+      "printedStartCandidate": 404,
+      "printedEndCandidate": 407,
+      "pdfPages": [
+        448,
+        449,
+        450,
+        451
+      ],
+      "solutionPdfPage": 450,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 82,
+      "printedStartCandidate": 408,
+      "printedEndCandidate": 411,
+      "pdfPages": [
+        452,
+        453,
+        454,
+        455
+      ],
+      "solutionPdfPage": 455,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 83,
+      "printedStartCandidate": 412,
+      "printedEndCandidate": 415,
+      "pdfPages": [
+        456,
+        457,
+        458,
+        459
+      ],
+      "solutionPdfPage": 458,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 84,
+      "printedStartCandidate": 416,
+      "printedEndCandidate": 419,
+      "pdfPages": [
+        460,
+        461,
+        462,
+        463
+      ],
+      "solutionPdfPage": 462,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 85,
+      "printedStartCandidate": 420,
+      "printedEndCandidate": 425,
+      "pdfPages": [
+        464,
+        465,
+        466,
+        467,
+        468,
+        469
+      ],
+      "solutionPdfPage": 468,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 86,
+      "printedStartCandidate": 426,
+      "printedEndCandidate": 431,
+      "pdfPages": [
+        470,
+        471,
+        472,
+        473,
+        474,
+        475
+      ],
+      "solutionPdfPage": 473,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 87,
+      "printedStartCandidate": 432,
+      "printedEndCandidate": 435,
+      "pdfPages": [
+        476,
+        477,
+        478,
+        479
+      ],
+      "solutionPdfPage": 478,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 88,
+      "printedStartCandidate": 436,
+      "printedEndCandidate": 439,
+      "pdfPages": [
+        480,
+        481,
+        482,
+        483
+      ],
+      "solutionPdfPage": 483,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 89,
+      "printedStartCandidate": 440,
+      "printedEndCandidate": 443,
+      "pdfPages": [
+        484,
+        485,
+        486,
+        487
+      ],
+      "solutionPdfPage": 486,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 90,
+      "printedStartCandidate": 444,
+      "printedEndCandidate": 447,
+      "pdfPages": [
+        488,
+        489,
+        490,
+        491
+      ],
+      "solutionPdfPage": 490,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 91,
+      "printedStartCandidate": 448,
+      "printedEndCandidate": 450,
+      "pdfPages": [
+        492,
+        493,
+        494
+      ],
+      "solutionPdfPage": 494,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 92,
+      "printedStartCandidate": 451,
+      "printedEndCandidate": 453,
+      "pdfPages": [
+        495,
+        496,
+        497
+      ],
+      "solutionPdfPage": 497,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 93,
+      "printedStartCandidate": 454,
+      "printedEndCandidate": 456,
+      "pdfPages": [
+        498,
+        499,
+        500
+      ],
+      "solutionPdfPage": 500,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 94,
+      "printedStartCandidate": 457,
+      "printedEndCandidate": 467,
+      "pdfPages": [
+        501,
+        502,
+        503,
+        504,
+        505,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511
+      ],
+      "solutionPdfPage": 503,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 95,
+      "printedStartCandidate": 468,
+      "printedEndCandidate": 472,
+      "pdfPages": [
+        512,
+        513,
+        514,
+        515,
+        516
+      ],
+      "solutionPdfPage": 515,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 96,
+      "printedStartCandidate": 473,
+      "printedEndCandidate": 476,
+      "pdfPages": [
+        517,
+        518,
+        519,
+        520
+      ],
+      "solutionPdfPage": 519,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 97,
+      "printedStartCandidate": 477,
+      "printedEndCandidate": 479,
+      "pdfPages": [
+        521,
+        522,
+        523
+      ],
+      "solutionPdfPage": 523,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 98,
+      "printedStartCandidate": 480,
+      "printedEndCandidate": 484,
+      "pdfPages": [
+        524,
+        525,
+        526,
+        527,
+        528
+      ],
+      "solutionPdfPage": 528,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 99,
+      "printedStartCandidate": 485,
+      "printedEndCandidate": 487,
+      "pdfPages": [
+        529,
+        530,
+        531
+      ],
+      "solutionPdfPage": 531,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 100,
+      "printedStartCandidate": 488,
+      "printedEndCandidate": 491,
+      "pdfPages": [
+        532,
+        533,
+        534,
+        535
+      ],
+      "solutionPdfPage": 534,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 101,
+      "printedStartCandidate": 492,
+      "printedEndCandidate": 498,
+      "pdfPages": [
+        536,
+        537,
+        538,
+        539,
+        540,
+        541,
+        542
+      ],
+      "solutionPdfPage": 541,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 102,
+      "printedStartCandidate": 499,
+      "printedEndCandidate": 502,
+      "pdfPages": [
+        543,
+        544,
+        545,
+        546
+      ],
+      "solutionPdfPage": 546,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 103,
+      "printedStartCandidate": 503,
+      "printedEndCandidate": 507,
+      "pdfPages": [
+        547,
+        548,
+        549,
+        550,
+        551
+      ],
+      "solutionPdfPage": 550,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 104,
+      "printedStartCandidate": 508,
+      "printedEndCandidate": 512,
+      "pdfPages": [
+        552,
+        553,
+        554,
+        555,
+        556
+      ],
+      "solutionPdfPage": 555,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 105,
+      "printedStartCandidate": 513,
+      "printedEndCandidate": 516,
+      "pdfPages": [
+        557,
+        558,
+        559,
+        560
+      ],
+      "solutionPdfPage": 560,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 106,
+      "printedStartCandidate": 517,
+      "printedEndCandidate": 523,
+      "pdfPages": [
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567
+      ],
+      "solutionPdfPage": 566,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 107,
+      "printedStartCandidate": 524,
+      "printedEndCandidate": 530,
+      "pdfPages": [
+        568,
+        569,
+        570,
+        571,
+        572,
+        573,
+        574
+      ],
+      "solutionPdfPage": 573,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 108,
+      "printedStartCandidate": 531,
+      "printedEndCandidate": 534,
+      "pdfPages": [
+        578,
+        577,
+        576,
+        575
+      ],
+      "solutionPdfPage": 575,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 109,
+      "printedStartCandidate": 535,
+      "printedEndCandidate": 539,
+      "pdfPages": [
+        579,
+        580,
+        581,
+        582,
+        583
+      ],
+      "solutionPdfPage": 581,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 110,
+      "printedStartCandidate": 540,
+      "printedEndCandidate": 544,
+      "pdfPages": [
+        584,
+        585,
+        586,
+        587,
+        588
+      ],
+      "solutionPdfPage": 588,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 111,
+      "printedStartCandidate": 545,
+      "printedEndCandidate": 547,
+      "pdfPages": [
+        589,
+        590,
+        591
+      ],
+      "solutionPdfPage": 591,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 112,
+      "printedStartCandidate": 548,
+      "printedEndCandidate": 552,
+      "pdfPages": [
+        592,
+        593,
+        594,
+        595,
+        596
+      ],
+      "solutionPdfPage": 596,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 113,
+      "printedStartCandidate": 553,
+      "printedEndCandidate": 556,
+      "pdfPages": [
+        597,
+        598,
+        599,
+        600
+      ],
+      "solutionPdfPage": 600,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 114,
+      "printedStartCandidate": 557,
+      "printedEndCandidate": 560,
+      "pdfPages": [
+        601,
+        602,
+        603,
+        604
+      ],
+      "solutionPdfPage": 603,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 115,
+      "printedStartCandidate": 561,
+      "printedEndCandidate": 564,
+      "pdfPages": [
+        605,
+        606,
+        607,
+        608
+      ],
+      "solutionPdfPage": 608,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 116,
+      "printedStartCandidate": 565,
+      "printedEndCandidate": 568,
+      "pdfPages": [
+        609,
+        610,
+        611,
+        612
+      ],
+      "solutionPdfPage": 612,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 117,
+      "printedStartCandidate": 569,
+      "printedEndCandidate": 574,
+      "pdfPages": [
+        613,
+        614,
+        615,
+        616,
+        617,
+        618
+      ],
+      "solutionPdfPage": 617,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 118,
+      "printedStartCandidate": 575,
+      "printedEndCandidate": 579,
+      "pdfPages": [
+        619,
+        620,
+        621,
+        622,
+        623
+      ],
+      "solutionPdfPage": 621,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 119,
+      "printedStartCandidate": 580,
+      "printedEndCandidate": 584,
+      "pdfPages": [
+        624,
+        625,
+        626,
+        627,
+        628
+      ],
+      "solutionPdfPage": 627,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 120,
+      "printedStartCandidate": 585,
+      "printedEndCandidate": 588,
+      "pdfPages": [
+        629,
+        630,
+        631,
+        632
+      ],
+      "solutionPdfPage": 631,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 121,
+      "printedStartCandidate": 589,
+      "printedEndCandidate": 592,
+      "pdfPages": [
+        633,
+        634,
+        635,
+        636
+      ],
+      "solutionPdfPage": 635,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 122,
+      "printedStartCandidate": 593,
+      "printedEndCandidate": 595,
+      "pdfPages": [
+        637,
+        638,
+        639
+      ],
+      "solutionPdfPage": 638,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 123,
+      "printedStartCandidate": 596,
+      "printedEndCandidate": 598,
+      "pdfPages": [
+        640,
+        641,
+        642
+      ],
+      "solutionPdfPage": 642,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 124,
+      "printedStartCandidate": 599,
+      "printedEndCandidate": 602,
+      "pdfPages": [
+        643,
+        644,
+        645,
+        646
+      ],
+      "solutionPdfPage": 645,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 125,
+      "printedStartCandidate": 603,
+      "printedEndCandidate": 605,
+      "pdfPages": [
+        647,
+        648,
+        649
+      ],
+      "solutionPdfPage": 649,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 126,
+      "printedStartCandidate": 606,
+      "printedEndCandidate": 609,
+      "pdfPages": [
+        650,
+        651,
+        652,
+        653
+      ],
+      "solutionPdfPage": 651,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 127,
+      "printedStartCandidate": 610,
+      "printedEndCandidate": 613,
+      "pdfPages": [
+        654,
+        655,
+        656,
+        657
+      ],
+      "solutionPdfPage": 657,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 128,
+      "printedStartCandidate": 614,
+      "printedEndCandidate": 617,
+      "pdfPages": [
+        658,
+        659,
+        660,
+        661
+      ],
+      "solutionPdfPage": 661,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 129,
+      "printedStartCandidate": 618,
+      "printedEndCandidate": 621,
+      "pdfPages": [
+        662,
+        663,
+        664,
+        665
+      ],
+      "solutionPdfPage": 665,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 130,
+      "printedStartCandidate": 622,
+      "printedEndCandidate": 626,
+      "pdfPages": [
+        666,
+        667,
+        668,
+        669,
+        670
+      ],
+      "solutionPdfPage": 669,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 131,
+      "printedStartCandidate": 627,
+      "printedEndCandidate": 631,
+      "pdfPages": [
+        671,
+        672,
+        673,
+        674,
+        675
+      ],
+      "solutionPdfPage": 674,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 132,
+      "printedStartCandidate": 632,
+      "printedEndCandidate": 636,
+      "pdfPages": [
+        676,
+        677,
+        678,
+        679,
+        680
+      ],
+      "solutionPdfPage": 679,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 133,
+      "printedStartCandidate": 637,
+      "printedEndCandidate": 640,
+      "pdfPages": [
+        681,
+        682,
+        683,
+        684
+      ],
+      "solutionPdfPage": 683,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 134,
+      "printedStartCandidate": 641,
+      "printedEndCandidate": 643,
+      "pdfPages": [
+        685,
+        686,
+        687
+      ],
+      "solutionPdfPage": null,
+      "missingPrintedPages": [],
+      "reviewBasis": "available-body-needs-review"
+    },
+    {
+      "id": 135,
+      "printedStartCandidate": 644,
+      "printedEndCandidate": 647,
+      "pdfPages": [
+        688,
+        689,
+        690,
+        691
+      ],
+      "solutionPdfPage": 690,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 136,
+      "printedStartCandidate": 648,
+      "printedEndCandidate": 650,
+      "pdfPages": [
+        692,
+        693,
+        694
+      ],
+      "solutionPdfPage": 694,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 137,
+      "printedStartCandidate": 651,
+      "printedEndCandidate": 655,
+      "pdfPages": [
+        695,
+        696,
+        697,
+        698,
+        699
+      ],
+      "solutionPdfPage": 698,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 138,
+      "printedStartCandidate": 656,
+      "printedEndCandidate": 659,
+      "pdfPages": [
+        700,
+        701,
+        702,
+        703
+      ],
+      "solutionPdfPage": 703,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 139,
+      "printedStartCandidate": 660,
+      "printedEndCandidate": 663,
+      "pdfPages": [
+        704,
+        705,
+        706,
+        707
+      ],
+      "solutionPdfPage": 706,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 140,
+      "printedStartCandidate": 664,
+      "printedEndCandidate": 667,
+      "pdfPages": [
+        708,
+        709,
+        710,
+        711
+      ],
+      "solutionPdfPage": 711,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 141,
+      "printedStartCandidate": 668,
+      "printedEndCandidate": 672,
+      "pdfPages": [
+        712,
+        713,
+        714,
+        715,
+        716
+      ],
+      "solutionPdfPage": 715,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 142,
+      "printedStartCandidate": 673,
+      "printedEndCandidate": 675,
+      "pdfPages": [
+        717,
+        718,
+        719
+      ],
+      "solutionPdfPage": 718,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 143,
+      "printedStartCandidate": 676,
+      "printedEndCandidate": 680,
+      "pdfPages": [
+        720,
+        721,
+        722,
+        723,
+        724
+      ],
+      "solutionPdfPage": 723,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 144,
+      "printedStartCandidate": 681,
+      "printedEndCandidate": 686,
+      "pdfPages": [
+        725,
+        726,
+        727,
+        728,
+        729,
+        730
+      ],
+      "solutionPdfPage": 729,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 145,
+      "printedStartCandidate": 687,
+      "printedEndCandidate": 689,
+      "pdfPages": [
+        731,
+        732,
+        733
+      ],
+      "solutionPdfPage": 732,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 146,
+      "printedStartCandidate": 690,
+      "printedEndCandidate": 695,
+      "pdfPages": [
+        734,
+        735,
+        736,
+        737,
+        738,
+        739
+      ],
+      "solutionPdfPage": 738,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 147,
+      "printedStartCandidate": 696,
+      "printedEndCandidate": 700,
+      "pdfPages": [
+        740,
+        741,
+        742,
+        743,
+        744
+      ],
+      "solutionPdfPage": 743,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 148,
+      "printedStartCandidate": 701,
+      "printedEndCandidate": 704,
+      "pdfPages": [
+        745,
+        746,
+        747,
+        748
+      ],
+      "solutionPdfPage": 747,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 149,
+      "printedStartCandidate": 705,
+      "printedEndCandidate": 706,
+      "pdfPages": [
+        749,
+        750
+      ],
+      "solutionPdfPage": 750,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 150,
+      "printedStartCandidate": 707,
+      "printedEndCandidate": 711,
+      "pdfPages": [
+        751,
+        752,
+        753,
+        754,
+        755
+      ],
+      "solutionPdfPage": 754,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 151,
+      "printedStartCandidate": 712,
+      "printedEndCandidate": 716,
+      "pdfPages": [
+        756,
+        757,
+        758,
+        759,
+        760
+      ],
+      "solutionPdfPage": 759,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 152,
+      "printedStartCandidate": 717,
+      "printedEndCandidate": 719,
+      "pdfPages": [
+        761,
+        762,
+        763
+      ],
+      "solutionPdfPage": 762,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 153,
+      "printedStartCandidate": 720,
+      "printedEndCandidate": 722,
+      "pdfPages": [
+        764,
+        765,
+        766
+      ],
+      "solutionPdfPage": 766,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 154,
+      "printedStartCandidate": 723,
+      "printedEndCandidate": 728,
+      "pdfPages": [
+        767,
+        768,
+        769,
+        770,
+        771,
+        772
+      ],
+      "solutionPdfPage": 771,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 155,
+      "printedStartCandidate": 729,
+      "printedEndCandidate": 732,
+      "pdfPages": [
+        773,
+        774,
+        775,
+        776
+      ],
+      "solutionPdfPage": 775,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 156,
+      "printedStartCandidate": 733,
+      "printedEndCandidate": 736,
+      "pdfPages": [
+        777,
+        778,
+        779,
+        780
+      ],
+      "solutionPdfPage": 779,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 157,
+      "printedStartCandidate": 737,
+      "printedEndCandidate": 739,
+      "pdfPages": [
+        781,
+        782,
+        783
+      ],
+      "solutionPdfPage": 783,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 158,
+      "printedStartCandidate": 740,
+      "printedEndCandidate": 745,
+      "pdfPages": [
+        784,
+        785,
+        786,
+        787,
+        788,
+        789
+      ],
+      "solutionPdfPage": 788,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 159,
+      "printedStartCandidate": 746,
+      "printedEndCandidate": 751,
+      "pdfPages": [
+        790,
+        791,
+        792,
+        793,
+        794,
+        795
+      ],
+      "solutionPdfPage": 794,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 160,
+      "printedStartCandidate": 752,
+      "printedEndCandidate": 756,
+      "pdfPages": [
+        796,
+        797,
+        798,
+        799,
+        800
+      ],
+      "solutionPdfPage": 799,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 161,
+      "printedStartCandidate": 757,
+      "printedEndCandidate": 760,
+      "pdfPages": [
+        801,
+        802,
+        803,
+        804
+      ],
+      "solutionPdfPage": 803,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 162,
+      "printedStartCandidate": 761,
+      "printedEndCandidate": 763,
+      "pdfPages": [
+        805,
+        806,
+        807
+      ],
+      "solutionPdfPage": 806,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 163,
+      "printedStartCandidate": 764,
+      "printedEndCandidate": 768,
+      "pdfPages": [
+        808,
+        809,
+        810,
+        812
+      ],
+      "solutionPdfPage": null,
+      "missingPrintedPages": [
+        767
+      ],
+      "reviewBasis": "available-body-needs-review"
+    },
+    {
+      "id": 164,
+      "printedStartCandidate": 769,
+      "printedEndCandidate": 772,
+      "pdfPages": [
+        813,
+        814,
+        815,
+        816
+      ],
+      "solutionPdfPage": 816,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 165,
+      "printedStartCandidate": 773,
+      "printedEndCandidate": 776,
+      "pdfPages": [
+        817,
+        818,
+        819,
+        820
+      ],
+      "solutionPdfPage": 820,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 166,
+      "printedStartCandidate": 777,
+      "printedEndCandidate": 780,
+      "pdfPages": [
+        821,
+        822,
+        823,
+        824
+      ],
+      "solutionPdfPage": 824,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 167,
+      "printedStartCandidate": 781,
+      "printedEndCandidate": 784,
+      "pdfPages": [
+        825,
+        826,
+        827,
+        828
+      ],
+      "solutionPdfPage": 828,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 168,
+      "printedStartCandidate": 785,
+      "printedEndCandidate": 789,
+      "pdfPages": [
+        829,
+        830,
+        831,
+        832,
+        833
+      ],
+      "solutionPdfPage": 831,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 169,
+      "printedStartCandidate": 790,
+      "printedEndCandidate": 793,
+      "pdfPages": [
+        834,
+        835,
+        836,
+        837
+      ],
+      "solutionPdfPage": 836,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 170,
+      "printedStartCandidate": 794,
+      "printedEndCandidate": 796,
+      "pdfPages": [
+        838,
+        839,
+        840
+      ],
+      "solutionPdfPage": 840,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 171,
+      "printedStartCandidate": 797,
+      "printedEndCandidate": 800,
+      "pdfPages": [
+        841,
+        842,
+        843,
+        844
+      ],
+      "solutionPdfPage": 844,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 172,
+      "printedStartCandidate": 801,
+      "printedEndCandidate": 804,
+      "pdfPages": [
+        845,
+        846,
+        847,
+        848
+      ],
+      "solutionPdfPage": 847,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 173,
+      "printedStartCandidate": 805,
+      "printedEndCandidate": 808,
+      "pdfPages": [
+        849,
+        850,
+        851,
+        852
+      ],
+      "solutionPdfPage": 851,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 174,
+      "printedStartCandidate": 809,
+      "printedEndCandidate": 811,
+      "pdfPages": [
+        853,
+        854,
+        855
+      ],
+      "solutionPdfPage": 855,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 175,
+      "printedStartCandidate": 812,
+      "printedEndCandidate": 814,
+      "pdfPages": [
+        856,
+        857,
+        858
+      ],
+      "solutionPdfPage": 858,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 176,
+      "printedStartCandidate": 815,
+      "printedEndCandidate": 817,
+      "pdfPages": [
+        859,
+        860,
+        861
+      ],
+      "solutionPdfPage": 861,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 177,
+      "printedStartCandidate": 818,
+      "printedEndCandidate": 821,
+      "pdfPages": [
+        862,
+        863,
+        864,
+        865
+      ],
+      "solutionPdfPage": 864,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 178,
+      "printedStartCandidate": 822,
+      "printedEndCandidate": 827,
+      "pdfPages": [
+        866,
+        867,
+        868,
+        869,
+        870,
+        871
+      ],
+      "solutionPdfPage": 869,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 179,
+      "printedStartCandidate": 828,
+      "printedEndCandidate": 832,
+      "pdfPages": [
+        872,
+        873,
+        874,
+        875,
+        876
+      ],
+      "solutionPdfPage": 876,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 180,
+      "printedStartCandidate": 833,
+      "printedEndCandidate": 837,
+      "pdfPages": [
+        877,
+        878,
+        879,
+        880,
+        881
+      ],
+      "solutionPdfPage": 881,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 181,
+      "printedStartCandidate": 838,
+      "printedEndCandidate": 843,
+      "pdfPages": [
+        882,
+        883,
+        884,
+        885,
+        886,
+        887
+      ],
+      "solutionPdfPage": 886,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 182,
+      "printedStartCandidate": 844,
+      "printedEndCandidate": 845,
+      "pdfPages": [
+        888,
+        889
+      ],
+      "solutionPdfPage": 888,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 183,
+      "printedStartCandidate": 846,
+      "printedEndCandidate": 852,
+      "pdfPages": [
+        890,
+        891,
+        892,
+        893,
+        894,
+        895,
+        896
+      ],
+      "solutionPdfPage": 895,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 184,
+      "printedStartCandidate": 853,
+      "printedEndCandidate": 856,
+      "pdfPages": [
+        897,
+        898,
+        899,
+        900
+      ],
+      "solutionPdfPage": 899,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 185,
+      "printedStartCandidate": 857,
+      "printedEndCandidate": 860,
+      "pdfPages": [
+        901,
+        902,
+        903,
+        904
+      ],
+      "solutionPdfPage": 903,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 186,
+      "printedStartCandidate": 861,
+      "printedEndCandidate": 863,
+      "pdfPages": [
+        905,
+        906,
+        907
+      ],
+      "solutionPdfPage": null,
+      "missingPrintedPages": [],
+      "reviewBasis": "available-body-needs-review"
+    },
+    {
+      "id": 187,
+      "printedStartCandidate": 864,
+      "printedEndCandidate": 867,
+      "pdfPages": [
+        908,
+        909,
+        910,
+        911
+      ],
+      "solutionPdfPage": 911,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 188,
+      "printedStartCandidate": 868,
+      "printedEndCandidate": 871,
+      "pdfPages": [
+        912,
+        913,
+        914,
+        915
+      ],
+      "solutionPdfPage": 914,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 189,
+      "printedStartCandidate": 872,
+      "printedEndCandidate": 875,
+      "pdfPages": [
+        916,
+        917,
+        918,
+        919
+      ],
+      "solutionPdfPage": 918,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 190,
+      "printedStartCandidate": 876,
+      "printedEndCandidate": 882,
+      "pdfPages": [
+        920,
+        921,
+        922,
+        923,
+        924,
+        925,
+        926
+      ],
+      "solutionPdfPage": 925,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 191,
+      "printedStartCandidate": 883,
+      "printedEndCandidate": 888,
+      "pdfPages": [
+        927,
+        928,
+        929,
+        930,
+        931,
+        932
+      ],
+      "solutionPdfPage": 932,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 192,
+      "printedStartCandidate": 889,
+      "printedEndCandidate": 892,
+      "pdfPages": [
+        933,
+        934,
+        935,
+        936
+      ],
+      "solutionPdfPage": 936,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 193,
+      "printedStartCandidate": 893,
+      "printedEndCandidate": 896,
+      "pdfPages": [
+        937,
+        938,
+        939,
+        940
+      ],
+      "solutionPdfPage": 939,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 194,
+      "printedStartCandidate": 897,
+      "printedEndCandidate": 899,
+      "pdfPages": [
+        941,
+        942,
+        943
+      ],
+      "solutionPdfPage": 942,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 195,
+      "printedStartCandidate": 900,
+      "printedEndCandidate": 903,
+      "pdfPages": [
+        944,
+        945,
+        946,
+        947
+      ],
+      "solutionPdfPage": 947,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 196,
+      "printedStartCandidate": 904,
+      "printedEndCandidate": 907,
+      "pdfPages": [
+        948,
+        949,
+        950,
+        951
+      ],
+      "solutionPdfPage": 949,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 197,
+      "printedStartCandidate": 908,
+      "printedEndCandidate": 912,
+      "pdfPages": [
+        952,
+        953,
+        954,
+        955,
+        956
+      ],
+      "solutionPdfPage": 955,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 198,
+      "printedStartCandidate": 913,
+      "printedEndCandidate": 915,
+      "pdfPages": [
+        957,
+        958,
+        959
+      ],
+      "solutionPdfPage": 959,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 199,
+      "printedStartCandidate": 916,
+      "printedEndCandidate": 918,
+      "pdfPages": [
+        960,
+        961,
+        962
+      ],
+      "solutionPdfPage": 962,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 200,
+      "printedStartCandidate": 919,
+      "printedEndCandidate": 921,
+      "pdfPages": [
+        963,
+        964,
+        965
+      ],
+      "solutionPdfPage": 965,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 201,
+      "printedStartCandidate": 922,
+      "printedEndCandidate": 923,
+      "pdfPages": [
+        966,
+        967
+      ],
+      "solutionPdfPage": null,
+      "missingPrintedPages": [],
+      "reviewBasis": "available-body-needs-review"
+    },
+    {
+      "id": 202,
+      "printedStartCandidate": 924,
+      "printedEndCandidate": 926,
+      "pdfPages": [
+        968,
+        969,
+        970
+      ],
+      "solutionPdfPage": 970,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 203,
+      "printedStartCandidate": 927,
+      "printedEndCandidate": 929,
+      "pdfPages": [
+        971,
+        972,
+        973
+      ],
+      "solutionPdfPage": 972,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 204,
+      "printedStartCandidate": 930,
+      "printedEndCandidate": 939,
+      "pdfPages": [
+        974,
+        975,
+        976,
+        977,
+        978,
+        979,
+        980,
+        981,
+        982,
+        983
+      ],
+      "solutionPdfPage": 975,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 205,
+      "printedStartCandidate": 940,
+      "printedEndCandidate": 945,
+      "pdfPages": [
+        984,
+        985,
+        986,
+        987,
+        988,
+        989
+      ],
+      "solutionPdfPage": null,
+      "missingPrintedPages": [],
+      "reviewBasis": "available-body-needs-review"
+    },
+    {
+      "id": 206,
+      "printedStartCandidate": 946,
+      "printedEndCandidate": 954,
+      "pdfPages": [
+        990,
+        991,
+        992,
+        993,
+        994,
+        995,
+        996,
+        997,
+        998
+      ],
+      "solutionPdfPage": 997,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 207,
+      "printedStartCandidate": 955,
+      "printedEndCandidate": 961,
+      "pdfPages": [
+        999,
+        1000,
+        1001,
+        1002,
+        1003,
+        1004,
+        1005
+      ],
+      "solutionPdfPage": 1004,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 208,
+      "printedStartCandidate": 962,
+      "printedEndCandidate": 969,
+      "pdfPages": [
+        1006,
+        1007,
+        1008,
+        1009,
+        1010,
+        1011,
+        1012,
+        1013
+      ],
+      "solutionPdfPage": 1012,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 209,
+      "printedStartCandidate": 970,
+      "printedEndCandidate": 977,
+      "pdfPages": [
+        1014,
+        1015,
+        1016,
+        1017,
+        1018,
+        1019,
+        1020,
+        1021
+      ],
+      "solutionPdfPage": 1020,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 210,
+      "printedStartCandidate": 978,
+      "printedEndCandidate": 982,
+      "pdfPages": [
+        1022,
+        1023,
+        1024,
+        1025,
+        1026
+      ],
+      "solutionPdfPage": 1025,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 211,
+      "printedStartCandidate": 983,
+      "printedEndCandidate": 988,
+      "pdfPages": [
+        1027,
+        1028,
+        1029,
+        1030,
+        1031,
+        1032
+      ],
+      "solutionPdfPage": 1031,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 212,
+      "printedStartCandidate": 989,
+      "printedEndCandidate": 994,
+      "pdfPages": [
+        1033,
+        1034,
+        1035,
+        1036,
+        1037,
+        1038
+      ],
+      "solutionPdfPage": 1037,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 213,
+      "printedStartCandidate": 995,
+      "printedEndCandidate": 1005,
+      "pdfPages": [
+        1039,
+        1040,
+        1041,
+        1042,
+        1043,
+        1044,
+        1045,
+        1046,
+        1047,
+        1048,
+        1049
+      ],
+      "solutionPdfPage": 1047,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 214,
+      "printedStartCandidate": 1006,
+      "printedEndCandidate": 1008,
+      "pdfPages": [
+        1050,
+        1051,
+        1052
+      ],
+      "solutionPdfPage": null,
+      "missingPrintedPages": [],
+      "reviewBasis": "available-body-needs-review"
+    },
+    {
+      "id": 215,
+      "printedStartCandidate": 1009,
+      "printedEndCandidate": 1011,
+      "pdfPages": [
+        1053,
+        1054,
+        1055
+      ],
+      "solutionPdfPage": 1054,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 216,
+      "printedStartCandidate": 1012,
+      "printedEndCandidate": 1017,
+      "pdfPages": [
+        1056,
+        1057,
+        1058,
+        1059,
+        1060,
+        1061
+      ],
+      "solutionPdfPage": 1060,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 217,
+      "printedStartCandidate": 1018,
+      "printedEndCandidate": 1022,
+      "pdfPages": [
+        1062,
+        1063,
+        1064,
+        1065,
+        1066
+      ],
+      "solutionPdfPage": 1065,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 218,
+      "printedStartCandidate": 1023,
+      "printedEndCandidate": 1026,
+      "pdfPages": [
+        1067,
+        1068,
+        1069,
+        1070
+      ],
+      "solutionPdfPage": 1069,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 219,
+      "printedStartCandidate": 1027,
+      "printedEndCandidate": 1035,
+      "pdfPages": [
+        1071,
+        1072,
+        1073,
+        1074,
+        1075,
+        1076,
+        1077,
+        1078,
+        1079
+      ],
+      "solutionPdfPage": 1079,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 220,
+      "printedStartCandidate": 1036,
+      "printedEndCandidate": 1045,
+      "pdfPages": [
+        1080,
+        1081,
+        1082,
+        1083,
+        1084,
+        1085,
+        1086,
+        1087,
+        1088,
+        1089
+      ],
+      "solutionPdfPage": 1087,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 221,
+      "printedStartCandidate": 1046,
+      "printedEndCandidate": 1049,
+      "pdfPages": [
+        1090,
+        1091,
+        1092,
+        1093
+      ],
+      "solutionPdfPage": 1092,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 222,
+      "printedStartCandidate": 1050,
+      "printedEndCandidate": 1052,
+      "pdfPages": [
+        1094,
+        1095,
+        1096
+      ],
+      "solutionPdfPage": 1096,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 223,
+      "printedStartCandidate": 1053,
+      "printedEndCandidate": 1055,
+      "pdfPages": [
+        1097,
+        1098,
+        1099
+      ],
+      "solutionPdfPage": 1099,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 224,
+      "printedStartCandidate": 1056,
+      "printedEndCandidate": 1058,
+      "pdfPages": [
+        1100,
+        1101,
+        1102
+      ],
+      "solutionPdfPage": 1101,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 225,
+      "printedStartCandidate": 1059,
+      "printedEndCandidate": 1063,
+      "pdfPages": [
+        1103,
+        1104,
+        1105,
+        1106,
+        1107
+      ],
+      "solutionPdfPage": 1106,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 226,
+      "printedStartCandidate": 1064,
+      "printedEndCandidate": 1067,
+      "pdfPages": [
+        1108,
+        1109,
+        1110,
+        1111
+      ],
+      "solutionPdfPage": 1111,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 227,
+      "printedStartCandidate": 1068,
+      "printedEndCandidate": 1072,
+      "pdfPages": [
+        1112,
+        1113,
+        1114,
+        1115,
+        1116
+      ],
+      "solutionPdfPage": 1115,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 228,
+      "printedStartCandidate": 1073,
+      "printedEndCandidate": 1075,
+      "pdfPages": [
+        1117,
+        1118,
+        1119
+      ],
+      "solutionPdfPage": 1118,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 229,
+      "printedStartCandidate": 1076,
+      "printedEndCandidate": 1077,
+      "pdfPages": [
+        1120,
+        1121
+      ],
+      "solutionPdfPage": 1121,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 230,
+      "printedStartCandidate": 1078,
+      "printedEndCandidate": 1080,
+      "pdfPages": [
+        1122,
+        1123,
+        1124
+      ],
+      "solutionPdfPage": 1124,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 231,
+      "printedStartCandidate": 1081,
+      "printedEndCandidate": 1083,
+      "pdfPages": [
+        1125,
+        1126,
+        1127
+      ],
+      "solutionPdfPage": 1127,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 232,
+      "printedStartCandidate": 1084,
+      "printedEndCandidate": 1087,
+      "pdfPages": [
+        1128,
+        1129,
+        1130,
+        1131
+      ],
+      "solutionPdfPage": 1130,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 233,
+      "printedStartCandidate": 1088,
+      "printedEndCandidate": 1092,
+      "pdfPages": [
+        1132,
+        1133,
+        1134,
+        1135,
+        1136
+      ],
+      "solutionPdfPage": 1135,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 234,
+      "printedStartCandidate": 1093,
+      "printedEndCandidate": 1095,
+      "pdfPages": [
+        1137,
+        1138,
+        1139
+      ],
+      "solutionPdfPage": 1139,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 235,
+      "printedStartCandidate": 1096,
+      "printedEndCandidate": 1099,
+      "pdfPages": [
+        1140,
+        1141,
+        1142,
+        1143
+      ],
+      "solutionPdfPage": 1142,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 236,
+      "printedStartCandidate": 1100,
+      "printedEndCandidate": 1102,
+      "pdfPages": [
+        1144,
+        1145,
+        1146
+      ],
+      "solutionPdfPage": 1146,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 237,
+      "printedStartCandidate": 1103,
+      "printedEndCandidate": 1104,
+      "pdfPages": [
+        1147,
+        1148
+      ],
+      "solutionPdfPage": 1147,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 238,
+      "printedStartCandidate": 1105,
+      "printedEndCandidate": 1107,
+      "pdfPages": [
+        1149,
+        1150,
+        1151
+      ],
+      "solutionPdfPage": 1151,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 239,
+      "printedStartCandidate": 1108,
+      "printedEndCandidate": 1111,
+      "pdfPages": [
+        1152,
+        1153,
+        1154,
+        1155
+      ],
+      "solutionPdfPage": 1155,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 240,
+      "printedStartCandidate": 1112,
+      "printedEndCandidate": 1117,
+      "pdfPages": [
+        1156,
+        1157,
+        1158,
+        1159,
+        1160,
+        1161
+      ],
+      "solutionPdfPage": 1159,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 241,
+      "printedStartCandidate": 1118,
+      "printedEndCandidate": 1120,
+      "pdfPages": [
+        1162,
+        1163,
+        1164
+      ],
+      "solutionPdfPage": 1164,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 242,
+      "printedStartCandidate": 1121,
+      "printedEndCandidate": 1123,
+      "pdfPages": [
+        1165,
+        1166,
+        1167
+      ],
+      "solutionPdfPage": 1167,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 243,
+      "printedStartCandidate": 1124,
+      "printedEndCandidate": 1127,
+      "pdfPages": [
+        1168,
+        1169,
+        1170,
+        1171
+      ],
+      "solutionPdfPage": 1170,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 244,
+      "printedStartCandidate": 1128,
+      "printedEndCandidate": 1131,
+      "pdfPages": [
+        1172,
+        1173,
+        1174,
+        1175
+      ],
+      "solutionPdfPage": 1174,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 245,
+      "printedStartCandidate": 1132,
+      "printedEndCandidate": 1134,
+      "pdfPages": [
+        1176,
+        1177,
+        1178
+      ],
+      "solutionPdfPage": 1178,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 246,
+      "printedStartCandidate": 1135,
+      "printedEndCandidate": 1137,
+      "pdfPages": [
+        1179,
+        1180,
+        1181
+      ],
+      "solutionPdfPage": 1181,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 247,
+      "printedStartCandidate": 1138,
+      "printedEndCandidate": 1140,
+      "pdfPages": [
+        1182,
+        1183,
+        1184
+      ],
+      "solutionPdfPage": 1183,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 248,
+      "printedStartCandidate": 1141,
+      "printedEndCandidate": 1145,
+      "pdfPages": [
+        1185,
+        1186,
+        1187,
+        1188,
+        1189
+      ],
+      "solutionPdfPage": 1188,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 249,
+      "printedStartCandidate": 1146,
+      "printedEndCandidate": 1152,
+      "pdfPages": [
+        1190,
+        1191,
+        1192,
+        1193,
+        1194,
+        1195,
+        1196
+      ],
+      "solutionPdfPage": 1195,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 250,
+      "printedStartCandidate": 1153,
+      "printedEndCandidate": 1156,
+      "pdfPages": [
+        1197,
+        1198,
+        1199,
+        1200
+      ],
+      "solutionPdfPage": 1200,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 251,
+      "printedStartCandidate": 1157,
+      "printedEndCandidate": 1159,
+      "pdfPages": [
+        1201,
+        1202,
+        1203
+      ],
+      "solutionPdfPage": 1203,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 252,
+      "printedStartCandidate": 1160,
+      "printedEndCandidate": 1163,
+      "pdfPages": [
+        1204,
+        1205,
+        1206,
+        1207
+      ],
+      "solutionPdfPage": 1206,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    {
+      "id": 253,
+      "printedStartCandidate": 1164,
+      "printedEndCandidate": 1166,
+      "pdfPages": [
+        1208,
+        1209,
+        1210
+      ],
+      "solutionPdfPage": 1210,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    }
+  ]
+}

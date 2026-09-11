@@ -1,3 +1,4 @@
+import {groupFor,encodeAtlas} from './atlas/compose.js';
 import {patterns, SOURCE} from './data/patterns.js';
 import {normalize, defaults, encode, decode, buildScene} from './model.js';
 import {renderScene} from './scene.js';
@@ -47,7 +48,7 @@ function renderList(){
 }
 function detail(){
  const p=patterns.find(p=>p.id===focus), entry=catalog.find(c=>c.id===focus);
- $('pattern-detail').innerHTML=`<div class="pattern-id">${p.id}</div><h3 class="detail-title">${p.zh}</h3><p class="detail-en">${esc(entry?.name||'A PATTERN LANGUAGE')}</p><p class="detail-question">${p.question}</p><p class="detail-idea">${p.idea}</p><div class="effect"><strong>${state.ids.includes(p.id)?'已应用 ·':'未应用 · 勾选后'} 模型中的变化</strong><p>${p.effect}</p></div><p class="tradeoff">${p.tradeoff}</p><span class="related-label">可一起探索 · 项目组合建议</span><div class="related">${p.related.map(id=>`<button data-focus="${id}">${id} ${patterns.find(p=>p.id===id).zh}</button>`).join('')}</div>`;
+ $('pattern-detail').innerHTML=`<div class="pattern-id">${p.id}</div><h3 class="detail-title">${p.zh}</h3><p class="detail-en">${esc(entry?.name||'A PATTERN LANGUAGE')}</p><p class="detail-question">${p.question}</p><p class="detail-idea">${p.idea}</p><div class="effect"><strong>${state.ids.includes(p.id)?'已应用 ·':'未应用 · 勾选后'} 模型中的变化</strong><p>${p.effect}</p></div><p class="tradeoff">${p.tradeoff}</p><p><a class="text-link" href="./${encodeAtlas({group:groupFor(p.id).key,ids:[p.id],focus:p.id,view:'single'})}">查看原书概括、页码与完整图解 ↗</a></p><span class="related-label">可一起探索 · 项目组合建议</span><div class="related">${p.related.map(id=>`<button data-focus="${id}">${id} ${patterns.find(p=>p.id===id).zh}</button>`).join('')}</div>`;
 }
 function controls(){
  for(const key of ['width','depth','court','seat']){$(key).value=state[key];$(key+'-out').textContent=state[key]+' m';}
