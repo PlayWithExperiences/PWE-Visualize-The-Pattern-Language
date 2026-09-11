@@ -1,5 +1,5 @@
-import {patterns} from './data/patterns.js?v=d42f0eca304c';
-import {normalizeSun,defaultSun} from './sun.js?v=d42f0eca304c';
+import {patterns} from './data/patterns.js?v=e1f7a13264b8';
+import {normalizeSun,defaultSun} from './sun.js?v=e1f7a13264b8';
 export const allowed = patterns.map(p=>p.id);
 export const defaults = {ids:[105,106,112,115,163,171,180],width:12,depth:10,court:4,seat:0.65,sun:defaultSun};
 const clamp=(n,a,b,f)=>Number.isFinite(Number(n))?Math.min(b,Math.max(a,Number(n))):f;
@@ -80,7 +80,7 @@ export function buildScene(raw){
   add(2,3,.15,1.8,.85,.55,'#c1b19a',0,'furniture');
   if(has(251)){chair(4.05,1.65,'e',1,251);chair(4.05,3.15,'e',2,251);}
  }
- add(w-3.3,has(139)?.55:1.1,.15,2,2,.45,'#c8bda9',0,'furniture');add(w-3.15,has(139)?.65:1.2,.6,1.7,.55,.12,'#eee9dc',0,'furniture');
+ add(w-3.3,1.1,.15,2,2,.45,'#c8bda9',0,'furniture');add(w-3.15,1.2,.6,1.7,.55,.12,'#eee9dc',0,'furniture');
  if(has(127)){
   add(w*.53,.2,.15,.16,2.7,2.1,wall,127,'partition');
   if(d-c>4)add(w*.53,4,.15,.16,d-c-4,2.1,wall,127,'partition');
@@ -113,10 +113,10 @@ export function buildScene(raw){
  }
  if(has(180))add(4.1,.25,.15,2,seat,.5,wood,180,'window-seat');
  if(has(139)){
-  add(w-3.4,3.25,.15,2.8,.55,.74,'#c8bda9',139,'furniture');
-  add(w-3.45,3.2,.89,2.9,.65,.08,stone,139,'furniture');
-  add(w-3.1,3.33,.975,.6,.38,.015,'#647b7a',139,'furniture');
-  for(const xx of [w-1.65,w-1.28])add(xx,3.36,.975,.24,.28,.015,'#535950',139,'furniture');
+  add(.4,.3,.15,2.8,.55,.74,'#c8bda9',139,'furniture');
+  add(.35,.25,.89,2.9,.65,.08,stone,139,'furniture');
+  add(.7,.38,.975,.6,.38,.015,'#647b7a',139,'furniture');
+  for(const xx of [2.15,2.52])add(xx,.41,.975,.24,.28,.015,'#535950',139,'furniture');
  }
  if(has(139)||has(147)){
   const id=has(147)?147:139,tableWidth=has(147)?2:1.4,tableDepth=has(147)?1.2:.85;

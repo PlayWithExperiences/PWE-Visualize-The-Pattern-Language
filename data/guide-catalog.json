@@ -1,0 +1,6768 @@
+[
+  {
+    "id": 1,
+    "name": "INDEPENDENT REGIONS",
+    "scale": "town",
+    "zh": "独立的区域",
+    "problem": "集中在巨大国家层级的决策，如何回应各地不同的生活条件？",
+    "principle": "原书设想具有自然边界、地方经济和自治能力的区域，由区域直接参与更大的协作体系。",
+    "rule": "regionalAutonomy",
+    "value": true,
+    "group": "region",
+    "source": {
+      "id": 1,
+      "printedStartCandidate": 10,
+      "printedEndCandidate": 15,
+      "pdfPages": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "solutionPdfPage": 58,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 2,
+    "name": "THE DISTRIBUTION OF TOWNS",
+    "scale": "town",
+    "zh": "城镇的分布",
+    "problem": "人口和机会怎样避免只集中于少数大城市？",
+    "principle": "在区域内形成大小不同、同一规模又分布均匀的城镇体系，让多种规模的聚落共同承载人口。",
+    "rule": "distributedSettlementSizes",
+    "value": true,
+    "group": "region",
+    "source": {
+      "id": 2,
+      "printedStartCandidate": 16,
+      "printedEndCandidate": 20,
+      "pdfPages": [
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "solutionPdfPage": 63,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 3,
+    "name": "CITY COUNTRY FINGERS",
+    "scale": "town",
+    "zh": "城乡交织的指状地带",
+    "problem": "城市变大以后，人们如何仍能接近乡野？",
+    "principle": "使建成区与农业绿地像手指一样交错延伸，让城市内部也保有连续的乡野通道。",
+    "rule": "interlockingLandFingers",
+    "value": true,
+    "group": "region",
+    "source": {
+      "id": 3,
+      "printedStartCandidate": 21,
+      "printedEndCandidate": 25,
+      "pdfPages": [
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "solutionPdfPage": 69,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 4,
+    "name": "AGRICULTURAL VALLEYS",
+    "scale": "town",
+    "zh": "农业山谷",
+    "problem": "肥沃谷地被建成区占据后，如何维持区域的农业基础？",
+    "principle": "保护农业谷地，把城市发展引向适宜的山坡和高地；暂未耕作的肥沃土地也保留农业潜力。",
+    "rule": "protectValleys",
+    "value": true,
+    "group": "region",
+    "source": {
+      "id": 4,
+      "printedStartCandidate": 26,
+      "printedEndCandidate": 28,
+      "pdfPages": [
+        70,
+        71,
+        72
+      ],
+      "solutionPdfPage": 71,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 5,
+    "name": "LACE OF COUNTRY STREETS",
+    "scale": "town",
+    "zh": "乡间道路的网带",
+    "problem": "城乡交界处怎样同时容纳住宅与连续农地？",
+    "principle": "用间隔较大的乡间道路围合大片农地，住宅沿路只布置一层地块，后方继续连接开阔土地。",
+    "rule": "countryRoadLace",
+    "value": true,
+    "group": "region",
+    "source": {
+      "id": 5,
+      "printedStartCandidate": 29,
+      "printedEndCandidate": 32,
+      "pdfPages": [
+        73,
+        74,
+        75,
+        76
+      ],
+      "solutionPdfPage": 75,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 6,
+    "name": "COUNTRY TOWNS",
+    "scale": "town",
+    "zh": "乡村小镇",
+    "problem": "小镇怎样避免沦为大城市的睡眠卫星？",
+    "principle": "让小镇保持乡野环绕和相互间隔，并具有本地产业与日常服务，支持完整生活。",
+    "rule": "selfContainedTowns",
+    "value": true,
+    "group": "region",
+    "source": {
+      "id": 6,
+      "printedStartCandidate": 33,
+      "printedEndCandidate": 35,
+      "pdfPages": [
+        77,
+        78,
+        79
+      ],
+      "solutionPdfPage": 79,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 7,
+    "name": "THE COUNTRYSIDE",
+    "scale": "town",
+    "zh": "乡野",
+    "problem": "乡野如何既有人照料，又能让公众接近？",
+    "principle": "以负责任的土地托管连接农业生产、生态照料和公共访问；访问者遵守当地使用规则。",
+    "rule": "countrysideStewardship",
+    "value": true,
+    "group": "region",
+    "source": {
+      "id": 7,
+      "printedStartCandidate": 36,
+      "printedEndCandidate": 41,
+      "pdfPages": [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85
+      ],
+      "solutionPdfPage": 83,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 8,
+    "name": "MOSAIC OF SUBCULTURES",
+    "scale": "town",
+    "zh": "亚文化的拼图",
+    "problem": "城市怎样支持不同生活方式，而不把所有地方变得相同？",
+    "principle": "原书主张由许多较小、各具空间领域和生活自主性的文化群体构成城市，同时让居民能接近周围的多样选择。",
+    "rule": "subcultureMosaic",
+    "value": true,
+    "note": "本项目表现空间特色与自愿参与，不把文化边界当作排斥他人的依据。",
+    "group": "city",
+    "source": {
+      "id": 8,
+      "printedStartCandidate": 42,
+      "printedEndCandidate": 50,
+      "pdfPages": [
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94
+      ],
+      "solutionPdfPage": 94,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 9,
+    "name": "SCATTERED WORK",
+    "scale": "town",
+    "zh": "分散的工作场所",
+    "problem": "工作区与住宅区完全分离，会让日常生活怎样被切开？",
+    "principle": "把不同规模的工作场所分散到城市生活之中，让工作与家庭活动在邻近范围内共存。",
+    "rule": "scatterWorkplaces",
+    "value": true,
+    "group": "city",
+    "source": {
+      "id": 9,
+      "printedStartCandidate": 51,
+      "printedEndCandidate": 57,
+      "pdfPages": [
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101
+      ],
+      "solutionPdfPage": 100,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 10,
+    "name": "MAGIC OF THE CITY",
+    "scale": "town",
+    "zh": "城市的魅力",
+    "problem": "城市的文化与街头活力怎样不只属于中心附近的人？",
+    "principle": "形成多个可达的活跃中心，限制单一中心无止境膨胀，以公共交通连接中心与周围社区。",
+    "rule": "distributedCityCenters",
+    "value": true,
+    "group": "city",
+    "source": {
+      "id": 10,
+      "printedStartCandidate": 58,
+      "printedEndCandidate": 62,
+      "pdfPages": [
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "solutionPdfPage": 106,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 11,
+    "name": "LOCAL TRANSPORT AREAS",
+    "scale": "town",
+    "zh": "地方交通区",
+    "problem": "怎样让本地慢行与跨区域交通各得其所？",
+    "principle": "把城市组织为地方交通区：区内步行、自行车和小型交通便捷，机动车容易到达外围干路，却不适合区内抄近道。",
+    "rule": "localTransportCells",
+    "value": true,
+    "group": "city",
+    "source": {
+      "id": 11,
+      "printedStartCandidate": 63,
+      "printedEndCandidate": 69,
+      "pdfPages": [
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "solutionPdfPage": 112,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 12,
+    "name": "COMMUNITY OF 7000",
+    "scale": "town",
+    "zh": "七千人的社区",
+    "problem": "居民怎样对与生活密切相关的公共事务产生实际影响？",
+    "principle": "将城市治理下放到约五千至一万人的社区，尊重地理与历史边界，再由邻里参与社区决策。",
+    "rule": "communityGovernance",
+    "value": true,
+    "group": "city",
+    "source": {
+      "id": 12,
+      "printedStartCandidate": 70,
+      "printedEndCandidate": 74,
+      "pdfPages": [
+        114,
+        115,
+        116,
+        117,
+        118
+      ],
+      "solutionPdfPage": 117,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 13,
+    "name": "SUBCULTURE BOUNDARY",
+    "scale": "town",
+    "zh": "亚文化边界",
+    "problem": "相邻群体怎样保持特色，又有共同相遇的地方？",
+    "principle": "在不同社区之间保留具有厚度的过渡带，并把双方都能使用的设施与会面场所放在接合处。",
+    "rule": "sharedBoundaryBand",
+    "value": true,
+    "group": "city",
+    "source": {
+      "id": 13,
+      "printedStartCandidate": 75,
+      "printedEndCandidate": 79,
+      "pdfPages": [
+        119,
+        120,
+        121,
+        122,
+        123
+      ],
+      "solutionPdfPage": 122,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 14,
+    "name": "IDENTIFIABLE NEIGHBORHOOD",
+    "scale": "town",
+    "zh": "可识别的邻里",
+    "problem": "居民如何辨认并参与自己生活的邻里？",
+    "principle": "形成尺度较小、人口有限、具有一定自主性的邻里，把主要交通道路留在外侧，并建立可辨认的中心和入口。",
+    "rule": "identifiableNeighborhoods",
+    "value": true,
+    "group": "city",
+    "source": {
+      "id": 14,
+      "printedStartCandidate": 80,
+      "printedEndCandidate": 85,
+      "pdfPages": [
+        124,
+        125,
+        126,
+        127,
+        128,
+        129
+      ],
+      "solutionPdfPage": 128,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 15,
+    "name": "NEIGHBORHOOD BOUNDARY",
+    "scale": "town",
+    "zh": "邻里边界",
+    "problem": "邻里边缘如何被识别，同时承载与外界的联系？",
+    "principle": "减少穿越邻里的道路入口，在保留的通道处形成门户，并用有宽度的边界承载共享活动。",
+    "rule": "neighborhoodThresholds",
+    "value": true,
+    "group": "city",
+    "source": {
+      "id": 15,
+      "printedStartCandidate": 86,
+      "printedEndCandidate": 91,
+      "pdfPages": [
+        130,
+        131,
+        132,
+        133,
+        134,
+        135
+      ],
+      "solutionPdfPage": 133,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 16,
+    "name": "WEB OF PUBLIC TRANSPORTATION",
+    "scale": "town",
+    "zh": "公共交通网络",
+    "problem": "多种公共交通怎样真正成为一个可换乘的系统？",
+    "principle": "优先组织换乘节点，再让不同交通线路汇聚到这些节点；缩短换乘步行距离，并支持地方管理。",
+    "rule": "interchangeNetwork",
+    "value": true,
+    "group": "city",
+    "source": {
+      "id": 16,
+      "printedStartCandidate": 92,
+      "printedEndCandidate": 95,
+      "pdfPages": [
+        136,
+        137,
+        138,
+        139
+      ],
+      "solutionPdfPage": 138,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 17,
+    "name": "RING ROADS",
+    "scale": "town",
+    "zh": "环形道路",
+    "problem": "快速道路如何服务社区而不切断社区与乡野？",
+    "principle": "使快速道路与地方交通区相切，至少保留一侧直接通向乡野，并用下沉、土堤或建筑遮挡噪声。",
+    "rule": "openRingRoads",
+    "value": true,
+    "group": "city",
+    "source": {
+      "id": 17,
+      "printedStartCandidate": 96,
+      "printedEndCandidate": 98,
+      "pdfPages": [
+        140,
+        141,
+        142
+      ],
+      "solutionPdfPage": 142,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 18,
+    "name": "NETWORK OF LEARNING",
+    "scale": "town",
+    "zh": "学习网络",
+    "problem": "学习能否发生在学校以外的真实生活里？",
+    "principle": "把工作坊、家庭、博物馆、专业者和不同年龄的人连接成学习网络，让学习者组合适合自己的经历。",
+    "rule": "learningNetwork",
+    "value": true,
+    "note": "原书涉及教育制度的倡议；本项目只演示学习资源及其联系。",
+    "group": "city",
+    "source": {
+      "id": 18,
+      "printedStartCandidate": 99,
+      "printedEndCandidate": 103,
+      "pdfPages": [
+        143,
+        144,
+        145,
+        146,
+        147
+      ],
+      "solutionPdfPage": 146,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 19,
+    "name": "WEB OF SHOPPING",
+    "scale": "town",
+    "zh": "购物网络",
+    "problem": "新商店应该放在哪里才能填补服务空缺？",
+    "principle": "先看同类商店与潜在顾客的分布，在需求较大而服务不足处选址，并靠近其他互补店铺。",
+    "rule": "fillRetailGaps",
+    "value": true,
+    "group": "city",
+    "source": {
+      "id": 19,
+      "printedStartCandidate": 104,
+      "printedEndCandidate": 109,
+      "pdfPages": [
+        148,
+        149,
+        150,
+        151,
+        152,
+        153
+      ],
+      "solutionPdfPage": 152,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 20,
+    "name": "MINI-BUSES",
+    "scale": "town",
+    "zh": "小型公共汽车",
+    "problem": "干线公共交通怎样接上分散的短距离需求？",
+    "principle": "用小容量、可按需求调度的接驳交通补足网络，并把方便等候的站点布置在步行可达范围。",
+    "rule": "demandResponsiveFeeders",
+    "value": true,
+    "group": "city",
+    "source": {
+      "id": 20,
+      "printedStartCandidate": 110,
+      "printedEndCandidate": 113,
+      "pdfPages": [
+        154,
+        155,
+        156,
+        157
+      ],
+      "solutionPdfPage": 156,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 21,
+    "name": "FOUR-STORY LIMIT",
+    "scale": "town",
+    "zh": "四层高度限制",
+    "problem": "建筑高度怎样维持人与街道和地面的联系？",
+    "principle": "原书倡导大多数建筑保持四层以下，并强调这是一种空间联系原则，而非禁止一切例外。",
+    "rule": "fourStoryLimit",
+    "value": true,
+    "note": "这是原书的设计主张，不是当前法规或健康因果关系的验证。",
+    "group": "city",
+    "source": {
+      "id": 21,
+      "printedStartCandidate": 114,
+      "printedEndCandidate": 119,
+      "pdfPages": [
+        158,
+        159,
+        160,
+        161,
+        162,
+        163
+      ],
+      "solutionPdfPage": 163,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 22,
+    "name": "NINE PER CENT PARKING",
+    "scale": "town",
+    "zh": "百分之九的停车用地",
+    "problem": "停车怎样避免吞噬邻里地面？",
+    "principle": "原书建议把停车用地限制在各个较小分区面积的百分之九以内，防止停车集中成大块空地。",
+    "rule": "parkingAreaCap",
+    "value": true,
+    "note": "图中显示原书的比例目标，不代表现代项目必须采用的标准。",
+    "group": "city",
+    "source": {
+      "id": 22,
+      "printedStartCandidate": 120,
+      "printedEndCandidate": 125,
+      "pdfPages": [
+        164,
+        165,
+        166,
+        167,
+        168,
+        169
+      ],
+      "solutionPdfPage": 168,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 23,
+    "name": "PARALLEL ROADS",
+    "scale": "town",
+    "zh": "平行道路",
+    "problem": "干路交通怎样减少交叉冲突和区内穿行？",
+    "principle": "在地方交通区内组织相互平行、交替单行的主要道路；慢行横向连接，支路以丁字口接入。",
+    "rule": "parallelOneWayRoads",
+    "value": true,
+    "group": "city",
+    "source": {
+      "id": 23,
+      "printedStartCandidate": 126,
+      "printedEndCandidate": 130,
+      "pdfPages": [
+        170,
+        171,
+        172,
+        173,
+        174
+      ],
+      "solutionPdfPage": 174,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 24,
+    "name": "SACRED SITES",
+    "scale": "town",
+    "zh": "神圣场所",
+    "problem": "具有共同记忆的场所怎样在发展中留下来？",
+    "principle": "识别并保护不可替代的场所，使接近过程经过一系列过渡，让人有停留和感受其意义的位置。",
+    "rule": "protectedMeaningfulSites",
+    "value": true,
+    "group": "city",
+    "source": {
+      "id": 24,
+      "printedStartCandidate": 131,
+      "printedEndCandidate": 134,
+      "pdfPages": [
+        175,
+        176,
+        177,
+        178
+      ],
+      "solutionPdfPage": 177,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 25,
+    "name": "ACCESS TO WATER",
+    "scale": "town",
+    "zh": "亲近水面",
+    "problem": "水岸怎样在被使用时仍然保持公共性与生态连续性？",
+    "principle": "沿自然水体保留共有地带，密集建设只在少数位置接近水边；主要到达路径垂直水岸，而非占满岸线。",
+    "rule": "publicWaterfront",
+    "value": true,
+    "group": "city",
+    "source": {
+      "id": 25,
+      "printedStartCandidate": 135,
+      "printedEndCandidate": 138,
+      "pdfPages": [
+        179,
+        180,
+        181,
+        182
+      ],
+      "solutionPdfPage": 181,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 26,
+    "name": "LIFE CYCLE",
+    "scale": "town",
+    "zh": "生命周期",
+    "problem": "社区是否为人生的不同阶段及其过渡留下位置？",
+    "principle": "让儿童、成年人和老人都能在社区生活，并提供支持阶段转换、仪式和跨年龄相遇的场所。",
+    "rule": "completeLifeCycle",
+    "value": true,
+    "group": "city",
+    "source": {
+      "id": 26,
+      "printedStartCandidate": 139,
+      "printedEndCandidate": 145,
+      "pdfPages": [
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189
+      ],
+      "solutionPdfPage": 189,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 27,
+    "name": "MEN AND WOMEN",
+    "scale": "town",
+    "zh": "男性与女性",
+    "problem": "谁的生活经验被纳入环境的设计？",
+    "principle": "原书以男女二元框架讨论工作、家庭与照料经验的平衡，主张不同人的经验都应参与塑造环境。",
+    "rule": "inclusiveParticipation",
+    "value": true,
+    "note": "原书包含年代性的性别分工假设；本项目改以多样使用者参与和照料资源共存表达，不按性别限定活动。",
+    "group": "city",
+    "source": {
+      "id": 27,
+      "printedStartCandidate": 146,
+      "printedEndCandidate": 149,
+      "pdfPages": [
+        190,
+        191,
+        192,
+        193
+      ],
+      "solutionPdfPage": 191,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 28,
+    "name": "ECCENTRIC NUCLEUS",
+    "scale": "town",
+    "zh": "偏心的核心",
+    "problem": "社区中心一定要位于几何中心吗？",
+    "principle": "把较活跃的核心放在靠近更大城市中心的社区边缘，并让高密度沿边界形成向内延展的弧形。",
+    "rule": "eccentricNuclei",
+    "value": true,
+    "group": "city",
+    "source": {
+      "id": 28,
+      "printedStartCandidate": 150,
+      "printedEndCandidate": 155,
+      "pdfPages": [
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ],
+      "solutionPdfPage": 198,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 29,
+    "name": "DENSITY RINGS",
+    "scale": "town",
+    "zh": "密度环带",
+    "problem": "核心周围的居住密度怎样回应活动与安静的不同偏好？",
+    "principle": "以明确的核心为起点形成逐渐降低的密度层次，并让未来使用者参与决定这种分布。",
+    "rule": "densityRings",
+    "value": true,
+    "group": "city",
+    "source": {
+      "id": 29,
+      "printedStartCandidate": 156,
+      "printedEndCandidate": 162,
+      "pdfPages": [
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206
+      ],
+      "solutionPdfPage": 206,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 30,
+    "name": "ACTIVITY NODES",
+    "scale": "town",
+    "zh": "活动节点",
+    "problem": "分散的活动怎样汇聚为有生活的公共节点？",
+    "principle": "识别已有活动集中点，让路径通过这些地方，再以小广场和互相支持的设施强化节点。",
+    "rule": "activityNodes",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 30,
+      "printedStartCandidate": 163,
+      "printedEndCandidate": 167,
+      "pdfPages": [
+        207,
+        208,
+        209,
+        210,
+        211
+      ],
+      "solutionPdfPage": 210,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 31,
+    "name": "PROMENADE",
+    "scale": "town",
+    "zh": "步行漫游道",
+    "problem": "社区中的主要活动点怎样成为一段可漫步的日常路线？",
+    "principle": "用位于社区生活中心的步行漫游道串联活动节点，并在两端安排吸引人前往的场所，维持沿途流动。",
+    "rule": "promenade",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 31,
+      "printedStartCandidate": 168,
+      "printedEndCandidate": 173,
+      "pdfPages": [
+        212,
+        213,
+        214,
+        215,
+        216,
+        217
+      ],
+      "solutionPdfPage": 217,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 32,
+    "name": "SHOPPING STREET",
+    "scale": "town",
+    "zh": "购物街",
+    "problem": "购物活动如何免受穿行车辆支配？",
+    "principle": "将地方购物组织为从干路侧向伸出的短步行街，停车置于店铺后方，让临街界面留给行人。",
+    "rule": "shoppingStreet",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 32,
+      "printedStartCandidate": 174,
+      "printedEndCandidate": 178,
+      "pdfPages": [
+        218,
+        219,
+        220,
+        221,
+        222
+      ],
+      "solutionPdfPage": 221,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 33,
+    "name": "NIGHT LIFE",
+    "scale": "town",
+    "zh": "夜生活",
+    "problem": "夜间活动分散后，怎样形成相互支持的公共生活？",
+    "principle": "把夜间营业的服务、餐饮和娱乐聚成若干有照明的中心，并使这些中心分布在城市各处。",
+    "rule": "nightCenters",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 33,
+      "printedStartCandidate": 179,
+      "printedEndCandidate": 182,
+      "pdfPages": [
+        223,
+        224,
+        225,
+        226
+      ],
+      "solutionPdfPage": 226,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 34,
+    "name": "INTERCHANGE",
+    "scale": "town",
+    "zh": "交通换乘",
+    "problem": "换乘站如何与周围城市生活连续，而不成为孤立交通设施？",
+    "principle": "缩短不同交通方式之间的转换距离，使站内步行路径接上街道，周围安排依赖公共交通的住房和工作场所。",
+    "rule": "compactInterchange",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 34,
+      "printedStartCandidate": 183,
+      "printedEndCandidate": 187,
+      "pdfPages": [
+        227,
+        228,
+        229,
+        230,
+        231
+      ],
+      "solutionPdfPage": 229,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 35,
+    "name": "HOUSEHOLD MIX",
+    "scale": "town",
+    "zh": "多样的住户",
+    "problem": "邻里怎样容纳不同家庭结构与生活阶段？",
+    "principle": "在邻里和住宅组团里混合单人、伴侣、带孩子家庭及共同居住等住户类型，避免单一住户构成。",
+    "rule": "householdMix",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 35,
+      "printedStartCandidate": 188,
+      "printedEndCandidate": 191,
+      "pdfPages": [
+        232,
+        233,
+        234,
+        235
+      ],
+      "solutionPdfPage": 234,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 36,
+    "name": "DEGREES OF PUBLICNESS",
+    "scale": "town",
+    "zh": "公共性的层次",
+    "problem": "居民对热闹和隐静的不同偏好怎样被空间支持？",
+    "principle": "提供临近活跃街道、处在安静支路和介于两者之间的住宅位置，并相应调整暴露程度与到达路径。",
+    "rule": "publicnessGradient",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 36,
+      "printedStartCandidate": 192,
+      "printedEndCandidate": 196,
+      "pdfPages": [
+        236,
+        237,
+        238,
+        239,
+        240
+      ],
+      "solutionPdfPage": 239,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 37,
+    "name": "HOUSE CLUSTER",
+    "scale": "town",
+    "zh": "住宅组团",
+    "problem": "住宅如何形成可辨认的小群体，同时允许他人自然经过？",
+    "principle": "让约八至十二户围绕共有地和路径形成松散组团，路径保持可穿行，避免让经过的人觉得闯入私地。",
+    "rule": "houseClusters",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 37,
+      "printedStartCandidate": 197,
+      "printedEndCandidate": 203,
+      "pdfPages": [
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247
+      ],
+      "solutionPdfPage": 246,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 38,
+    "name": "ROW HOUSES",
+    "scale": "town",
+    "zh": "联排住宅",
+    "problem": "较高密度下，住宅怎样仍有充分的临街面与独立入口？",
+    "principle": "沿与机动车道路垂直的步行路径布置浅进深、长面宽的联排住宅，停车在路径端部或道路附近解决。",
+    "rule": "shallowRowHouses",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 38,
+      "printedStartCandidate": 204,
+      "printedEndCandidate": 208,
+      "pdfPages": [
+        248,
+        249,
+        250,
+        251,
+        252
+      ],
+      "solutionPdfPage": 251,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 39,
+    "name": "HOUSING HILL",
+    "scale": "town",
+    "zh": "住宅山丘",
+    "problem": "多层高密度住宅怎样保有露台、共同花园和对地面的联系？",
+    "principle": "以朝阳的阶梯露台组织住宅，上层平台成为下层屋顶，开放的共同楼梯连接各层与地面花园。",
+    "rule": "housingTerraces",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 39,
+      "printedStartCandidate": 209,
+      "printedEndCandidate": 214,
+      "pdfPages": [
+        253,
+        254,
+        255,
+        256,
+        257,
+        258
+      ],
+      "solutionPdfPage": 257,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 40,
+    "name": "OLD PEOPLE EVERYWHERE",
+    "scale": "town",
+    "zh": "老年人融入各处",
+    "problem": "老年人的照护支持怎样与普通邻里生活相连？",
+    "principle": "将有集中支持的核心、近旁小住宅和混入邻里的较远小住宅组织成相连网络，避免把老年人整体隔离。",
+    "rule": "integratedElderHousing",
+    "value": true,
+    "note": "只表达住宅与支持资源的邻近关系，不代替照护需求评估。",
+    "group": "neighborhood",
+    "source": {
+      "id": 40,
+      "printedStartCandidate": 215,
+      "printedEndCandidate": 221,
+      "pdfPages": [
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265
+      ],
+      "solutionPdfPage": 263,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 41,
+    "name": "WORK COMMUNITY",
+    "scale": "town",
+    "zh": "工作社区",
+    "problem": "多个小工作场所怎样形成共同生活，而不是孤立单元？",
+    "principle": "小工作组围绕各自院落，再共同面向较大的公共院落或广场，并结合餐饮、运动与日常交流。",
+    "rule": "workCourtyardClusters",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 41,
+      "printedStartCandidate": 222,
+      "printedEndCandidate": 226,
+      "pdfPages": [
+        266,
+        267,
+        268,
+        269,
+        270
+      ],
+      "solutionPdfPage": 269,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 42,
+    "name": "INDUSTRIAL RIBBON",
+    "scale": "town",
+    "zh": "工业带",
+    "problem": "工业如何接近运输网络，又与邻近社区形成可用的边缘？",
+    "principle": "把工业组织为社区边界上的带状地段，直接连接快速道路，并让对社区有用的活动面向带的边缘。",
+    "rule": "industrialRibbon",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 42,
+      "printedStartCandidate": 227,
+      "printedEndCandidate": 230,
+      "pdfPages": [
+        271,
+        272,
+        273,
+        274
+      ],
+      "solutionPdfPage": 274,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 43,
+    "name": "UNIVERSITY AS A MARKETPLACE",
+    "scale": "town",
+    "zh": "如集市般的大学",
+    "problem": "大学如何成为城市中的开放学习网络？",
+    "principle": "以一个公共交汇核心组织大学，课程与设施沿步行街向外扩散，逐渐与城市混合，并面向不同年龄和学习节奏。",
+    "rule": "universityMarketplace",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 43,
+      "printedStartCandidate": 231,
+      "printedEndCandidate": 235,
+      "pdfPages": [
+        275,
+        276,
+        277,
+        278,
+        279
+      ],
+      "solutionPdfPage": 278,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 44,
+    "name": "LOCAL TOWN HALL",
+    "scale": "town",
+    "zh": "地方市政厅",
+    "problem": "地方公共事务在哪里被讨论、办理和试验？",
+    "principle": "在社区繁忙节点附近设置小型市政场所，以公共讨论中心为核心，周围组织服务和可供社区项目使用的空间。",
+    "rule": "localTownHall",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 44,
+      "printedStartCandidate": 236,
+      "printedEndCandidate": 241,
+      "pdfPages": [
+        280,
+        281,
+        282,
+        283,
+        284,
+        285
+      ],
+      "solutionPdfPage": 284,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 45,
+    "name": "NECKLACE OF COMMUNITY PROJECTS",
+    "scale": "town",
+    "zh": "串联的社区项目",
+    "problem": "临时的公共倡议如何找到低门槛的实体空间？",
+    "principle": "在市政厅等公共建筑外围沿繁忙路径提供小店铺尺度的空间，供不同社区团体开展项目和试验服务。",
+    "rule": "communityProjectFrontage",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 45,
+      "printedStartCandidate": 242,
+      "printedEndCandidate": 245,
+      "pdfPages": [
+        286,
+        287,
+        288,
+        289
+      ],
+      "solutionPdfPage": 288,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 46,
+    "name": "MARKET OF MANY SHOPS",
+    "scale": "town",
+    "zh": "多店铺的市场",
+    "problem": "市场怎样允许小经营者独立经营，又共享基础设施？",
+    "principle": "用共同顶盖、柱列、通道和基本服务支持许多小型专业店铺，让各店自行塑造内部环境。",
+    "rule": "manyShopMarket",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 46,
+      "printedStartCandidate": 246,
+      "printedEndCandidate": 251,
+      "pdfPages": [
+        290,
+        291,
+        292,
+        293,
+        294,
+        295
+      ],
+      "solutionPdfPage": 294,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 47,
+    "name": "HEALTH CENTER",
+    "scale": "town",
+    "zh": "健康中心",
+    "problem": "日常健康支持怎样融入社区，而不只发生在大型医院里？",
+    "principle": "原书倡导分散的小型健康中心，把医疗支持与日常教育、运动和社区生活联系起来。",
+    "rule": "neighborhoodHealthCenters",
+    "value": true,
+    "note": "图解不提供医疗配置、疾病治疗或设施达标建议。",
+    "group": "neighborhood",
+    "source": {
+      "id": 47,
+      "printedStartCandidate": 252,
+      "printedEndCandidate": 255,
+      "pdfPages": [
+        296,
+        297,
+        298,
+        299
+      ],
+      "solutionPdfPage": 299,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 48,
+    "name": "HOUSING IN BETWEEN",
+    "scale": "town",
+    "zh": "穿插其间的住宅",
+    "problem": "白天繁忙的非住宅片区如何在其他时段也有人生活？",
+    "principle": "把住宅穿插进商业、学校、产业和公共服务片区，同时为住户保留可辨识的私人领域。",
+    "rule": "housingInBetween",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 48,
+      "printedStartCandidate": 256,
+      "printedEndCandidate": 259,
+      "pdfPages": [
+        300,
+        301,
+        302,
+        303
+      ],
+      "solutionPdfPage": 302,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 49,
+    "name": "LOOPED LOCAL ROADS",
+    "scale": "town",
+    "zh": "环形地方道路",
+    "problem": "住区支路如何提供到达，同时避免被当成捷径？",
+    "principle": "使支路形成服务有限目的地的环路，保持狭窄、缓慢，并以丁字路口连接，而非便利的穿行网格。",
+    "rule": "localRoadLoops",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 49,
+      "printedStartCandidate": 260,
+      "printedEndCandidate": 263,
+      "pdfPages": [
+        304,
+        305,
+        306,
+        307
+      ],
+      "solutionPdfPage": 307,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 50,
+    "name": "T JUNCTIONS",
+    "scale": "town",
+    "zh": "丁字路口",
+    "problem": "道路交会怎样减少交叉运动？",
+    "principle": "优先让地面道路以接近直角的丁字口相接，减少四向交叉；人流集中的位置另行强化步行过街。",
+    "rule": "tJunctions",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 50,
+      "printedStartCandidate": 264,
+      "printedEndCandidate": 265,
+      "pdfPages": [
+        308,
+        309
+      ],
+      "solutionPdfPage": 309,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 51,
+    "name": "GREEN STREETS",
+    "scale": "town",
+    "zh": "绿色街道",
+    "problem": "低流量住宅道路能否同时成为可停留的绿色空间？",
+    "principle": "在不承担穿行交通的地方道路上，让草地与车轮所需铺装结合，减少街道和人行道的硬性分割。",
+    "rule": "greenLocalStreets",
+    "value": true,
+    "note": "只演示低流量街道的地面关系，不是交通安全标准。",
+    "group": "neighborhood",
+    "source": {
+      "id": 51,
+      "printedStartCandidate": 266,
+      "printedEndCandidate": 269,
+      "pdfPages": [
+        310,
+        311,
+        312,
+        313
+      ],
+      "solutionPdfPage": 313,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 52,
+    "name": "NETWORK OF PATHS AND CARS",
+    "scale": "town",
+    "zh": "步行与车辆网络",
+    "problem": "步行网络如何拥有不同于车行网络的组织逻辑？",
+    "principle": "让步行路径尽量从街区内部横穿机动车道路，形成相互关联但不完全重合的第二张网络。",
+    "rule": "orthogonalPathNetwork",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 52,
+      "printedStartCandidate": 270,
+      "printedEndCandidate": 275,
+      "pdfPages": [
+        314,
+        315,
+        316,
+        317,
+        318,
+        319
+      ],
+      "solutionPdfPage": 318,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 53,
+    "name": "MAIN GATEWAYS",
+    "scale": "town",
+    "zh": "主要门户",
+    "problem": "人们如何感知自己正在进入一个有意义的领域？",
+    "principle": "在主要路径跨越有意义的边界处设置清晰可见的门户，并用尺度、光线或地面变化强化过渡。",
+    "rule": "mainGateways",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 53,
+      "printedStartCandidate": 276,
+      "printedEndCandidate": 279,
+      "pdfPages": [
+        320,
+        321,
+        322,
+        323
+      ],
+      "solutionPdfPage": 322,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 54,
+    "name": "ROAD CROSSING",
+    "scale": "town",
+    "zh": "道路穿越",
+    "problem": "步行路径遇到繁忙道路时，怎样保持连续性？",
+    "principle": "在交叉处收窄车道、延续并抬高步行面，结合庇护、等候和显眼的界定，使过街成为明确的节点。",
+    "rule": "raisedCrossings",
+    "value": true,
+    "note": "图中坡度与尺寸是示意，真实道路需专项设计。",
+    "group": "neighborhood",
+    "source": {
+      "id": 54,
+      "printedStartCandidate": 280,
+      "printedEndCandidate": 284,
+      "pdfPages": [
+        324,
+        325,
+        326,
+        327,
+        328
+      ],
+      "solutionPdfPage": 327,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 55,
+    "name": "RAISED WALK",
+    "scale": "town",
+    "zh": "抬高的步行道",
+    "problem": "必须沿快速车流行走时，怎样获得空间分隔？",
+    "principle": "将步行面抬高并以栏杆或矮墙界定，集中在道路一侧形成较宽通道，必要处用台阶连接。",
+    "rule": "raisedWalk",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 55,
+      "printedStartCandidate": 285,
+      "printedEndCandidate": 288,
+      "pdfPages": [
+        329,
+        330,
+        331,
+        332
+      ],
+      "solutionPdfPage": 332,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 56,
+    "name": "BIKE PATHS AND RACKS",
+    "scale": "town",
+    "zh": "自行车道与停放架",
+    "problem": "自行车如何连续到达建筑，又不挤占安静步行空间？",
+    "principle": "用易辨认的骑行路面形成网络，与步行面区分，并把有庇护的停放架设在入口附近且不堵住入口。",
+    "rule": "bikeNetworkAndRacks",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 56,
+      "printedStartCandidate": 289,
+      "printedEndCandidate": 292,
+      "pdfPages": [
+        333,
+        334,
+        335,
+        336
+      ],
+      "solutionPdfPage": 335,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 57,
+    "name": "CHILDREN IN THE CITY",
+    "scale": "town",
+    "zh": "城市中的儿童",
+    "problem": "儿童怎样接近城市的真实活动，而不必不断穿越车流？",
+    "principle": "把额外保护的儿童路径接入各邻里，连接有趣的工作和公共场所，并让沿线日常使用的窗口面向路径。",
+    "rule": "childExplorationRoute",
+    "value": true,
+    "note": "图解中的路线不能替代儿童出行风险评估。",
+    "group": "neighborhood",
+    "source": {
+      "id": 57,
+      "printedStartCandidate": 293,
+      "printedEndCandidate": 297,
+      "pdfPages": [
+        337,
+        338,
+        339,
+        340,
+        341
+      ],
+      "solutionPdfPage": 339,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 58,
+    "name": "CARNIVAL",
+    "scale": "town",
+    "zh": "嘉年华",
+    "problem": "城市在哪里容纳节庆、试验性表演和超出日常的活动？",
+    "principle": "划出有连续步行空间的节庆区域，把摊位、巷道、音乐和露天舞台织在一起，让表演与街道相互延伸。",
+    "rule": "carnivalStreet",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 58,
+      "printedStartCandidate": 298,
+      "printedEndCandidate": 300,
+      "pdfPages": [
+        342,
+        343,
+        344
+      ],
+      "solutionPdfPage": 344,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 59,
+    "name": "QUIET BACKS",
+    "scale": "town",
+    "zh": "安静的背面",
+    "problem": "繁忙城市空间里如何找到不被穿行打扰的安静背面？",
+    "principle": "利用建筑、距离或围墙遮挡噪声，把向阳的背面步道连接成安静网络，并避免将其变成快捷通道。",
+    "rule": "quietBacks",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 59,
+      "printedStartCandidate": 301,
+      "printedEndCandidate": 303,
+      "pdfPages": [
+        345,
+        346,
+        347
+      ],
+      "solutionPdfPage": 347,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 60,
+    "name": "ACCESSIBLE GREEN",
+    "scale": "town",
+    "zh": "容易到达的绿地",
+    "problem": "绿地怎样成为随时可到达的日常场所？",
+    "principle": "让公共绿地均匀分布在住宅和工作场所的短步行范围内，并形成可停留的围合空间而非车流环岛。",
+    "rule": "accessibleGreens",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 60,
+      "printedStartCandidate": 304,
+      "printedEndCandidate": 309,
+      "pdfPages": [
+        348,
+        349,
+        350,
+        351,
+        352,
+        353
+      ],
+      "solutionPdfPage": 352,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 61,
+    "name": "SMALL PUBLIC SQUARES",
+    "scale": "town",
+    "zh": "小型公共广场",
+    "problem": "公共广场如何避免尺度大到显得空旷？",
+    "principle": "让广场的短边保持较小，并根据通常聚集的人数控制面积；边缘活动与中心物共同使广场可使用。",
+    "rule": "smallPublicSquares",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 61,
+      "printedStartCandidate": 310,
+      "printedEndCandidate": 314,
+      "pdfPages": [
+        354,
+        355,
+        356,
+        357,
+        358
+      ],
+      "solutionPdfPage": 357,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 62,
+    "name": "HIGH PLACES",
+    "scale": "town",
+    "zh": "高处",
+    "problem": "城市怎样提供可攀登、可辨认的高处？",
+    "principle": "在各处保留少量可通过身体攀登到达的制高点或塔楼，让攀登、停歇与眺望共同构成体验。",
+    "rule": "climbableLandmark",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 62,
+      "printedStartCandidate": 315,
+      "printedEndCandidate": 318,
+      "pdfPages": [
+        359,
+        360,
+        361,
+        362
+      ],
+      "solutionPdfPage": 361,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 63,
+    "name": "DANCING IN THE STREET",
+    "scale": "town",
+    "zh": "街头舞蹈",
+    "problem": "街头音乐和舞蹈需要怎样的空间支持？",
+    "principle": "在广场或漫游道边缘设置有顶盖的小乐台，周围留出铺装舞蹈面，并结合饮食和停留位置。",
+    "rule": "streetDancePlatform",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 63,
+      "printedStartCandidate": 319,
+      "printedEndCandidate": 321,
+      "pdfPages": [
+        363,
+        364,
+        365
+      ],
+      "solutionPdfPage": 365,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 64,
+    "name": "POOLS AND STREAMS",
+    "scale": "town",
+    "zh": "水池与溪流",
+    "problem": "流动水体怎样成为城市连续的公共环境？",
+    "principle": "保留溪流与水池，沿水设置步道、少量跨越桥梁，并让可见的雨水和水流参与城市空间。",
+    "rule": "connectedWatercourses",
+    "value": true,
+    "note": "原书有关自然净水的建议不等于水质安全保证。",
+    "group": "neighborhood",
+    "source": {
+      "id": 64,
+      "printedStartCandidate": 322,
+      "printedEndCandidate": 327,
+      "pdfPages": [
+        366,
+        367,
+        368,
+        369,
+        370,
+        371
+      ],
+      "solutionPdfPage": 370,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 65,
+    "name": "BIRTH PLACES",
+    "scale": "town",
+    "zh": "出生的地方",
+    "problem": "出生这一家庭事件怎样获得有私密性和共同支持的空间？",
+    "principle": "原书设想地方性的出生场所，结合家庭参与、产前教育、共同起居和较私密的花园。",
+    "rule": "familyBirthPlace",
+    "value": true,
+    "note": "只呈现照护空间关系，不据此选择分娩方式或替代医疗标准。",
+    "group": "neighborhood",
+    "source": {
+      "id": 65,
+      "printedStartCandidate": 328,
+      "printedEndCandidate": 330,
+      "pdfPages": [
+        372,
+        373,
+        374
+      ],
+      "solutionPdfPage": 374,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 66,
+    "name": "HOLY GROUND",
+    "scale": "town",
+    "zh": "神圣之地",
+    "problem": "具有特殊意义的核心如何通过接近过程被感知？",
+    "principle": "以层层嵌套的领域和门户组织进入过程，越向内越安静、私密，最终到达一个重要核心。",
+    "rule": "nestedSacredThresholds",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 66,
+      "printedStartCandidate": 331,
+      "printedEndCandidate": 335,
+      "pdfPages": [
+        375,
+        376,
+        377,
+        378,
+        379
+      ],
+      "solutionPdfPage": 378,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 67,
+    "name": "COMMON LAND",
+    "scale": "town",
+    "zh": "共有土地",
+    "problem": "住宅之间怎样拥有超出私人地块的共同生活空间？",
+    "principle": "在住户旁保留足够的共有地，原书以约四分之一为建议比例，并避免机动车主导这些空间。",
+    "rule": "sharedCommonLand",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 67,
+      "printedStartCandidate": 336,
+      "printedEndCandidate": 340,
+      "pdfPages": [
+        380,
+        381,
+        382,
+        383,
+        384
+      ],
+      "solutionPdfPage": 383,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 68,
+    "name": "CONNECTED PLAY",
+    "scale": "town",
+    "zh": "相连的游戏空间",
+    "problem": "孩子能否在多个住户之间连续玩耍而不穿越车流？",
+    "principle": "连接住宅组团的共有地、花园和安全路径，形成跨多个住户的连续游戏范围。",
+    "rule": "connectedPlayGround",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 68,
+      "printedStartCandidate": 341,
+      "printedEndCandidate": 347,
+      "pdfPages": [
+        385,
+        386,
+        387,
+        388,
+        389,
+        390,
+        391
+      ],
+      "solutionPdfPage": 390,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 69,
+    "name": "PUBLIC OUTDOOR ROOM",
+    "scale": "town",
+    "zh": "公共户外房间",
+    "problem": "共有地上如何出现一个自然会面的半室外中心？",
+    "principle": "在重要路径旁、可被附近住宅与工作场所看见的位置，设置由柱列和部分顶盖界定的公共户外房间。",
+    "rule": "publicOutdoorRoom",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 69,
+      "printedStartCandidate": 348,
+      "printedEndCandidate": 352,
+      "pdfPages": [
+        392,
+        393,
+        394,
+        395,
+        396
+      ],
+      "solutionPdfPage": 395,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 70,
+    "name": "GRAVE SITES",
+    "scale": "town",
+    "zh": "墓地",
+    "problem": "纪念逝者的场所如何融入社区的日常地景？",
+    "principle": "原书建议把小型纪念场所分散在公园、路径或花园边，并配以边界、安静角落和座位。",
+    "rule": "localMemorialSites",
+    "value": true,
+    "note": "展示纪念空间，不涉及殡葬许可或实际安葬安排。",
+    "group": "neighborhood",
+    "source": {
+      "id": 70,
+      "printedStartCandidate": 353,
+      "printedEndCandidate": 357,
+      "pdfPages": [
+        397,
+        398,
+        399,
+        400,
+        401
+      ],
+      "solutionPdfPage": 400,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 71,
+    "name": "STILL WATER",
+    "scale": "town",
+    "zh": "静水",
+    "problem": "人们如何平缓地接近可以使用的静水？",
+    "principle": "提供公共水池或池塘，使入口从很浅的水边开始、逐渐加深，并结合岸边停留空间。",
+    "rule": "gradedStillWater",
+    "value": true,
+    "note": "示意坡岸和公共访问；水质、防溺水及运行条件必须另行评估。",
+    "group": "neighborhood",
+    "source": {
+      "id": 71,
+      "printedStartCandidate": 358,
+      "printedEndCandidate": 362,
+      "pdfPages": [
+        402,
+        403,
+        404,
+        405,
+        406
+      ],
+      "solutionPdfPage": null,
+      "missingPrintedPages": [],
+      "reviewBasis": "available-body-needs-review"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 72,
+    "name": "LOCAL SPORTS",
+    "scale": "town",
+    "zh": "地方体育活动",
+    "problem": "运动怎样成为邻里随时可参与的活动？",
+    "principle": "把个人和团体运动场所分散到日常生活中，让路过的人看见活动，并容易进入或停留观看。",
+    "rule": "visibleLocalSports",
+    "value": true,
+    "group": "neighborhood",
+    "source": {
+      "id": 72,
+      "printedStartCandidate": 363,
+      "printedEndCandidate": 366,
+      "pdfPages": [
+        407,
+        408,
+        409,
+        410
+      ],
+      "solutionPdfPage": 409,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 73,
+    "name": "ADVENTURE PLAYGROUND",
+    "scale": "town",
+    "zh": "冒险游戏场",
+    "problem": "儿童游戏是否只能使用已经完成的设施？",
+    "principle": "提供可反复改造的材料、工具、土、水和搭建空间，让孩子参与创造自己的游戏环境。",
+    "rule": "adventurePlayground",
+    "value": true,
+    "note": "材料与工具只是图解，真实活动需适龄评估与照护。",
+    "group": "neighborhood",
+    "source": {
+      "id": 73,
+      "printedStartCandidate": 367,
+      "printedEndCandidate": 370,
+      "pdfPages": [
+        411,
+        412,
+        413,
+        414
+      ],
+      "solutionPdfPage": 413,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 74,
+    "name": "ANIMALS",
+    "scale": "town",
+    "zh": "动物",
+    "problem": "动物如何拥有连续、受照料的栖息与活动空间？",
+    "principle": "将有水、草地、树木的动物共有地与绿色路径连接，并结合社区照料和儿童学习。",
+    "rule": "animalCommons",
+    "value": true,
+    "note": "不把原书关于饲养许可的倡议当成现行规定。",
+    "group": "neighborhood",
+    "source": {
+      "id": 74,
+      "printedStartCandidate": 371,
+      "printedEndCandidate": 375,
+      "pdfPages": [
+        415,
+        416,
+        417,
+        418,
+        419
+      ],
+      "solutionPdfPage": 417,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 75,
+    "name": "THE FAMILY",
+    "scale": "town",
+    "zh": "家庭",
+    "problem": "较大的共同居住群体怎样同时拥有自主与共享？",
+    "principle": "给个人、小家庭和伴侣保留独立领域，在领域之间提供共同的烹饪、照料、工作和聚集场所。",
+    "rule": "extendedHousehold",
+    "value": true,
+    "group": "institution",
+    "source": {
+      "id": 75,
+      "printedStartCandidate": 376,
+      "printedEndCandidate": 380,
+      "pdfPages": [
+        420,
+        421,
+        422,
+        423,
+        424
+      ],
+      "solutionPdfPage": 424,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 76,
+    "name": "HOUSE FOR A SMALL FAMILY",
+    "scale": "town",
+    "zh": "小家庭的住宅",
+    "problem": "有儿童的小家庭如何平衡各自活动与共同生活？",
+    "principle": "把住宅组织为成人领域、儿童领域和较大的共享区三个清晰部分，并保持相互联系。",
+    "rule": "smallFamilyRealms",
+    "value": true,
+    "group": "institution",
+    "source": {
+      "id": 76,
+      "printedStartCandidate": 381,
+      "printedEndCandidate": 384,
+      "pdfPages": [
+        425,
+        426,
+        427,
+        428
+      ],
+      "solutionPdfPage": 428,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 77,
+    "name": "HOUSE FOR A COUPLE",
+    "scale": "town",
+    "zh": "两个人的住宅",
+    "problem": "两个人共同居住时，如何同时保留独处？",
+    "principle": "同时提供共同的伴侣领域和各自完全私人的小世界，让共享与个人空间都有明确位置。",
+    "rule": "coupleAndIndividualRealms",
+    "value": true,
+    "group": "institution",
+    "source": {
+      "id": 77,
+      "printedStartCandidate": 385,
+      "printedEndCandidate": 388,
+      "pdfPages": [
+        429,
+        430,
+        431,
+        432
+      ],
+      "solutionPdfPage": 431,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 78,
+    "name": "HOUSE FOR ONE PERSON",
+    "scale": "town",
+    "zh": "一个人的住宅",
+    "problem": "独居住宅如何用最少空间承载不同活动？",
+    "principle": "以一个简单主室为中心，在周边安排较大或较小的凹室来支持睡眠、工作、坐下和生活服务。",
+    "rule": "singlePersonStudio",
+    "value": true,
+    "group": "institution",
+    "source": {
+      "id": 78,
+      "printedStartCandidate": 389,
+      "printedEndCandidate": 391,
+      "pdfPages": [
+        433,
+        434,
+        435
+      ],
+      "solutionPdfPage": 435,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 79,
+    "name": "YOUR OWN HOME",
+    "scale": "town",
+    "zh": "自己的家",
+    "problem": "居住者是否有权持续改变和照料自己的家？",
+    "principle": "原书强调对住宅与小花园的实际控制权，以及改造、修理和生长的机会，区别于纯粹财务所有权。",
+    "rule": "residentControl",
+    "value": true,
+    "note": "本项目展示可改造边界，不提供产权或租赁法律建议。",
+    "group": "institution",
+    "source": {
+      "id": 79,
+      "printedStartCandidate": 392,
+      "printedEndCandidate": 397,
+      "pdfPages": [
+        436,
+        437,
+        438,
+        439,
+        440,
+        441
+      ],
+      "solutionPdfPage": 439,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 80,
+    "name": "SELF-GOVERNING WORKSHOPS AND OFFICES",
+    "scale": "town",
+    "zh": "自治的作坊与办公室",
+    "problem": "较大的组织如何保留小工作群体的自主性？",
+    "principle": "以小型自治工作组为基础，在复杂工作需要时相互协作；空间上给各组可辨认的领域。",
+    "rule": "autonomousWorkshops",
+    "value": true,
+    "group": "institution",
+    "source": {
+      "id": 80,
+      "printedStartCandidate": 398,
+      "printedEndCandidate": 403,
+      "pdfPages": [
+        442,
+        443,
+        444,
+        445,
+        446,
+        447
+      ],
+      "solutionPdfPage": 446,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 81,
+    "name": "SMALL SERVICES WITHOUT RED TAPE",
+    "scale": "town",
+    "zh": "少些繁文缛节的小服务机构",
+    "problem": "公众怎样直接找到并接触具体服务？",
+    "principle": "把服务组织为较小、自主、可识别的单元，每个单元直接面向公共通道，减少层层转接。",
+    "rule": "directServiceFronts",
+    "value": true,
+    "group": "institution",
+    "source": {
+      "id": 81,
+      "printedStartCandidate": 404,
+      "printedEndCandidate": 407,
+      "pdfPages": [
+        448,
+        449,
+        450,
+        451
+      ],
+      "solutionPdfPage": 450,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 82,
+    "name": "OFFICE CONNECTIONS",
+    "scale": "town",
+    "zh": "办公室之间的联系",
+    "problem": "经常协作的部门是否因为距离而难以往来？",
+    "principle": "根据部门间实际往来频次确定邻近程度，频繁联系的单元更靠近，并考虑上下楼带来的额外距离。",
+    "rule": "officeContactDistances",
+    "value": true,
+    "group": "institution",
+    "source": {
+      "id": 82,
+      "printedStartCandidate": 408,
+      "printedEndCandidate": 411,
+      "pdfPages": [
+        452,
+        453,
+        454,
+        455
+      ],
+      "solutionPdfPage": 455,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 83,
+    "name": "MASTER AND APPRENTICES",
+    "scale": "town",
+    "zh": "师傅与学徒",
+    "problem": "工作过程怎样同时成为学习过程？",
+    "principle": "以经验较多者与学习者共同工作的空间小组组织任务，让实践、观察和讨论发生在相邻位置。",
+    "rule": "apprenticeshipClusters",
+    "value": true,
+    "group": "institution",
+    "source": {
+      "id": 83,
+      "printedStartCandidate": 412,
+      "printedEndCandidate": 415,
+      "pdfPages": [
+        456,
+        457,
+        458,
+        459
+      ],
+      "solutionPdfPage": 458,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 84,
+    "name": "TEENAGE SOCIETY",
+    "scale": "town",
+    "zh": "青少年的社会",
+    "problem": "青少年如何在有支持的环境里练习承担责任？",
+    "principle": "原书设想由青少年承担较多学习与社会生活责任的组织，成人提供指导，中心空间连接城市学习资源。",
+    "rule": "teenageSelfOrganization",
+    "value": true,
+    "note": "呈现责任与支持的关系，不照搬原书对教育制度的替代主张。",
+    "group": "institution",
+    "source": {
+      "id": 84,
+      "printedStartCandidate": 416,
+      "printedEndCandidate": 419,
+      "pdfPages": [
+        460,
+        461,
+        462,
+        463
+      ],
+      "solutionPdfPage": 462,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 85,
+    "name": "SHOPFRONT SCHOOLS",
+    "scale": "town",
+    "zh": "临街学校",
+    "problem": "学校怎样与社区日常工作和街道生活保持联系？",
+    "principle": "把较小的学习单元设置在公共步行环境中，以清晰的临街界面连接附近工作场所和绿地。",
+    "rule": "shopfrontSchools",
+    "value": true,
+    "group": "institution",
+    "source": {
+      "id": 85,
+      "printedStartCandidate": 420,
+      "printedEndCandidate": 425,
+      "pdfPages": [
+        464,
+        465,
+        466,
+        467,
+        468,
+        469
+      ],
+      "solutionPdfPage": 468,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 86,
+    "name": "CHILDREN'S HOME",
+    "scale": "town",
+    "zh": "儿童之家",
+    "problem": "儿童在自己家以外能否拥有稳定而熟悉的支持场所？",
+    "principle": "原书提出像第二个家庭的邻里儿童之家，结合持续照料者、共同生活空间、可见的路径和游戏环境。",
+    "rule": "childrensSecondHome",
+    "value": true,
+    "note": "空间关系示意不代表托育、住宿或儿童保护规范。",
+    "group": "institution",
+    "source": {
+      "id": 86,
+      "printedStartCandidate": 426,
+      "printedEndCandidate": 431,
+      "pdfPages": [
+        470,
+        471,
+        472,
+        473,
+        474,
+        475
+      ],
+      "solutionPdfPage": 473,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 87,
+    "name": "INDIVIDUALLY OWNED SHOPS",
+    "scale": "town",
+    "zh": "独立经营的商店",
+    "problem": "小经营者怎样在商业空间中保持自主和个性？",
+    "principle": "提供许多小而可识别的经营单元，让实际经营者能够组织店铺，并将店铺与步行街道相接。",
+    "rule": "independentSmallShops",
+    "value": true,
+    "note": "原书包含经营许可的政策倡议；图解仅表达小单元与自主界面。",
+    "group": "institution",
+    "source": {
+      "id": 87,
+      "printedStartCandidate": 432,
+      "printedEndCandidate": 435,
+      "pdfPages": [
+        476,
+        477,
+        478,
+        479
+      ],
+      "solutionPdfPage": 478,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 88,
+    "name": "STREET CAFÉ",
+    "scale": "town",
+    "zh": "街边咖啡馆",
+    "problem": "咖啡馆怎样让坐下的人与街道生活发生联系？",
+    "principle": "让较亲密的室内空间面向繁忙步行路径，以桌椅和宽开口将活动延伸到街边。",
+    "rule": "streetCafeTerrace",
+    "value": true,
+    "group": "institution",
+    "source": {
+      "id": 88,
+      "printedStartCandidate": 436,
+      "printedEndCandidate": 439,
+      "pdfPages": [
+        480,
+        481,
+        482,
+        483
+      ],
+      "solutionPdfPage": 483,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 89,
+    "name": "CORNER GROCERY",
+    "scale": "town",
+    "zh": "街角杂货店",
+    "problem": "日常小额购物怎样成为步行可达的邻里活动？",
+    "principle": "把小杂货店放在有人经过的街角、接近邻里中心，并允许经营者住在楼上或旁边。",
+    "rule": "cornerGrocery",
+    "value": true,
+    "group": "institution",
+    "source": {
+      "id": 89,
+      "printedStartCandidate": 440,
+      "printedEndCandidate": 443,
+      "pdfPages": [
+        484,
+        485,
+        486,
+        487
+      ],
+      "solutionPdfPage": 486,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 90,
+    "name": "BEER HALL",
+    "scale": "town",
+    "zh": "啤酒馆",
+    "problem": "较大聚会场所怎样让人不断遇见不同活动？",
+    "principle": "把饮食、音乐等多个活动围绕相互穿越的路径组织起来，以可穿行的凹室容纳桌椅。",
+    "rule": "crossingActivityHall",
+    "value": true,
+    "group": "institution",
+    "source": {
+      "id": 90,
+      "printedStartCandidate": 444,
+      "printedEndCandidate": 447,
+      "pdfPages": [
+        488,
+        489,
+        490,
+        491
+      ],
+      "solutionPdfPage": 490,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 91,
+    "name": "TRAVELER'S INN",
+    "scale": "town",
+    "zh": "旅人客栈",
+    "problem": "旅人住宿如何形成短暂但真实的共同生活？",
+    "principle": "以较小尺度的客栈组织私人客房、睡眠凹室和共同用餐、交谈空间，使公共核心成为交流中心。",
+    "rule": "travelersInnCommons",
+    "value": true,
+    "group": "institution",
+    "source": {
+      "id": 91,
+      "printedStartCandidate": 448,
+      "printedEndCandidate": 450,
+      "pdfPages": [
+        492,
+        493,
+        494
+      ],
+      "solutionPdfPage": 494,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 92,
+    "name": "BUS STOP",
+    "scale": "town",
+    "zh": "公交站",
+    "problem": "等车的地方能否成为邻里的小型公共中心？",
+    "principle": "把站点与入口、座位、庇护、信息和小型服务结合，使等待与周边日常活动相互支持。",
+    "rule": "busStopPlace",
+    "value": true,
+    "group": "institution",
+    "source": {
+      "id": 92,
+      "printedStartCandidate": 451,
+      "printedEndCandidate": 453,
+      "pdfPages": [
+        495,
+        496,
+        497
+      ],
+      "solutionPdfPage": 497,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 93,
+    "name": "FOOD STANDS",
+    "scale": "town",
+    "zh": "小吃摊",
+    "problem": "简便饮食怎样支持过街、换乘和步行活动？",
+    "principle": "在车行与人行交汇处配置面向街道的小摊或半开放窗口，使饮食活动成为停留节点。",
+    "rule": "foodStandsAtCrossings",
+    "value": true,
+    "group": "institution",
+    "source": {
+      "id": 93,
+      "printedStartCandidate": 454,
+      "printedEndCandidate": 456,
+      "pdfPages": [
+        498,
+        499,
+        500
+      ],
+      "solutionPdfPage": 500,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 94,
+    "name": "SLEEPING IN PUBLIC",
+    "scale": "town",
+    "zh": "公共场所中的小憩",
+    "problem": "公共环境是否容得下不消费的休息和小憩？",
+    "principle": "在避开主要通行的受庇护边缘提供舒适座位、地面和角落，并重视公众之间的信任。",
+    "rule": "publicRestingPlaces",
+    "value": true,
+    "group": "institution",
+    "source": {
+      "id": 94,
+      "printedStartCandidate": 457,
+      "printedEndCandidate": 467,
+      "pdfPages": [
+        501,
+        502,
+        503,
+        504,
+        505,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511
+      ],
+      "solutionPdfPage": 503,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 95,
+    "name": "BUILDING COMPLEX",
+    "scale": "building",
+    "zh": "建筑群",
+    "problem": "大型建筑如何让真实的使用群体和活动被辨认？",
+    "principle": "把建筑组织成可识别的部分或小建筑群，使这些部分对应社会与使用单元，并通过路径、院落和廊道联系。",
+    "rule": "buildingComplex",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 95,
+      "printedStartCandidate": 468,
+      "printedEndCandidate": 472,
+      "pdfPages": [
+        512,
+        513,
+        514,
+        515,
+        516
+      ],
+      "solutionPdfPage": 515,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 96,
+    "name": "NUMBER OF STORIES",
+    "scale": "building",
+    "zh": "层数",
+    "problem": "所需面积、建筑高度和室外空间怎样共同决定？",
+    "principle": "先考虑所需楼面面积和场地比例，再结合周围高度决定层数，并保留足够开放空间。",
+    "rule": "programBasedStories",
+    "value": true,
+    "note": "原书的比例表是历史设计建议，图解不替代容积率或规划审批。",
+    "group": "site",
+    "source": {
+      "id": 96,
+      "printedStartCandidate": 473,
+      "printedEndCandidate": 476,
+      "pdfPages": [
+        517,
+        518,
+        519,
+        520
+      ],
+      "solutionPdfPage": 519,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 97,
+    "name": "SHIELDED PARKING",
+    "scale": "building",
+    "zh": "隐蔽的停车空间",
+    "problem": "停车怎样容易找到，却不占据环境的视觉中心？",
+    "principle": "以建筑、土堤或绿化遮蔽较大的停车空间，同时让停车入口、步行出口和所服务的主入口彼此清楚关联。",
+    "rule": "shieldedParking",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 97,
+      "printedStartCandidate": 477,
+      "printedEndCandidate": 479,
+      "pdfPages": [
+        521,
+        522,
+        523
+      ],
+      "solutionPdfPage": 523,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 98,
+    "name": "CIRCULATION REALMS",
+    "scale": "building",
+    "zh": "流线领域",
+    "problem": "复杂建筑里怎样不用冗长指示也能找到目的地？",
+    "principle": "将到达过程组织为逐渐缩小、可命名的领域，并以入口或门槛标识每次进入。",
+    "rule": "circulationRealms",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 98,
+      "printedStartCandidate": 480,
+      "printedEndCandidate": 484,
+      "pdfPages": [
+        524,
+        525,
+        526,
+        527,
+        528
+      ],
+      "solutionPdfPage": 528,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 99,
+    "name": "MAIN BUILDING",
+    "scale": "building",
+    "zh": "主要建筑",
+    "problem": "建筑群中最重要的共同功能如何被看见？",
+    "principle": "把承载核心活动的部分置于明显位置，以较高屋顶和主要路径强化其作为群体中心的身份。",
+    "rule": "mainBuilding",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 99,
+      "printedStartCandidate": 485,
+      "printedEndCandidate": 487,
+      "pdfPages": [
+        529,
+        530,
+        531
+      ],
+      "solutionPdfPage": 531,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 100,
+    "name": "PEDESTRIAN STREET",
+    "scale": "building",
+    "zh": "步行街",
+    "problem": "建筑间和楼层间的日常移动如何形成街道生活？",
+    "principle": "让建筑共同界定步行街，以频繁入口和直接通向街道的开放楼梯，把活动带到室外路径上。",
+    "rule": "pedestrianBuildingStreet",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 100,
+      "printedStartCandidate": 488,
+      "printedEndCandidate": 491,
+      "pdfPages": [
+        532,
+        533,
+        534,
+        535
+      ],
+      "solutionPdfPage": 534,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 101,
+    "name": "BUILDING THOROUGHFARE",
+    "scale": "building",
+    "zh": "穿过建筑的通道",
+    "problem": "必须移入室内的公共通行怎样仍然像街道一样有生活？",
+    "principle": "使室内通道成为连接外部街道的明确捷径，配以宽入口、较高中心空间和可见的边缘活动。",
+    "rule": "buildingThoroughfare",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 101,
+      "printedStartCandidate": 492,
+      "printedEndCandidate": 498,
+      "pdfPages": [
+        536,
+        537,
+        538,
+        539,
+        540,
+        541,
+        542
+      ],
+      "solutionPdfPage": 541,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 102,
+    "name": "FAMILY OF ENTRANCES",
+    "scale": "building",
+    "zh": "入口家族",
+    "problem": "多个入口如何既容易找到，又被理解为一组？",
+    "principle": "让相关入口相互可见，并共享门廊、门洞或屋顶等可辨认的形态语言。",
+    "rule": "entranceFamily",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 102,
+      "printedStartCandidate": 499,
+      "printedEndCandidate": 502,
+      "pdfPages": [
+        543,
+        544,
+        545,
+        546
+      ],
+      "solutionPdfPage": 546,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 103,
+    "name": "SMALL PARKING LOTS",
+    "scale": "building",
+    "zh": "小停车场",
+    "problem": "停车需求怎样被分散为不压倒场地的小部分？",
+    "principle": "将停车拆成小组，彼此保持间隔，用边界和植物遮挡，并使步行路径明确通向建筑。",
+    "rule": "smallParkingLots",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 103,
+      "printedStartCandidate": 503,
+      "printedEndCandidate": 507,
+      "pdfPages": [
+        547,
+        548,
+        549,
+        550,
+        551
+      ],
+      "solutionPdfPage": 550,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 104,
+    "name": "SITE REPAIR",
+    "scale": "building",
+    "zh": "场地修复",
+    "problem": "新建筑应占据场地中最好的部分，还是帮助修复较差部分？",
+    "principle": "保留珍贵、健康和舒适的地方，把新建筑放在更需要改善的位置，使建成与未建成部分共同修复场地。",
+    "rule": "siteRepair",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 104,
+      "printedStartCandidate": 508,
+      "printedEndCandidate": 512,
+      "pdfPages": [
+        552,
+        553,
+        554,
+        555,
+        556
+      ],
+      "solutionPdfPage": 555,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 105,
+    "name": "SOUTH FACING OUTDOORS",
+    "scale": "building",
+    "zh": "朝阳的户外空间",
+    "problem": "建筑会不会把主要户外活动区长期放在阴影里？",
+    "principle": "原书按北半球情境建议将建筑放在户外活动空间的北侧，使主要户外空间向南获得日照。",
+    "rule": "southFacingOutdoors",
+    "value": true,
+    "note": "朝向作用取决于半球、季节、地形与遮挡，不能无条件套用。",
+    "group": "site",
+    "source": {
+      "id": 105,
+      "printedStartCandidate": 513,
+      "printedEndCandidate": 516,
+      "pdfPages": [
+        557,
+        558,
+        559,
+        560
+      ],
+      "solutionPdfPage": 560,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 106,
+    "name": "POSITIVE OUTDOOR SPACE",
+    "scale": "building",
+    "zh": "积极的户外空间",
+    "problem": "建筑间的空地是剩余缝隙，还是一个可使用的地方？",
+    "principle": "通过建筑、树木、廊架和边界形成部分围合、具有明确形状的室外空间，同时向更大的空间开放。",
+    "rule": "positiveOutdoorSpace",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 106,
+      "printedStartCandidate": 517,
+      "printedEndCandidate": 523,
+      "pdfPages": [
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567
+      ],
+      "solutionPdfPage": 566,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 107,
+    "name": "WINGS OF LIGHT",
+    "scale": "building",
+    "zh": "采光翼部",
+    "problem": "建筑进深如何让自然光接近主要使用空间？",
+    "principle": "把建筑拆分为对应主要使用群体的狭长翼部，以较小进深增加与室外和自然光的联系。",
+    "rule": "narrowLightWings",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 107,
+      "printedStartCandidate": 524,
+      "printedEndCandidate": 530,
+      "pdfPages": [
+        568,
+        569,
+        570,
+        571,
+        572,
+        573,
+        574
+      ],
+      "solutionPdfPage": 573,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 108,
+    "name": "CONNECTED BUILDINGS",
+    "scale": "building",
+    "zh": "相连的建筑",
+    "problem": "新建筑如何接入已有环境，而不是孤立陈列？",
+    "principle": "把新建筑尽可能接续到已有建筑；无法直接相接时，以廊道、院落或户外房间建立连续联系。",
+    "rule": "connectedBuildings",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 108,
+      "printedStartCandidate": 531,
+      "printedEndCandidate": 534,
+      "pdfPages": [
+        578,
+        577,
+        576,
+        575
+      ],
+      "solutionPdfPage": 575,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 109,
+    "name": "LONG THIN HOUSE",
+    "scale": "building",
+    "zh": "狭长住宅",
+    "problem": "小建筑里的不同活动如何获得距离与独立性？",
+    "principle": "把房间沿较狭长的平面或竖向序列展开，同时用共享交汇点维持共同生活。",
+    "rule": "longThinBuilding",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 109,
+      "printedStartCandidate": 535,
+      "printedEndCandidate": 539,
+      "pdfPages": [
+        579,
+        580,
+        581,
+        582,
+        583
+      ],
+      "solutionPdfPage": 581,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 110,
+    "name": "MAIN ENTRANCE",
+    "scale": "building",
+    "zh": "主入口",
+    "problem": "来访者如何从主要到达方向立即识别入口？",
+    "principle": "让主入口位于可见位置，并以向外突出的、明确的空间形态表现出来。",
+    "rule": "visibleMainEntrance",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 110,
+      "printedStartCandidate": 540,
+      "printedEndCandidate": 544,
+      "pdfPages": [
+        584,
+        585,
+        586,
+        587,
+        588
+      ],
+      "solutionPdfPage": 588,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 111,
+    "name": "HALF-HIDDEN GARDEN",
+    "scale": "building",
+    "zh": "半隐的花园",
+    "problem": "花园如何既保持私密，又不与街道完全隔绝？",
+    "principle": "将花园安排在住宅侧边或半前半后的位置，使其部分隐藏、部分可见，并让入口路径与之关联。",
+    "rule": "halfHiddenGarden",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 111,
+      "printedStartCandidate": 545,
+      "printedEndCandidate": 547,
+      "pdfPages": [
+        589,
+        590,
+        591
+      ],
+      "solutionPdfPage": 591,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 112,
+    "name": "ENTRANCE TRANSITION",
+    "scale": "building",
+    "zh": "入口过渡",
+    "problem": "从公共街道到家中，如何有一个心理与身体上的转换？",
+    "principle": "在街道与前门之间组织一段过渡路径，通过光、方向、地面、声音、标高或视野的变化标识转换。",
+    "rule": "entranceTransition",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 112,
+      "printedStartCandidate": 548,
+      "printedEndCandidate": 552,
+      "pdfPages": [
+        592,
+        593,
+        594,
+        595,
+        596
+      ],
+      "solutionPdfPage": 596,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 113,
+    "name": "CAR CONNECTION",
+    "scale": "building",
+    "zh": "与汽车的连接",
+    "problem": "停车后进入住宅的路径会不会绕开主要入口？",
+    "principle": "让停车位到厨房和共享起居区的便捷路径经过主入口，并把停车处做成有明确边界的空间。",
+    "rule": "carToMainEntrance",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 113,
+      "printedStartCandidate": 553,
+      "printedEndCandidate": 556,
+      "pdfPages": [
+        597,
+        598,
+        599,
+        600
+      ],
+      "solutionPdfPage": 600,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 114,
+    "name": "HIERARCHY OF OPEN SPACE",
+    "scale": "building",
+    "zh": "开放空间的层次",
+    "problem": "室外空间怎样既有依靠，又能向远处展开？",
+    "principle": "每个室外空间都联系一个更小的背靠空间，也面向至少一个更大的空间，形成层次。",
+    "rule": "openSpaceHierarchy",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 114,
+      "printedStartCandidate": 557,
+      "printedEndCandidate": 560,
+      "pdfPages": [
+        601,
+        602,
+        603,
+        604
+      ],
+      "solutionPdfPage": 603,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 115,
+    "name": "COURTYARDS WHICH LIVE",
+    "scale": "building",
+    "zh": "有生活的庭院",
+    "problem": "庭院怎样成为日常活动经过和停留的地方？",
+    "principle": "让多个门和自然通行路径接入庭院，保留看向更大空间的视野，并在入口边结合有顶的过渡空间。",
+    "rule": "livingCourtyard",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 115,
+      "printedStartCandidate": 561,
+      "printedEndCandidate": 564,
+      "pdfPages": [
+        605,
+        606,
+        607,
+        608
+      ],
+      "solutionPdfPage": 608,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 116,
+    "name": "CASCADE OF ROOFS",
+    "scale": "building",
+    "zh": "层叠的屋顶",
+    "problem": "建筑的重要活动层次如何在屋顶上表现出来？",
+    "principle": "把最大、最高的屋顶放在重要空间上方，较小屋顶从它向外逐级下降，使屋顶与空间层次对应。",
+    "rule": "cascadingRoofs",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 116,
+      "printedStartCandidate": 565,
+      "printedEndCandidate": 568,
+      "pdfPages": [
+        609,
+        610,
+        611,
+        612
+      ],
+      "solutionPdfPage": 612,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 117,
+    "name": "SHELTERING ROOF",
+    "scale": "building",
+    "zh": "庇护性的屋顶",
+    "problem": "屋顶如何让人感到被包围和庇护，而不只是盖在上面？",
+    "principle": "使坡屋顶或拱顶的形态可见，并在入口等停留处降低檐口，让顶层空间进入屋顶体积内部。",
+    "rule": "shelteringRoof",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 117,
+      "printedStartCandidate": 569,
+      "printedEndCandidate": 574,
+      "pdfPages": [
+        613,
+        614,
+        615,
+        616,
+        617,
+        618
+      ],
+      "solutionPdfPage": 617,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 118,
+    "name": "ROOF GARDEN",
+    "scale": "building",
+    "zh": "屋顶花园",
+    "problem": "屋顶怎样成为可直接使用的室外生活空间？",
+    "principle": "把部分屋面做成可到达的花园或露台，与相同标高的日常房间直接连接，并考虑风与日照。",
+    "rule": "usableRoofGarden",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 118,
+      "printedStartCandidate": 575,
+      "printedEndCandidate": 579,
+      "pdfPages": [
+        619,
+        620,
+        621,
+        622,
+        623
+      ],
+      "solutionPdfPage": 621,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 119,
+    "name": "ARCADES",
+    "scale": "building",
+    "zh": "拱廊",
+    "problem": "沿建筑边缘移动时，怎样保持连续的庇护？",
+    "principle": "在建筑边缘路径上设置较低的廊道，并用它连接相邻建筑，让步行者能够在有顶的连续空间里移动。",
+    "rule": "connectingArcades",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 119,
+      "printedStartCandidate": 580,
+      "printedEndCandidate": 584,
+      "pdfPages": [
+        624,
+        625,
+        626,
+        627,
+        628
+      ],
+      "solutionPdfPage": 627,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 120,
+    "name": "PATHS AND GOALS",
+    "scale": "building",
+    "zh": "路径与目标",
+    "problem": "路径如何由值得到达的地方形成，而非任意画线？",
+    "principle": "先选择树、入口、座位或水景等目标，再连接这些目标，并让路径在目标附近适当扩展。",
+    "rule": "pathsBetweenGoals",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 120,
+      "printedStartCandidate": 585,
+      "printedEndCandidate": 588,
+      "pdfPages": [
+        629,
+        630,
+        631,
+        632
+      ],
+      "solutionPdfPage": 631,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 121,
+    "name": "PATH SHAPE",
+    "scale": "building",
+    "zh": "路径的形状",
+    "problem": "路径怎样既能通行，也能容纳停留？",
+    "principle": "使路径中段适度膨大、两端较窄，以建筑和边缘活动形成一个可以停留的空间。",
+    "rule": "bulgingPath",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 121,
+      "printedStartCandidate": 589,
+      "printedEndCandidate": 592,
+      "pdfPages": [
+        633,
+        634,
+        635,
+        636
+      ],
+      "solutionPdfPage": 635,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 122,
+    "name": "BUILDING FRONTS",
+    "scale": "building",
+    "zh": "建筑正面",
+    "problem": "建筑正面与公共路径之间怎样形成明确的空间？",
+    "principle": "原书主张让建筑正面贴近路径和公共空间，并随街道形状调整角度，以共同界定街道。",
+    "rule": "alignedBuildingFronts",
+    "value": true,
+    "note": "真实退界要求受规划、消防与通行规则约束。",
+    "group": "site",
+    "source": {
+      "id": 122,
+      "printedStartCandidate": 593,
+      "printedEndCandidate": 595,
+      "pdfPages": [
+        637,
+        638,
+        639
+      ],
+      "solutionPdfPage": 638,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 123,
+    "name": "PEDESTRIAN DENSITY",
+    "scale": "building",
+    "zh": "步行密度",
+    "problem": "公共空间的面积怎样与实际使用人数匹配？",
+    "principle": "依据通常在场的人数确定公共空间尺度，避免面积过大而稀疏；原书给出每人面积的参考区间。",
+    "rule": "pedestrianCapacityFit",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 123,
+      "printedStartCandidate": 596,
+      "printedEndCandidate": 598,
+      "pdfPages": [
+        640,
+        641,
+        642
+      ],
+      "solutionPdfPage": 642,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 124,
+    "name": "ACTIVITY POCKETS",
+    "scale": "building",
+    "zh": "活动口袋",
+    "problem": "公共空间的边缘如何吸引人停下并参与？",
+    "principle": "沿边缘设置向公共空间突出的、部分围合的活动小口袋，让路径从它们之间经过。",
+    "rule": "edgeActivityPockets",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 124,
+      "printedStartCandidate": 599,
+      "printedEndCandidate": 602,
+      "pdfPages": [
+        643,
+        644,
+        645,
+        646
+      ],
+      "solutionPdfPage": 645,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 125,
+    "name": "STAIR SEATS",
+    "scale": "building",
+    "zh": "台阶座位",
+    "problem": "标高变化如何同时成为观看和相遇的位置？",
+    "principle": "在公共场所边缘的高差处设置可以直接到达的宽台阶，让人坐下观看正在发生的活动。",
+    "rule": "stairSeats",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 125,
+      "printedStartCandidate": 603,
+      "printedEndCandidate": 605,
+      "pdfPages": [
+        647,
+        648,
+        649
+      ],
+      "solutionPdfPage": 649,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 126,
+    "name": "SOMETHING ROUGHLY IN THE MIDDLE",
+    "scale": "building",
+    "zh": "大致居中的某个东西",
+    "problem": "广场的中心如何有吸引力而不妨碍自然路径？",
+    "principle": "在穿越路径之间放置树、水景、钟塔等稳定的中心物，接受自然形成的偏心位置，而非强行几何居中。",
+    "rule": "roughlyCentralFocus",
+    "value": true,
+    "group": "site",
+    "source": {
+      "id": 126,
+      "printedStartCandidate": 606,
+      "printedEndCandidate": 609,
+      "pdfPages": [
+        650,
+        651,
+        652,
+        653
+      ],
+      "solutionPdfPage": 651,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 127,
+    "name": "INTIMACY GRADIENT",
+    "scale": "building",
+    "zh": "私密性渐变",
+    "problem": "来访与日常通行怎样避免直接侵入最私人的空间？",
+    "principle": "从入口和公共活动开始，经过半私密区域，再到最私人的领域；共享空间仍与主要路径相邻。",
+    "rule": "intimacyGradient",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 127,
+      "printedStartCandidate": 610,
+      "printedEndCandidate": 613,
+      "pdfPages": [
+        654,
+        655,
+        656,
+        657
+      ],
+      "solutionPdfPage": 657,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 128,
+    "name": "INDOOR SUNLIGHT",
+    "scale": "building",
+    "zh": "室内阳光",
+    "problem": "重要房间的位置如何回应一天中的阳光？",
+    "principle": "原书按北半球情境把主要生活房间朝向南侧，并根据活动节奏细分东南、西南和早晨日照的位置。",
+    "rule": "sunOrientedRooms",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 128,
+      "printedStartCandidate": 614,
+      "printedEndCandidate": 617,
+      "pdfPages": [
+        658,
+        659,
+        660,
+        661
+      ],
+      "solutionPdfPage": 661,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 129,
+    "name": "COMMON AREAS AT THE HEART",
+    "scale": "building",
+    "zh": "共享空间位于中心",
+    "problem": "共享空间怎样自然进入每个人的日常路线？",
+    "principle": "把共同活动区放在群体所用空间的重心附近，让主要到达路径擦边经过，而不从活动中心切穿。",
+    "rule": "commonsAtHeart",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 129,
+      "printedStartCandidate": 618,
+      "printedEndCandidate": 621,
+      "pdfPages": [
+        662,
+        663,
+        664,
+        665
+      ],
+      "solutionPdfPage": 665,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 130,
+    "name": "ENTRANCE ROOM",
+    "scale": "building",
+    "zh": "入口处的房间",
+    "problem": "入口能否成为一个可停留的房间，而不是一扇门？",
+    "principle": "用有光的空间跨越室内外边界，室外部分提供庇护，室内部分支持迎接、等待和置物。",
+    "rule": "entranceRoom",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 130,
+      "printedStartCandidate": 622,
+      "printedEndCandidate": 626,
+      "pdfPages": [
+        666,
+        667,
+        668,
+        669,
+        670
+      ],
+      "solutionPdfPage": 669,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 131,
+    "name": "THE FLOW THROUGH ROOMS",
+    "scale": "building",
+    "zh": "穿行房间的流线",
+    "problem": "室内通行怎样与共同生活相连，又不破坏私密房间？",
+    "principle": "让共享房间形成连续链或环，私人房间从它们侧面进入，以较宽敞的房间联系替代过多走廊。",
+    "rule": "flowThroughRooms",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 131,
+      "printedStartCandidate": 627,
+      "printedEndCandidate": 631,
+      "pdfPages": [
+        671,
+        672,
+        673,
+        674,
+        675
+      ],
+      "solutionPdfPage": 674,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 132,
+    "name": "SHORT PASSAGES",
+    "scale": "building",
+    "zh": "短走道",
+    "problem": "不可避免的走道如何避免成为漫长而空洞的剩余空间？",
+    "principle": "使走道较短、明亮且有合适宽度，并以窗、座位和书架赋予它房间般的使用可能。",
+    "rule": "shortRoomlikePassages",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 132,
+      "printedStartCandidate": 632,
+      "printedEndCandidate": 636,
+      "pdfPages": [
+        676,
+        677,
+        678,
+        679,
+        680
+      ],
+      "solutionPdfPage": 679,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 133,
+    "name": "STAIRCASE AS A STAGE",
+    "scale": "building",
+    "zh": "楼梯作为舞台",
+    "problem": "上下楼的人怎样参与共享空间的活动？",
+    "principle": "把主要楼梯放在可见的关键位置，沿共享空间边缘展开，并放宽底部台阶，使楼梯兼具观看和坐下的作用。",
+    "rule": "staircaseStage",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 133,
+      "printedStartCandidate": 637,
+      "printedEndCandidate": 640,
+      "pdfPages": [
+        681,
+        682,
+        683,
+        684
+      ],
+      "solutionPdfPage": 683,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 134,
+    "name": "ZEN VIEW",
+    "scale": "building",
+    "zh": "禅意景观",
+    "problem": "美好的景观怎样在反复经过时仍被注意？",
+    "principle": "通过小开口、转折或路径上的特定位置让景观短暂显露，使观看成为一次有意识的发现。",
+    "rule": "glimpsedView",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 134,
+      "printedStartCandidate": 641,
+      "printedEndCandidate": 643,
+      "pdfPages": [
+        685,
+        686,
+        687
+      ],
+      "solutionPdfPage": null,
+      "missingPrintedPages": [],
+      "reviewBasis": "available-body-needs-review"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 135,
+    "name": "TAPESTRY OF LIGHT AND DARK",
+    "scale": "building",
+    "zh": "明暗的织锦",
+    "problem": "光线如何帮助人辨认重要位置与移动方向？",
+    "principle": "让入口、楼梯、座位等重要位置具有较强光线，并与较暗区域交替，形成可感知的引导。",
+    "rule": "lightDarkSequence",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 135,
+      "printedStartCandidate": 644,
+      "printedEndCandidate": 647,
+      "pdfPages": [
+        688,
+        689,
+        690,
+        691
+      ],
+      "solutionPdfPage": 690,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 136,
+    "name": "COUPLE'S REALM",
+    "scale": "building",
+    "zh": "伴侣的领域",
+    "problem": "共同居住的伴侣怎样获得独处于其他家庭活动之外的领域？",
+    "principle": "给伴侣一个与共享区、儿童区区别开的私人部分，同时保留照料儿童所需的直接联系。",
+    "rule": "couplesRealm",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 136,
+      "printedStartCandidate": 648,
+      "printedEndCandidate": 650,
+      "pdfPages": [
+        692,
+        693,
+        694
+      ],
+      "solutionPdfPage": 694,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 137,
+    "name": "CHILDREN'S REALM",
+    "scale": "building",
+    "zh": "儿童的领域",
+    "problem": "儿童的活动如何从睡眠处延伸到户外，又不穿过安静领域？",
+    "principle": "把儿童床位、所需服务和户外游戏空间连接成连续带，从共享区侧面经过，并绕开伴侣与安静坐区。",
+    "rule": "childrensRealm",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 137,
+      "printedStartCandidate": 651,
+      "printedEndCandidate": 655,
+      "pdfPages": [
+        695,
+        696,
+        697,
+        698,
+        699
+      ],
+      "solutionPdfPage": 698,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 138,
+    "name": "SLEEPING TO THE EAST",
+    "scale": "building",
+    "zh": "朝东的睡眠空间",
+    "problem": "睡眠空间怎样与早晨的自然光建立联系？",
+    "principle": "让床位能从东侧开口获得晨光，不必只把整个房间放在建筑东边；庭院也可以提供东向开口。",
+    "rule": "eastFacingBeds",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 138,
+      "printedStartCandidate": 656,
+      "printedEndCandidate": 659,
+      "pdfPages": [
+        700,
+        701,
+        702,
+        703
+      ],
+      "solutionPdfPage": 703,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 139,
+    "name": "FARMHOUSE KITCHEN",
+    "scale": "building",
+    "zh": "农舍厨房",
+    "problem": "厨房怎样成为共同生活的一部分，而不是偏远的服务间？",
+    "principle": "把烹饪、围坐和家庭活动放在接近共享核心的明亮大空间里，操作台沿边、共同餐桌在中间。",
+    "rule": "farmhouseKitchen",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 139,
+      "printedStartCandidate": 660,
+      "printedEndCandidate": 663,
+      "pdfPages": [
+        704,
+        705,
+        706,
+        707
+      ],
+      "solutionPdfPage": 706,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 140,
+    "name": "PRIVATE TERRACE ON THE STREET",
+    "scale": "building",
+    "zh": "临街的私人露台",
+    "problem": "共享房间怎样看向街道，同时保留住户私密性？",
+    "principle": "让房间打开到面向街道的较宽露台，以小幅抬高和可越过视线的矮墙区分公共与私人领域。",
+    "rule": "privateStreetTerrace",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 140,
+      "printedStartCandidate": 664,
+      "printedEndCandidate": 667,
+      "pdfPages": [
+        708,
+        709,
+        710,
+        711
+      ],
+      "solutionPdfPage": 711,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 141,
+    "name": "A ROOM OF ONE'S OWN",
+    "scale": "building",
+    "zh": "自己的房间",
+    "problem": "共同生活中，每个人能否找到由自己支配的独处空间？",
+    "principle": "为每个成员提供私人房间或至少可围合的小凹室，放在私密层次的深处，并容纳个人工作和物件。",
+    "rule": "individualRetreats",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 141,
+      "printedStartCandidate": 668,
+      "printedEndCandidate": 672,
+      "pdfPages": [
+        712,
+        713,
+        714,
+        715,
+        716
+      ],
+      "solutionPdfPage": 715,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 142,
+    "name": "SEQUENCE OF SITTING SPACES",
+    "scale": "building",
+    "zh": "一系列坐下的空间",
+    "problem": "不同性质的交谈与休息是否只能使用同一种坐区？",
+    "principle": "在建筑中提供围合程度不同的坐下空间，从独立房间、半围合角落到开放的房间边缘。",
+    "rule": "sittingSpaceSequence",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 142,
+      "printedStartCandidate": 673,
+      "printedEndCandidate": 675,
+      "pdfPages": [
+        717,
+        718,
+        719
+      ],
+      "solutionPdfPage": 718,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 143,
+    "name": "BED CLUSTER",
+    "scale": "building",
+    "zh": "床位组团",
+    "problem": "孩子如何在睡眠时既有个人领地，又感到与同伴相连？",
+    "principle": "将独立床位凹室围绕共同游戏区布置，用帘幕等柔性边界区分个人物件和共有空间。",
+    "rule": "bedCluster",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 143,
+      "printedStartCandidate": 676,
+      "printedEndCandidate": 680,
+      "pdfPages": [
+        720,
+        721,
+        722,
+        723,
+        724
+      ],
+      "solutionPdfPage": 723,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 144,
+    "name": "BATHING ROOM",
+    "scale": "building",
+    "zh": "沐浴室",
+    "problem": "沐浴空间怎样同时接近共同生活与私密领域？",
+    "principle": "把沐浴、清洁和相关服务安排在共同与私人区域之间，兼顾私人到达、自然光及可能的私密户外联系。",
+    "rule": "bathingRoom",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 144,
+      "printedStartCandidate": 681,
+      "printedEndCandidate": 686,
+      "pdfPages": [
+        725,
+        726,
+        727,
+        728,
+        729,
+        730
+      ],
+      "solutionPdfPage": 729,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 145,
+    "name": "BULK STORAGE",
+    "scale": "building",
+    "zh": "大件储物",
+    "problem": "大件收纳为什么不能等平面画完后再填缝？",
+    "principle": "提前预留明确的大件储物体积，利用较便宜或较少需要日照的位置，避免挤占主要生活空间。",
+    "rule": "plannedBulkStorage",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 145,
+      "printedStartCandidate": 687,
+      "printedEndCandidate": 689,
+      "pdfPages": [
+        731,
+        732,
+        733
+      ],
+      "solutionPdfPage": 732,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 146,
+    "name": "FLEXIBLE OFFICE SPACE",
+    "scale": "building",
+    "zh": "灵活的办公空间",
+    "problem": "办公空间怎样随群体和工作方式改变？",
+    "principle": "用可逐步填充的柱列和不同尺度的半私密空间组织办公室，保留相互接触、采光与调整余地。",
+    "rule": "flexibleOfficeBays",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 146,
+      "printedStartCandidate": 690,
+      "printedEndCandidate": 695,
+      "pdfPages": [
+        734,
+        735,
+        736,
+        737,
+        738,
+        739
+      ],
+      "solutionPdfPage": 738,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 147,
+    "name": "COMMUNAL EATING",
+    "scale": "building",
+    "zh": "共同进餐",
+    "problem": "共同进餐怎样成为群体持续的日常活动？",
+    "principle": "给群体一个共同餐桌和准备食物的位置，把共同用餐组织为经常发生、可邀请他人参与的事件。",
+    "rule": "communalEating",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 147,
+      "printedStartCandidate": 696,
+      "printedEndCandidate": 700,
+      "pdfPages": [
+        740,
+        741,
+        742,
+        743,
+        744
+      ],
+      "solutionPdfPage": 743,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 148,
+    "name": "SMALL WORK GROUPS",
+    "scale": "building",
+    "zh": "小型工作组",
+    "problem": "机构中的小团队如何保持可见联系并共享资源？",
+    "principle": "把工作组织为空间上可识别的少人数群体，使同组成员部分互见，多个小组再共享入口和服务。",
+    "rule": "smallWorkGroups",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 148,
+      "printedStartCandidate": 701,
+      "printedEndCandidate": 704,
+      "pdfPages": [
+        745,
+        746,
+        747,
+        748
+      ],
+      "solutionPdfPage": 747,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 149,
+    "name": "RECEPTION WELCOMES YOU",
+    "scale": "building",
+    "zh": "欢迎来客的接待处",
+    "problem": "接待是否必须是一道挡在来访者面前的柜台？",
+    "principle": "把座位、饮食或炉火等欢迎元素放在入口内，接待工作位设在侧面，便于工作人员走近来访者。",
+    "rule": "welcomingReception",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 149,
+      "printedStartCandidate": 705,
+      "printedEndCandidate": 706,
+      "pdfPages": [
+        749,
+        750
+      ],
+      "solutionPdfPage": 750,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 150,
+    "name": "A PLACE TO WAIT",
+    "scale": "building",
+    "zh": "等待的地方",
+    "problem": "等待能否同时容纳交往和安静休息？",
+    "principle": "将等待与可参与的日常活动结合，也提供安静角落，让等候者能根据当时的需要选择。",
+    "rule": "positiveWaiting",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 150,
+      "printedStartCandidate": 707,
+      "printedEndCandidate": 711,
+      "pdfPages": [
+        751,
+        752,
+        753,
+        754,
+        755
+      ],
+      "solutionPdfPage": 754,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 151,
+    "name": "SMALL MEETING ROOMS",
+    "scale": "building",
+    "zh": "小会议室",
+    "problem": "讨论空间怎样避免因为过大而削弱面对面交流？",
+    "principle": "让大多数会议室保持小尺度，并分散在较公共、接近工作区的位置，提供适合围坐的形状。",
+    "rule": "smallMeetingRooms",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 151,
+      "printedStartCandidate": 712,
+      "printedEndCandidate": 716,
+      "pdfPages": [
+        756,
+        757,
+        758,
+        759,
+        760
+      ],
+      "solutionPdfPage": 759,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 152,
+    "name": "HALF-PRIVATE OFFICE",
+    "scale": "building",
+    "zh": "半私密办公室",
+    "problem": "工作空间如何在完全隔绝和完全暴露之间取得平衡？",
+    "principle": "让办公室向外部半开敞，入口附近设置交谈位置，实际工作位则放在较深、较安静的部分。",
+    "rule": "halfPrivateOffice",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 152,
+      "printedStartCandidate": 717,
+      "printedEndCandidate": 719,
+      "pdfPages": [
+        761,
+        762,
+        763
+      ],
+      "solutionPdfPage": 762,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 153,
+    "name": "ROOMS TO RENT",
+    "scale": "building",
+    "zh": "可出租的房间",
+    "problem": "住宅的一部分如何在未来获得相对独立的用途？",
+    "principle": "给可独立使用的部分增加一个外部入口和直接可达的卫生服务，同时保留可关闭的内部连接。",
+    "rule": "independentRentableRoom",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 153,
+      "printedStartCandidate": 720,
+      "printedEndCandidate": 722,
+      "pdfPages": [
+        764,
+        765,
+        766
+      ],
+      "solutionPdfPage": 766,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 154,
+    "name": "TEENAGER'S COTTAGE",
+    "scale": "building",
+    "zh": "青少年的小屋",
+    "problem": "青少年逐渐独立的过程如何在住宅中被表达？",
+    "principle": "给青少年一个仍附属于家庭、但可辨认且有独立入口的空间，并通过共享服务保持与家庭的联系。",
+    "rule": "teenagersCottage",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 154,
+      "printedStartCandidate": 723,
+      "printedEndCandidate": 728,
+      "pdfPages": [
+        767,
+        768,
+        769,
+        770,
+        771,
+        772
+      ],
+      "solutionPdfPage": 771,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 155,
+    "name": "OLD AGE COTTAGE",
+    "scale": "building",
+    "zh": "老年人的小屋",
+    "problem": "较小的老年住宅怎样保持自主并接近邻里生活？",
+    "principle": "把小住宅放在地面层，接近有人经过的街道、共有地与服务，让门前停留成为日常联系的一部分。",
+    "rule": "olderPersonsCottage",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 155,
+      "printedStartCandidate": 729,
+      "printedEndCandidate": 732,
+      "pdfPages": [
+        773,
+        774,
+        775,
+        776
+      ],
+      "solutionPdfPage": 775,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 156,
+    "name": "SETTLED WORK",
+    "scale": "building",
+    "zh": "安定的工作",
+    "problem": "一个人的工作与兴趣怎样能在家附近逐渐生长？",
+    "principle": "提供由使用者持续掌控的工作位置，允许它从小兴趣开始逐步成为稳定、可生产的工作场所。",
+    "rule": "settledPersonalWork",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 156,
+      "printedStartCandidate": 733,
+      "printedEndCandidate": 736,
+      "pdfPages": [
+        777,
+        778,
+        779,
+        780
+      ],
+      "solutionPdfPage": 779,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 157,
+    "name": "HOME WORKSHOP",
+    "scale": "building",
+    "zh": "家庭工作间",
+    "problem": "家附近能否容纳真正持续的工作，而不只是一张临时桌子？",
+    "principle": "为较安静的实际工作留出明确空间，让它与住宅相连，也能被街道看见和直接接近。",
+    "rule": "homeWorkshop",
+    "value": true,
+    "group": "plan",
+    "source": {
+      "id": 157,
+      "printedStartCandidate": 737,
+      "printedEndCandidate": 739,
+      "pdfPages": [
+        781,
+        782,
+        783
+      ],
+      "solutionPdfPage": 783,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 158,
+    "name": "OPEN STAIRS",
+    "scale": "building",
+    "zh": "开放楼梯",
+    "problem": "上层独立单元如何直接联系公共街道？",
+    "principle": "以从街道开放到达的楼梯和平台连接上层住户、服务或工作组，必要时加顶盖，并减少封闭的上层长走廊。",
+    "rule": "openExternalStairs",
+    "value": true,
+    "note": "真实楼梯还需满足疏散、无障碍、防坠及气候要求。",
+    "group": "plan",
+    "source": {
+      "id": 158,
+      "printedStartCandidate": 740,
+      "printedEndCandidate": 745,
+      "pdfPages": [
+        784,
+        785,
+        786,
+        787,
+        788,
+        789
+      ],
+      "solutionPdfPage": 788,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 159,
+    "name": "LIGHT ON TWO SIDES OF EVERY ROOM",
+    "scale": "building",
+    "zh": "每个房间的双面采光",
+    "problem": "单侧亮窗与室内暗部之间如何避免过强的明暗对比？",
+    "principle": "优先让房间接触两个方向的室外空间，使自然光从不同方向进入；原书也讨论浅进深等替代条件。",
+    "rule": "twoSidedDaylight",
+    "value": true,
+    "group": "edge",
+    "source": {
+      "id": 159,
+      "printedStartCandidate": 746,
+      "printedEndCandidate": 751,
+      "pdfPages": [
+        790,
+        791,
+        792,
+        793,
+        794,
+        795
+      ],
+      "solutionPdfPage": 794,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 160,
+    "name": "BUILDING EDGE",
+    "scale": "building",
+    "zh": "建筑边缘",
+    "problem": "建筑边缘能否成为停留和活动的地方，而不只是一条界线？",
+    "principle": "以有进深、有庇护、可以坐靠和行走的空间丰富建筑边缘，尤其面向有趣的室外活动。",
+    "rule": "inhabitedBuildingEdge",
+    "value": true,
+    "group": "edge",
+    "source": {
+      "id": 160,
+      "printedStartCandidate": 752,
+      "printedEndCandidate": 756,
+      "pdfPages": [
+        796,
+        797,
+        798,
+        799,
+        800
+      ],
+      "solutionPdfPage": 799,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 161,
+    "name": "SUNNY PLACE",
+    "scale": "building",
+    "zh": "向阳的地方",
+    "problem": "有阳光的位置为什么仍可能难以停留？",
+    "principle": "在建筑与室外交界处选择日照较好的位置，并结合挡风、座位和适当遮阴，把它做成明确场所。",
+    "rule": "shelteredSunnyPlace",
+    "value": true,
+    "group": "edge",
+    "source": {
+      "id": 161,
+      "printedStartCandidate": 757,
+      "printedEndCandidate": 760,
+      "pdfPages": [
+        801,
+        802,
+        803,
+        804
+      ],
+      "solutionPdfPage": 803,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 162,
+    "name": "NORTH FACE",
+    "scale": "building",
+    "zh": "北立面",
+    "problem": "建筑北侧如何避免留下深而无用的阴影带？",
+    "principle": "原书按北半球情境使北侧体量逐级降低，并把较少需要直射阳光的储物与服务空间放入这一侧。",
+    "rule": "northSideCascade",
+    "value": true,
+    "group": "edge",
+    "source": {
+      "id": 162,
+      "printedStartCandidate": 761,
+      "printedEndCandidate": 763,
+      "pdfPages": [
+        805,
+        806,
+        807
+      ],
+      "solutionPdfPage": 806,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 163,
+    "name": "OUTDOOR ROOM",
+    "scale": "building",
+    "zh": "户外房间",
+    "problem": "花园是否同时满足坐下、交谈、工作和用餐等户外生活？",
+    "principle": "在建筑与花园之间形成部分围合、像房间一样可以居住的户外空间，使生活真正延伸到室外。",
+    "rule": "outdoorLivingRoom",
+    "value": true,
+    "note": "所供扫描本缺印刷页767；此概括依据现有765、766、768页正文，未伪称已读缺页。",
+    "group": "edge",
+    "source": {
+      "id": 163,
+      "printedStartCandidate": 764,
+      "printedEndCandidate": 768,
+      "pdfPages": [
+        808,
+        809,
+        810,
+        812
+      ],
+      "solutionPdfPage": null,
+      "missingPrintedPages": [
+        767
+      ],
+      "reviewBasis": "available-body-needs-review"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 164,
+    "name": "STREET WINDOWS",
+    "scale": "building",
+    "zh": "街道窗户",
+    "problem": "室内活动如何与街道保持视觉联系，同时兼顾隐私？",
+    "principle": "让经常有人使用或经过的位置设窗看向街道，并为停留观看提供位置；低层窗适当保护私密性。",
+    "rule": "streetWatchingWindows",
+    "value": true,
+    "group": "edge",
+    "source": {
+      "id": 164,
+      "printedStartCandidate": 769,
+      "printedEndCandidate": 772,
+      "pdfPages": [
+        813,
+        814,
+        815,
+        816
+      ],
+      "solutionPdfPage": 816,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 165,
+    "name": "OPENING TO THE STREET",
+    "scale": "building",
+    "zh": "向街道敞开",
+    "problem": "依赖街道活动的公共空间如何真正向行人开放？",
+    "principle": "用能够大幅打开的界面连接室内外，必要时让一部分活动跨到路径另一侧，使行人经过活动之中。",
+    "rule": "openStreetFront",
+    "value": true,
+    "group": "edge",
+    "source": {
+      "id": 165,
+      "printedStartCandidate": 773,
+      "printedEndCandidate": 776,
+      "pdfPages": [
+        817,
+        818,
+        819,
+        820
+      ],
+      "solutionPdfPage": 820,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 166,
+    "name": "GALLERY SURROUND",
+    "scale": "building",
+    "zh": "环绕的廊道",
+    "problem": "建筑各层如何拥有与室内直接相连的边缘生活？",
+    "principle": "在有实际使用联系的位置配置廊、露台、阳台和凹室，通过门直接接入室内，而不只做附加装饰。",
+    "rule": "inhabitedGalleryEdge",
+    "value": true,
+    "group": "edge",
+    "source": {
+      "id": 166,
+      "printedStartCandidate": 777,
+      "printedEndCandidate": 780,
+      "pdfPages": [
+        821,
+        822,
+        823,
+        824
+      ],
+      "solutionPdfPage": 824,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 167,
+    "name": "SIX-FOOT BALCONY",
+    "scale": "building",
+    "zh": "六英尺阳台",
+    "problem": "阳台和露台有多深才容得下真实活动？",
+    "principle": "原书强调至少约六英尺的使用进深，并建议部分嵌入建筑、适度围合，使其像户外房间。",
+    "rule": "deepUsableBalcony",
+    "value": true,
+    "group": "edge",
+    "source": {
+      "id": 167,
+      "printedStartCandidate": 781,
+      "printedEndCandidate": 784,
+      "pdfPages": [
+        825,
+        826,
+        827,
+        828
+      ],
+      "solutionPdfPage": 828,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 168,
+    "name": "CONNECTION TO THE EARTH",
+    "scale": "building",
+    "zh": "与大地相连",
+    "problem": "建筑与地面的关系如何从一道硬边界变成连续过渡？",
+    "principle": "通过边缘的路径、平台、台阶和材质变化，把建筑逐步延伸到周围土地。",
+    "rule": "groundConnection",
+    "value": true,
+    "group": "edge",
+    "source": {
+      "id": 168,
+      "printedStartCandidate": 785,
+      "printedEndCandidate": 789,
+      "pdfPages": [
+        829,
+        830,
+        831,
+        832,
+        833
+      ],
+      "solutionPdfPage": 831,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 169,
+    "name": "TERRACED SLOPE",
+    "scale": "building",
+    "zh": "阶梯状坡地",
+    "problem": "坡地如何形成可以停留、种植和使用的地面？",
+    "principle": "让低墙和台地顺着等高线组织地形，建筑可跨越台地，而不必完全服从每条等高线。",
+    "rule": "contourTerraces",
+    "value": true,
+    "group": "edge",
+    "source": {
+      "id": 169,
+      "printedStartCandidate": 790,
+      "printedEndCandidate": 793,
+      "pdfPages": [
+        834,
+        835,
+        836,
+        837
+      ],
+      "solutionPdfPage": 836,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 170,
+    "name": "FRUIT TREES",
+    "scale": "building",
+    "zh": "果树",
+    "problem": "果树怎样进入有人持续照料的日常公共空间？",
+    "principle": "在有明确照料群体的花园、共有地和路径旁形成小果园，并让特别的树成为停留目标。",
+    "rule": "communityFruitTrees",
+    "value": true,
+    "group": "edge",
+    "source": {
+      "id": 170,
+      "printedStartCandidate": 794,
+      "printedEndCandidate": 796,
+      "pdfPages": [
+        838,
+        839,
+        840
+      ],
+      "solutionPdfPage": 840,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 171,
+    "name": "TREE PLACES",
+    "scale": "building",
+    "zh": "树下的地方",
+    "problem": "树木怎样参与形成空间，而不只是被零散摆放？",
+    "principle": "根据树的生长形态组织树荫、林丛、树列或围合，并让建筑、路径和座位回应这些树形成的场所。",
+    "rule": "treeFormedPlaces",
+    "value": true,
+    "group": "edge",
+    "source": {
+      "id": 171,
+      "printedStartCandidate": 797,
+      "printedEndCandidate": 800,
+      "pdfPages": [
+        841,
+        842,
+        843,
+        844
+      ],
+      "solutionPdfPage": 844,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 172,
+    "name": "GARDEN GROWING WILD",
+    "scale": "building",
+    "zh": "自然生长的花园",
+    "problem": "花园能否呈现植物相互交织的生长，而不是孤立的装饰花坛？",
+    "principle": "让草、苔藓、灌木和树接近自然地混生，使用能融入生长的边缘材料，只为具体功能保留必要的正式构件。",
+    "rule": "wildGrowingGarden",
+    "value": true,
+    "group": "edge",
+    "source": {
+      "id": 172,
+      "printedStartCandidate": 801,
+      "printedEndCandidate": 804,
+      "pdfPages": [
+        845,
+        846,
+        847,
+        848
+      ],
+      "solutionPdfPage": 847,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 173,
+    "name": "GARDEN WALL",
+    "scale": "building",
+    "zh": "花园围墙",
+    "problem": "安静花园如何保护内部生活，又不完全封闭视野？",
+    "principle": "按花园尺度选择植物、地形、建筑或墙体围合，遮挡交通干扰，同时以开口连接外界和更远的景观。",
+    "rule": "protectiveGardenWall",
+    "value": true,
+    "group": "edge",
+    "source": {
+      "id": 173,
+      "printedStartCandidate": 805,
+      "printedEndCandidate": 808,
+      "pdfPages": [
+        849,
+        850,
+        851,
+        852
+      ],
+      "solutionPdfPage": 851,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 174,
+    "name": "TRELLISED WALK",
+    "scale": "building",
+    "zh": "藤架步道",
+    "problem": "步行路径怎样获得亲密感和柔和光线？",
+    "principle": "在需要庇护的路径上设置攀缘植物与藤架，并用它同时界定路径两侧的空间。",
+    "rule": "trellisedWalk",
+    "value": true,
+    "group": "edge",
+    "source": {
+      "id": 174,
+      "printedStartCandidate": 809,
+      "printedEndCandidate": 811,
+      "pdfPages": [
+        853,
+        854,
+        855
+      ],
+      "solutionPdfPage": 855,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 175,
+    "name": "GREENHOUSE",
+    "scale": "building",
+    "zh": "温室",
+    "problem": "温室如何既属于住宅，又属于花园？",
+    "principle": "在适宜气候下，让温室同时直接连接室内和花园，靠近种植、工具及堆肥相关空间。",
+    "rule": "connectedGreenhouse",
+    "value": true,
+    "group": "edge",
+    "source": {
+      "id": 175,
+      "printedStartCandidate": 812,
+      "printedEndCandidate": 814,
+      "pdfPages": [
+        856,
+        857,
+        858
+      ],
+      "solutionPdfPage": 858,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 176,
+    "name": "GARDEN SEAT",
+    "scale": "building",
+    "zh": "花园座位",
+    "problem": "花园里哪里能支持一个人安静地停留？",
+    "principle": "精心选择有视野、阳光和挡风的位置，以植物围合和舒适座位形成私密的小角落。",
+    "rule": "quietGardenSeat",
+    "value": true,
+    "group": "edge",
+    "source": {
+      "id": 176,
+      "printedStartCandidate": 815,
+      "printedEndCandidate": 817,
+      "pdfPages": [
+        859,
+        860,
+        861
+      ],
+      "solutionPdfPage": 861,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 177,
+    "name": "VEGETABLE GARDEN",
+    "scale": "building",
+    "zh": "菜园",
+    "problem": "食物种植怎样靠近日常生活并容易照料？",
+    "principle": "在私人或共有地中安排向阳、对使用住户居中的菜园，并结合围护与工具存放。",
+    "rule": "vegetableGarden",
+    "value": true,
+    "group": "edge",
+    "source": {
+      "id": 177,
+      "printedStartCandidate": 818,
+      "printedEndCandidate": 821,
+      "pdfPages": [
+        862,
+        863,
+        864,
+        865
+      ],
+      "solutionPdfPage": 864,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 178,
+    "name": "COMPOST",
+    "scale": "building",
+    "zh": "堆肥",
+    "problem": "有机废弃物和种植之间怎样形成可理解的循环？",
+    "principle": "原书提出把有机废物及排泄物处理与堆肥、种植联系起来，而不把它们视为彼此无关的系统。",
+    "rule": "compostCycle",
+    "value": true,
+    "note": "原书的卫生处理方案具有年代性。图解保留专业处理环节，不表示可直接把排泄物或污水用于种植。",
+    "group": "edge",
+    "source": {
+      "id": 178,
+      "printedStartCandidate": 822,
+      "printedEndCandidate": 827,
+      "pdfPages": [
+        866,
+        867,
+        868,
+        869,
+        870,
+        871
+      ],
+      "solutionPdfPage": 869,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 179,
+    "name": "ALCOVES",
+    "scale": "building",
+    "zh": "小凹室",
+    "problem": "共享房间边缘怎样容纳较小、相对独立的活动？",
+    "principle": "在主室旁形成可坐、交谈或工作的小凹室，以部分边界和较低顶面表现独立性，仍与主室相连。",
+    "rule": "edgeAlcoves",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 179,
+      "printedStartCandidate": 828,
+      "printedEndCandidate": 832,
+      "pdfPages": [
+        872,
+        873,
+        874,
+        875,
+        876
+      ],
+      "solutionPdfPage": 876,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 180,
+    "name": "WINDOW PLACE",
+    "scale": "building",
+    "zh": "窗边位置",
+    "problem": "窗户怎样从采光洞口变成一个可以停留的地方？",
+    "principle": "在白天经常使用的房间中，至少把一处窗边组织成有座位、尺度和一定围合感的场所。",
+    "rule": "windowPlace",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 180,
+      "printedStartCandidate": 833,
+      "printedEndCandidate": 837,
+      "pdfPages": [
+        877,
+        878,
+        879,
+        880,
+        881
+      ],
+      "solutionPdfPage": 881,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 181,
+    "name": "THE FIRE",
+    "scale": "building",
+    "zh": "炉火",
+    "problem": "共同空间如何形成一个可从周围看见的聚集焦点？",
+    "principle": "原书把炉火作为交谈和沉思的共同中心，并要求在熄火时仍有窗口或其他焦点维持这个场所。",
+    "rule": "sharedFireFocus",
+    "value": true,
+    "note": "只显示聚集关系；不提供燃烧、排烟或燃料使用指引。",
+    "group": "room",
+    "source": {
+      "id": 181,
+      "printedStartCandidate": 838,
+      "printedEndCandidate": 843,
+      "pdfPages": [
+        882,
+        883,
+        884,
+        885,
+        886,
+        887
+      ],
+      "solutionPdfPage": 886,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 182,
+    "name": "EATING ATMOSPHERE",
+    "scale": "building",
+    "zh": "用餐的氛围",
+    "problem": "餐桌周围怎样形成明确而舒适的聚集氛围？",
+    "principle": "以足够大的共同桌面为中心，结合局部灯光、围合或明暗对比，并给拉开椅子与随手取物留出空间。",
+    "rule": "eatingAtmosphere",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 182,
+      "printedStartCandidate": 844,
+      "printedEndCandidate": 845,
+      "pdfPages": [
+        888,
+        889
+      ],
+      "solutionPdfPage": 888,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 183,
+    "name": "WORKSPACE ENCLOSURE",
+    "scale": "building",
+    "zh": "工作空间的围合",
+    "problem": "个人工作位怎样兼顾背靠、视野和有限的同伴联系？",
+    "principle": "用部分墙体和窗口围合工作位，背后或侧面有依靠，前方朝向更大空间，并避免同时暴露于过多人。",
+    "rule": "workspaceEnclosure",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 183,
+      "printedStartCandidate": 846,
+      "printedEndCandidate": 852,
+      "pdfPages": [
+        890,
+        891,
+        892,
+        893,
+        894,
+        895,
+        896
+      ],
+      "solutionPdfPage": 895,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 184,
+    "name": "COOKING LAYOUT",
+    "scale": "building",
+    "zh": "烹饪布局",
+    "problem": "厨房如何兼顾动作之间的距离和足够的连续操作面？",
+    "principle": "把灶、洗涤、食物存放和操作面组织在较紧凑的关系中，同时保留足够长且可实际使用的台面。",
+    "rule": "cookingWorkTriangle",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 184,
+      "printedStartCandidate": 853,
+      "printedEndCandidate": 856,
+      "pdfPages": [
+        897,
+        898,
+        899,
+        900
+      ],
+      "solutionPdfPage": 899,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 185,
+    "name": "SITTING CIRCLE",
+    "scale": "building",
+    "zh": "围坐",
+    "problem": "座位怎样形成愿意加入的交流圈，而不被通行切穿？",
+    "principle": "在受保护的位置松散地围坐，让路径从周围经过，并保留不同形态和少量富余座位。",
+    "rule": "looseSittingCircle",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 185,
+      "printedStartCandidate": 857,
+      "printedEndCandidate": 860,
+      "pdfPages": [
+        901,
+        902,
+        903,
+        904
+      ],
+      "solutionPdfPage": 903,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 186,
+    "name": "COMMUNAL SLEEPING",
+    "scale": "building",
+    "zh": "共同睡眠",
+    "problem": "共同生活是否可以偶尔容纳更灵活的共同睡眠？",
+    "principle": "原书把共同睡眠作为日常习惯以外的可选方式，用共享区的垫子或可兼作床位的凹室支持临时聚宿。",
+    "rule": "optionalCommunalSleeping",
+    "value": true,
+    "note": "选择应以所有使用者的意愿、私密性和照护要求为前提。",
+    "group": "room",
+    "source": {
+      "id": 186,
+      "printedStartCandidate": 861,
+      "printedEndCandidate": 863,
+      "pdfPages": [
+        905,
+        906,
+        907
+      ],
+      "solutionPdfPage": null,
+      "missingPrintedPages": [],
+      "reviewBasis": "available-body-needs-review"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 187,
+    "name": "MARRIAGE BED",
+    "scale": "building",
+    "zh": "婚床",
+    "problem": "伴侣的床位如何成为具有个人意义的私人中心？",
+    "principle": "用适度围合、较低顶面、可个性化的床架及周围空间，让床成为私人领域里的明确位置。",
+    "rule": "intimateBedAnchor",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 187,
+      "printedStartCandidate": 864,
+      "printedEndCandidate": 867,
+      "pdfPages": [
+        908,
+        909,
+        910,
+        911
+      ],
+      "solutionPdfPage": 911,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 188,
+    "name": "BED ALCOVE",
+    "scale": "building",
+    "zh": "床边凹室",
+    "problem": "床位能否是一个小型私人庇护，而不是占满整间空房？",
+    "principle": "把床位放在连接其他活动房间的小凹室中，以低顶、储物和适当开口形成私密的小领域。",
+    "rule": "bedAlcoves",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 188,
+      "printedStartCandidate": 868,
+      "printedEndCandidate": 871,
+      "pdfPages": [
+        912,
+        913,
+        914,
+        915
+      ],
+      "solutionPdfPage": 914,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 189,
+    "name": "DRESSING ROOM",
+    "scale": "building",
+    "zh": "更衣室",
+    "problem": "更衣活动如何在睡眠与沐浴之间有完整的位置？",
+    "principle": "在床位与浴室之间提供有足够转身空间、衣物存放、镜子和自然光的更衣区域。",
+    "rule": "dressingBetweenBedAndBath",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 189,
+      "printedStartCandidate": 872,
+      "printedEndCandidate": 875,
+      "pdfPages": [
+        916,
+        917,
+        918,
+        919
+      ],
+      "solutionPdfPage": 918,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 190,
+    "name": "CEILING HEIGHT VARIETY",
+    "scale": "building",
+    "zh": "多样的层高",
+    "problem": "空间的公共性和亲密性如何通过高度被感知？",
+    "principle": "让相连空间的顶高有层次：较大的公共活动更高，较小聚会较低，个人凹室更低。",
+    "rule": "gradedCeilingHeights",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 190,
+      "printedStartCandidate": 876,
+      "printedEndCandidate": 882,
+      "pdfPages": [
+        920,
+        921,
+        922,
+        923,
+        924,
+        925,
+        926
+      ],
+      "solutionPdfPage": 925,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 191,
+    "name": "THE SHAPE OF INDOOR SPACE",
+    "scale": "building",
+    "zh": "室内空间的形状",
+    "problem": "房间的形状如何同时支持使用与清晰的空间感？",
+    "principle": "原书倾向大致矩形、近直角的房间，以相对对称的顶面组织空间，并允许必要的例外。",
+    "rule": "coherentRoomShapes",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 191,
+      "printedStartCandidate": 883,
+      "printedEndCandidate": 888,
+      "pdfPages": [
+        927,
+        928,
+        929,
+        930,
+        931,
+        932
+      ],
+      "solutionPdfPage": 932,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 192,
+    "name": "WINDOWS OVERLOOKING LIFE",
+    "scale": "building",
+    "zh": "俯瞰生活的窗户",
+    "problem": "开窗是否只满足面积，而没有回应窗外的生活？",
+    "principle": "在满足地域条件的前提下，把窗口放在能看见街道活动、花园或其他与室内不同的景象的位置。",
+    "rule": "windowsOverlookingLife",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 192,
+      "printedStartCandidate": 889,
+      "printedEndCandidate": 892,
+      "pdfPages": [
+        933,
+        934,
+        935,
+        936
+      ],
+      "solutionPdfPage": 936,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 193,
+    "name": "HALF-OPEN WALL",
+    "scale": "building",
+    "zh": "半开敞的墙面",
+    "problem": "相邻空间怎样兼有流动与独立，而不走向全封闭或全敞开？",
+    "principle": "组合柱、半墙、门和内窗，形成适度开合的边界，让小空间既属于较大空间又有自身领域。",
+    "rule": "halfOpenBoundaries",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 193,
+      "printedStartCandidate": 893,
+      "printedEndCandidate": 896,
+      "pdfPages": [
+        937,
+        938,
+        939,
+        940
+      ],
+      "solutionPdfPage": 939,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 194,
+    "name": "INTERIOR WINDOWS",
+    "scale": "building",
+    "zh": "室内窗",
+    "problem": "内侧房间怎样与邻近活动和光线保持联系？",
+    "principle": "在过暗或缺乏活动联系的房间之间加入内窗，使视觉和部分光线穿过内部边界。",
+    "rule": "interiorWindows",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 194,
+      "printedStartCandidate": 897,
+      "printedEndCandidate": 899,
+      "pdfPages": [
+        941,
+        942,
+        943
+      ],
+      "solutionPdfPage": 942,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 195,
+    "name": "STAIRCASE VOLUME",
+    "scale": "building",
+    "zh": "楼梯体量",
+    "problem": "楼梯的实际体积如何在平面中被提前容纳？",
+    "principle": "为楼梯预留一个跨两层的完整空间单元，再决定直行、转折或回转形式，避免把楼梯挤进剩余缝隙。",
+    "rule": "stairVolume",
+    "value": true,
+    "note": "示意不使用原书尺寸作为当前楼梯规范。",
+    "group": "room",
+    "source": {
+      "id": 195,
+      "printedStartCandidate": 900,
+      "printedEndCandidate": 903,
+      "pdfPages": [
+        944,
+        945,
+        946,
+        947
+      ],
+      "solutionPdfPage": 947,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 196,
+    "name": "CORNER DOORS",
+    "scale": "building",
+    "zh": "角落的门",
+    "problem": "房门的位置怎样影响完整墙面、家具和穿行路径？",
+    "principle": "小房间的门尽量靠近角落，若有穿行的两个门则集中在一端，把主要可使用区域留完整。",
+    "rule": "cornerDoors",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 196,
+      "printedStartCandidate": 904,
+      "printedEndCandidate": 907,
+      "pdfPages": [
+        948,
+        949,
+        950,
+        951
+      ],
+      "solutionPdfPage": 949,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 197,
+    "name": "THICK WALLS",
+    "scale": "building",
+    "zh": "厚墙",
+    "problem": "墙体能否容纳生活，而不只是薄薄的分隔？",
+    "principle": "把需要的窗边、座位、凹室和储物组织进有厚度的墙体领域，让墙成为可使用的体积。",
+    "rule": "inhabitedThickWalls",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 197,
+      "printedStartCandidate": 908,
+      "printedEndCandidate": 912,
+      "pdfPages": [
+        952,
+        953,
+        954,
+        955,
+        956
+      ],
+      "solutionPdfPage": 955,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 198,
+    "name": "CLOSETS BETWEEN ROOMS",
+    "scale": "building",
+    "zh": "房间之间的壁橱",
+    "problem": "储物位置如何同时帮助私密性和房间间的声音分隔？",
+    "principle": "把衣柜等布置在需要分隔的内墙和门前过渡处，尽量不占据宝贵的外墙采光面。",
+    "rule": "closetBuffers",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 198,
+      "printedStartCandidate": 913,
+      "printedEndCandidate": 915,
+      "pdfPages": [
+        957,
+        958,
+        959
+      ],
+      "solutionPdfPage": 959,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 199,
+    "name": "SUNNY COUNTER",
+    "scale": "building",
+    "zh": "向阳的操作台",
+    "problem": "主要厨房操作面怎样获得明亮的自然光和对外联系？",
+    "principle": "原书将主要操作面朝向南或东南窗口，结合花园或活动视野，使经常工作的地方接近阳光。",
+    "rule": "sunnyKitchenCounter",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 199,
+      "printedStartCandidate": 916,
+      "printedEndCandidate": 918,
+      "pdfPages": [
+        960,
+        961,
+        962
+      ],
+      "solutionPdfPage": 962,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 200,
+    "name": "OPEN SHELVES",
+    "scale": "building",
+    "zh": "开放的架子",
+    "problem": "常用物品怎样一眼可见，而不藏在其他物品后面？",
+    "principle": "设置深浅不同但较浅的开放层架，尽量只放一层物品，使存放与取用直接可见。",
+    "rule": "oneDeepOpenShelves",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 200,
+      "printedStartCandidate": 919,
+      "printedEndCandidate": 921,
+      "pdfPages": [
+        963,
+        964,
+        965
+      ],
+      "solutionPdfPage": 965,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 201,
+    "name": "WAIST-HIGH SHELF",
+    "scale": "building",
+    "zh": "齐腰高的架子",
+    "problem": "日常随手拿放的小物在哪里停留？",
+    "principle": "沿主要生活与工作空间安排接近腰高的连续置物面，并为门、窗和座位留出中断。",
+    "rule": "waistHighLedges",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 201,
+      "printedStartCandidate": 922,
+      "printedEndCandidate": 923,
+      "pdfPages": [
+        966,
+        967
+      ],
+      "solutionPdfPage": null,
+      "missingPrintedPages": [],
+      "reviewBasis": "available-body-needs-review"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 202,
+    "name": "BUILT-IN SEATS",
+    "scale": "building",
+    "zh": "内置座位",
+    "problem": "固定座位怎样避免被建在实际上没人愿意坐的位置？",
+    "principle": "先用可移动的椅子试坐和调整，确认位置与舒适度后，再把同等舒适的座位整合进建筑。",
+    "rule": "testedBuiltInSeat",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 202,
+      "printedStartCandidate": 924,
+      "printedEndCandidate": 926,
+      "pdfPages": [
+        968,
+        969,
+        970
+      ],
+      "solutionPdfPage": 970,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 203,
+    "name": "CHILD CAVES",
+    "scale": "building",
+    "zh": "儿童洞穴",
+    "problem": "儿童游戏能否拥有属于小身体尺度的隐蔽角落？",
+    "principle": "在台阶下、台面下或墙体余隙里形成较低的小洞穴，使儿童能把它当作自己的小空间。",
+    "rule": "childScaleCaves",
+    "value": true,
+    "note": "真实洞穴需另行考虑照护、通风、夹困和疏散。",
+    "group": "room",
+    "source": {
+      "id": 203,
+      "printedStartCandidate": 927,
+      "printedEndCandidate": 929,
+      "pdfPages": [
+        971,
+        972,
+        973
+      ],
+      "solutionPdfPage": 972,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 204,
+    "name": "SECRET PLACE",
+    "scale": "building",
+    "zh": "秘密场所",
+    "problem": "住宅能否为特别私人的记忆和珍藏留出位置？",
+    "principle": "原书设想一个不显眼的小型隐秘空间，用于存放住宅的档案和具有特殊意义的物件。",
+    "rule": "privateMemoryNiche",
+    "value": true,
+    "group": "room",
+    "source": {
+      "id": 204,
+      "printedStartCandidate": 930,
+      "printedEndCandidate": 939,
+      "pdfPages": [
+        974,
+        975,
+        976,
+        977,
+        978,
+        979,
+        980,
+        981,
+        982,
+        983
+      ],
+      "solutionPdfPage": 975,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 205,
+    "name": "STRUCTURE FOLLOWS SOCIAL SPACES",
+    "scale": "construction",
+    "zh": "结构顺应社会空间",
+    "problem": "结构网格会不会压倒原本需要的社会空间？",
+    "principle": "原书主张让柱、墙和楼面回应活动空间的形状，尤其标识空间转角，而不是先用统一结构网格决定所有房间。",
+    "rule": "structureFollowsRooms",
+    "value": true,
+    "note": "这是一种设计顺序主张；结构安全仍需专业计算与协调。",
+    "group": "construction",
+    "source": {
+      "id": 205,
+      "printedStartCandidate": 940,
+      "printedEndCandidate": 945,
+      "pdfPages": [
+        984,
+        985,
+        986,
+        987,
+        988,
+        989
+      ],
+      "solutionPdfPage": null,
+      "missingPrintedPages": [],
+      "reviewBasis": "available-body-needs-review"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 206,
+    "name": "EFFICIENT STRUCTURE",
+    "scale": "construction",
+    "zh": "高效结构",
+    "problem": "构件之间怎样形成连续的受力构想？",
+    "principle": "原书提出以受压材料、拱壳、薄墙和局部加劲相连的整体体系，让连接处和开口附近获得加强。",
+    "rule": "continuousCompressionSystem",
+    "value": true,
+    "note": "仅图解原书的结构构想，不给出承载力或施工结论。",
+    "group": "construction",
+    "source": {
+      "id": 206,
+      "printedStartCandidate": 946,
+      "printedEndCandidate": 954,
+      "pdfPages": [
+        990,
+        991,
+        992,
+        993,
+        994,
+        995,
+        996,
+        997,
+        998
+      ],
+      "solutionPdfPage": 997,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 207,
+    "name": "GOOD MATERIALS",
+    "scale": "construction",
+    "zh": "合适的材料",
+    "problem": "材料怎样支持现场调整、后续修理和较低资源消耗？",
+    "principle": "原书偏向易加工、可现场改变、较低能耗的材料，并讨论土基材料、轻质填充及较轻的表层材料。",
+    "rule": "adaptableMaterialPalette",
+    "value": true,
+    "note": "原书对材料环境性能的判断具有年代性，未作现代生命周期评估。",
+    "group": "construction",
+    "source": {
+      "id": 207,
+      "printedStartCandidate": 955,
+      "printedEndCandidate": 961,
+      "pdfPages": [
+        999,
+        1000,
+        1001,
+        1002,
+        1003,
+        1004,
+        1005
+      ],
+      "solutionPdfPage": 1004,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 208,
+    "name": "GRADUAL STIFFENING",
+    "scale": "construction",
+    "zh": "逐渐加固",
+    "problem": "建造能否在保持整体形态的同时逐步获得刚度？",
+    "principle": "原书设想先形成较轻、可调整的整体外壳，再逐步填充和加强，最后成为稳定结构。",
+    "rule": "gradualStiffening",
+    "value": true,
+    "note": "展示过程顺序，不代表可直接执行的施工方法。",
+    "group": "construction",
+    "source": {
+      "id": 208,
+      "printedStartCandidate": 962,
+      "printedEndCandidate": 969,
+      "pdfPages": [
+        1006,
+        1007,
+        1008,
+        1009,
+        1010,
+        1011,
+        1012,
+        1013
+      ],
+      "solutionPdfPage": 1012,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 209,
+    "name": "ROOF LAYOUT",
+    "scale": "construction",
+    "zh": "屋顶布局",
+    "problem": "屋顶分区怎样对应建筑中的不同使用单元？",
+    "principle": "让主要屋顶覆盖重要共同空间，较小屋顶依次附着其旁，再以更小屋面覆盖凹室和厚墙领域。",
+    "rule": "socialRoofHierarchy",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 209,
+      "printedStartCandidate": 970,
+      "printedEndCandidate": 977,
+      "pdfPages": [
+        1014,
+        1015,
+        1016,
+        1017,
+        1018,
+        1019,
+        1020,
+        1021
+      ],
+      "solutionPdfPage": 1020,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 210,
+    "name": "FLOOR AND CEILING LAYOUT",
+    "scale": "construction",
+    "zh": "楼板与天花布局",
+    "problem": "上下层的房间和拱顶如何在平面、剖面中相互协调？",
+    "principle": "为各层绘制与房间对应的顶面单元，同时检查边缘支承、上下层错位和连续的受力关系。",
+    "rule": "coordinatedFloorCeilings",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 210,
+      "printedStartCandidate": 978,
+      "printedEndCandidate": 982,
+      "pdfPages": [
+        1022,
+        1023,
+        1024,
+        1025,
+        1026
+      ],
+      "solutionPdfPage": 1025,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 211,
+    "name": "THICKENING THE OUTER WALLS",
+    "scale": "construction",
+    "zh": "加厚外墙",
+    "problem": "座位、凹室和储物的墙体厚度如何提前成为结构布局的一部分？",
+    "principle": "先在房间主要使用范围外标出较厚的边缘带，再用柱和次级屋面界定这些可使用的墙体体积。",
+    "rule": "thickenedOuterEdges",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 211,
+      "printedStartCandidate": 983,
+      "printedEndCandidate": 988,
+      "pdfPages": [
+        1027,
+        1028,
+        1029,
+        1030,
+        1031,
+        1032
+      ],
+      "solutionPdfPage": 1031,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 212,
+    "name": "COLUMNS AT THE CORNERS",
+    "scale": "construction",
+    "zh": "角部的柱子",
+    "problem": "结构支点怎样帮助定义实际房间与小空间？",
+    "principle": "在房间及凹室等空间转角安排柱位，再协调上下层关系，而不要求所有转角落在同一规则网格上。",
+    "rule": "columnsAtSpaceCorners",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 212,
+      "printedStartCandidate": 989,
+      "printedEndCandidate": 994,
+      "pdfPages": [
+        1033,
+        1034,
+        1035,
+        1036,
+        1037,
+        1038
+      ],
+      "solutionPdfPage": 1037,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 213,
+    "name": "FINAL COLUMN DISTRIBUTION",
+    "scale": "construction",
+    "zh": "最终的柱网分布",
+    "problem": "不同层、不同尺度的房间需要怎样的柱间分布？",
+    "principle": "在原书体系中，依据高度、荷载与房间大小补充中间加劲柱，并在层与层之间协调柱距和构件尺度。",
+    "rule": "gradedColumnSpacing",
+    "value": true,
+    "note": "不把原书示例表当作本模型的结构计算结果。",
+    "group": "construction",
+    "source": {
+      "id": 213,
+      "printedStartCandidate": 995,
+      "printedEndCandidate": 1005,
+      "pdfPages": [
+        1039,
+        1040,
+        1041,
+        1042,
+        1043,
+        1044,
+        1045,
+        1046,
+        1047,
+        1048,
+        1049
+      ],
+      "solutionPdfPage": 1047,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 214,
+    "name": "ROOT FOUNDATIONS",
+    "scale": "construction",
+    "zh": "根状基础",
+    "problem": "柱与基础的连接怎样像根一样连续进入地面？",
+    "principle": "原书提出柱和基础连续扩展的方向，同时明确承认其具体实现和结构有效性尚未解决。",
+    "rule": "rootlikeFoundation",
+    "value": true,
+    "note": "本项在原书中就是待解决的挑战；图示不表示该基础可直接施工。",
+    "group": "construction",
+    "source": {
+      "id": 214,
+      "printedStartCandidate": 1006,
+      "printedEndCandidate": 1008,
+      "pdfPages": [
+        1050,
+        1051,
+        1052
+      ],
+      "solutionPdfPage": null,
+      "missingPrintedPages": [],
+      "reviewBasis": "available-body-needs-review"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 215,
+    "name": "GROUND FLOOR SLAB",
+    "scale": "construction",
+    "zh": "首层地板",
+    "problem": "首层地面如何与基础和周围地面形成连续关系？",
+    "principle": "原书用略高于地面的首层平台连接边缘墙与柱基础，并通过台阶、露台和地面层次与室外衔接。",
+    "rule": "groundSlabEdge",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 215,
+      "printedStartCandidate": 1009,
+      "printedEndCandidate": 1011,
+      "pdfPages": [
+        1053,
+        1054,
+        1055
+      ],
+      "solutionPdfPage": 1054,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 216,
+    "name": "BOX COLUMNS",
+    "scale": "construction",
+    "zh": "箱形柱",
+    "problem": "柱的外层与内部填充如何共同构成一个构件？",
+    "principle": "原书以外壳和抗压芯材组成箱形或管状柱，并强调它与基础、梁和楼面的连续关系。",
+    "rule": "hollowColumnCore",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 216,
+      "printedStartCandidate": 1012,
+      "printedEndCandidate": 1017,
+      "pdfPages": [
+        1056,
+        1057,
+        1058,
+        1059,
+        1060,
+        1061
+      ],
+      "solutionPdfPage": 1060,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 217,
+    "name": "PERIMETER BEAMS",
+    "scale": "construction",
+    "zh": "周边梁",
+    "problem": "房间周边的柱、墙、开口与上部结构如何连接？",
+    "principle": "以连续的周边梁围合房间，连接支点并跨越开口，在原书体系中也承担拱顶边缘的约束。",
+    "rule": "continuousPerimeterBeam",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 217,
+      "printedStartCandidate": 1018,
+      "printedEndCandidate": 1022,
+      "pdfPages": [
+        1062,
+        1063,
+        1064,
+        1065,
+        1066
+      ],
+      "solutionPdfPage": 1065,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 218,
+    "name": "WALL MEMBRANES",
+    "scale": "construction",
+    "zh": "墙体薄壳",
+    "problem": "墙面如何成为柱、门窗框之间连续的层？",
+    "principle": "原书用内外两层表面与中间填充连接柱和框，把墙理解为受边缘加劲的膜状构件。",
+    "rule": "layeredWallMembrane",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 218,
+      "printedStartCandidate": 1023,
+      "printedEndCandidate": 1026,
+      "pdfPages": [
+        1067,
+        1068,
+        1069,
+        1070
+      ],
+      "solutionPdfPage": 1069,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 219,
+    "name": "FLOOR-CEILING VAULTS",
+    "scale": "construction",
+    "zh": "楼板与天花的拱顶",
+    "problem": "楼板与下层顶面如何对应房间并在现场形成连续体？",
+    "principle": "原书采用与房间匹配的拱形顶面和上方楼面，并要求协调上层支点、边缘支承和局部加强。",
+    "rule": "floorCeilingVault",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 219,
+      "printedStartCandidate": 1027,
+      "printedEndCandidate": 1035,
+      "pdfPages": [
+        1071,
+        1072,
+        1073,
+        1074,
+        1075,
+        1076,
+        1077,
+        1078,
+        1079
+      ],
+      "solutionPdfPage": 1079,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 220,
+    "name": "ROOF VAULTS",
+    "scale": "construction",
+    "zh": "屋顶拱壳",
+    "problem": "屋面如何通过曲率、起伏与连接形成一个整体？",
+    "principle": "原书讨论筒拱或微弯的坡面，以局部起伏加强屋面，并把天窗、排水和防水表层纳入整体。",
+    "rule": "curvedRoofVault",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 220,
+      "printedStartCandidate": 1036,
+      "printedEndCandidate": 1045,
+      "pdfPages": [
+        1080,
+        1081,
+        1082,
+        1083,
+        1084,
+        1085,
+        1086,
+        1087,
+        1088,
+        1089
+      ],
+      "solutionPdfPage": 1087,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 221,
+    "name": "NATURAL DOORS AND WINDOWS",
+    "scale": "construction",
+    "zh": "自然形成的门窗",
+    "problem": "门窗的位置怎样回应实际站在房间里的感受与视野？",
+    "principle": "原书建议在空间轮廓形成后现场判断门窗的位置和尺寸，让不同开口适应各自的场所，而非先统一规格。",
+    "rule": "siteFittedOpenings",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 221,
+      "printedStartCandidate": 1046,
+      "printedEndCandidate": 1049,
+      "pdfPages": [
+        1090,
+        1091,
+        1092,
+        1093
+      ],
+      "solutionPdfPage": 1092,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 222,
+    "name": "LOW SILL",
+    "scale": "construction",
+    "zh": "低窗台",
+    "problem": "坐下时窗台会不会挡住室外视野？",
+    "principle": "为适合坐在旁边的窗降低窗台，并结合楼层、座位和置物需求决定具体高度。",
+    "rule": "lowWindowSills",
+    "value": true,
+    "note": "真实低窗台仍需满足防坠与安全玻璃要求。",
+    "group": "construction",
+    "source": {
+      "id": 222,
+      "printedStartCandidate": 1050,
+      "printedEndCandidate": 1052,
+      "pdfPages": [
+        1094,
+        1095,
+        1096
+      ],
+      "solutionPdfPage": 1096,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 223,
+    "name": "DEEP REVEALS",
+    "scale": "construction",
+    "zh": "深窗洞",
+    "problem": "窗的亮面与室内暗墙之间怎样形成柔和过渡？",
+    "principle": "用有深度并向内展开的窗洞边缘，让窗边光线形成渐变，而不是突然从亮玻璃跳到暗墙。",
+    "rule": "splayedDeepReveals",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 223,
+      "printedStartCandidate": 1053,
+      "printedEndCandidate": 1055,
+      "pdfPages": [
+        1097,
+        1098,
+        1099
+      ],
+      "solutionPdfPage": 1099,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 224,
+    "name": "LOW DOORWAY",
+    "scale": "construction",
+    "zh": "低门洞",
+    "problem": "门洞如何让进入私人场所成为可感知的过渡？",
+    "principle": "原书以部分较低门洞加强进入的意识，并强调应先在现场试验高度。",
+    "rule": "deliberateLowDoorway",
+    "value": true,
+    "note": "不照搬原书低门高度作为现行通行或无障碍尺寸。",
+    "group": "construction",
+    "source": {
+      "id": 224,
+      "printedStartCandidate": 1056,
+      "printedEndCandidate": 1058,
+      "pdfPages": [
+        1100,
+        1101,
+        1102
+      ],
+      "solutionPdfPage": 1101,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 225,
+    "name": "FRAMES AS THICKENED EDGES",
+    "scale": "construction",
+    "zh": "加厚边缘的框",
+    "problem": "门窗框如何与墙体连续，而不是独立塞入的部件？",
+    "principle": "把框视为开口周围墙体的加厚边缘，用连续材料和形态连接框与墙。",
+    "rule": "thickenedOpeningFrames",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 225,
+      "printedStartCandidate": 1059,
+      "printedEndCandidate": 1063,
+      "pdfPages": [
+        1103,
+        1104,
+        1105,
+        1106,
+        1107
+      ],
+      "solutionPdfPage": 1106,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 226,
+    "name": "COLUMN PLACE",
+    "scale": "construction",
+    "zh": "柱边场所",
+    "problem": "独立柱旁能否形成可坐、可靠的地方？",
+    "principle": "让柱具有足够厚度，并结合柱脚、座位、成对柱或上方庇护，使它参与形成停留位置。",
+    "rule": "inhabitedColumnPlace",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 226,
+      "printedStartCandidate": 1064,
+      "printedEndCandidate": 1067,
+      "pdfPages": [
+        1108,
+        1109,
+        1110,
+        1111
+      ],
+      "solutionPdfPage": 1111,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 227,
+    "name": "COLUMN CONNECTION",
+    "scale": "construction",
+    "zh": "柱的连接",
+    "problem": "柱与梁的转角如何在形态上连续连接？",
+    "principle": "以柱头、斜撑、加腋或拱形过渡填充柱梁转角，并让这个连接成为可辨认的构造细节。",
+    "rule": "columnBeamTransitions",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 227,
+      "printedStartCandidate": 1068,
+      "printedEndCandidate": 1072,
+      "pdfPages": [
+        1112,
+        1113,
+        1114,
+        1115,
+        1116
+      ],
+      "solutionPdfPage": 1115,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 228,
+    "name": "STAIR VAULT",
+    "scale": "construction",
+    "zh": "楼梯拱壳",
+    "problem": "楼梯及其下方空间如何成为连续的体量？",
+    "principle": "原书设想以斜向弯曲的拱壳托起踏步，同时把下方空间处理为可使用的凹室或储物。",
+    "rule": "stairVault",
+    "value": true,
+    "note": "这是构造剖面示意，不是楼梯受力或施工方案。",
+    "group": "construction",
+    "source": {
+      "id": 228,
+      "printedStartCandidate": 1073,
+      "printedEndCandidate": 1075,
+      "pdfPages": [
+        1117,
+        1118,
+        1119
+      ],
+      "solutionPdfPage": 1118,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 229,
+    "name": "DUCT SPACE",
+    "scale": "construction",
+    "zh": "管线空间",
+    "problem": "管线如何有连续、可到达维护的路径？",
+    "principle": "在墙顶与拱顶边缘的余隙中组织水平管线，以角部竖井连接，并设置可打开的检修位置。",
+    "rule": "serviceDuctRoutes",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 229,
+      "printedStartCandidate": 1076,
+      "printedEndCandidate": 1077,
+      "pdfPages": [
+        1120,
+        1121
+      ],
+      "solutionPdfPage": 1121,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 230,
+    "name": "RADIANT HEAT",
+    "scale": "construction",
+    "zh": "辐射供暖",
+    "problem": "人在寒冷时聚集的地方如何获得来自表面的温暖？",
+    "principle": "原书偏向用较暖的表面形成辐射供热，并把这种表面与坐下、停留的位置联系起来。",
+    "rule": "radiantSurfaceHeat",
+    "value": true,
+    "note": "图中热流仅表示原理，不是温度或能耗计算。",
+    "group": "construction",
+    "source": {
+      "id": 230,
+      "printedStartCandidate": 1078,
+      "printedEndCandidate": 1080,
+      "pdfPages": [
+        1122,
+        1123,
+        1124
+      ],
+      "solutionPdfPage": 1124,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 231,
+    "name": "DORMER WINDOWS",
+    "scale": "construction",
+    "zh": "老虎窗",
+    "problem": "坡屋顶上的开口能否成为一个可站立的空间？",
+    "principle": "把老虎窗做成有足够内部体积的小凹室，像其他窗边空间一样组织支撑、框与使用位置。",
+    "rule": "inhabitableDormer",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 231,
+      "printedStartCandidate": 1081,
+      "printedEndCandidate": 1083,
+      "pdfPages": [
+        1125,
+        1126,
+        1127
+      ],
+      "solutionPdfPage": 1127,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 232,
+    "name": "ROOF CAPS",
+    "scale": "construction",
+    "zh": "屋顶帽",
+    "problem": "屋顶与天空相接的位置如何被清楚地表达？",
+    "principle": "以符合建筑构造与意义的屋顶帽、脊部或端部标识最高处，而不把顶部当作未处理的终点。",
+    "rule": "roofCrowning",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 232,
+      "printedStartCandidate": 1084,
+      "printedEndCandidate": 1087,
+      "pdfPages": [
+        1128,
+        1129,
+        1130,
+        1131
+      ],
+      "solutionPdfPage": 1130,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 233,
+    "name": "FLOOR SURFACE",
+    "scale": "construction",
+    "zh": "地面表层",
+    "problem": "地面材质怎样表达公共活动和亲密生活的差别？",
+    "principle": "在较公共区域使用较硬地面，私人停留区使用较软覆盖，并在两者之间设置清楚的转换边缘。",
+    "rule": "floorMaterialZones",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 233,
+      "printedStartCandidate": 1088,
+      "printedEndCandidate": 1092,
+      "pdfPages": [
+        1132,
+        1133,
+        1134,
+        1135,
+        1136
+      ],
+      "solutionPdfPage": 1135,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 234,
+    "name": "LAPPED OUTSIDE WALLS",
+    "scale": "construction",
+    "zh": "搭接的外墙",
+    "problem": "外墙表面如何抵御天气，同时能被小范围修理？",
+    "principle": "以顺应雨水的搭接或连续表层保护外墙，选择可局部修补的做法，使维护可以逐步进行。",
+    "rule": "repairableLappedCladding",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 234,
+      "printedStartCandidate": 1093,
+      "printedEndCandidate": 1095,
+      "pdfPages": [
+        1137,
+        1138,
+        1139
+      ],
+      "solutionPdfPage": 1139,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 235,
+    "name": "SOFT INSIDE WALLS",
+    "scale": "construction",
+    "zh": "柔和的内墙",
+    "problem": "室内表面如何让人愿意触碰并能够日常改变？",
+    "principle": "选择温和、有一定柔顺性且容易固定小物件的内表面，使墙面可以被居住者使用和调整。",
+    "rule": "softInteriorSurfaces",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 235,
+      "printedStartCandidate": 1096,
+      "printedEndCandidate": 1099,
+      "pdfPages": [
+        1140,
+        1141,
+        1142,
+        1143
+      ],
+      "solutionPdfPage": 1142,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 236,
+    "name": "WINDOWS WHICH OPEN WIDE",
+    "scale": "construction",
+    "zh": "大幅开启的窗户",
+    "problem": "窗口如何不仅用于观看，也支持空气、气味和交往？",
+    "principle": "在容易接近且能联系花草、路径或自然风的位置设置可充分开启的窗，原书偏好向外开启。",
+    "rule": "wideOpeningCasements",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 236,
+      "printedStartCandidate": 1100,
+      "printedEndCandidate": 1102,
+      "pdfPages": [
+        1144,
+        1145,
+        1146
+      ],
+      "solutionPdfPage": 1146,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 237,
+    "name": "SOLID DOORS WITH GLASS",
+    "scale": "construction",
+    "zh": "带玻璃的实心门",
+    "problem": "门如何同时保留视觉联系与关闭后的分隔？",
+    "principle": "在较结实的门上配置透明部分，使人能够看见另一侧，又保留门关闭后的实体感和声音分隔。",
+    "rule": "glazedSolidDoors",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 237,
+      "printedStartCandidate": 1103,
+      "printedEndCandidate": 1104,
+      "pdfPages": [
+        1147,
+        1148
+      ],
+      "solutionPdfPage": 1147,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 238,
+    "name": "FILTERED LIGHT",
+    "scale": "construction",
+    "zh": "过滤的光线",
+    "problem": "窗或檐口映衬天空时，强光边缘如何被打散？",
+    "principle": "用攀缘植物、织物、细窗格等形成丰富的明暗层次，尤其柔化开口上缘与天空相接的位置。",
+    "rule": "filteredLightEdges",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 238,
+      "printedStartCandidate": 1105,
+      "printedEndCandidate": 1107,
+      "pdfPages": [
+        1149,
+        1150,
+        1151
+      ],
+      "solutionPdfPage": 1151,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 239,
+    "name": "SMALL PANES",
+    "scale": "construction",
+    "zh": "小块窗玻璃",
+    "problem": "大窗面如何获得更细的视觉尺度？",
+    "principle": "按每个窗的实际宽高划分较小玻璃单元，使窗格成为整体的细分，而非由统一模块反过来决定整窗。",
+    "rule": "smallWindowPanes",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 239,
+      "printedStartCandidate": 1108,
+      "printedEndCandidate": 1111,
+      "pdfPages": [
+        1152,
+        1153,
+        1154,
+        1155
+      ],
+      "solutionPdfPage": 1155,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 240,
+    "name": "HALF-INCH TRIM",
+    "scale": "construction",
+    "zh": "半英寸饰条",
+    "problem": "两种材料的接缝如何被连接并在近处可读？",
+    "principle": "在材料相接的边缘配置较细的收口条，以小尺度细节连接不同表面，也可成为装饰的基础。",
+    "rule": "fineJointTrim",
+    "value": true,
+    "group": "construction",
+    "source": {
+      "id": 240,
+      "printedStartCandidate": 1112,
+      "printedEndCandidate": 1117,
+      "pdfPages": [
+        1156,
+        1157,
+        1158,
+        1159,
+        1160,
+        1161
+      ],
+      "solutionPdfPage": 1159,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 241,
+    "name": "SEAT SPOTS",
+    "scale": "construction",
+    "zh": "座位的位置",
+    "problem": "一张普通座椅怎样因为位置合适而变得好用？",
+    "principle": "先根据气候、日照、风和可观看的活动选择坐下的位置，再决定座椅形式。",
+    "rule": "climateAwareSeatSpots",
+    "value": true,
+    "group": "finish",
+    "source": {
+      "id": 241,
+      "printedStartCandidate": 1118,
+      "printedEndCandidate": 1120,
+      "pdfPages": [
+        1162,
+        1163,
+        1164
+      ],
+      "solutionPdfPage": 1164,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 242,
+    "name": "FRONT DOOR BENCH",
+    "scale": "construction",
+    "zh": "前门长椅",
+    "problem": "住户怎样在家门口停留并看见外面的生活？",
+    "principle": "在前门外设置舒适长椅，结合植物或矮边界形成一个半私人的门前领域。",
+    "rule": "frontDoorBench",
+    "value": true,
+    "group": "finish",
+    "source": {
+      "id": 242,
+      "printedStartCandidate": 1121,
+      "printedEndCandidate": 1123,
+      "pdfPages": [
+        1165,
+        1166,
+        1167
+      ],
+      "solutionPdfPage": 1167,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 243,
+    "name": "SITTING WALL",
+    "scale": "construction",
+    "zh": "可坐的墙",
+    "problem": "室外小边界能否同时承担坐下的功能？",
+    "principle": "用高度和宽度适合坐下的低墙界定室外空间，并把它放在有日照、视野或活动联系的位置。",
+    "rule": "sittingBoundaryWalls",
+    "value": true,
+    "group": "finish",
+    "source": {
+      "id": 243,
+      "printedStartCandidate": 1124,
+      "printedEndCandidate": 1127,
+      "pdfPages": [
+        1168,
+        1169,
+        1170,
+        1171
+      ],
+      "solutionPdfPage": 1170,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 244,
+    "name": "CANVAS ROOFS",
+    "scale": "construction",
+    "zh": "帆布屋顶",
+    "problem": "遮阴和遮挡能否随天气与使用需要改变？",
+    "principle": "以可以收起的帆布顶、墙或遮篷提供局部庇护和柔和光线，尤其用于强光窗口和室外停留处。",
+    "rule": "retractableCanvasCover",
+    "value": true,
+    "group": "finish",
+    "source": {
+      "id": 244,
+      "printedStartCandidate": 1128,
+      "printedEndCandidate": 1131,
+      "pdfPages": [
+        1172,
+        1173,
+        1174,
+        1175
+      ],
+      "solutionPdfPage": 1174,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 245,
+    "name": "RAISED FLOWERS",
+    "scale": "construction",
+    "zh": "抬高的花池",
+    "problem": "植物怎样更接近人的视线、手和嗅觉？",
+    "principle": "在建筑和路径边缘抬高花床，以坚实边缘支持靠近、闻花和坐在植物旁边。",
+    "rule": "raisedFlowerEdges",
+    "value": true,
+    "group": "finish",
+    "source": {
+      "id": 245,
+      "printedStartCandidate": 1132,
+      "printedEndCandidate": 1134,
+      "pdfPages": [
+        1176,
+        1177,
+        1178
+      ],
+      "solutionPdfPage": 1178,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 246,
+    "name": "CLIMBING PLANTS",
+    "scale": "construction",
+    "zh": "攀缘植物",
+    "problem": "植物如何与门窗、廊道的边缘共同生长？",
+    "principle": "在适合日照的墙面和开口周围引导攀缘植物，使植物参与门窗、门廊和藤架的界定。",
+    "rule": "climbingPlantFrames",
+    "value": true,
+    "group": "finish",
+    "source": {
+      "id": 246,
+      "printedStartCandidate": 1135,
+      "printedEndCandidate": 1137,
+      "pdfPages": [
+        1179,
+        1180,
+        1181
+      ],
+      "solutionPdfPage": 1181,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 247,
+    "name": "PAVING WITH CRACKS BETWEEN THE STONES",
+    "scale": "construction",
+    "zh": "石块间留缝的铺地",
+    "problem": "铺装能否让地面生长与时间痕迹继续出现？",
+    "principle": "在步道和露台铺石之间保留可生长的缝隙，使草、苔藓和小植物进入铺装表面。",
+    "rule": "plantedPavingJoints",
+    "value": true,
+    "note": "真实地面还需评估平整、防滑、无障碍与维护条件。",
+    "group": "finish",
+    "source": {
+      "id": 247,
+      "printedStartCandidate": 1138,
+      "printedEndCandidate": 1140,
+      "pdfPages": [
+        1182,
+        1183,
+        1184
+      ],
+      "solutionPdfPage": 1183,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 248,
+    "name": "SOFT TILE AND BRICK",
+    "scale": "construction",
+    "zh": "柔和的砖瓦",
+    "problem": "地面和构件如何留下使用与时间的痕迹？",
+    "principle": "原书欣赏会逐渐磨损、触感较柔和的砖瓦，使材料的变化成为生活的一部分。",
+    "rule": "wearingTileAndBrick",
+    "value": true,
+    "note": "不提供自行烧制或以低烧程度替代材料性能标准的指引。",
+    "group": "finish",
+    "source": {
+      "id": 248,
+      "printedStartCandidate": 1141,
+      "printedEndCandidate": 1145,
+      "pdfPages": [
+        1185,
+        1186,
+        1187,
+        1188,
+        1189
+      ],
+      "solutionPdfPage": 1188,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 249,
+    "name": "ORNAMENT",
+    "scale": "construction",
+    "zh": "装饰",
+    "problem": "装饰如何强化真实的边缘和连接，而非随意贴附？",
+    "principle": "在材料交界、转角、门窗和入口处重复简洁主题，让装饰像接缝一样连接两侧。",
+    "rule": "ornamentAtSeams",
+    "value": true,
+    "group": "finish",
+    "source": {
+      "id": 249,
+      "printedStartCandidate": 1146,
+      "printedEndCandidate": 1152,
+      "pdfPages": [
+        1190,
+        1191,
+        1192,
+        1193,
+        1194,
+        1195,
+        1196
+      ],
+      "solutionPdfPage": 1195,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 250,
+    "name": "WARM COLORS",
+    "scale": "construction",
+    "zh": "暖色",
+    "problem": "颜色如何与自然光、反射光和灯光一起塑造室内氛围？",
+    "principle": "原书建议选择能共同产生暖色光感的表面和细节，并以少量对比色衬托，而非要求所有表面使用同一种颜色。",
+    "rule": "warmReflectedLight",
+    "value": true,
+    "group": "finish",
+    "source": {
+      "id": 250,
+      "printedStartCandidate": 1153,
+      "printedEndCandidate": 1156,
+      "pdfPages": [
+        1197,
+        1198,
+        1199,
+        1200
+      ],
+      "solutionPdfPage": 1200,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 251,
+    "name": "DIFFERENT CHAIRS",
+    "scale": "construction",
+    "zh": "不同的椅子",
+    "problem": "不同的人和姿态如何找到适合自己的坐法？",
+    "principle": "混合大小、软硬、新旧、扶手与材质不同的椅子，让座位形成实际选择。",
+    "rule": "variedChairs",
+    "value": true,
+    "group": "finish",
+    "source": {
+      "id": 251,
+      "printedStartCandidate": 1157,
+      "printedEndCandidate": 1159,
+      "pdfPages": [
+        1201,
+        1202,
+        1203
+      ],
+      "solutionPdfPage": 1203,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 252,
+    "name": "POOLS OF LIGHT",
+    "scale": "construction",
+    "zh": "一池池光",
+    "problem": "灯光如何把不同的交谈与活动小组标识出来？",
+    "principle": "以位置较低、相互分开的局部灯光覆盖桌椅和活动，并保留其间较暗的地方。",
+    "rule": "separatePoolsOfLight",
+    "value": true,
+    "group": "finish",
+    "source": {
+      "id": 252,
+      "printedStartCandidate": 1160,
+      "printedEndCandidate": 1163,
+      "pdfPages": [
+        1204,
+        1205,
+        1206,
+        1207
+      ],
+      "solutionPdfPage": 1206,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  },
+  {
+    "id": 253,
+    "name": "THINGS FROM YOUR LIFE",
+    "scale": "construction",
+    "zh": "生活中的物件",
+    "problem": "空间的个性从哪里来？",
+    "principle": "让照片、收藏、纪念物和真正关心的东西表达生活故事，而不是为了符合某种流行装饰风格。",
+    "rule": "personalLifeObjects",
+    "value": true,
+    "group": "finish",
+    "source": {
+      "id": 253,
+      "printedStartCandidate": 1164,
+      "printedEndCandidate": 1166,
+      "pdfPages": [
+        1208,
+        1209,
+        1210
+      ],
+      "solutionPdfPage": 1210,
+      "missingPrintedPages": [],
+      "reviewBasis": "solution-section"
+    },
+    "representation": "项目编制的概念图解；原书允许多种具体实现。"
+  }
+]

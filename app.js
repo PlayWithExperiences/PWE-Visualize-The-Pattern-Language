@@ -1,8 +1,9 @@
-import {patterns, SOURCE} from './data/patterns.js?v=d42f0eca304c';
-import {normalize, defaults, encode, decode, buildScene} from './model.js?v=d42f0eca304c';
-import {renderScene} from './scene.js?v=d42f0eca304c';
-import {createWalk} from './walk.js?v=d42f0eca304c';
-import {normalizeSun,sampleSun,formatHour} from './sun.js?v=d42f0eca304c';
+import {groupFor,encodeAtlas} from './atlas/compose.js?v=e1f7a13264b8';
+import {patterns, SOURCE} from './data/patterns.js?v=e1f7a13264b8';
+import {normalize, defaults, encode, decode, buildScene} from './model.js?v=e1f7a13264b8';
+import {renderScene} from './scene.js?v=e1f7a13264b8';
+import {createWalk} from './walk.js?v=e1f7a13264b8';
+import {normalizeSun,sampleSun,formatHour} from './sun.js?v=e1f7a13264b8';
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let {state,error}=decode(location.hash),focus=115,angle=-35,plan=false,cutaway=true,catalog=[],saved=null;
@@ -47,7 +48,7 @@ function renderList(){
 }
 function detail(){
  const p=patterns.find(p=>p.id===focus), entry=catalog.find(c=>c.id===focus);
- $('pattern-detail').innerHTML=`<div class="pattern-id">${p.id}</div><h3 class="detail-title">${p.zh}</h3><p class="detail-en">${esc(entry?.name||'A PATTERN LANGUAGE')}</p><p class="detail-question">${p.question}</p><p class="detail-idea">${p.idea}</p><div class="effect"><strong>${state.ids.includes(p.id)?'已应用 ·':'未应用 · 勾选后'} 模型中的变化</strong><p>${p.effect}</p></div><p class="tradeoff">${p.tradeoff}</p><span class="related-label">可一起探索 · 项目组合建议</span><div class="related">${p.related.map(id=>`<button data-focus="${id}">${id} ${patterns.find(p=>p.id===id).zh}</button>`).join('')}</div>`;
+ $('pattern-detail').innerHTML=`<div class="pattern-id">${p.id}</div><h3 class="detail-title">${p.zh}</h3><p class="detail-en">${esc(entry?.name||'A PATTERN LANGUAGE')}</p><p class="detail-question">${p.question}</p><p class="detail-idea">${p.idea}</p><div class="effect"><strong>${state.ids.includes(p.id)?'已应用 ·':'未应用 · 勾选后'} 模型中的变化</strong><p>${p.effect}</p></div><p class="tradeoff">${p.tradeoff}</p><p><a class="text-link" href="./${encodeAtlas({group:groupFor(p.id).key,ids:[p.id],focus:p.id,view:'single'})}">查看原书概括、页码与完整图解 ↗</a></p><span class="related-label">可一起探索 · 项目组合建议</span><div class="related">${p.related.map(id=>`<button data-focus="${id}">${id} ${patterns.find(p=>p.id===id).zh}</button>`).join('')}</div>`;
 }
 function controls(){
  for(const key of ['width','depth','court','seat']){$(key).value=state[key];$(key+'-out').textContent=state[key]+' m';}
@@ -103,7 +104,7 @@ function catalogRender(){
  $('catalog-results').innerHTML=matches.length?matches.map(c=>{const p=patterns.find(p=>p.id===c.id);return `<article class="catalog-item"><span>${String(c.id).padStart(3,'0')}</span><div><h3>${esc(p?.zh||c.zh||c.name)}</h3><p>${esc(c.name)}</p></div>${p?`<button data-explore="${c.id}">探索 ↗</button>`:'<span class="index-only">目录条目</span>'}</article>`;}).join(''):'<p class="catalog-note">没有匹配的模式。试试其他名称或切换尺度。</p>';
 }
 async function loadCatalog(){
- try{const res=await fetch('./data/catalog.json?v=d42f0eca304c');if(!res.ok)throw Error('HTTP '+res.status);catalog=await res.json();if(catalog.length!==253)throw Error('目录数量异常');catalogRender();detail();}
+ try{const res=await fetch('./data/catalog.json?v=e1f7a13264b8');if(!res.ok)throw Error('HTTP '+res.status);catalog=await res.json();if(catalog.length!==253)throw Error('目录数量异常');catalogRender();detail();}
  catch(e){$('catalog-count').textContent='目录加载失败';$('catalog-results').innerHTML='<p>无法读取目录，请检查网络后重试。<button id="retry-catalog" class="secondary">重新加载</button></p>';$('retry-catalog').onclick=loadCatalog;say('模式目录加载失败：'+e.message);}
 }
 const openCatalog=()=>{$('catalog-dialog').showModal();$('search').focus();};
