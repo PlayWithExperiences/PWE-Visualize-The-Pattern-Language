@@ -1,7 +1,7 @@
 // Geometry is authored in metres, x/y ground plane and z up. No SVG extrusion.
 export const palette={wall:'#e8ddc9',wood:'#aa825c',roof:'#ad876c',glass:'#aacbd1',stone:'#cac4b5',ground:'#b9c7a6',plant:'#708d64',soil:'#9e8564',water:'#79afb9',metal:'#697b77',warm:'#e3bd87'};
 export class World{
- constructor(key,width,depth,ids){this.key=key;this.ids=new Set(ids);this.boxes=[];this.meshes=[];this.landmarks=[];this.applied=new Set();this.state={width,depth,court:0,ids:[...this.ids]};this.navigation={world:true,bounds:Math.max(width,depth)*2,maxHeight:Math.max(80,width),far:Math.max(250,width*5),speed:Math.max(4,width/18)};this.autoCeiling=false;this.box(-15,-15,-.3,width+30,depth+30,.3,palette.ground,0,'ground');this.spawn={x:width/2,y:depth+5,yaw:0,pitch:0,feet:0};this.overview={x:width*1.15,y:depth*1.3,z:Math.max(10,width*.7),yaw:-.6,pitch:-.6};}
+ constructor(key,width,depth,ids){this.key=key;this.ids=new Set(ids);this.boxes=[];this.meshes=[];this.lights=[];this.landmarks=[];this.applied=new Set();this.state={width,depth,court:0,ids:[...this.ids]};this.navigation={world:true,bounds:Math.max(width,depth)*2,maxHeight:Math.max(80,width),far:Math.max(250,width*5),speed:Math.max(4,width/18)};this.autoCeiling=false;this.box(-15,-15,-.3,width+30,depth+30,.3,palette.ground,0,'ground');this.spawn={x:width/2,y:depth+5,yaw:0,pitch:0,feet:0};this.overview={x:width*1.15,y:depth*1.3,z:Math.max(10,width*.7),yaw:-.6,pitch:-.6};}
  has(id){return this.ids.has(id);}
  box(x,y,z,dx,dy,dz,color=palette.wall,id=0,kind='solid',extra={}){const b={x,y,z,dx,dy,dz,color,pattern:id,kind,...extra};this.boxes.push(b);if(id)this.applied.add(id);return b;}
  triangle(a,b,c,color,id=0,kind='solid'){this.meshes.push({points:[a,b,c],color,pattern:id,kind});if(id)this.applied.add(id);}
@@ -31,6 +31,7 @@ export class World{
  steps(x,y,w,count,id=0,rise=.16,run=.3,z=0){for(let n=0;n<count;n++)this.box(x,y+n*run,z,w,run,rise*(n+1),palette.stone,id,'step');}
  bed(x,y,id=0,w=1.5){this.box(x,y,.2,w,2,.28,palette.wood,id,'furniture');this.box(x+.04,y+.04,.48,w-.08,1.92,.15,'#efe8da',id,'furniture');this.box(x+.12,y+.1,.63,w-.24,.4,.1,'#faf5e8',id,'furniture');}
  planter(x,y,w=2,d=.6,id=0){this.box(x,y,0,w,d,.55,palette.stone,id,'planter');this.box(x+.08,y+.08,.55,w-.16,d-.16,.04,palette.soil,id);for(let xx=x+.2;xx<x+w-.1;xx+=.35)this.box(xx,y+.2,.59,.15,.15,.28,palette.plant,id,'plant');}
+ light(x,y,z,id=0,{color='#ffd49a',intensity=2,radius=5}={}){this.lights.push({x,y,z,color,intensity,radius,pattern:id});}
  marker(id,x,y,label){this.landmarks.push({id,x,y,z:1.5,label});}
- finish(){return {key:this.key,boxes:this.boxes,meshes:this.meshes,landmarks:this.landmarks,applied:[...this.applied],state:this.state,navigation:this.navigation,autoCeiling:false,spawn:this.spawn,overview:this.overview};}
+ finish(){return {key:this.key,boxes:this.boxes,meshes:this.meshes,lights:this.lights,landmarks:this.landmarks,applied:[...this.applied],state:this.state,navigation:this.navigation,autoCeiling:false,spawn:this.spawn,overview:this.overview};}
 }

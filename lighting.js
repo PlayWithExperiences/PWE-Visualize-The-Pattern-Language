@@ -7,14 +7,16 @@ export function multiply(a,b){
 }
 export function sunMatrix(scene,direction=SUN_DIRECTION){
  const base=scene.boxes.find(b=>b.kind==='ground');
- const center=[base.x+base.dx/2,1,base.y+base.dy/2];
+ const height=Math.max(3,...scene.boxes.map(b=>b.z+b.dz),...(scene.meshes||[]).flatMap(m=>m.points.map(p=>p[2])));
+ const center=[base.x+base.dx/2,scene.navigation?.world?height/2:1,base.y+base.dy/2];
+ const radius=Math.hypot(base.dx,base.dy,height)/2+3,reach=Math.max(40,radius*1.5);
  const length=Math.hypot(...direction),back=direction.map(x=>x/length);
- const eye=center.map((x,i)=>x+back[i]*40);
+ const eye=center.map((x,i)=>x+back[i]*reach);
  const rightLength=Math.hypot(back[2],back[0]),right=rightLength<1e-6?[1,0,0]:[back[2]/rightLength,0,-back[0]/rightLength];
  const up=[back[1]*right[2],back[2]*right[0]-back[0]*right[2],-back[1]*right[0]];
  const dot=(a,b)=>a.reduce((sum,x,i)=>sum+x*b[i],0);
  const view=[right[0],up[0],back[0],0,right[1],up[1],back[1],0,right[2],up[2],back[2],0,-dot(right,eye),-dot(up,eye),-dot(back,eye),1];
- const radius=Math.hypot(base.dx,base.dy)/2+3,near=.1,far=90;
+ const near=.1,far=Math.max(90,reach+radius*2);
  return multiply([1/radius,0,0,0,0,1/radius,0,0,0,0,-2/(far-near),0,0,0,-(far+near)/(far-near),1],view);
 }
 export const vertexSource=`
@@ -45,6 +47,8 @@ uniform vec3 uSkyColor;
 uniform vec3 uSunColor;
 uniform float uDaylight;
 uniform float uSunStrength;
+uniform vec4 uLampPosition[8];
+uniform vec3 uLampColor[8];
 varying vec4 vColor;
 varying vec3 vWorld;
 varying vec3 vNormal;
@@ -85,7 +89,14 @@ void main(){
  float hemisphere=normal.y*.5+.5;
  vec3 ambient=mix(vec3(.26,.235,.20),vec3(.42,.47,.52),hemisphere);
  ambient*=.025+.975*uDaylight;
- vec3 radiance=albedo*(ambient+uSunColor*sunlight);
+ vec3 localLight=vec3(0.0);
+ for(int i=0;i<8;i++){
+  vec3 delta=uLampPosition[i].xyz-vWorld;float distance=length(delta);
+  float falloff=pow(max(0.0,1.0-distance/max(.01,uLampPosition[i].w)),2.0);
+  localLight+=uLampColor[i]*falloff*max(.12,dot(normal,normalize(delta+vec3(.0001))));
+ }
+ vec3 radiance=albedo*(ambient+uSunColor*sunlight+localLight);
+ if(vMaterial>3.5)radiance=albedo*2.5;
  float alpha=vColor.a;
  if(vMaterial>2.5&&vMaterial<3.5){
   vec3 view=normalize(uEye-vWorld);
