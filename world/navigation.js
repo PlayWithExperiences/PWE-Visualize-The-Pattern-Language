@@ -27,7 +27,7 @@ export function safeSpawn(scene){
 export function observationPose(scene,id,free=true){
  const mark=scene.landmarks?.find(m=>m.id===id);if(!mark)return free?worldOverview(scene):safeSpawn(scene);
  const nearby=scene.boxes.filter(b=>(b.pattern===id||b.patterns?.includes(id))&&Math.hypot(b.x+b.dx/2-mark.x,b.y+b.dy/2-mark.y)<6&&!['floor','path','ground'].includes(b.kind));
- const targetHeight=nearby.length?Math.max(.4,Math.min(8,nearby.reduce((n,b)=>n+b.z+b.dz/2,0)/nearby.length)):(mark.z||1.2);
+ const targetHeight=nearby.length?Math.max(.4,Math.min(scene.key==='construction'||id===190?8:1.3,nearby.reduce((n,b)=>n+b.z+b.dz/2,0)/nearby.length)):(mark.z||1.2);
  if(free){const extent=Math.max(3,Math.min(12,scene.state.width*.07)),x=mark.x+extent,y=mark.y+extent,z=Math.max(2.8,(mark.z||1.5)+extent*.65);return {x,y,z,yaw:Math.atan2(mark.x-x,-(mark.y-y)),pitch:Math.atan2((mark.z||1.2)-z,Math.hypot(x-mark.x,y-mark.y))};}
  const interiorAngle=['room','plan'].includes(scene.key)?Math.atan2(scene.state.width/2-mark.x,scene.state.depth/2-mark.y):0;
  for(const radius of [2.5,4,6,9,14,22])for(const angle of [interiorAngle,0,Math.PI/4,-Math.PI/4,Math.PI/2,-Math.PI/2,Math.PI]){
