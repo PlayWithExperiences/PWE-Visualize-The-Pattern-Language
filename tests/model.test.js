@@ -12,7 +12,7 @@ test('complete contiguous catalog and bilingual names',()=>{
  assert.equal(catalog.filter(p=>p.scale==='construction').length,49);
 });
 test('share preserves an empty selection and exact supported dimensions',()=>{
- const s={ids:[],width:13.5,depth:11.5,court:4.25,seat:.75};assert.deepEqual(decode(encode(s)).state,s);
+ const s={ids:[],width:13.5,depth:11.5,court:4.25,seat:.75};assert.deepEqual(decode(encode(s)).state,{...s,sun:{mode:'time',hour:15,playing:false,rate:10,azimuth:225,elevation:45}});
  assert.deepEqual(decode(encode(defaults)).state,normalize(defaults));
 });
 test('invalid sharing and untrusted parameter bounds remain identifiable',()=>{

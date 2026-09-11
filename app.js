@@ -2,10 +2,11 @@ import {patterns, SOURCE} from './data/patterns.js';
 import {normalize, defaults, encode, decode, buildScene} from './model.js';
 import {renderScene} from './scene.js';
 import {createWalk} from './walk.js';
+import {normalizeSun,sampleSun,formatHour} from './sun.js';
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let {state,error}=decode(location.hash),focus=115,angle=-35,plan=false,cutaway=true,catalog=[],saved=null;
-let walking=false,walker=null;
+let walking=false,freeCamera=false,walker=null;
 const STORAGE='pwe-pattern-language:v1';
 const presets={garden:defaults,quiet:{...defaults,ids:[105,112,127,159,179,180]},social:{...defaults,ids:[105,106,112,115,159,163,171]},blank:{...defaults,ids:[]}};
 try{const v=localStorage.getItem(STORAGE);if(v){const parsed=decode(v);if(parsed.error)error='本机保存的方案已损坏，请重新保存。';else saved=parsed.state;}}catch{error='浏览器未开放本机存储；仍可使用分享链接保存方案。';}
@@ -14,23 +15,28 @@ function draw(){
  $('scene').hidden=walking;$('walk-scene').hidden=!walking;
  if(walking){
   try{
-   if(!walker)walker=createWalk($('walk-canvas'),message=>{say(message);$('walk-location').textContent=message;},pose=>{
+   if(!walker)walker=createWalk($('walk-canvas'),message=>{say(message);$('walk-location').textContent=message;},(pose,isFree)=>{
     const inside=pose.x>=0&&pose.x<=state.width&&pose.y>=0&&pose.y<=state.depth;
     const garden=state.ids.includes(115)&&pose.x>state.width-state.court&&(state.ids.includes(105)?pose.y>state.depth-state.court:pose.y<state.court);
     const compass=['北','东北','东','东南','南','西南','西','西北'][((Math.round(pose.yaw/(Math.PI/4))%8)+8)%8];
-    $('walk-location').textContent='眼高 1.65 m · 朝'+compass+' · '+(inside&&!garden?'室内':'户外');
-   });
-   walker.update(buildScene(state));walker.start();
+    $('walk-location').textContent=(isFree?'自由相机 · 高度 '+pose.z.toFixed(1)+' m':'眼高 1.65 m')+' · 朝'+compass+(isFree?'':' · '+(inside&&!garden?'室内':'户外'));
+   },settings=>{state.sun=settings;syncSunControls();});
+   walker.update(buildScene(state),{freeMode:freeCamera});walker.start();
   }catch(e){walking=false;say(e.message);$('scene').hidden=false;$('walk-scene').hidden=true;}
  }
  if(!walking){walker?.stop();$('scene').innerHTML=renderScene(state,{angle,plan,cutaway,focus});}
  const m=buildScene(state).metrics;
  $('area-value').textContent=m.indoorArea;$('garden-value').textContent=Number(m.courtArea.toFixed(2));$('mode-value').textContent=m.selected;
  $('selected-count').textContent=m.selected+' / 10';$('scheme-number').textContent=String(m.selected).padStart(2,'0');
- $('scene-hint').textContent=walking?'WASD 行走 · 拖动 / 方向键转头 · Esc 停止':plan?'平面视图 · 上北下南':'拖动旋转 · ← → 调整视角';
+ $('scene-hint').textContent=walking?(freeCamera?'WASD 飞行 · E 上升 / Q 下降 · 拖动转头':'WASD 行走 · 拖动 / 方向键转头 · Esc 停止'):plan?'平面视图 · 上北下南':'拖动旋转 · ← → 调整视角';
  $('scene').setAttribute('aria-label',plan?'建筑平面视图。':'建筑视图。左右方向键旋转视角。');
- $('view-3d').setAttribute('aria-pressed',!plan&&!walking);$('view-plan').setAttribute('aria-pressed',plan&&!walking);$('view-walk').setAttribute('aria-pressed',walking);$('cutaway').disabled=plan||walking;
- $('reset-view').textContent=walking?'回到入口 ↺':'视角复位 ↺';
+ $('view-3d').setAttribute('aria-pressed',!plan&&!walking);$('view-plan').setAttribute('aria-pressed',plan&&!walking);$('view-walk').setAttribute('aria-pressed',walking&&!freeCamera);$('view-free').setAttribute('aria-pressed',walking&&freeCamera);$('cutaway').disabled=plan||walking;$('cutaway').closest('label').hidden=walking;
+ $('reset-view').textContent=walking?(freeCamera?'回到全景 ↺':'回到入口 ↺'):'视角复位 ↺';
+ $('walk-home').textContent=freeCamera?'回到全景':'回到入口';
+ $('walk-canvas').setAttribute('aria-label',freeCamera?'自由相机，WASD飞行，E上升Q下降，拖动或方向键转头。':'第一人称漫游，眼高1.65米。WASD移动，拖动或方向键转头。');
+ document.querySelector('.walk-help').innerHTML=freeCamera?'WASD 飞行 · E 上升 / Q 下降<br>拖动 / 方向键转头 · 可穿墙观察':'WASD 行走 · 拖动看四周<br>方向键转头 · Esc 停止 / 退出全屏';
+ for(const item of document.querySelectorAll('[data-flight]'))item.hidden=!freeCamera;
+ syncSunControls();
  $('compare').disabled=!saved;
 }
 function renderList(){
@@ -55,10 +61,11 @@ function update({push=true}={}){
 function setFocus(id){focus=id;renderList();detail();draw();}
 $('pattern-list').addEventListener('change',e=>{const id=Number(e.target.dataset.toggle);if(!id)return;state.ids=e.target.checked?[...state.ids,id]:state.ids.filter(n=>n!==id);focus=id;update();say(`${patterns.find(p=>p.id===id).zh}已${e.target.checked?'应用':'移除'}。`);});
 document.addEventListener('click',e=>{const target=e.target.closest('[data-focus]');if(target)setFocus(Number(target.dataset.focus));const close=e.target.closest('[data-close]');if(close)$(close.dataset.close).close();});
-$('preset').addEventListener('change',()=>{const key=$('preset').value;if(!presets[key])return;state=normalize(presets[key]);update();$('preset').value=key;say('已载入组合。勾选模式继续探索。');});
+$('preset').addEventListener('change',()=>{const key=$('preset').value;if(!presets[key])return;state=normalize({...presets[key],sun:state.sun});update();$('preset').value=key;say('已载入组合。勾选模式继续探索。');});
 for(const key of ['width','depth','court','seat'])$(key).addEventListener('input',()=>{state[key]=Number($(key).value);update();});
-$('view-3d').onclick=()=>{walking=false;plan=false;draw();};$('view-plan').onclick=()=>{walking=false;plan=true;draw();};
-$('view-walk').onclick=()=>{walking=true;plan=false;draw();if(walking)$('walk-canvas').focus({preventScroll:true});};$('cutaway').onchange=()=>{cutaway=$('cutaway').checked;draw();};$('reset-view').onclick=()=>{angle=-35;if(walking){walker?.reset();$('walk-canvas').focus({preventScroll:true});}draw();};
+$('view-3d').onclick=()=>{walking=false;plan=false;state.sun.playing=false;draw();};$('view-plan').onclick=()=>{walking=false;plan=true;state.sun.playing=false;draw();};
+$('view-free').onclick=()=>{walking=true;freeCamera=true;plan=false;draw();if(walking)$('walk-canvas').focus({preventScroll:true});};
+$('view-walk').onclick=()=>{walking=true;freeCamera=false;plan=false;draw();if(walking)$('walk-canvas').focus({preventScroll:true});};$('cutaway').onchange=()=>{cutaway=$('cutaway').checked;draw();};$('reset-view').onclick=()=>{angle=-35;if(walking){walker?.reset();$('walk-canvas').focus({preventScroll:true});}draw();};
 $('walk-home').onclick=()=>{walker?.reset();$('walk-canvas').focus({preventScroll:true});};
 document.addEventListener('fullscreenchange',()=>{$('walk-fullscreen').textContent=document.fullscreenElement?'退出全屏':'全屏 ⛶';});
 $('walk-fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('walk-scene').requestFullscreen();$('walk-canvas').focus({preventScroll:true});}catch{say('当前浏览器不支持全屏；可继续在工作台内漫游。');}};
@@ -74,10 +81,10 @@ $('scene').addEventListener('pointerdown',e=>{if(plan||walking)return;drag={x:e.
 $('scene').addEventListener('pointermove',e=>{if(!drag)return;angle=drag.angle+(e.clientX-drag.x)*.35;draw();});
 for(const ev of ['pointerup','pointercancel','lostpointercapture'])$('scene').addEventListener(ev,()=>drag=null);
 $('scene').addEventListener('keydown',e=>{if(plan||walking)return;if(['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();angle+=e.key==='ArrowLeft'?-10:10;draw();}});
-$('save').onclick=()=>{try{localStorage.setItem(STORAGE,encode(state));saved=normalize(state);draw();say('已保存到本机，可与接下来的组合比较。');}catch{say('保存失败：本机存储不可用。请使用分享链接保留方案。');}};
+$('save').onclick=()=>{try{localStorage.setItem(STORAGE,encode(state));saved=decode(encode(state)).state;draw();say('已保存到本机，可与接下来的组合比较。');}catch{say('保存失败：本机存储不可用。请使用分享链接保留方案。');}};
 $('compare').onclick=()=>{
  if(!saved)return;
- $('comparison').innerHTML=[['已保存的方案',saved],['当前方案',state]].map(([title,s])=>{const m=buildScene(s).metrics;return `<section class="compare-scene"><h3>${title}</h3>${renderScene(s,{angle,plan,cutaway})}<p>室内 ${m.indoorArea} m² · 庭院 ${Number(m.courtArea.toFixed(2))} m² · ${s.ids.length} 个模式</p><p>${s.ids.length?s.ids.map(id=>patterns.find(p=>p.id===id).zh).join(' / '):'未应用模式'}</p><p>包络 ${s.width} × ${s.depth} m · 庭院尺度 ${s.court} m · 座位进深 ${s.seat} m</p></section>`;}).join('');
+ $('comparison').innerHTML=[['已保存的方案',saved],['当前方案',state]].map(([title,s])=>{const m=buildScene(s).metrics;return `<section class="compare-scene"><h3>${title}</h3>${renderScene(s,{angle,plan,cutaway})}<p>室内 ${m.indoorArea} m² · 庭院 ${Number(m.courtArea.toFixed(2))} m² · ${s.ids.length} 个模式</p><p>${s.ids.length?s.ids.map(id=>patterns.find(p=>p.id===id).zh).join(' / '):'未应用模式'}</p><p>包络 ${s.width} × ${s.depth} m · 庭院尺度 ${s.court} m · 座位进深 ${s.seat} m</p><p>光照：${s.sun.mode==='time'?formatHour(s.sun.hour):'手动方位 '+s.sun.azimuth+'° / 高度 '+s.sun.elevation+'°'}</p></section>`;}).join('');
  $('compare-dialog').showModal();
 };
 $('restore').onclick=()=>{state=normalize(saved);update();$('compare-dialog').close();say('已载入本机方案。');};
@@ -102,4 +109,25 @@ const openCatalog=()=>{$('catalog-dialog').showModal();$('search').focus();};
 $('catalog-open').onclick=openCatalog;$('catalog-bottom').onclick=openCatalog;$('about-open').onclick=()=>$('about-dialog').showModal();
 $('search').oninput=catalogRender;$('scale').onchange=catalogRender;
 $('catalog-results').onclick=e=>{const b=e.target.closest('[data-explore]');if(b){setFocus(Number(b.dataset.explore));$('catalog-dialog').close();$('pattern-detail').scrollIntoView({block:'nearest',behavior:'smooth'});}};
+
+function syncSunControls(){
+ const sun=normalizeSun(state.sun),sample=sampleSun(sun);
+ $('sun-mode').value=sun.mode;
+ $('sun-time-controls').hidden=sun.mode!=='time';$('sun-manual-controls').hidden=sun.mode!=='manual';
+ $('sun-time').value=Math.floor(sun.hour*60);$('sun-time-out').textContent=formatHour(sun.hour);
+ $('sun-rate').value=sun.rate;$('sun-rate-out').textContent=sun.rate+' 分钟 / 秒';
+ for(const key of ['azimuth','elevation']){$('sun-'+key).value=sun[key];$('sun-'+key+'-out').textContent=sun[key]+'°';}
+ $('sun-play').textContent=sun.playing?'暂停时间':'播放时间';$('sun-play').setAttribute('aria-pressed',sun.playing);
+ $('sun-summary').textContent=sun.mode==='time'?formatHour(sun.hour):'手动太阳';
+ $('sun-description').textContent=(sun.mode==='time'?'示意日周期：06:00 日出、18:00 日落。':'直接设定太阳；高度角低于 0° 时太阳落下。')+(sample.elevation<0?' 当前无太阳直射光，未模拟室内灯。':'');
+}
+function applySun(){
+ state.sun=normalizeSun(state.sun);walker?.setLighting(state.sun);syncSunControls();
+ history.replaceState(null,'',encode(state));
+}
+$('sun-mode').onchange=()=>{state.sun.mode=$('sun-mode').value;state.sun.playing=false;applySun();};
+$('sun-time').oninput=()=>{state.sun.hour=Number($('sun-time').value)/60;state.sun.playing=false;applySun();};
+$('sun-rate').oninput=()=>{state.sun.rate=Number($('sun-rate').value);applySun();};
+for(const key of ['azimuth','elevation'])$('sun-'+key).oninput=()=>{state.sun[key]=Number($('sun-'+key).value);applySun();};
+$('sun-play').onclick=()=>{state.sun.playing=!state.sun.playing;applySun();};
 update({push:false});if(location.hash)$('preset').value='custom';say(error||'从左侧选择模式，或点击名称查看它如何改变空间。');loadCatalog();
