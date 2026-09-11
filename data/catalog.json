@@ -1,0 +1,1520 @@
+[
+  {
+    "id": 1,
+    "name": "INDEPENDENT REGIONS",
+    "scale": "town",
+    "zh": "独立的区域"
+  },
+  {
+    "id": 2,
+    "name": "THE DISTRIBUTION OF TOWNS",
+    "scale": "town",
+    "zh": "城镇的分布"
+  },
+  {
+    "id": 3,
+    "name": "CITY COUNTRY FINGERS",
+    "scale": "town",
+    "zh": "城乡交织的指状地带"
+  },
+  {
+    "id": 4,
+    "name": "AGRICULTURAL VALLEYS",
+    "scale": "town",
+    "zh": "农业山谷"
+  },
+  {
+    "id": 5,
+    "name": "LACE OF COUNTRY STREETS",
+    "scale": "town",
+    "zh": "乡间道路的网带"
+  },
+  {
+    "id": 6,
+    "name": "COUNTRY TOWNS",
+    "scale": "town",
+    "zh": "乡村小镇"
+  },
+  {
+    "id": 7,
+    "name": "THE COUNTRYSIDE",
+    "scale": "town",
+    "zh": "乡野"
+  },
+  {
+    "id": 8,
+    "name": "MOSAIC OF SUBCULTURES",
+    "scale": "town",
+    "zh": "亚文化的拼图"
+  },
+  {
+    "id": 9,
+    "name": "SCATTERED WORK",
+    "scale": "town",
+    "zh": "分散的工作场所"
+  },
+  {
+    "id": 10,
+    "name": "MAGIC OF THE CITY",
+    "scale": "town",
+    "zh": "城市的魅力"
+  },
+  {
+    "id": 11,
+    "name": "LOCAL TRANSPORT AREAS",
+    "scale": "town",
+    "zh": "地方交通区"
+  },
+  {
+    "id": 12,
+    "name": "COMMUNITY OF 7000",
+    "scale": "town",
+    "zh": "七千人的社区"
+  },
+  {
+    "id": 13,
+    "name": "SUBCULTURE BOUNDARY",
+    "scale": "town",
+    "zh": "亚文化边界"
+  },
+  {
+    "id": 14,
+    "name": "IDENTIFIABLE NEIGHBORHOOD",
+    "scale": "town",
+    "zh": "可识别的邻里"
+  },
+  {
+    "id": 15,
+    "name": "NEIGHBORHOOD BOUNDARY",
+    "scale": "town",
+    "zh": "邻里边界"
+  },
+  {
+    "id": 16,
+    "name": "WEB OF PUBLIC TRANSPORTATION",
+    "scale": "town",
+    "zh": "公共交通网络"
+  },
+  {
+    "id": 17,
+    "name": "RING ROADS",
+    "scale": "town",
+    "zh": "环形道路"
+  },
+  {
+    "id": 18,
+    "name": "NETWORK OF LEARNING",
+    "scale": "town",
+    "zh": "学习网络"
+  },
+  {
+    "id": 19,
+    "name": "WEB OF SHOPPING",
+    "scale": "town",
+    "zh": "购物网络"
+  },
+  {
+    "id": 20,
+    "name": "MINI-BUSES",
+    "scale": "town",
+    "zh": "小型公共汽车"
+  },
+  {
+    "id": 21,
+    "name": "FOUR-STORY LIMIT",
+    "scale": "town",
+    "zh": "四层高度限制"
+  },
+  {
+    "id": 22,
+    "name": "NINE PER CENT PARKING",
+    "scale": "town",
+    "zh": "百分之九的停车用地"
+  },
+  {
+    "id": 23,
+    "name": "PARALLEL ROADS",
+    "scale": "town",
+    "zh": "平行道路"
+  },
+  {
+    "id": 24,
+    "name": "SACRED SITES",
+    "scale": "town",
+    "zh": "神圣场所"
+  },
+  {
+    "id": 25,
+    "name": "ACCESS TO WATER",
+    "scale": "town",
+    "zh": "亲近水面"
+  },
+  {
+    "id": 26,
+    "name": "LIFE CYCLE",
+    "scale": "town",
+    "zh": "生命周期"
+  },
+  {
+    "id": 27,
+    "name": "MEN AND WOMEN",
+    "scale": "town",
+    "zh": "男性与女性"
+  },
+  {
+    "id": 28,
+    "name": "ECCENTRIC NUCLEUS",
+    "scale": "town",
+    "zh": "偏心的核心"
+  },
+  {
+    "id": 29,
+    "name": "DENSITY RINGS",
+    "scale": "town",
+    "zh": "密度环带"
+  },
+  {
+    "id": 30,
+    "name": "ACTIVITY NODES",
+    "scale": "town",
+    "zh": "活动节点"
+  },
+  {
+    "id": 31,
+    "name": "PROMENADE",
+    "scale": "town",
+    "zh": "步行漫游道"
+  },
+  {
+    "id": 32,
+    "name": "SHOPPING STREET",
+    "scale": "town",
+    "zh": "购物街"
+  },
+  {
+    "id": 33,
+    "name": "NIGHT LIFE",
+    "scale": "town",
+    "zh": "夜生活"
+  },
+  {
+    "id": 34,
+    "name": "INTERCHANGE",
+    "scale": "town",
+    "zh": "交通换乘"
+  },
+  {
+    "id": 35,
+    "name": "HOUSEHOLD MIX",
+    "scale": "town",
+    "zh": "多样的住户"
+  },
+  {
+    "id": 36,
+    "name": "DEGREES OF PUBLICNESS",
+    "scale": "town",
+    "zh": "公共性的层次"
+  },
+  {
+    "id": 37,
+    "name": "HOUSE CLUSTER",
+    "scale": "town",
+    "zh": "住宅组团"
+  },
+  {
+    "id": 38,
+    "name": "ROW HOUSES",
+    "scale": "town",
+    "zh": "联排住宅"
+  },
+  {
+    "id": 39,
+    "name": "HOUSING HILL",
+    "scale": "town",
+    "zh": "住宅山丘"
+  },
+  {
+    "id": 40,
+    "name": "OLD PEOPLE EVERYWHERE",
+    "scale": "town",
+    "zh": "老年人融入各处"
+  },
+  {
+    "id": 41,
+    "name": "WORK COMMUNITY",
+    "scale": "town",
+    "zh": "工作社区"
+  },
+  {
+    "id": 42,
+    "name": "INDUSTRIAL RIBBON",
+    "scale": "town",
+    "zh": "工业带"
+  },
+  {
+    "id": 43,
+    "name": "UNIVERSITY AS A MARKETPLACE",
+    "scale": "town",
+    "zh": "如集市般的大学"
+  },
+  {
+    "id": 44,
+    "name": "LOCAL TOWN HALL",
+    "scale": "town",
+    "zh": "地方市政厅"
+  },
+  {
+    "id": 45,
+    "name": "NECKLACE OF COMMUNITY PROJECTS",
+    "scale": "town",
+    "zh": "串联的社区项目"
+  },
+  {
+    "id": 46,
+    "name": "MARKET OF MANY SHOPS",
+    "scale": "town",
+    "zh": "多店铺的市场"
+  },
+  {
+    "id": 47,
+    "name": "HEALTH CENTER",
+    "scale": "town",
+    "zh": "健康中心"
+  },
+  {
+    "id": 48,
+    "name": "HOUSING IN BETWEEN",
+    "scale": "town",
+    "zh": "穿插其间的住宅"
+  },
+  {
+    "id": 49,
+    "name": "LOOPED LOCAL ROADS",
+    "scale": "town",
+    "zh": "环形地方道路"
+  },
+  {
+    "id": 50,
+    "name": "T JUNCTIONS",
+    "scale": "town",
+    "zh": "丁字路口"
+  },
+  {
+    "id": 51,
+    "name": "GREEN STREETS",
+    "scale": "town",
+    "zh": "绿色街道"
+  },
+  {
+    "id": 52,
+    "name": "NETWORK OF PATHS AND CARS",
+    "scale": "town",
+    "zh": "步行与车辆网络"
+  },
+  {
+    "id": 53,
+    "name": "MAIN GATEWAYS",
+    "scale": "town",
+    "zh": "主要门户"
+  },
+  {
+    "id": 54,
+    "name": "ROAD CROSSING",
+    "scale": "town",
+    "zh": "道路穿越"
+  },
+  {
+    "id": 55,
+    "name": "RAISED WALK",
+    "scale": "town",
+    "zh": "抬高的步行道"
+  },
+  {
+    "id": 56,
+    "name": "BIKE PATHS AND RACKS",
+    "scale": "town",
+    "zh": "自行车道与停放架"
+  },
+  {
+    "id": 57,
+    "name": "CHILDREN IN THE CITY",
+    "scale": "town",
+    "zh": "城市中的儿童"
+  },
+  {
+    "id": 58,
+    "name": "CARNIVAL",
+    "scale": "town",
+    "zh": "嘉年华"
+  },
+  {
+    "id": 59,
+    "name": "QUIET BACKS",
+    "scale": "town",
+    "zh": "安静的背面"
+  },
+  {
+    "id": 60,
+    "name": "ACCESSIBLE GREEN",
+    "scale": "town",
+    "zh": "容易到达的绿地"
+  },
+  {
+    "id": 61,
+    "name": "SMALL PUBLIC SQUARES",
+    "scale": "town",
+    "zh": "小型公共广场"
+  },
+  {
+    "id": 62,
+    "name": "HIGH PLACES",
+    "scale": "town",
+    "zh": "高处"
+  },
+  {
+    "id": 63,
+    "name": "DANCING IN THE STREET",
+    "scale": "town",
+    "zh": "街头舞蹈"
+  },
+  {
+    "id": 64,
+    "name": "POOLS AND STREAMS",
+    "scale": "town",
+    "zh": "水池与溪流"
+  },
+  {
+    "id": 65,
+    "name": "BIRTH PLACES",
+    "scale": "town",
+    "zh": "出生的地方"
+  },
+  {
+    "id": 66,
+    "name": "HOLY GROUND",
+    "scale": "town",
+    "zh": "神圣之地"
+  },
+  {
+    "id": 67,
+    "name": "COMMON LAND",
+    "scale": "town",
+    "zh": "共有土地"
+  },
+  {
+    "id": 68,
+    "name": "CONNECTED PLAY",
+    "scale": "town",
+    "zh": "相连的游戏空间"
+  },
+  {
+    "id": 69,
+    "name": "PUBLIC OUTDOOR ROOM",
+    "scale": "town",
+    "zh": "公共户外房间"
+  },
+  {
+    "id": 70,
+    "name": "GRAVE SITES",
+    "scale": "town",
+    "zh": "墓地"
+  },
+  {
+    "id": 71,
+    "name": "STILL WATER",
+    "scale": "town",
+    "zh": "静水"
+  },
+  {
+    "id": 72,
+    "name": "LOCAL SPORTS",
+    "scale": "town",
+    "zh": "地方体育活动"
+  },
+  {
+    "id": 73,
+    "name": "ADVENTURE PLAYGROUND",
+    "scale": "town",
+    "zh": "冒险游戏场"
+  },
+  {
+    "id": 74,
+    "name": "ANIMALS",
+    "scale": "town",
+    "zh": "动物"
+  },
+  {
+    "id": 75,
+    "name": "THE FAMILY",
+    "scale": "town",
+    "zh": "家庭"
+  },
+  {
+    "id": 76,
+    "name": "HOUSE FOR A SMALL FAMILY",
+    "scale": "town",
+    "zh": "小家庭的住宅"
+  },
+  {
+    "id": 77,
+    "name": "HOUSE FOR A COUPLE",
+    "scale": "town",
+    "zh": "两个人的住宅"
+  },
+  {
+    "id": 78,
+    "name": "HOUSE FOR ONE PERSON",
+    "scale": "town",
+    "zh": "一个人的住宅"
+  },
+  {
+    "id": 79,
+    "name": "YOUR OWN HOME",
+    "scale": "town",
+    "zh": "自己的家"
+  },
+  {
+    "id": 80,
+    "name": "SELF-GOVERNING WORKSHOPS AND OFFICES",
+    "scale": "town",
+    "zh": "自治的作坊与办公室"
+  },
+  {
+    "id": 81,
+    "name": "SMALL SERVICES WITHOUT RED TAPE",
+    "scale": "town",
+    "zh": "少些繁文缛节的小服务机构"
+  },
+  {
+    "id": 82,
+    "name": "OFFICE CONNECTIONS",
+    "scale": "town",
+    "zh": "办公室之间的联系"
+  },
+  {
+    "id": 83,
+    "name": "MASTER AND APPRENTICES",
+    "scale": "town",
+    "zh": "师傅与学徒"
+  },
+  {
+    "id": 84,
+    "name": "TEENAGE SOCIETY",
+    "scale": "town",
+    "zh": "青少年的社会"
+  },
+  {
+    "id": 85,
+    "name": "SHOPFRONT SCHOOLS",
+    "scale": "town",
+    "zh": "临街学校"
+  },
+  {
+    "id": 86,
+    "name": "CHILDREN'S HOME",
+    "scale": "town",
+    "zh": "儿童之家"
+  },
+  {
+    "id": 87,
+    "name": "INDIVIDUALLY OWNED SHOPS",
+    "scale": "town",
+    "zh": "独立经营的商店"
+  },
+  {
+    "id": 88,
+    "name": "STREET CAFÉ",
+    "scale": "town",
+    "zh": "街边咖啡馆"
+  },
+  {
+    "id": 89,
+    "name": "CORNER GROCERY",
+    "scale": "town",
+    "zh": "街角杂货店"
+  },
+  {
+    "id": 90,
+    "name": "BEER HALL",
+    "scale": "town",
+    "zh": "啤酒馆"
+  },
+  {
+    "id": 91,
+    "name": "TRAVELER'S INN",
+    "scale": "town",
+    "zh": "旅人客栈"
+  },
+  {
+    "id": 92,
+    "name": "BUS STOP",
+    "scale": "town",
+    "zh": "公交站"
+  },
+  {
+    "id": 93,
+    "name": "FOOD STANDS",
+    "scale": "town",
+    "zh": "小吃摊"
+  },
+  {
+    "id": 94,
+    "name": "SLEEPING IN PUBLIC",
+    "scale": "town",
+    "zh": "公共场所中的小憩"
+  },
+  {
+    "id": 95,
+    "name": "BUILDING COMPLEX",
+    "scale": "building",
+    "zh": "建筑群"
+  },
+  {
+    "id": 96,
+    "name": "NUMBER OF STORIES",
+    "scale": "building",
+    "zh": "层数"
+  },
+  {
+    "id": 97,
+    "name": "SHIELDED PARKING",
+    "scale": "building",
+    "zh": "隐蔽的停车空间"
+  },
+  {
+    "id": 98,
+    "name": "CIRCULATION REALMS",
+    "scale": "building",
+    "zh": "流线领域"
+  },
+  {
+    "id": 99,
+    "name": "MAIN BUILDING",
+    "scale": "building",
+    "zh": "主要建筑"
+  },
+  {
+    "id": 100,
+    "name": "PEDESTRIAN STREET",
+    "scale": "building",
+    "zh": "步行街"
+  },
+  {
+    "id": 101,
+    "name": "BUILDING THOROUGHFARE",
+    "scale": "building",
+    "zh": "穿过建筑的通道"
+  },
+  {
+    "id": 102,
+    "name": "FAMILY OF ENTRANCES",
+    "scale": "building",
+    "zh": "入口家族"
+  },
+  {
+    "id": 103,
+    "name": "SMALL PARKING LOTS",
+    "scale": "building",
+    "zh": "小停车场"
+  },
+  {
+    "id": 104,
+    "name": "SITE REPAIR",
+    "scale": "building",
+    "zh": "场地修复"
+  },
+  {
+    "id": 105,
+    "name": "SOUTH FACING OUTDOORS",
+    "scale": "building",
+    "zh": "朝阳的户外空间"
+  },
+  {
+    "id": 106,
+    "name": "POSITIVE OUTDOOR SPACE",
+    "scale": "building",
+    "zh": "积极的户外空间"
+  },
+  {
+    "id": 107,
+    "name": "WINGS OF LIGHT",
+    "scale": "building",
+    "zh": "采光翼部"
+  },
+  {
+    "id": 108,
+    "name": "CONNECTED BUILDINGS",
+    "scale": "building",
+    "zh": "相连的建筑"
+  },
+  {
+    "id": 109,
+    "name": "LONG THIN HOUSE",
+    "scale": "building",
+    "zh": "狭长住宅"
+  },
+  {
+    "id": 110,
+    "name": "MAIN ENTRANCE",
+    "scale": "building",
+    "zh": "主入口"
+  },
+  {
+    "id": 111,
+    "name": "HALF-HIDDEN GARDEN",
+    "scale": "building",
+    "zh": "半隐的花园"
+  },
+  {
+    "id": 112,
+    "name": "ENTRANCE TRANSITION",
+    "scale": "building",
+    "zh": "入口过渡"
+  },
+  {
+    "id": 113,
+    "name": "CAR CONNECTION",
+    "scale": "building",
+    "zh": "与汽车的连接"
+  },
+  {
+    "id": 114,
+    "name": "HIERARCHY OF OPEN SPACE",
+    "scale": "building",
+    "zh": "开放空间的层次"
+  },
+  {
+    "id": 115,
+    "name": "COURTYARDS WHICH LIVE",
+    "scale": "building",
+    "zh": "有生活的庭院"
+  },
+  {
+    "id": 116,
+    "name": "CASCADE OF ROOFS",
+    "scale": "building",
+    "zh": "层叠的屋顶"
+  },
+  {
+    "id": 117,
+    "name": "SHELTERING ROOF",
+    "scale": "building",
+    "zh": "庇护性的屋顶"
+  },
+  {
+    "id": 118,
+    "name": "ROOF GARDEN",
+    "scale": "building",
+    "zh": "屋顶花园"
+  },
+  {
+    "id": 119,
+    "name": "ARCADES",
+    "scale": "building",
+    "zh": "拱廊"
+  },
+  {
+    "id": 120,
+    "name": "PATHS AND GOALS",
+    "scale": "building",
+    "zh": "路径与目标"
+  },
+  {
+    "id": 121,
+    "name": "PATH SHAPE",
+    "scale": "building",
+    "zh": "路径的形状"
+  },
+  {
+    "id": 122,
+    "name": "BUILDING FRONTS",
+    "scale": "building",
+    "zh": "建筑正面"
+  },
+  {
+    "id": 123,
+    "name": "PEDESTRIAN DENSITY",
+    "scale": "building",
+    "zh": "步行密度"
+  },
+  {
+    "id": 124,
+    "name": "ACTIVITY POCKETS",
+    "scale": "building",
+    "zh": "活动口袋"
+  },
+  {
+    "id": 125,
+    "name": "STAIR SEATS",
+    "scale": "building",
+    "zh": "台阶座位"
+  },
+  {
+    "id": 126,
+    "name": "SOMETHING ROUGHLY IN THE MIDDLE",
+    "scale": "building",
+    "zh": "大致居中的某个东西"
+  },
+  {
+    "id": 127,
+    "name": "INTIMACY GRADIENT",
+    "scale": "building",
+    "zh": "私密性渐变"
+  },
+  {
+    "id": 128,
+    "name": "INDOOR SUNLIGHT",
+    "scale": "building",
+    "zh": "室内阳光"
+  },
+  {
+    "id": 129,
+    "name": "COMMON AREAS AT THE HEART",
+    "scale": "building",
+    "zh": "共享空间位于中心"
+  },
+  {
+    "id": 130,
+    "name": "ENTRANCE ROOM",
+    "scale": "building",
+    "zh": "入口处的房间"
+  },
+  {
+    "id": 131,
+    "name": "THE FLOW THROUGH ROOMS",
+    "scale": "building",
+    "zh": "穿行房间的流线"
+  },
+  {
+    "id": 132,
+    "name": "SHORT PASSAGES",
+    "scale": "building",
+    "zh": "短走道"
+  },
+  {
+    "id": 133,
+    "name": "STAIRCASE AS A STAGE",
+    "scale": "building",
+    "zh": "楼梯作为舞台"
+  },
+  {
+    "id": 134,
+    "name": "ZEN VIEW",
+    "scale": "building",
+    "zh": "禅意景观"
+  },
+  {
+    "id": 135,
+    "name": "TAPESTRY OF LIGHT AND DARK",
+    "scale": "building",
+    "zh": "明暗的织锦"
+  },
+  {
+    "id": 136,
+    "name": "COUPLE'S REALM",
+    "scale": "building",
+    "zh": "伴侣的领域"
+  },
+  {
+    "id": 137,
+    "name": "CHILDREN'S REALM",
+    "scale": "building",
+    "zh": "儿童的领域"
+  },
+  {
+    "id": 138,
+    "name": "SLEEPING TO THE EAST",
+    "scale": "building",
+    "zh": "朝东的睡眠空间"
+  },
+  {
+    "id": 139,
+    "name": "FARMHOUSE KITCHEN",
+    "scale": "building",
+    "zh": "农舍厨房"
+  },
+  {
+    "id": 140,
+    "name": "PRIVATE TERRACE ON THE STREET",
+    "scale": "building",
+    "zh": "临街的私人露台"
+  },
+  {
+    "id": 141,
+    "name": "A ROOM OF ONE'S OWN",
+    "scale": "building",
+    "zh": "自己的房间"
+  },
+  {
+    "id": 142,
+    "name": "SEQUENCE OF SITTING SPACES",
+    "scale": "building",
+    "zh": "一系列坐下的空间"
+  },
+  {
+    "id": 143,
+    "name": "BED CLUSTER",
+    "scale": "building",
+    "zh": "床位组团"
+  },
+  {
+    "id": 144,
+    "name": "BATHING ROOM",
+    "scale": "building",
+    "zh": "沐浴室"
+  },
+  {
+    "id": 145,
+    "name": "BULK STORAGE",
+    "scale": "building",
+    "zh": "大件储物"
+  },
+  {
+    "id": 146,
+    "name": "FLEXIBLE OFFICE SPACE",
+    "scale": "building",
+    "zh": "灵活的办公空间"
+  },
+  {
+    "id": 147,
+    "name": "COMMUNAL EATING",
+    "scale": "building",
+    "zh": "共同进餐"
+  },
+  {
+    "id": 148,
+    "name": "SMALL WORK GROUPS",
+    "scale": "building",
+    "zh": "小型工作组"
+  },
+  {
+    "id": 149,
+    "name": "RECEPTION WELCOMES YOU",
+    "scale": "building",
+    "zh": "欢迎来客的接待处"
+  },
+  {
+    "id": 150,
+    "name": "A PLACE TO WAIT",
+    "scale": "building",
+    "zh": "等待的地方"
+  },
+  {
+    "id": 151,
+    "name": "SMALL MEETING ROOMS",
+    "scale": "building",
+    "zh": "小会议室"
+  },
+  {
+    "id": 152,
+    "name": "HALF-PRIVATE OFFICE",
+    "scale": "building",
+    "zh": "半私密办公室"
+  },
+  {
+    "id": 153,
+    "name": "ROOMS TO RENT",
+    "scale": "building",
+    "zh": "可出租的房间"
+  },
+  {
+    "id": 154,
+    "name": "TEENAGER'S COTTAGE",
+    "scale": "building",
+    "zh": "青少年的小屋"
+  },
+  {
+    "id": 155,
+    "name": "OLD AGE COTTAGE",
+    "scale": "building",
+    "zh": "老年人的小屋"
+  },
+  {
+    "id": 156,
+    "name": "SETTLED WORK",
+    "scale": "building",
+    "zh": "安定的工作"
+  },
+  {
+    "id": 157,
+    "name": "HOME WORKSHOP",
+    "scale": "building",
+    "zh": "家庭工作间"
+  },
+  {
+    "id": 158,
+    "name": "OPEN STAIRS",
+    "scale": "building",
+    "zh": "开放楼梯"
+  },
+  {
+    "id": 159,
+    "name": "LIGHT ON TWO SIDES OF EVERY ROOM",
+    "scale": "building",
+    "zh": "每个房间的双面采光"
+  },
+  {
+    "id": 160,
+    "name": "BUILDING EDGE",
+    "scale": "building",
+    "zh": "建筑边缘"
+  },
+  {
+    "id": 161,
+    "name": "SUNNY PLACE",
+    "scale": "building",
+    "zh": "向阳的地方"
+  },
+  {
+    "id": 162,
+    "name": "NORTH FACE",
+    "scale": "building",
+    "zh": "北立面"
+  },
+  {
+    "id": 163,
+    "name": "OUTDOOR ROOM",
+    "scale": "building",
+    "zh": "户外房间"
+  },
+  {
+    "id": 164,
+    "name": "STREET WINDOWS",
+    "scale": "building",
+    "zh": "街道窗户"
+  },
+  {
+    "id": 165,
+    "name": "OPENING TO THE STREET",
+    "scale": "building",
+    "zh": "向街道敞开"
+  },
+  {
+    "id": 166,
+    "name": "GALLERY SURROUND",
+    "scale": "building",
+    "zh": "环绕的廊道"
+  },
+  {
+    "id": 167,
+    "name": "SIX-FOOT BALCONY",
+    "scale": "building",
+    "zh": "六英尺阳台"
+  },
+  {
+    "id": 168,
+    "name": "CONNECTION TO THE EARTH",
+    "scale": "building",
+    "zh": "与大地相连"
+  },
+  {
+    "id": 169,
+    "name": "TERRACED SLOPE",
+    "scale": "building",
+    "zh": "阶梯状坡地"
+  },
+  {
+    "id": 170,
+    "name": "FRUIT TREES",
+    "scale": "building",
+    "zh": "果树"
+  },
+  {
+    "id": 171,
+    "name": "TREE PLACES",
+    "scale": "building",
+    "zh": "树下的地方"
+  },
+  {
+    "id": 172,
+    "name": "GARDEN GROWING WILD",
+    "scale": "building",
+    "zh": "自然生长的花园"
+  },
+  {
+    "id": 173,
+    "name": "GARDEN WALL",
+    "scale": "building",
+    "zh": "花园围墙"
+  },
+  {
+    "id": 174,
+    "name": "TRELLISED WALK",
+    "scale": "building",
+    "zh": "藤架步道"
+  },
+  {
+    "id": 175,
+    "name": "GREENHOUSE",
+    "scale": "building",
+    "zh": "温室"
+  },
+  {
+    "id": 176,
+    "name": "GARDEN SEAT",
+    "scale": "building",
+    "zh": "花园座位"
+  },
+  {
+    "id": 177,
+    "name": "VEGETABLE GARDEN",
+    "scale": "building",
+    "zh": "菜园"
+  },
+  {
+    "id": 178,
+    "name": "COMPOST",
+    "scale": "building",
+    "zh": "堆肥"
+  },
+  {
+    "id": 179,
+    "name": "ALCOVES",
+    "scale": "building",
+    "zh": "小凹室"
+  },
+  {
+    "id": 180,
+    "name": "WINDOW PLACE",
+    "scale": "building",
+    "zh": "窗边位置"
+  },
+  {
+    "id": 181,
+    "name": "THE FIRE",
+    "scale": "building",
+    "zh": "炉火"
+  },
+  {
+    "id": 182,
+    "name": "EATING ATMOSPHERE",
+    "scale": "building",
+    "zh": "用餐的氛围"
+  },
+  {
+    "id": 183,
+    "name": "WORKSPACE ENCLOSURE",
+    "scale": "building",
+    "zh": "工作空间的围合"
+  },
+  {
+    "id": 184,
+    "name": "COOKING LAYOUT",
+    "scale": "building",
+    "zh": "烹饪布局"
+  },
+  {
+    "id": 185,
+    "name": "SITTING CIRCLE",
+    "scale": "building",
+    "zh": "围坐"
+  },
+  {
+    "id": 186,
+    "name": "COMMUNAL SLEEPING",
+    "scale": "building",
+    "zh": "共同睡眠"
+  },
+  {
+    "id": 187,
+    "name": "MARRIAGE BED",
+    "scale": "building",
+    "zh": "婚床"
+  },
+  {
+    "id": 188,
+    "name": "BED ALCOVE",
+    "scale": "building",
+    "zh": "床边凹室"
+  },
+  {
+    "id": 189,
+    "name": "DRESSING ROOM",
+    "scale": "building",
+    "zh": "更衣室"
+  },
+  {
+    "id": 190,
+    "name": "CEILING HEIGHT VARIETY",
+    "scale": "building",
+    "zh": "多样的层高"
+  },
+  {
+    "id": 191,
+    "name": "THE SHAPE OF INDOOR SPACE",
+    "scale": "building",
+    "zh": "室内空间的形状"
+  },
+  {
+    "id": 192,
+    "name": "WINDOWS OVERLOOKING LIFE",
+    "scale": "building",
+    "zh": "俯瞰生活的窗户"
+  },
+  {
+    "id": 193,
+    "name": "HALF-OPEN WALL",
+    "scale": "building",
+    "zh": "半开敞的墙面"
+  },
+  {
+    "id": 194,
+    "name": "INTERIOR WINDOWS",
+    "scale": "building",
+    "zh": "室内窗"
+  },
+  {
+    "id": 195,
+    "name": "STAIRCASE VOLUME",
+    "scale": "building",
+    "zh": "楼梯体量"
+  },
+  {
+    "id": 196,
+    "name": "CORNER DOORS",
+    "scale": "building",
+    "zh": "角落的门"
+  },
+  {
+    "id": 197,
+    "name": "THICK WALLS",
+    "scale": "building",
+    "zh": "厚墙"
+  },
+  {
+    "id": 198,
+    "name": "CLOSETS BETWEEN ROOMS",
+    "scale": "building",
+    "zh": "房间之间的壁橱"
+  },
+  {
+    "id": 199,
+    "name": "SUNNY COUNTER",
+    "scale": "building",
+    "zh": "向阳的操作台"
+  },
+  {
+    "id": 200,
+    "name": "OPEN SHELVES",
+    "scale": "building",
+    "zh": "开放的架子"
+  },
+  {
+    "id": 201,
+    "name": "WAIST-HIGH SHELF",
+    "scale": "building",
+    "zh": "齐腰高的架子"
+  },
+  {
+    "id": 202,
+    "name": "BUILT-IN SEATS",
+    "scale": "building",
+    "zh": "内置座位"
+  },
+  {
+    "id": 203,
+    "name": "CHILD CAVES",
+    "scale": "building",
+    "zh": "儿童洞穴"
+  },
+  {
+    "id": 204,
+    "name": "SECRET PLACE",
+    "scale": "building",
+    "zh": "秘密场所"
+  },
+  {
+    "id": 205,
+    "name": "STRUCTURE FOLLOWS SOCIAL SPACES",
+    "scale": "construction",
+    "zh": "结构顺应社会空间"
+  },
+  {
+    "id": 206,
+    "name": "EFFICIENT STRUCTURE",
+    "scale": "construction",
+    "zh": "高效结构"
+  },
+  {
+    "id": 207,
+    "name": "GOOD MATERIALS",
+    "scale": "construction",
+    "zh": "合适的材料"
+  },
+  {
+    "id": 208,
+    "name": "GRADUAL STIFFENING",
+    "scale": "construction",
+    "zh": "逐渐加固"
+  },
+  {
+    "id": 209,
+    "name": "ROOF LAYOUT",
+    "scale": "construction",
+    "zh": "屋顶布局"
+  },
+  {
+    "id": 210,
+    "name": "FLOOR AND CEILING LAYOUT",
+    "scale": "construction",
+    "zh": "楼板与天花布局"
+  },
+  {
+    "id": 211,
+    "name": "THICKENING THE OUTER WALLS",
+    "scale": "construction",
+    "zh": "加厚外墙"
+  },
+  {
+    "id": 212,
+    "name": "COLUMNS AT THE CORNERS",
+    "scale": "construction",
+    "zh": "角部的柱子"
+  },
+  {
+    "id": 213,
+    "name": "FINAL COLUMN DISTRIBUTION",
+    "scale": "construction",
+    "zh": "最终的柱网分布"
+  },
+  {
+    "id": 214,
+    "name": "ROOT FOUNDATIONS",
+    "scale": "construction",
+    "zh": "根状基础"
+  },
+  {
+    "id": 215,
+    "name": "GROUND FLOOR SLAB",
+    "scale": "construction",
+    "zh": "首层地板"
+  },
+  {
+    "id": 216,
+    "name": "BOX COLUMNS",
+    "scale": "construction",
+    "zh": "箱形柱"
+  },
+  {
+    "id": 217,
+    "name": "PERIMETER BEAMS",
+    "scale": "construction",
+    "zh": "周边梁"
+  },
+  {
+    "id": 218,
+    "name": "WALL MEMBRANES",
+    "scale": "construction",
+    "zh": "墙体薄壳"
+  },
+  {
+    "id": 219,
+    "name": "FLOOR-CEILING VAULTS",
+    "scale": "construction",
+    "zh": "楼板与天花的拱顶"
+  },
+  {
+    "id": 220,
+    "name": "ROOF VAULTS",
+    "scale": "construction",
+    "zh": "屋顶拱壳"
+  },
+  {
+    "id": 221,
+    "name": "NATURAL DOORS AND WINDOWS",
+    "scale": "construction",
+    "zh": "自然形成的门窗"
+  },
+  {
+    "id": 222,
+    "name": "LOW SILL",
+    "scale": "construction",
+    "zh": "低窗台"
+  },
+  {
+    "id": 223,
+    "name": "DEEP REVEALS",
+    "scale": "construction",
+    "zh": "深窗洞"
+  },
+  {
+    "id": 224,
+    "name": "LOW DOORWAY",
+    "scale": "construction",
+    "zh": "低门洞"
+  },
+  {
+    "id": 225,
+    "name": "FRAMES AS THICKENED EDGES",
+    "scale": "construction",
+    "zh": "加厚边缘的框"
+  },
+  {
+    "id": 226,
+    "name": "COLUMN PLACE",
+    "scale": "construction",
+    "zh": "柱边场所"
+  },
+  {
+    "id": 227,
+    "name": "COLUMN CONNECTION",
+    "scale": "construction",
+    "zh": "柱的连接"
+  },
+  {
+    "id": 228,
+    "name": "STAIR VAULT",
+    "scale": "construction",
+    "zh": "楼梯拱壳"
+  },
+  {
+    "id": 229,
+    "name": "DUCT SPACE",
+    "scale": "construction",
+    "zh": "管线空间"
+  },
+  {
+    "id": 230,
+    "name": "RADIANT HEAT",
+    "scale": "construction",
+    "zh": "辐射供暖"
+  },
+  {
+    "id": 231,
+    "name": "DORMER WINDOWS",
+    "scale": "construction",
+    "zh": "老虎窗"
+  },
+  {
+    "id": 232,
+    "name": "ROOF CAPS",
+    "scale": "construction",
+    "zh": "屋顶帽"
+  },
+  {
+    "id": 233,
+    "name": "FLOOR SURFACE",
+    "scale": "construction",
+    "zh": "地面表层"
+  },
+  {
+    "id": 234,
+    "name": "LAPPED OUTSIDE WALLS",
+    "scale": "construction",
+    "zh": "搭接的外墙"
+  },
+  {
+    "id": 235,
+    "name": "SOFT INSIDE WALLS",
+    "scale": "construction",
+    "zh": "柔和的内墙"
+  },
+  {
+    "id": 236,
+    "name": "WINDOWS WHICH OPEN WIDE",
+    "scale": "construction",
+    "zh": "大幅开启的窗户"
+  },
+  {
+    "id": 237,
+    "name": "SOLID DOORS WITH GLASS",
+    "scale": "construction",
+    "zh": "带玻璃的实心门"
+  },
+  {
+    "id": 238,
+    "name": "FILTERED LIGHT",
+    "scale": "construction",
+    "zh": "过滤的光线"
+  },
+  {
+    "id": 239,
+    "name": "SMALL PANES",
+    "scale": "construction",
+    "zh": "小块窗玻璃"
+  },
+  {
+    "id": 240,
+    "name": "HALF-INCH TRIM",
+    "scale": "construction",
+    "zh": "半英寸饰条"
+  },
+  {
+    "id": 241,
+    "name": "SEAT SPOTS",
+    "scale": "construction",
+    "zh": "座位的位置"
+  },
+  {
+    "id": 242,
+    "name": "FRONT DOOR BENCH",
+    "scale": "construction",
+    "zh": "前门长椅"
+  },
+  {
+    "id": 243,
+    "name": "SITTING WALL",
+    "scale": "construction",
+    "zh": "可坐的墙"
+  },
+  {
+    "id": 244,
+    "name": "CANVAS ROOFS",
+    "scale": "construction",
+    "zh": "帆布屋顶"
+  },
+  {
+    "id": 245,
+    "name": "RAISED FLOWERS",
+    "scale": "construction",
+    "zh": "抬高的花池"
+  },
+  {
+    "id": 246,
+    "name": "CLIMBING PLANTS",
+    "scale": "construction",
+    "zh": "攀缘植物"
+  },
+  {
+    "id": 247,
+    "name": "PAVING WITH CRACKS BETWEEN THE STONES",
+    "scale": "construction",
+    "zh": "石块间留缝的铺地"
+  },
+  {
+    "id": 248,
+    "name": "SOFT TILE AND BRICK",
+    "scale": "construction",
+    "zh": "柔和的砖瓦"
+  },
+  {
+    "id": 249,
+    "name": "ORNAMENT",
+    "scale": "construction",
+    "zh": "装饰"
+  },
+  {
+    "id": 250,
+    "name": "WARM COLORS",
+    "scale": "construction",
+    "zh": "暖色"
+  },
+  {
+    "id": 251,
+    "name": "DIFFERENT CHAIRS",
+    "scale": "construction",
+    "zh": "不同的椅子"
+  },
+  {
+    "id": 252,
+    "name": "POOLS OF LIGHT",
+    "scale": "construction",
+    "zh": "一池池光"
+  },
+  {
+    "id": 253,
+    "name": "THINGS FROM YOUR LIFE",
+    "scale": "construction",
+    "zh": "生活中的物件"
+  }
+]
