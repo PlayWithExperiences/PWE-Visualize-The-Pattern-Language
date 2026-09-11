@@ -1,6 +1,6 @@
-import {buildRooms} from './detail-room.js?v=580c78464447';
-import {buildConstruction} from './detail-construction.js?v=580c78464447';
-import {buildFinish} from './detail-finish.js?v=580c78464447';
+import {buildRooms} from './detail-room.js?v=3534622f64ec';
+import {buildConstruction} from './detail-construction.js?v=3534622f64ec';
+import {buildFinish} from './detail-finish.js?v=3534622f64ec';
 
 export function buildDetail(key,ids=[]){
  if(key==='room')return buildRooms(ids);

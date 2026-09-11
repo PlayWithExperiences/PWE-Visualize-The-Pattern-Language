@@ -1,4 +1,4 @@
-import {colors as C,gateway,route} from './primitives.js?v=580c78464447';
+import {colors as C,gateway,route} from './primitives.js?v=3534622f64ec';
 export function region(d){
  const H=id=>d.has(id);
  d.rect(55,75,890,490,C.land);d.text(500,45,'区域 · 聚落、土地与公共联系',0,19);

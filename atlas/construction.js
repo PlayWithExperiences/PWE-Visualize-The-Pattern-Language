@@ -1,4 +1,4 @@
-import {colors as C,pane,route} from './primitives.js?v=580c78464447';
+import {colors as C,pane,route} from './primitives.js?v=3534622f64ec';
 export function construction(d){
  const H=id=>d.has(id);d.text(500,32,'构造剖面 · 原书体系的概念图解',0,19);d.text(500,55,'不含荷载、材料性能、节点尺寸或工程验算',0,11);
  d.rect(60,495,880,95,C.land);d.line(65,495,935,495,0,{width:3});

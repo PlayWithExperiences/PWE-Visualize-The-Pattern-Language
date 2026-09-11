@@ -1,4 +1,4 @@
-import {colors as C,gateway,route,pane} from './primitives.js?v=580c78464447';
+import {colors as C,gateway,route,pane} from './primitives.js?v=3534622f64ec';
 export function plan(d){
  const H=id=>d.has(id);d.text(500,36,'建筑平面 · 共同生活与私人领域',0,19);d.rect(80,85,840,440,C.land);
  d.rect(130,120,720,360,C.building);const privateX=H(127)?670:145,commonX=H(129)?410:330,commonY=H(128)?305:230;

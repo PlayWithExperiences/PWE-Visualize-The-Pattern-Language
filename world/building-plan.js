@@ -1,5 +1,5 @@
-import {World,palette as p} from './primitives.js?v=580c78464447';
-import {finishBuilding,share,note,portal,eastWindow,counter,bookcase,rail} from './building-common.js?v=580c78464447';
+import {World,palette as p} from './primitives.js?v=3534622f64ec';
+import {finishBuilding,share,note,portal,eastWindow,counter,bookcase,rail} from './building-common.js?v=3534622f64ec';
 export function buildPlan(ids){
  const w=new World('plan',48,43,ids),h=id=>w.has(id),any=(...a)=>a.some(h);
  w.room(10,8,24,22,0,{roof:false,sideDoor:h(153)});w.roof(9.7,7.7,24.6,22.6,0,3.1,2.2);w.path([[22,33],[22,29]],2.2);w.spawn={x:22,y:32,yaw:0,pitch:0,feet:0};w.navigation.speed=4;

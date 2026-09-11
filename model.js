@@ -1,5 +1,5 @@
-import {patterns} from './data/patterns.js?v=580c78464447';
-import {normalizeSun,defaultSun} from './sun.js?v=580c78464447';
+import {patterns} from './data/patterns.js?v=3534622f64ec';
+import {normalizeSun,defaultSun} from './sun.js?v=3534622f64ec';
 export const allowed = patterns.map(p=>p.id);
 export const defaults = {ids:[105,106,112,115,163,171,180],width:12,depth:10,court:4,seat:0.65,sun:defaultSun};
 const clamp=(n,a,b,f)=>Number.isFinite(Number(n))?Math.min(b,Math.max(a,Number(n))):f;

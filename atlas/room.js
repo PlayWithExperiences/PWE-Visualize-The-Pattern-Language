@@ -1,4 +1,4 @@
-import {colors as C,pane,route} from './primitives.js?v=580c78464447';
+import {colors as C,pane,route} from './primitives.js?v=3534622f64ec';
 export function room(d){
  const H=id=>d.has(id);d.text(500,36,'房间 · 活动平面与高度剖面',0,19);
  d.rect(90,85,820,360,C.land);d.rect(140,120,690,285,H(250)?'#e7c79e':C.paper,H(250)?250:0);

@@ -1,4 +1,4 @@
-import {buildScene} from './model.js?v=580c78464447';
+import {buildScene} from './model.js?v=3534622f64ec';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const shade=(hex,k)=>'#'+hex.slice(1).match(/../g).map(c=>Math.min(255,Math.max(0,Math.round(parseInt(c,16)*k))).toString(16).padStart(2,'0')).join('');
 export function renderScene(state,{angle=-35,plan=false,cutaway=true,focus=0,labels=true}={}){

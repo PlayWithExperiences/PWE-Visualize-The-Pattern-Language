@@ -1,8 +1,8 @@
-import {worldOverview,safeSpawn,observationPose,reconcilePerson} from './world/navigation.js?v=580c78464447';
-import {EYE_HEIGHT,floorHeight,canStand,entryPose,movePlayer} from './walk-physics.js?v=580c78464447';
-import {multiply,vertexSource,fragmentSource,createSunlight} from './lighting.js?v=580c78464447';
-import {normalizeSun,advanceSun,sampleSun} from './sun.js?v=580c78464447';
-import {overviewPose,moveFree} from './free-camera.js?v=580c78464447';
+import {worldOverview,safeSpawn,observationPose,reconcilePerson} from './world/navigation.js?v=3534622f64ec';
+import {EYE_HEIGHT,floorHeight,canStand,entryPose,movePlayer} from './walk-physics.js?v=3534622f64ec';
+import {multiply,vertexSource,fragmentSource,createSunlight} from './lighting.js?v=3534622f64ec';
+import {normalizeSun,advanceSun,sampleSun} from './sun.js?v=3534622f64ec';
+import {overviewPose,moveFree} from './free-camera.js?v=3534622f64ec';
 const dot=(a,b)=>a.reduce((s,n,i)=>s+n*b[i],0);
 const cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
 const unit=a=>{const n=Math.hypot(...a);return a.map(v=>v/n);};
