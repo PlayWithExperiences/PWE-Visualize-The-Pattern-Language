@@ -1,9 +1,5 @@
-import {EYE_HEIGHT,floorHeight,canStand,entryPose,movePlayer} from './walk-physics.js';
-const multiply=(a,b)=>{
- const out=new Float32Array(16);
- for(let col=0;col<4;col++)for(let row=0;row<4;row++)for(let k=0;k<4;k++)out[col*4+row]+=a[k*4+row]*b[col*4+k];
- return out;
-};
+import {EYE_HEIGHT,floorHeight,canStand,entryPose,movePlayer} from './walk-physics.js?v=7cf58ddf4371';
+import {multiply,SUN_DIRECTION,vertexSource,fragmentSource,createSunlight} from './lighting.js?v=7cf58ddf4371';
 const dot=(a,b)=>a.reduce((s,n,i)=>s+n*b[i],0);
 const cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
 const unit=a=>{const n=Math.hypot(...a);return a.map(v=>v/n);};
@@ -23,12 +19,16 @@ export function createWalk(canvas,onError,onPose){
   if(!gl.getShaderParameter(shader,gl.COMPILE_STATUS))throw Error('三维着色器初始化失败。');
   return shader;
  };
- const vertex=compile(gl.VERTEX_SHADER,'attribute vec3 aPosition; attribute vec4 aColor; uniform mat4 uMatrix; varying vec4 vColor; varying float vDistance; void main(){gl_Position=uMatrix*vec4(aPosition,1.0);vDistance=gl_Position.w;vColor=aColor;}');
- const fragment=compile(gl.FRAGMENT_SHADER,'precision mediump float; varying vec4 vColor; varying float vDistance; void main(){float fog=clamp((vDistance-18.0)/65.0,0.0,0.35);gl_FragColor=vec4(mix(vColor.rgb,vec3(0.80,0.86,0.85),fog),vColor.a);}');
+ const vertex=compile(gl.VERTEX_SHADER,vertexSource);
+ const fragment=compile(gl.FRAGMENT_SHADER,fragmentSource);
  const program=gl.createProgram();gl.attachShader(program,vertex);gl.attachShader(program,fragment);gl.linkProgram(program);
  if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw Error('三维场景初始化失败。');
  gl.deleteShader(vertex);gl.deleteShader(fragment);
  const buffer=gl.createBuffer(),pos=gl.getAttribLocation(program,'aPosition'),color=gl.getAttribLocation(program,'aColor'),matrix=gl.getUniformLocation(program,'uMatrix');
+ const normalAttribute=gl.getAttribLocation(program,'aNormal'),materialAttribute=gl.getAttribLocation(program,'aMaterial');
+ const sunUniform=gl.getUniformLocation(program,'uSunMatrix'),shadowUniform=gl.getUniformLocation(program,'uShadow');
+ const texelUniform=gl.getUniformLocation(program,'uShadowTexel'),eyeUniform=gl.getUniformLocation(program,'uEye'),directionUniform=gl.getUniformLocation(program,'uSunDirection');
+ const sunlight=createSunlight(gl,compile);
  let scene=null,pose=null,opaque=[],glass=[],active=false,frame=0,last=0,lastReadout=0,drag=null;
  const keys=new Set(), cleanup=[];
  const listen=(target,event,fn,options)=>{target.addEventListener(event,fn,options);cleanup.push(()=>target.removeEventListener(event,fn,options));};
@@ -43,18 +43,19 @@ export function createWalk(canvas,onError,onPose){
    const rgb=b.color.slice(1).match(/../g).map(c=>parseInt(c,16)/255);
    const isGlass=b.kind==='window';
    for(const [indices,normal] of faces){
-    const light=.76+Math.max(0,dot(normal,[-.35,-.4,.85]))*.23;
+    const material=isGlass?3:['deck','post','pergola','window-seat','bench','trunk','furniture'].includes(b.kind)?2:b.kind==='floor'?1:0;
     const vertices=[];
     for(const i of [0,1,2,0,2,3]){
      const [px,py,pz]=points[indices[i]];
-     vertices.push(px,pz,py,...rgb.map(c=>c*light),isGlass?.23:1);
+     vertices.push(px,pz,py,...rgb,isGlass?.23:1,normal[0],normal[2],normal[1],material);
     }
     if(isGlass)glass.push({vertices,center:[x+dx/2,y+dy/2,z+dz/2]});else opaque.push(...vertices);
    }
   }
+  sunlight.update(scene,opaque);
  }
  function drawBatch(data){
-  gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(data),gl.DYNAMIC_DRAW);gl.drawArrays(gl.TRIANGLES,0,data.length/7);
+  gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(data),gl.DYNAMIC_DRAW);gl.drawArrays(gl.TRIANGLES,0,data.length/11);
  }
  function render(now){
   if(!active)return;
@@ -74,9 +75,14 @@ export function createWalk(canvas,onError,onPose){
   const eye=floorHeight(scene.boxes,pose.x,pose.y)+EYE_HEIGHT;
   const ratio=Math.min(devicePixelRatio||1,2),width=Math.max(1,Math.round(canvas.clientWidth*ratio)),height=Math.max(1,Math.round(canvas.clientHeight*ratio));
   if(canvas.width!==width||canvas.height!==height){canvas.width=width;canvas.height=height;}
-  gl.viewport(0,0,width,height);gl.clearColor(.8,.86,.85,1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
+  gl.viewport(0,0,width,height);gl.clearColor(.77,.84,.87,1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
   gl.enable(gl.DEPTH_TEST);gl.disable(gl.CULL_FACE);gl.useProgram(program);gl.bindBuffer(gl.ARRAY_BUFFER,buffer);
-  gl.enableVertexAttribArray(pos);gl.vertexAttribPointer(pos,3,gl.FLOAT,false,28,0);gl.enableVertexAttribArray(color);gl.vertexAttribPointer(color,4,gl.FLOAT,false,28,12);
+  gl.enableVertexAttribArray(pos);gl.vertexAttribPointer(pos,3,gl.FLOAT,false,44,0);gl.enableVertexAttribArray(color);gl.vertexAttribPointer(color,4,gl.FLOAT,false,44,12);
+  gl.enableVertexAttribArray(normalAttribute);gl.vertexAttribPointer(normalAttribute,3,gl.FLOAT,false,44,28);
+  gl.enableVertexAttribArray(materialAttribute);gl.vertexAttribPointer(materialAttribute,1,gl.FLOAT,false,44,40);
+  gl.uniformMatrix4fv(sunUniform,false,sunlight.matrix);
+  gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,sunlight.texture);gl.uniform1i(shadowUniform,0);gl.uniform2f(texelUniform,1/sunlight.size,1/sunlight.size);
+  gl.uniform3f(eyeUniform,pose.x,eye,pose.y);const length=Math.hypot(...SUN_DIRECTION);gl.uniform3fv(directionUniform,SUN_DIRECTION.map(x=>x/length));
   gl.uniformMatrix4fv(matrix,false,cameraMatrix(pose,eye,width/height));
   gl.disable(gl.BLEND);gl.depthMask(true);drawBatch(opaque);
   gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);gl.depthMask(false);
@@ -102,6 +108,6 @@ export function createWalk(canvas,onError,onPose){
   stop,reset,
   step(key){if(!scene||!pose)return;if(key==='arrowleft')pose.yaw-=.18;else if(key==='arrowright')pose.yaw+=.18;else{const f=key==='w'?1:key==='s'?-1:0;const s=key==='d'?1:key==='a'?-1:0;pose=movePlayer(scene.boxes,pose,(Math.sin(pose.yaw)*f+Math.cos(pose.yaw)*s)*.4,(-Math.cos(pose.yaw)*f+Math.sin(pose.yaw)*s)*.4);}},
   key(key,down){if(down)keys.add(key);else keys.delete(key);},
-  dispose(){stop();cleanup.forEach(fn=>fn());gl.deleteBuffer(buffer);gl.deleteProgram(program);},
+  dispose(){stop();cleanup.forEach(fn=>fn());sunlight.dispose();gl.deleteBuffer(buffer);gl.deleteProgram(program);},
  };
 }

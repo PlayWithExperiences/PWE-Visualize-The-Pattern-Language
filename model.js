@@ -1,4 +1,4 @@
-import {patterns} from './data/patterns.js';
+import {patterns} from './data/patterns.js?v=7cf58ddf4371';
 export const allowed = patterns.map(p=>p.id);
 export const defaults = {ids:[105,106,112,115,163,171,180],width:12,depth:10,court:4,seat:0.65};
 const clamp=(n,a,b,f)=>Number.isFinite(Number(n))?Math.min(b,Math.max(a,Number(n))):f;
