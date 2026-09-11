@@ -1,0 +1,36 @@
+// Geometry is authored in metres, x/y ground plane and z up. No SVG extrusion.
+export const palette={wall:'#e8ddc9',wood:'#aa825c',roof:'#ad876c',glass:'#aacbd1',stone:'#cac4b5',ground:'#b9c7a6',plant:'#708d64',soil:'#9e8564',water:'#79afb9',metal:'#697b77',warm:'#e3bd87'};
+export class World{
+ constructor(key,width,depth,ids){this.key=key;this.ids=new Set(ids);this.boxes=[];this.meshes=[];this.landmarks=[];this.applied=new Set();this.state={width,depth,court:0,ids:[...this.ids]};this.navigation={world:true,bounds:Math.max(width,depth)*2,maxHeight:Math.max(80,width),far:Math.max(250,width*5),speed:Math.max(4,width/18)};this.autoCeiling=false;this.box(-15,-15,-.3,width+30,depth+30,.3,palette.ground,0,'ground');this.spawn={x:width/2,y:depth+5,yaw:0,pitch:0,feet:0};this.overview={x:width*1.15,y:depth*1.3,z:Math.max(10,width*.7),yaw:-.6,pitch:-.6};}
+ has(id){return this.ids.has(id);}
+ box(x,y,z,dx,dy,dz,color=palette.wall,id=0,kind='solid',extra={}){const b={x,y,z,dx,dy,dz,color,pattern:id,kind,...extra};this.boxes.push(b);if(id)this.applied.add(id);return b;}
+ triangle(a,b,c,color,id=0,kind='solid'){this.meshes.push({points:[a,b,c],color,pattern:id,kind});if(id)this.applied.add(id);}
+ quad(a,b,c,e,color,id=0,kind='solid'){this.triangle(a,b,c,color,id,kind);this.triangle(a,c,e,color,id,kind);}
+ beam(a,b,r,color=palette.wood,id=0){const dx=b[0]-a[0],dy=b[1]-a[1],dz=b[2]-a[2],len=Math.hypot(dx,dy,dz);if(!len)return;const u=[dx/len,dy/len,dz/len],ref=Math.abs(u[2])<.9?[0,0,1]:[0,1,0];const cross=(v,w)=>[v[1]*w[2]-v[2]*w[1],v[2]*w[0]-v[0]*w[2],v[0]*w[1]-v[1]*w[0]];let v=cross(u,ref);const n=Math.hypot(...v);v=v.map(x=>x/n);const w=cross(u,v),corners=[];for(const p of [a,b])for(const [s,t]of [[-1,-1],[1,-1],[1,1],[-1,1]])corners.push(p.map((x,i)=>x+(v[i]*s+w[i]*t)*r));for(const f of [[0,3,2,1],[4,5,6,7],[0,1,5,4],[1,2,6,5],[2,3,7,6],[3,0,4,7]])this.quad(...f.map(i=>corners[i]),color,id);}
+ path(points,width=1.5,id=0,color=palette.stone,z=.01){for(let i=1;i<points.length;i++){const a=points[i-1],b=points[i],dx=b[0]-a[0],dy=b[1]-a[1],len=Math.hypot(dx,dy);if(!len)continue;const nx=-dy/len*width/2,ny=dx/len*width/2;this.quad([a[0]+nx,a[1]+ny,z],[b[0]+nx,b[1]+ny,z],[b[0]-nx,b[1]-ny,z],[a[0]-nx,a[1]-ny,z],color,id,'path');}}
+ slab(x,y,w,d,id=0,color=palette.stone,z=0){this.box(x,y,z,w,d,.12,color,id,'floor');}
+ wall(x,y,w,d,h=2.8,id=0,z=.12){this.box(x,y,z,w,d,h,palette.wall,id,'wall');}
+ // South facade includes a real traversable portal; glazing occupies holes, never a wall overlay.
+ facade(x,y,w,h=2.8,id=0,{door=true,sill=.8,z=.12,panes=false,reveal=false}={}){
+  const doorW=door?1.2:0,doorX=x+w/2-doorW/2,side=(w-doorW)/2;
+  const segment=(sx,sw)=>{if(sw<1.3){if(sw>0)this.wall(sx,y,sw,.2,h,id,z);return;}const jamb=.35,ww=sw-2*jamb,windowH=Math.max(.3,h-.4-sill);this.wall(sx,y,jamb,.2,h,id,z);this.wall(sx+sw-jamb,y,jamb,.2,h,id,z);this.wall(sx+jamb,y,ww,.2,sill,id,z);this.wall(sx+jamb,y,ww,.2,.4,id,z+h-.4);this.box(sx+jamb,y+.075,z+sill,ww,.04,windowH,palette.glass,id,'window');if(panes){for(let xx=sx+jamb+.45;xx<sx+sw-jamb;xx+=.45)this.box(xx,y+.025,z+sill,.035,.09,windowH,palette.wood,id,'mullion');for(let zz=z+sill+.45;zz<z+h-.4;zz+=.45)this.box(sx+jamb,y+.025,zz,ww,.09,.035,palette.wood,id,'mullion');}if(reveal){this.box(sx+jamb-.1,y-.15,z+sill-.1,ww+.2,.42,.1,palette.stone,id);for(const xx of [sx+jamb-.1,sx+sw-jamb])this.box(xx,y-.15,z+sill,.1,.42,windowH,palette.stone,id);}};
+  segment(x,side);segment(doorX+doorW,side);if(door)this.wall(doorX,y,doorW,.2,h-2.15,id,z+2.15);
+ }
+ room(x,y,w,d,id=0,{height=2.8,roof=true,z=0,openNorth=false,sideDoor=false,sill=.8,panes=false}={}){
+  this.slab(x,y,w,d,id,palette.stone,z);this.facade(x,y+d-.2,w,height,id,{z:z+.12,sill,panes});if(!openNorth)this.facade(x,y,w,height,id,{door:false,z:z+.12,sill,panes});this.wall(x,y,.2,d,height,id,z+.12);
+  if(sideDoor){this.wall(x+w-.2,y,.2,d/2-.65,height,id,z+.12);this.wall(x+w-.2,y+d/2+.65,.2,d/2-.65,height,id,z+.12);this.wall(x+w-.2,y+d/2-.65,.2,1.3,height-2.15,id,z+2.27);}else this.wall(x+w-.2,y,.2,d,height,id,z+.12);
+  if(roof)this.box(x-.2,y-.2,z+height+.12,w+.4,d+.4,.14,palette.wall,id,'ceiling');return {x:x+w/2,y:y+d+1.5,yaw:0,pitch:0,feet:z+.12};
+ }
+ roof(x,y,w,d,id=0,z=3,rise=1.3){const p=[[x,y,z],[x+w,y,z],[x+w,y+d,z],[x,y+d,z],[x+w/2,y,z+rise],[x+w/2,y+d,z+rise]];this.quad(p[0],p[4],p[5],p[3],palette.roof,id,'roof');this.quad(p[4],p[1],p[2],p[5],palette.roof,id,'roof');this.triangle(p[0],p[1],p[4],palette.wall,id);this.triangle(p[3],p[5],p[2],palette.wall,id);}
+ house(x,y,w=6,d=5,id=0,{floors=1,roof=true,open=false}={}){if(open)return this.room(x,y,w,d,id,{roof});this.box(x,y,0,w,d,floors*3,palette.wall,id,'building');for(let f=0;f<floors;f++){for(let n=0;n<Math.min(4,Math.floor(w/2));n++)this.box(x+.7+n*1.7,y+d+.01,.8+f*3,1,.04,1.4,palette.glass,id,'window');}if(roof)this.roof(x-.3,y-.3,w+.6,d+.6,id,floors*3,.9);return {x:x+w/2,y:y+d+2,yaw:0,pitch:0,feet:0};}
+ tree(x,y,id=0,size=1){this.box(x-.12*size,y-.12*size,0,.24*size,.24*size,2.4*size,palette.wood,id,'trunk');const top=[x,y,4*size],bottom=[x,y,1.8*size],ring=[[x-1.1*size,y,2.8*size],[x,y-1.1*size,2.8*size],[x+1.1*size,y,2.8*size],[x,y+1.1*size,2.8*size]];for(let n=0;n<4;n++){this.triangle(top,ring[n],ring[(n+1)%4],n%2?'#839a72':palette.plant,id,'canopy');this.triangle(bottom,ring[(n+1)%4],ring[n],palette.plant,id,'canopy');}}
+ bench(x,y,id=0,w=1.5,z=0){this.box(x,y,z+.43,w,.48,.09,palette.wood,id,'bench');for(const xx of [x+.08,x+w-.15])this.box(xx,y+.08,z,.07,.3,.43,palette.wood,id,'bench');this.box(x,y,z+.5,w,.07,.52,palette.wood,id,'bench');}
+ table(x,y,id=0,w=1.6,d=.85){this.box(x,y,.75,w,d,.08,palette.wood,id,'furniture');for(const xx of [x+.08,x+w-.16])for(const yy of [y+.08,y+d-.16])this.box(xx,yy,0,.08,.08,.75,palette.wood,id,'furniture');}
+ chair(x,y,id=0,variant=0){const h=variant===2?.3:.43,w=variant===1?.65:.45;this.box(x,y,h,w,.48,.08,variant===1?palette.warm:palette.wood,id,'furniture');for(const xx of [x+.04,x+w-.09])for(const yy of [y+.04,y+.39])this.box(xx,yy,0,.05,.05,h,palette.wood,id,'furniture');if(variant!==2)this.box(x,y,h+.08,w,.055,.48,palette.wood,id,'furniture');if(variant===1)for(const xx of [x,x+w-.05])this.box(xx,y,.64,.05,.48,.05,palette.wood,id,'furniture');}
+ pergola(x,y,w,d,id=0,h=2.5){for(const xx of [x,x+w-.12])for(const yy of [y,y+d-.12])this.box(xx,yy,0,.12,.12,h,palette.wood,id,'post');for(let yy=y;yy<y+d;yy+=.35)this.box(x,yy,h,w,.07,.14,palette.wood,id,'pergola');}
+ steps(x,y,w,count,id=0,rise=.16,run=.3,z=0){for(let n=0;n<count;n++)this.box(x,y+n*run,z,w,run,rise*(n+1),palette.stone,id,'step');}
+ bed(x,y,id=0,w=1.5){this.box(x,y,.2,w,2,.28,palette.wood,id,'furniture');this.box(x+.04,y+.04,.48,w-.08,1.92,.15,'#efe8da',id,'furniture');this.box(x+.12,y+.1,.63,w-.24,.4,.1,'#faf5e8',id,'furniture');}
+ planter(x,y,w=2,d=.6,id=0){this.box(x,y,0,w,d,.55,palette.stone,id,'planter');this.box(x+.08,y+.08,.55,w-.16,d-.16,.04,palette.soil,id);for(let xx=x+.2;xx<x+w-.1;xx+=.35)this.box(xx,y+.2,.59,.15,.15,.28,palette.plant,id,'plant');}
+ marker(id,x,y,label){this.landmarks.push({id,x,y,z:1.5,label});}
+ finish(){return {key:this.key,boxes:this.boxes,meshes:this.meshes,landmarks:this.landmarks,applied:[...this.applied],state:this.state,navigation:this.navigation,autoCeiling:false,spawn:this.spawn,overview:this.overview};}
+}
