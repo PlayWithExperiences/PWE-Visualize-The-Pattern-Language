@@ -20,7 +20,7 @@ export function buildScene(raw){
  const add=(x,y,z,dx,dy,dz,color,p=0,k='solid')=>box(x,south?y:d-y-dy,z,dx,dy,dz,color,p,k);
  const mark=(x,y,z,text,p=0)=>labels.push({x,y:south?y:d-y,z,text,pattern:p});
  const stone='#eee9dc', wall='#f7f3e9', wood='#b88b60', green='#789080';
- add(-2,-2,-.2,w+4,d+7,.16,'#dfdfce',0,'ground');
+ add(-2,-2,-.2,w+4,d+8,.16,'#dfdfce',0,'ground');
  const houseD=d;
  if(courtyard){add(0,0,0,w,d-c,.15,stone,0,'floor');add(0,d-c,0,w-c,c,.15,stone,0,'floor');}
  else add(0,0,0,w,houseD,.15,stone,0,'floor');
@@ -79,7 +79,7 @@ export function buildScene(raw){
  if(has(171)){
   add(w+.75,gy+1.2,0,.23,.23,2.3,'#8a7459',171,'trunk');
   add(w+.04,gy+.5,2,1.7,1.7,1.1,'#718875',171,'canopy');add(w+.3,gy+.75,3.1,1.2,1.2,.6,'#899d7d',171,'canopy');
-  add(w+.7,gy+2.8,.15,1.5,.48,.5,wood,171,'bench');
+  add(w+.7,gy+2.8,.15,1.1,.48,.5,wood,171,'bench');
  }
  if(has(179)){
   add(.45,houseD-2.8,.15,1.8,.13,1.6,wall,179,'alcove');add(2.12,houseD-2.8,.15,.13,1.65,1.6,wall,179,'alcove');
