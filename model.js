@@ -22,8 +22,9 @@ export function buildScene(raw){
  const stone='#eee9dc', wall='#f7f3e9', wood='#b88b60', green='#789080';
  add(-2,-2,-.2,w+4,d+7,.16,'#dfdfce',0,'ground');
  const houseD=d;
- add(0,0,0,w,houseD,.15,stone,0,'floor');
- if(courtyard)add(w-c,d-c,.155,c,c,.025,'#cbd4b8',115,'garden');
+ if(courtyard){add(0,0,0,w,d-c,.15,stone,0,'floor');add(0,d-c,0,w-c,c,.15,stone,0,'floor');}
+ else add(0,0,0,w,houseD,.15,stone,0,'floor');
+ if(courtyard)add(w-c,d-c,.01,c,c,.14,'#cbd4b8',115,'garden');
  else add(w-c,d,.01,c,c,.14,'#cbd4b8',105,'garden');
  const gx=w-c, gy=courtyard?d-c:d;
  // Outer shell, segmented windows and entry. No overlaid solid walls behind windows.

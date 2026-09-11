@@ -26,7 +26,7 @@ export function renderScene(state,{angle=-35,plan=false,cutaway=true,focus=0,lab
  faces.sort((a,b)=>layer(a)-layer(b)||a.depth-b.depth);
  const all=faces.flatMap(f=>f.pts), minX=Math.min(...all.map(p=>p[0]))-1,maxX=Math.max(...all.map(p=>p[0]))+1,minY=Math.min(...all.map(p=>p[1]))-1,maxY=Math.max(...all.map(p=>p[1]))+1;
  const viewBox=`${minX} ${minY} ${maxX-minX} ${maxY-minY}`;
- const polygons=faces.map(f=>`<polygon points="${f.pts.map(p=>p.slice(0,2).join(',')).join(' ')}" fill="${f.color}" stroke="${focus&&f.pattern===focus?'#bd5f35':'#747362'}" stroke-width="${focus&&f.pattern===focus?.045:.012}" ${f.kind==='window'?'opacity=".68"':''} ${focus&&f.pattern&&f.pattern!==focus?'opacity=".7"':''}/>`).join('');
+ const polygons=faces.map(f=>`<polygon points="${f.pts.map(p=>p.slice(0,2).join(',')).join(' ')}" fill="${f.color}" stroke="${focus&&f.pattern===focus?'#bd5f35':'#747362'}" stroke-width="${focus&&f.pattern===focus?.045:.012}" opacity="${f.kind==='window'?.68:(focus&&f.pattern&&f.pattern!==focus?.7:1)}"/>`).join('');
  const labelText=labels?scene.labels.map(l=>{const p=project(l.x,l.y,l.z);return `<text x="${p[0]}" y="${p[1]}" text-anchor="middle" font-size=".32" fill="#42544c" paint-order="stroke" stroke="#f2efe6" stroke-width=".1">${esc(l.text)}</text>`;}).join(''):'';
  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewBox}" role="img" aria-label="${plan?'平面图':'可旋转的轴测建筑模型'}：${scene.metrics.selected}个模式，室内示意面积${scene.metrics.indoorArea}平方米"><title>小住宅与庭院 · ${plan?'平面':'轴测'}示意</title>${polygons}${labelText}</svg>`;
 }

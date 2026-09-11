@@ -14,11 +14,15 @@ function draw(){
  $('area-value').textContent=m.indoorArea;$('garden-value').textContent=Number(m.courtArea.toFixed(2));$('mode-value').textContent=m.selected;
  $('selected-count').textContent=m.selected+' / 10';$('scheme-number').textContent=String(m.selected).padStart(2,'0');
  $('scene-hint').textContent=plan?'平面视图 · 上北下南':'拖动旋转 · ← → 调整视角';
+ $('scene').setAttribute('aria-label',plan?'建筑平面视图。':'建筑视图。左右方向键旋转视角。');
  $('view-3d').setAttribute('aria-pressed',!plan);$('view-plan').setAttribute('aria-pressed',plan);$('cutaway').disabled=plan;
  $('compare').disabled=!saved;
 }
 function renderList(){
+ const active=document.activeElement;const toggle=active?.dataset.toggle;const selected=active?.dataset.focus;
  $('pattern-list').innerHTML=patterns.map(p=>`<div class="pattern-row ${p.id===focus?'focused':''}"><input type="checkbox" data-toggle="${p.id}" ${state.ids.includes(p.id)?'checked':''} aria-label="应用${p.zh}"><button class="pattern-name" data-focus="${p.id}" aria-pressed="${p.id===focus}"><small>${String(p.id).padStart(3,'0')}</small><span>${p.zh}</span></button></div>`).join('');
+ if(toggle)$('pattern-list').querySelector(`[data-toggle="${toggle}"]`)?.focus({preventScroll:true});
+ else if(selected)$('pattern-list').querySelector(`[data-focus="${selected}"]`)?.focus({preventScroll:true});
 }
 function detail(){
  const p=patterns.find(p=>p.id===focus), entry=catalog.find(c=>c.id===focus);
