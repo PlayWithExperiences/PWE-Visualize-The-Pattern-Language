@@ -2,3 +2,21 @@
 @media(prefers-reduced-motion:no-preference){button{transition:background .16s,color .16s}.effect{animation:appear .2s ease-out}@keyframes appear{from{opacity:.5;transform:translateY(3px)}to{opacity:1;transform:none}}}
 
 @media(max-width:720px){h1 span{display:block}}
+
+[hidden]{display:none!important}
+.walk-scene{position:relative;padding:0;min-height:380px;cursor:default;background:#ccdcd8;touch-action:none}
+#walk-canvas{display:block;width:100%;height:100%;min-height:380px;position:absolute;inset:0;cursor:grab;touch-action:none;outline-offset:-3px}
+#walk-canvas:active{cursor:grabbing}
+.walk-top{position:absolute;top:14px;left:14px;right:14px;display:flex;justify-content:space-between;pointer-events:none;font-size:10px;gap:10px}
+.walk-top span,.walk-top button{background:#f8f6eedb;padding:9px 11px;border-radius:3px}
+.walk-top button{pointer-events:auto}
+.walk-crosshair{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;color:#ffffff90;font-size:18px;text-shadow:0 1px 3px #36453670}
+.walk-buttons{position:absolute;bottom:14px;left:14px;display:grid;grid-template-columns:repeat(3,38px);gap:4px}
+.walk-buttons button{height:36px;background:#f8f6eede;border:1px solid #b4bfa980;border-radius:3px;touch-action:none;user-select:none;font-size:16px}
+.walk-buttons button:active{background:#3c5549;color:white}
+.walk-scene:fullscreen{width:100vw;height:100dvh;min-height:100dvh}
+.walk-scene:fullscreen #walk-canvas{min-height:100dvh}
+@media(max-width:720px){.canvas-toolbar{flex-wrap:wrap}.segmented button{padding:7px 10px}.walk-scene{height:360px;min-height:360px}#walk-canvas{min-height:360px}.walk-top{left:10px;right:10px}.walk-top span,.walk-top button{padding:8px;font-size:9px}.walk-buttons{grid-template-columns:repeat(3,42px)}.walk-buttons button{height:40px}}
+.walk-tools{display:flex;gap:5px}
+.walk-help{position:absolute;bottom:18px;right:14px;pointer-events:none;text-align:right;background:#f8f6eede;padding:8px 10px;font-size:9px;line-height:1.8;border-radius:3px}
+@media(max-width:720px){.walk-help{font-size:8px;max-width:calc(100% - 170px);right:10px;bottom:15px;padding:6px}.walk-top{gap:4px}.walk-tools{gap:3px}.walk-top span{max-width:60%}}
