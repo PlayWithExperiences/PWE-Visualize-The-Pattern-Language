@@ -1,7 +1,7 @@
-import {EYE_HEIGHT,floorHeight,canStand,entryPose,movePlayer} from './walk-physics.js?v=4d00a0c4441a';
-import {multiply,vertexSource,fragmentSource,createSunlight} from './lighting.js?v=4d00a0c4441a';
-import {normalizeSun,advanceSun,sampleSun} from './sun.js?v=4d00a0c4441a';
-import {overviewPose,moveFree} from './free-camera.js?v=4d00a0c4441a';
+import {EYE_HEIGHT,floorHeight,canStand,entryPose,movePlayer} from './walk-physics.js?v=d42f0eca304c';
+import {multiply,vertexSource,fragmentSource,createSunlight} from './lighting.js?v=d42f0eca304c';
+import {normalizeSun,advanceSun,sampleSun} from './sun.js?v=d42f0eca304c';
+import {overviewPose,moveFree} from './free-camera.js?v=d42f0eca304c';
 const dot=(a,b)=>a.reduce((s,n,i)=>s+n*b[i],0);
 const cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
 const unit=a=>{const n=Math.hypot(...a);return a.map(v=>v/n);};
@@ -49,7 +49,7 @@ export function createWalk(canvas,onError,onPose,onLight){
    const rgb=b.color.slice(1).match(/../g).map(c=>parseInt(c,16)/255);
    const isGlass=b.kind==='window';
    for(const [indices,normal] of faces){
-    const material=isGlass?3:['deck','post','pergola','window-seat','bench','trunk','furniture'].includes(b.kind)?2:b.kind==='floor'?1:0;
+    const material=isGlass?3:['deck','post','pergola','window-seat','bench','trunk','furniture','filter','mullion','ceiling-panel'].includes(b.kind)?2:b.kind==='floor'?1:0;
     const vertices=[];
     for(const i of [0,1,2,0,2,3]){
      const [px,py,pz]=points[indices[i]];

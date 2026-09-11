@@ -1,14 +1,14 @@
-import {patterns, SOURCE} from './data/patterns.js?v=4d00a0c4441a';
-import {normalize, defaults, encode, decode, buildScene} from './model.js?v=4d00a0c4441a';
-import {renderScene} from './scene.js?v=4d00a0c4441a';
-import {createWalk} from './walk.js?v=4d00a0c4441a';
-import {normalizeSun,sampleSun,formatHour} from './sun.js?v=4d00a0c4441a';
+import {patterns, SOURCE} from './data/patterns.js?v=d42f0eca304c';
+import {normalize, defaults, encode, decode, buildScene} from './model.js?v=d42f0eca304c';
+import {renderScene} from './scene.js?v=d42f0eca304c';
+import {createWalk} from './walk.js?v=d42f0eca304c';
+import {normalizeSun,sampleSun,formatHour} from './sun.js?v=d42f0eca304c';
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let {state,error}=decode(location.hash),focus=115,angle=-35,plan=false,cutaway=true,catalog=[],saved=null;
 let walking=false,freeCamera=false,walker=null;
 const STORAGE='pwe-pattern-language:v1';
-const presets={garden:defaults,quiet:{...defaults,ids:[105,112,127,159,179,180]},social:{...defaults,ids:[105,106,112,115,159,163,171]},blank:{...defaults,ids:[]}};
+const presets={garden:defaults,quiet:{...defaults,ids:[105,112,127,159,179,180]},social:{...defaults,ids:[105,106,112,115,159,163,171]},cooking:{...defaults,ids:[105,112,115,127,139,147,159,185,199,201,250,251]},light:{...defaults,ids:[105,115,159,171,179,180,190,200,222,223,238,239]},arrival:{...defaults,ids:[105,106,112,115,163,171,242,245,250,251]},blank:{...defaults,ids:[]}};
 try{const v=localStorage.getItem(STORAGE);if(v){const parsed=decode(v);if(parsed.error)error='本机保存的方案已损坏，请重新保存。';else saved=parsed.state;}}catch{error='浏览器未开放本机存储；仍可使用分享链接保存方案。';}
 const say=text=>{$('status').textContent=text;};
 function draw(){
@@ -27,7 +27,7 @@ function draw(){
  if(!walking){walker?.stop();$('scene').innerHTML=renderScene(state,{angle,plan,cutaway,focus});}
  const m=buildScene(state).metrics;
  $('area-value').textContent=m.indoorArea;$('garden-value').textContent=Number(m.courtArea.toFixed(2));$('mode-value').textContent=m.selected;
- $('selected-count').textContent=m.selected+' / 10';$('scheme-number').textContent=String(m.selected).padStart(2,'0');
+ $('selected-count').textContent=m.selected+' / '+patterns.length;$('scheme-number').textContent=String(m.selected).padStart(2,'0');
  $('scene-hint').textContent=walking?(freeCamera?'WASD 飞行 · E 上升 / Q 下降 · 拖动转头':'WASD 行走 · 拖动 / 方向键转头 · Esc 停止'):plan?'平面视图 · 上北下南':'拖动旋转 · ← → 调整视角';
  $('scene').setAttribute('aria-label',plan?'建筑平面视图。':'建筑视图。左右方向键旋转视角。');
  $('view-3d').setAttribute('aria-pressed',!plan&&!walking);$('view-plan').setAttribute('aria-pressed',plan&&!walking);$('view-walk').setAttribute('aria-pressed',walking&&!freeCamera);$('view-free').setAttribute('aria-pressed',walking&&freeCamera);$('cutaway').disabled=plan||walking;$('cutaway').closest('label').hidden=walking;
@@ -41,7 +41,7 @@ function draw(){
 }
 function renderList(){
  const active=document.activeElement;const toggle=active?.dataset.toggle;const selected=active?.dataset.focus;
- $('pattern-list').innerHTML=patterns.map(p=>`<div class="pattern-row ${p.id===focus?'focused':''}"><input type="checkbox" data-toggle="${p.id}" ${state.ids.includes(p.id)?'checked':''} aria-label="应用${p.zh}"><button class="pattern-name" data-focus="${p.id}" aria-pressed="${p.id===focus}"><small>${String(p.id).padStart(3,'0')}</small><span>${p.zh}</span></button></div>`).join('');
+ $('pattern-list').innerHTML=patterns.filter(p=>$('pattern-filter').value!=='new'||p.batch===2).map(p=>`<div class="pattern-row ${p.id===focus?'focused':''}"><input type="checkbox" data-toggle="${p.id}" ${state.ids.includes(p.id)?'checked':''} aria-label="应用${p.zh}"><button class="pattern-name" data-focus="${p.id}" aria-pressed="${p.id===focus}"><small>${String(p.id).padStart(3,'0')}</small><span>${p.zh}</span></button></div>`).join('');
  if(toggle)$('pattern-list').querySelector(`[data-toggle="${toggle}"]`)?.focus({preventScroll:true});
  else if(selected)$('pattern-list').querySelector(`[data-focus="${selected}"]`)?.focus({preventScroll:true});
 }
@@ -59,9 +59,10 @@ function update({push=true}={}){
  if(push){history.replaceState(null,'',encode(state));$('preset').value='custom';$('share-fallback').hidden=true;}
 }
 function setFocus(id){focus=id;renderList();detail();draw();}
+$('pattern-filter').onchange=renderList;
 $('pattern-list').addEventListener('change',e=>{const id=Number(e.target.dataset.toggle);if(!id)return;state.ids=e.target.checked?[...state.ids,id]:state.ids.filter(n=>n!==id);focus=id;update();say(`${patterns.find(p=>p.id===id).zh}已${e.target.checked?'应用':'移除'}。`);});
 document.addEventListener('click',e=>{const target=e.target.closest('[data-focus]');if(target)setFocus(Number(target.dataset.focus));const close=e.target.closest('[data-close]');if(close)$(close.dataset.close).close();});
-$('preset').addEventListener('change',()=>{const key=$('preset').value;if(!presets[key])return;state=normalize({...presets[key],sun:state.sun});update();$('preset').value=key;say('已载入组合。勾选模式继续探索。');});
+$('preset').addEventListener('change',()=>{const key=$('preset').value;if(!presets[key])return;state=normalize({...presets[key],sun:state.sun});focus=({garden:115,quiet:179,social:163,cooking:139,light:222,arrival:242,blank:115})[key];update();$('preset').value=key;say('已载入组合。勾选模式继续探索。');});
 for(const key of ['width','depth','court','seat'])$(key).addEventListener('input',()=>{state[key]=Number($(key).value);update();});
 $('view-3d').onclick=()=>{walking=false;plan=false;state.sun.playing=false;draw();};$('view-plan').onclick=()=>{walking=false;plan=true;state.sun.playing=false;draw();};
 $('view-free').onclick=()=>{walking=true;freeCamera=true;plan=false;draw();if(walking)$('walk-canvas').focus({preventScroll:true});};
@@ -102,7 +103,7 @@ function catalogRender(){
  $('catalog-results').innerHTML=matches.length?matches.map(c=>{const p=patterns.find(p=>p.id===c.id);return `<article class="catalog-item"><span>${String(c.id).padStart(3,'0')}</span><div><h3>${esc(p?.zh||c.zh||c.name)}</h3><p>${esc(c.name)}</p></div>${p?`<button data-explore="${c.id}">探索 ↗</button>`:'<span class="index-only">目录条目</span>'}</article>`;}).join(''):'<p class="catalog-note">没有匹配的模式。试试其他名称或切换尺度。</p>';
 }
 async function loadCatalog(){
- try{const res=await fetch('./data/catalog.json?v=4d00a0c4441a');if(!res.ok)throw Error('HTTP '+res.status);catalog=await res.json();if(catalog.length!==253)throw Error('目录数量异常');catalogRender();detail();}
+ try{const res=await fetch('./data/catalog.json?v=d42f0eca304c');if(!res.ok)throw Error('HTTP '+res.status);catalog=await res.json();if(catalog.length!==253)throw Error('目录数量异常');catalogRender();detail();}
  catch(e){$('catalog-count').textContent='目录加载失败';$('catalog-results').innerHTML='<p>无法读取目录，请检查网络后重试。<button id="retry-catalog" class="secondary">重新加载</button></p>';$('retry-catalog').onclick=loadCatalog;say('模式目录加载失败：'+e.message);}
 }
 const openCatalog=()=>{$('catalog-dialog').showModal();$('search').focus();};
