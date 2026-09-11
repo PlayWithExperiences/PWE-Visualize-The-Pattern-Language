@@ -1,0 +1,30 @@
+{
+  "id": "apl-1977-user-pdf",
+  "title": "A Pattern Language: Towns, Buildings, Construction",
+  "year": 1977,
+  "sourceKind": "user-provided local PDF",
+  "filename": "A_Pattern_Language_text.pdf",
+  "sha256": "d946dfa708677fd8fdf5656f9b463ad7997e0d0f8f886bf7abf08a4da6cc5dd8",
+  "pdfPageCount": 1218,
+  "extractedCharacterCount": 1966955,
+  "checkedAt": "2026-09-12T01:16:03.244458+08:00",
+  "verification": "metadata and beginning/middle/end spot checks; not a full page-by-page review",
+  "samples": [
+    {
+      "pattern": 1,
+      "pdfPage": 54,
+      "checked": "text heading"
+    },
+    {
+      "pattern": 180,
+      "pdfPage": 881,
+      "checked": "rendered page, text, diagram and cross-references"
+    },
+    {
+      "pattern": 253,
+      "pdfPage": 1208,
+      "checked": "text heading and following body"
+    }
+  ],
+  "publicationBoundary": "Do not publish this PDF, extracted full text or original page images; use source references and independently authored explanations/visuals."
+}
