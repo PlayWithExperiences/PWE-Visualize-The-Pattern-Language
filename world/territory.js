@@ -11,15 +11,22 @@ export function buildTerritory(key,ids=[]){
  if(key==='region'||key==='city')return composeTerritory(key,ids);
  const range=ranges[key];if(!range)throw new Error(`Unknown territory ${key}`);
  const selected=[...new Set(ids)].filter(id=>Number.isInteger(id)&&id>=range[0]&&id<=range[1]).sort((a,b)=>a-b);
- const columns=key==='region'?3:5, pitch=key==='region'?68:32;
- const rows=Math.ceil((range[1]-range[0]+1)/columns),width=columns*pitch,depth=rows*pitch;
+ const columns=5,pitch=32,sharedDepth=96;
+ // Composite domains own an entire street block. Public facilities have stable
+ // slots below it, so toggling a modifier never places it inside another use.
+ const sharedIds=new Set(key==='neighborhood'?[30,31,37,38,39,49,50,52,53,54,60,67,68]:[75,76,77,78,79,80,82,83]);
+ const facilityIds=Array.from({length:range[1]-range[0]+1},(_,n)=>range[0]+n).filter(id=>!sharedIds.has(id));
+ const rows=Math.ceil(facilityIds.length/columns),width=columns*pitch,depth=sharedDepth+rows*pitch;
  const w=new World(key,width,depth,selected);w.navigation.speed=5;w.navigation.maxHeight=Math.max(width,depth);w.navigation.far=Math.max(width,depth)*5;
  w.state.layout='shared-neighborhood-composition';w.state.patterns={};w.state.limitations=['Spatial concept models, not construction, demographic, accessibility, transport or care standards.','Public facilities share local streets; dwelling, workgroup and mobility patterns interact on common sites. Institutional rights are not simulated.'];
- for(let row=0;row<=rows;row++)w.path([[0,row*pitch],[width,row*pitch]],4,0);
- for(let col=0;col<columns;col++)w.path([[col*pitch,0],[col*pitch,depth+5]],3,0);
+ w.path([[0,0],[width,0]],4,0);
+ for(let row=0;row<=rows;row++)w.path([[0,sharedDepth+row*pitch],[width,sharedDepth+row*pitch]],4,0);
+ for(let col=0;col<=columns;col++)w.path([[col*pitch,col===0||col===columns?0:sharedDepth],[col*pitch,depth+5]],3,0);
  w.spawn={x:pitch/2,y:depth+4,yaw:0,pitch:0,feet:0};
+ w.state.sharedDomain={x:2,y:2,width:width-4,depth:sharedDepth-4};
  const overridden=key==='neighborhood'?composeLocal(w,selected):composeInstitution(w,selected);
- for(const id of selected){if(overridden.has(id))continue;const n=id-range[0],x=(n%columns)*pitch+2,y=Math.floor(n/columns)*pitch+2;
+ for(const id of selected){if(overridden.has(id))continue;const n=facilityIds.indexOf(id),residential=key==='neighborhood'&&[37,38,39].includes(id);
+  const x=residential?66+(id-37)*32:(n%columns)*pitch+2,y=residential?34:sharedDepth+Math.floor(n/columns)*pitch+2;
   // Facility coordinates preserve the surrounding shared street.
   const ctx={w,id,x,y,s: pitch-4};
   if(id<=29)buildUrbanPattern(ctx);else if(id<=74)buildLocalPattern(ctx);else buildInstitutionPattern(ctx);
@@ -27,7 +34,7 @@ export function buildTerritory(key,ids=[]){
   w.state.patterns[id]={parcel:[x,y,pitch-4,pitch-4],geometry:true};
  }
  if(selected.length){
-  const first=w.state.patterns[selected[0]].parcel??(key==='institution'?[2,2,pitch-4,pitch-4]:[66,34,pitch-4,pitch-4]);
+  const first=w.state.patterns[selected[0]].focus??w.state.patterns[selected[0]].parcel??(key==='institution'?[2,2,pitch-4,pitch-4]:[66,34,pitch-4,pitch-4]);
   w.spawn={x:first[0]+pitch/2-2,y:first[1]+pitch-1,yaw:0,pitch:0,feet:0};
   if(selected.length===1)w.overview={x:first[0]+pitch*1.15,y:first[1]+pitch*1.3,z:pitch*.7,yaw:-.6,pitch:-.6};
  }

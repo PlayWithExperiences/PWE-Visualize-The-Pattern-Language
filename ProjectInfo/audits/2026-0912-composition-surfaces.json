@@ -1,0 +1,95 @@
+{
+  "scope": "Ten all-selected worlds; axis-aligned same-facing opaque coplanar surfaces. Not a proof of collision-free layouts, mesh intersections, or architectural semantics.",
+  "results": [
+    {
+      "group": "region",
+      "patterns": 7,
+      "boxes": 375,
+      "rawFaces": 2250,
+      "resolvedFaces": 2412,
+      "coplanarPairsBefore": 78,
+      "coplanarPairsAfter": 0
+    },
+    {
+      "group": "city",
+      "patterns": 22,
+      "boxes": 1329,
+      "rawFaces": 7974,
+      "resolvedFaces": 8427,
+      "coplanarPairsBefore": 219,
+      "coplanarPairsAfter": 0
+    },
+    {
+      "group": "neighborhood",
+      "patterns": 45,
+      "boxes": 1872,
+      "rawFaces": 11232,
+      "resolvedFaces": 11750,
+      "coplanarPairsBefore": 210,
+      "coplanarPairsAfter": 0
+    },
+    {
+      "group": "institution",
+      "patterns": 17,
+      "boxes": 1091,
+      "rawFaces": 6546,
+      "resolvedFaces": 6938,
+      "coplanarPairsBefore": 178,
+      "coplanarPairsAfter": 0
+    },
+    {
+      "group": "site",
+      "patterns": 32,
+      "boxes": 478,
+      "rawFaces": 2868,
+      "resolvedFaces": 2950,
+      "coplanarPairsBefore": 50,
+      "coplanarPairsAfter": 0
+    },
+    {
+      "group": "plan",
+      "patterns": 32,
+      "boxes": 691,
+      "rawFaces": 4146,
+      "resolvedFaces": 4724,
+      "coplanarPairsBefore": 293,
+      "coplanarPairsAfter": 0
+    },
+    {
+      "group": "edge",
+      "patterns": 20,
+      "boxes": 411,
+      "rawFaces": 2466,
+      "resolvedFaces": 2571,
+      "coplanarPairsBefore": 71,
+      "coplanarPairsAfter": 0
+    },
+    {
+      "group": "room",
+      "patterns": 26,
+      "boxes": 236,
+      "rawFaces": 1416,
+      "resolvedFaces": 1610,
+      "coplanarPairsBefore": 88,
+      "coplanarPairsAfter": 0
+    },
+    {
+      "group": "construction",
+      "patterns": 36,
+      "boxes": 222,
+      "rawFaces": 1332,
+      "resolvedFaces": 1539,
+      "coplanarPairsBefore": 170,
+      "coplanarPairsAfter": 0
+    },
+    {
+      "group": "finish",
+      "patterns": 13,
+      "boxes": 252,
+      "rawFaces": 1512,
+      "resolvedFaces": 1620,
+      "coplanarPairsBefore": 51,
+      "coplanarPairsAfter": 0
+    }
+  ]
+}

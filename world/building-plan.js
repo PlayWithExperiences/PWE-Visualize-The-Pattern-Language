@@ -2,7 +2,7 @@ import {World,palette as p} from './primitives.js';
 import {finishBuilding,share,note,portal,eastWindow,counter,bookcase,rail} from './building-common.js';
 export function buildPlan(ids){
  const w=new World('plan',48,43,ids),h=id=>w.has(id),any=(...a)=>a.some(h);
- w.room(10,8,24,22,0,{roof:false,sideDoor:h(153)});w.roof(9.7,7.7,24.6,22.6,0,3.1,2.2);w.path([[22,33],[22,29]],2.2);w.spawn={x:22,y:32,yaw:0,pitch:0,feet:0};w.navigation.speed=4;
+ w.room(10,8,24,22,0,{roof:false,sideDoor:any(137,153)});w.roof(9.7,7.7,24.6,22.6,0,3.1,2.2);w.path([[22,33],[22,29]],2.2);w.spawn={x:22,y:32,yaw:0,pitch:0,feet:0};w.navigation.speed=4;
  // Private rooms open onto a shared north passage. Their doors never open into beds.
  const privateRoom=(x,active,bed=false)=>{const used=active.filter(h);if(!used.length)return;const s=w.boxes.length,m=w.meshes.length;w.room(x,9,6,6,used[0],{roof:false,floor:false});if(bed)w.bed(x+.7,10.2,used[0]);share(w,used,s,m);};
  privateRoom(11,[127,136,138,141],any(136,138));privateRoom(19,[127,137,143],false);privateRoom(27,[127,144,145],false);
@@ -10,7 +10,7 @@ export function buildPlan(ids){
  if(h(128)){w.bench(27,28,128,2);w.box(27,28.8,.12,3,.6,.03,p.warm,128,'sun-location');w.state.orientation={south:'+y',east:'+x',sunSimulation:false};}
  if(any(129,139,147)){const s=w.boxes.length,m=w.meshes.length;w.table(20,20,129,3,1.2);for(const x of [20,21.2,22.4]){w.chair(x,19,129);w.chair(x,22,129);}share(w,[129,139,147],s,m);w.state.sharedDiningTables=1;}
  if(h(129))w.path([[22,29],[25,26],[25,19],[25,16]],1.3,129,p.stone,.13);
- if(h(130)){w.pergola(19.7,29.8,4.6,2.7,130);w.box(19.7,29.8,2.64,4.6,2.7,.12,p.roof,130,'ceiling');w.bench(19,27,130);counter(w,24,27,130,1);}
+ if(h(130)){w.pergola(19.7,30,4.6,2.5,130);w.box(19.7,30,2.64,4.6,2.5,.12,p.roof,130,'ceiling');w.bench(19,27,130);counter(w,24,27,130,1);}
  if(h(131)){portal(w,11,24,10,131);portal(w,23,24,10,131);w.path([[15,25],[15,19],[25,19],[28,25]],1.4,131,p.wood,.13);w.state.sharedRoomLoop=[[15,25],[15,19],[25,19],[28,25]];}
  if(h(132)){w.wall(11,17,7,.15,1.1,132);w.bench(11.5,16,132);bookcase(w,15,16,132);w.path([[14,15.2],[18,15.7],[25,15.7]],1.2,132,p.stone,.13);}
  if(any(133,158)){const s=w.boxes.length,m=w.meshes.length;w.steps(35,31,2.2,20,133,.16,.3);w.slab(34,37,3.2,3,133,p.stone,3.2);w.room(28,34,6,6,133,{z:3.2,roof:false,sideDoor:true});w.roof(27.7,33.7,6.6,6.6,133,6.12,1);rail(w,34,39.9,3.2,133,3.32);share(w,[133,158],s,m);w.state.upperAccess={steps:20,rise:3.2,landing:[35,37],door:[33.8,37]};}
@@ -18,18 +18,18 @@ export function buildPlan(ids){
  if(h(134)){w.wall(11,18,2,.2,2.7,134);w.wall(14,18,2,.2,2.7,134);w.wall(13,18,1,.2,.8,134);w.wall(13,18,1,.2,.6,134,2.22);w.tree(13.5,3,134);w.path([[17,19],[13.5,19]],1.2,134,p.stone,.13);}
  if(h(135)){w.box(19,26,2.5,5,3,.1,p.wood,135,'ceiling');for(const [x,y]of [[22,28],[25,19],[18,16]]){w.box(x,y,2.85,.7,.7,.08,p.warm,135,'emissive');w.light(x+.35,y+.35,2.8,135,{intensity:1.8,radius:4});}w.state.lightSequence='顶棚暗段与入口、转折处局部点光；未作照度验算';}
  if(h(136)){w.chair(15,12.5,136,1);w.wall(17,12,.15,2,1.7,136);}
- if(h(137)){w.box(21,12,.15,1.4,1.4,.06,p.warm,137,'play-mat');w.path([[22,15],[25,16],[31,18],[36,18],[40,18]],1.4,137);w.box(39,17,.15,2,2,.3,p.soil,137,'sand-play');}
+ if(h(137)){if(!h(143))w.box(21,12,.15,1.4,1.4,.06,p.warm,137,'play-mat');w.path([[22,15],[25,16],[31,19],[36,19],[36,22]],1.4,137);w.box(35,22,.15,2,2,.3,p.soil,137,'sand-play');}
  if(h(138)){// Replace the bedroom east wall with a real glazed opening.
- w.boxes=w.boxes.filter(b=>!(b.kind==='wall'&&b.x===16.8&&b.y===9&&b.dy===6));eastWindow(w,16.8,9,6,138);w.box(14,10,.63,.6,1.4,.02,p.warm,138,'bed-orientation');}
+ w.boxes=w.boxes.filter(b=>!(b.kind==='wall'&&b.x===16.8&&b.y===9&&b.dy===6));eastWindow(w,16.8,9,6,138);w.box(12.5,10.8,.63,.6,1.3,.02,p.warm,138,'bed-orientation');}
  if(h(139)){counter(w,29,19,139,3);counter(w,32.3,20,139,.7);w.box(29.2,19.1,.92,.8,.45,.03,p.metal,139,'sink');}
  if(h(140)){w.slab(16,30,12,3,140,p.wood,.16);w.steps(21,33,2,1,140,.16,.3);w.wall(16,32.8,4,.2,.8,140,.28);w.wall(24,32.8,4,.2,.8,140,.28);w.bench(17,31,140,2,.28);}
  if(h(141)){bookcase(w,11.5,13.8,141);w.table(14.5,10,141,1.4,.65);w.chair(14.8,11.2,141);}
  if(h(142)){for(const [x,y,v]of [[12,27,1],[17,20,0],[25,12,2]])w.chair(x,y,142,v);w.wall(11,26,3,.15,1.4,142);w.wall(11,26,.15,2,1.4,142);}
- if(h(143)){w.bed(19.5,9.8,143,.9);w.bed(23.1,9.8,143,.9);for(const x of [20.5,22.8])w.box(x,9.5,.12,.06,2.8,1.8,p.warm,143,'curtain');w.box(21,12.7,.12,1.5,1.5,.06,p.warm,143,'play-mat');}
+ if(h(143)){w.bed(19.5,9.8,143,.9);w.bed(23.1,9.8,143,.9);for(const x of [20.5,22.8])w.box(x,9.5,.12,.06,2.8,1.8,p.warm,143,'curtain');const s=w.boxes.length;w.box(21,12.7,.12,1.5,1.5,.06,p.warm,143,'play-mat');share(w,[137,143],s,w.meshes.length);}
  if(h(144)){w.box(27.6,10,.12,2.1,1,.45,p.stone,144,'bath');w.box(27.8,10.2,.57,1.7,.6,.04,p.water,144,'water');counter(w,30.5,10,144,1.4);w.box(31,12,.12,.6,.8,.4,p.stone,144,'toilet');}
  if(h(145)){bookcase(w,28,13.9,145,3);w.box(28,14,.2,1,.22,.36,p.soil,145,'storage-box');w.box(29.5,14,.8,1,.22,.35,p.soil,145,'storage-box');w.state.bulkStorageVolume=3*.3*1.8;}
  if(any(146,148,151,152)){const s=w.boxes.length,m=w.meshes.length;w.room(1,9,7,7,146,{roof:false,sideDoor:true});w.roof(.7,8.7,7.6,7.6,146,2.92,.8);w.path([[8,12.5],[10,12.5],[10,19],[22,29]],1.5,146);share(w,[146,148,151,152],s,m);}
- if(h(146)){for(const x of [2,4.5,7])w.box(x,10,.12,.12,.12,2.7,p.wood,146,'post');w.wall(2,13,2,.12,1.1,146);w.table(2,11,146,1.4,.6);w.state.officeBays='柱列与可调整低隔断';}
+ if(h(146)){for(const x of [2,4.5,7])w.box(x,10,.12,.12,.12,2.7,p.wood,146,'post');w.wall(2,h(148)?12:13,2,.12,1.1,146);w.table(2,11,146,1.4,.6);w.state.officeBays='柱列与可调整低隔断';}
  if(h(147)){counter(w,26.5,21,147,1.5);w.box(26.7,21.1,.92,.45,.3,.25,p.warm,147,'serving');}
  if(h(148)){for(const x of [2,5.5]){w.table(x,13.7,148,1.5,.65);w.chair(x+.4,12.8,148);}w.state.workGroups=[2,2];}
  if(h(149)){w.chair(24,28,149,1);w.chair(26,28,149);counter(w,28,27,149,1.5);w.box(28.1,27.1,.92,.35,.3,.3,p.warm,149,'hospitality');w.state.receptionPassageClear=true;}

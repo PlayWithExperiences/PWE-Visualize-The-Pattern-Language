@@ -8,7 +8,7 @@ export function composeTerritory(key,requested){
 function make(key,width,depth,ids){const w=new World(key,width,depth,ids);w.navigation.speed=5;w.state.patterns={};w.state.layout='shared-spatial-composition';w.state.limitations=['Conceptual spatial composition; no demographic, governance, care, legal or transport compliance simulation.','Territorial distances are compressed.'];w.spawn={x:width/2,y:depth+5,yaw:0,pitch:0,feet:0};return w;}
 function mark(w,id,x,y,relation){w.marker(id,x,y,`#${id}`);w.state.patterns[id]={geometry:true,relation};}
 function region(ids){
- const w=make('region',120,108,ids),has=id=>ids.includes(id);
+ const w=make('region',120,132,ids),has=id=>ids.includes(id);
  // All regional principles shape the same settlements, cultivated valley and access network.
  let towns=has(2)?[{x:8,y:7,n:5},{x:83,y:7,n:3},{x:8,y:43,n:2},{x:83,y:43,n:2},{x:8,y:78,n:1}]:[{x:8,y:7,n:3},{x:83,y:7,n:3},{x:8,y:78,n:3}];
  if(has(3)&&!has(2))towns=[{x:8,y:7,n:3},{x:83,y:7,n:3},{x:8,y:43,n:3},{x:83,y:78,n:3}];
@@ -31,34 +31,37 @@ function region(ids){
   settlements.push({...t,z,localServices:has(6),civicDomain:has(1)});
  }
  // Rural roads border productive land and feed all settlements without occupying the valley.
- const roads=has(5)?[[[4,3],[36,3],[36,102],[4,102],[4,3]],[[79,3],[116,3],[116,102],[79,102],[79,3]],[[36,56],[79,56]]]:[[[36,0],[36,108]],[[79,0],[79,108]],[[36,56],[79,56]]];
+ const roads=has(5)?[[[4,3],[36,3],[36,114],[4,114],[4,3]],[[79,3],[116,3],[116,114],[79,114],[79,3]],[[36,56],[79,56]]]:[[[36,0],[36,108]],[[79,0],[79,108]],[[36,56],[79,56]]];
  for(const points of roads)w.path(points,has(5)?3:2,has(5)?5:0,P.stone);
- if(has(5))for(const y of [35,70]){w.house(29,y,5,6,5,{floors:1});w.house(110,y,5,6,5,{floors:1});}
- if(has(7)){w.path([[59,108],[59,93],[79,93],[79,56]],1.8,7,P.warm);w.room(84,91,8,6,7);w.bench(85,100,7);for(const x of [80,101,110])w.tree(x,100,7);w.box(60,99,0,.18,.18,2,P.wood,7,'stewardship-waypost');}
+ if(has(5))for(const x of [8,24,83,99])w.house(x,105,5,6,5,{floors:1});
+ if(has(7)){w.path([[59,132],[59,123],[79,123],[79,56]],1.8,7,P.warm);w.room(84,117,8,6,7);w.bench(85,126,7);for(const x of [80,101,110])w.tree(x,126,7);w.box(60,125,0,.18,.18,2,P.wood,7,'stewardship-waypost');}
  for(const id of ids)mark(w,id,36,10+id*11,'shared settlements, farmland and access network');
  w.state.settlements=settlements;w.state.valley={...valley,protected:has(4)};w.state.regionalRoads=roads;w.state.greenFingers=has(3)?[32,67]:[];
  return w.finish();
 }
 function city(ids){
  const w=make('city',272,288,ids),has=id=>ids.includes(id);
- const core=has(28)?{x:236,y:35}:{x:128,y:142};
+ const core=has(28)?{x:236,y:252}:{x:128,y:122};
  const lots=[];for(let row=0;row<4;row++)for(let col=0;col<4;col++)lots.push({x:9+col*64,y:14+row*64});
- const reserved=new Set([8,10,12,13,14,15,16,18,19,20,24,25,26,27].filter(has));
- const utilityLots=new Map([...reserved].map((id,i)=>[id,lots[i]]));
+ const utilityIds=[8,10,12,13,14,15,16,18,19,20,24,25,26,27];
+ const utilityLots=new Map(utilityIds.map((id,i)=>[id,lots[i]]).filter(([id])=>has(id)));
  // One shared stock of housing/workplace buildings; density and height rules apply globally.
- const buildings=[];
+ const buildings=[],housingWidth=22,housingDepth=20; // Set back from the actual street width, including side walks.
  for(const [i,lot]of lots.entries()){
-  const d=Math.hypot(lot.x+7-core.x,lot.y+5-core.y);
+  const d=Math.hypot(lot.x+35+housingWidth/2-core.x,lot.y+housingDepth/2-core.y);
   const desired=has(29)?(d<70?7:d<135?5:2):(has(9)?6:5);
   const floors=has(21)?Math.min(4,desired):desired;
   const owner=has(9)?9:has(29)?29:has(21)?21:0;
   const a=lot.x+35,b=lot.y;
-  w.house(a,b,24,20,owner,{floors,roof:false});
+  const firstBox=w.boxes.length,firstMesh=w.meshes.length;
+  w.house(a,b,housingWidth,housingDepth,owner,{floors,roof:false});
   // Height limitation replaces roof mass at the actual capped building elevation.
-  w.roof(a-.2,b-.2,24.4,20.4,has(21)?21:has(29)?29:owner,floors*3,.7);
-  if(has(9)){w.room(a,b+22,24,8,9);w.table(a+2,b+24,9);w.table(a+13,b+24,9);}
-  if(has(29))w.box(a,b+30.1,.12,24,.8,.12,P.stone,29,'density-frontage');
-  buildings.push({index:i,x:a,y:b,floors,requestedFloors:desired,uses:has(9)?['housing','workplace']:['housing'],distanceToCore:d});
+  w.roof(a-.2,b-.2,housingWidth+.4,housingDepth+.4,has(21)?21:has(29)?29:owner,floors*3,.7);
+  const buildingOwners=[9,21,29].filter(has);
+  if(buildingOwners.length)for(const shape of [...w.boxes.slice(firstBox),...w.meshes.slice(firstMesh)])shape.patterns=buildingOwners;
+  if(has(9)){w.room(a,b+22,housingWidth,8,9);w.table(a+2,b+24,9);w.table(a+13,b+24,9);}
+  if(has(29))w.box(a,b+30.1,.12,housingWidth,.8,.12,P.stone,29,'density-frontage');
+  buildings.push({index:i,x:a,y:b,width:housingWidth,depth:housingDepth,floors,requestedFloors:desired,uses:has(9)?['housing','workplace']:['housing'],distanceToCore:d});
  }
  // Auxiliary public uses occupy the free half of the same mixed city blocks.
  for(const [id,lot]of utilityLots){

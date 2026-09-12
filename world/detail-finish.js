@@ -9,14 +9,16 @@ export function buildFinish(ids){
  const w=new World('finish',20,22,ids),has=id=>w.has(id),mark=(id,x,y,s)=>w.marker(id,x,y,s);
  w.room(3,2,14,10,0,{roof:false,height:3.3});w.spawn={x:10,y:19,yaw:0,pitch:0,feet:0};
  w.slab(3,12,14,5);w.path([[10,21],[10,17],[10,12]],1.5);w.tree(1,17,0,.9);
- w.table(6,6,0,2,1);w.table(12,6,0,1.5,.85);
+ const tables=[{x:6,y:6,width:2,depth:1},{x:12,y:6,width:1.5,depth:.85}];
+ for(const t of tables)w.table(t.x,t.y,0,t.width,t.depth);
+ w.state.tables=tables;
  // The room and porch share one coherent seating arrangement, with no duplicate chairs.
  const seats=[[5.5,5,0],[7.6,5,0],[5.5,8,2],[7.6,8,2],[12.4,7.7,2]];
  for(const [n,[x,y,turn]]of seats.entries())chairFacing(w,x,y,has(251)?251:0,has(251)?n%3:0,turn);
  if(has(241)){w.bench(3.7,15.8,241,2);w.wall(3.2,14.4,.18,2.5,1.4,241);w.tree(2.2,14.5,241,.8);mark(241,5,17,'有树荫和挡风、看向门前路径的座位');}
  if(has(242)){w.bench(11.5,12.4,242,2.4);w.planter(14.2,12.4,1.5,.6,242);mark(242,12.5,13.6,'门外长椅连接室内与路径');}
  if(has(243)){w.box(4,17,.12,4,.5,.42,p.stone,243,'sitting-wall');w.box(12,17,.12,4,.5,.42,p.stone,243,'sitting-wall');w.box(4,17,.54,4,.5,.08,p.wood,243,'seat-cap');w.box(12,17,.54,4,.5,.08,p.wood,243,'seat-cap');mark(243,7,18,'可坐的边界墙留下中央入口');}
- if(has(244)){for(const x of [4,8])w.box(x,15.5,0,.08,.08,2.5,p.metal,244,'awning-post');w.beam([4,12,2.9],[8,12,2.9],.07,p.metal,244);for(let i=0;i<8;i++){const x=4+i*.5;w.quad([x,12,2.9],[x+.5,12,2.9],[x+.5,15.5,2.5],[x,15.5,2.5],i%2?'#d4c4a3':'#efe4ca',244,'canvas');}w.box(4,11.9,2.84,4,.18,.18,p.wood,244,'canvas-roller');mark(244,6,15,'有卷轴的可收帆布遮篷 · 展示展开状态');}
+ if(has(244)){for(const x of [4,8])w.box(x,15.5,0,.08,.08,2.5,p.metal,244,'awning-post');w.beam([4,12,2.9],[8,12,2.9],.07,p.metal,244);for(let i=0;i<8;i++){const x=4+i*.5;w.quad([x,12,2.9],[x+.5,12,2.9],[x+.5,15.5,2.5],[x,15.5,2.5],i%2?'#d4c4a3':'#efe4ca',244,'canvas');}w.box(4,12,2.84,4,.18,.18,p.wood,244,'canvas-roller');mark(244,6,15,'有卷轴的可收帆布遮篷 · 展示展开状态');}
  if(has(245)){w.planter(15.2,14,1.5,2.2,245);for(let x=15.4;x<16.5;x+=.32)for(let y=14.2;y<16;y+=.45)flower(w,x,y,.62,245,y%1>.5?'#d8a5a0':'#e4cd79');mark(245,16,16.9,'花朵抬高到手和嗅觉附近');}
  if(has(246)){for(const x of [8.8,11.2]){w.beam([x,12,.1],[x,12,3],.04,p.wood,246);for(let z=.5;z<3;z+=.35){w.beam([x,12,z],[x+.2*Math.sin(z*7),12.08,z+.3],.024,p.plant,246);w.box(x-.12,12.06,z,.28,.07,.13,p.plant,246,'climbing-leaf');}}w.beam([8.8,12,3],[11.2,12,3],.04,p.plant,246);mark(246,11.6,12.8,'植物沿门框生长，保留通行洞口');}
  if(has(247)){// Stones sit apart, with actual joints occupied by low ground cover.
@@ -30,7 +32,7 @@ export function buildFinish(ids){
  if(has(252)){
   w.box(3.2,6.2,3.3,13.6,.6,.1,p.wood,252,'lamp-support');
   w.beam([12.5,11.8,3.3],[12.5,12.9,3.3],.06,p.metal,252);
-  for(const [x,y,z]of [[7,6.5,2],[12.75,6.4,1.9],[12.5,12.8,2.3]]){
+  for(const [x,y,z]of [[tables[0].x+tables[0].width/2,tables[0].y+tables[0].depth/2,2],[tables[1].x+tables[1].width/2,tables[1].y+tables[1].depth/2,1.9],[12.5,12.8,2.3]]){
    w.beam([x,y,3.3],[x,y,z+.25],.014,p.metal,252);w.box(x-.25,y-.2,z,.5,.4,.16,p.warm,252,'lamp-shade');w.box(x-.18,y-.14,z-.03,.36,.28,.035,'#ffe0ac',252,'emissive');w.light(x,y,z-.08,252,{color:'#ffdaa0',intensity:2.3,radius:3});
   }
   mark(252,10,9,'三处独立局部灯光 · 夜间查看其间暗处');

@@ -1,4 +1,5 @@
 import {World,palette as p} from './primitives.js';
+import {share} from './building-common.js';
 import {chairFacing} from './detail-furniture.js';
 
 // Shared home: public south rooms, private north rooms, a clear central route.
@@ -23,7 +24,8 @@ export function buildRooms(ids){
   w.wall(2.3,12,2.8,.18,2.4,179);w.wall(5.1,12,.18,1.3,2.4,179);w.box(2.3,12,2.52,3,2.7,.12,p.wood,179,'ceiling');w.bench(2.6,13.3,179,2.1);mark(179,4,14.4,'主室边缘的小凹室');
  }
  if(has(180)||has(202)){
-  const owner=has(202)?202:180;w.bench(5.6,18.9,owner,2.6);w.box(5.6,18.97,.65,2.6,.08,.48,p.warm,owner,'seat-cushion');
+  const seatStart=w.boxes.length,owner=has(202)?202:180;w.bench(5.6,18.9,owner,2.6);w.box(5.6,18.97,.65,2.6,.08,.48,p.warm,owner,'seat-cushion');
+  share(w,[180,202],seatStart,w.meshes.length);
   if(has(180)){w.box(5.4,18.5,0,.16,1.1,1,p.wood,180,'window-place');w.box(8.3,18.5,0,.16,1.1,1,p.wood,180,'window-place');mark(180,7,18,'坐下看向花园的窗边');}
   if(has(202)){w.chair(8.8,17.9,202,1);mark(202,7,19,'可移动试坐椅与整合式座椅 · 舒适度未实测');}
  }
@@ -33,16 +35,17 @@ export function buildRooms(ids){
  if(has(182)){w.box(16,14,2.5,3,1.15,.12,p.warm,182,'emissive');w.light(17.5,14.575,2.45,182,{intensity:2.2,radius:3.5});w.box(19.8,14,0,.45,1.5,1,p.wood,182,'sideboard');mark(182,17.5,15.4,'餐桌聚集 · 四周保留拉椅空间');}
  if(has(183)){w.table(20,5,183,2,1);chairFacing(w,20.5,6.6,183,0,2);w.wall(19.4,4.6,.18,3,1.3,183);w.wall(19.4,7.6,3,.18,1.3,183);mark(183,21,7,'有背靠且朝向室内的工作位');}
  if(has(184)||has(199)){
-  const id=has(184)?184:199;
+  const counterStart=w.boxes.length,id=has(184)?184:199;
   w.box(22.8,15,.12,.7,4.5,.78,p.wood,id,'counter');w.box(19.8,18.8,.12,3,.7,.78,p.wood,id,'counter');
   w.box(22.8,15,.9,.7,4.5,.08,p.stone,id,'worktop');w.box(19.8,18.8,.9,3,.7,.08,p.stone,id,'worktop');
+  share(w,[184,199],counterStart,w.meshes.length);
   if(has(184)){w.box(22.9,15.3,.98,.5,.7,.05,p.metal,184,'hob');w.box(20.8,18.9,.98,.7,.4,.04,p.glass,184,'sink');w.box(24.5,16,.12,.85,.85,1.8,'#dadfd8',184,'food-store');mark(184,23,17.4,'灶—洗涤—储藏与连续台面');}
-  if(has(199)){w.box(20,18.9,1.02,.5,.18,.2,p.plant,199,'kitchen-herbs');w.box(21,19.6,1.05,1.7,.3,.1,p.stone,199,'sunny-sill');mark(199,21.5,18.2,'面向南侧花园窗的操作台');}
+  if(has(199)){w.box(20,18.9,1.02,.5,.18,.2,p.plant,199,'kitchen-herbs');w.box(21,19.6,1.05,1.7,.2,.1,p.stone,199,'sunny-sill');mark(199,21.5,18.2,'面向南侧花园窗的操作台');}
  }
  if(has(185)){for(const [x,y,v,t]of [[6.2,15,1,3],[9.5,14.4,0,1],[8.8,17,2,2],[5,16.3,0,3]])chairFacing(w,x,y,185,v,t);w.table(7.4,15.4,185,.8,.6);mark(185,8,16,'松散围坐 · 通路从圈外经过');}
  if(has(186)){for(let n=0;n<3;n++)w.box(4+n*2.15,7.6,.14,1.75,.8,.15,'#d1b591',186,'sleep-mat');mark(186,7,8.9,'可选临时共同睡眠 · 须所有人同意');}
  if(has(187)||has(188)){
-  w.bed(4,4,has(187)?187:188,1.8);
+  const bedStart=w.boxes.length;w.bed(4,4,has(187)?187:188,1.8);share(w,[187,188],bedStart,w.meshes.length);
   if(has(187)){for(const x of [3.9,5.9])for(const y of [3.9,6.1])w.box(x,y,0,.09,.09,2.15,p.wood,187,'bed-post');w.box(3.85,3.85,2.15,2.25,2.35,.08,p.warm,187,'ceiling');mark(187,5,6.6,'围合床架作为私人中心');}
   if(has(188)){w.wall(3.48,3.3,3.02,.18,2.4,188);w.wall(3.3,3.3,.18,3.6,2.4,188);w.wall(6.5,3.3,.18,2.5,2.4,188);w.box(3.3,3.3,2.52,3.4,3.6,.1,p.wall,188,'ceiling');w.box(6,3.6,.12,.35,1.2,1.2,p.wood,188,'bed-storage');mark(188,6.3,6.7,'小床凹室连着更大的活动室');}
  }
@@ -50,7 +53,7 @@ export function buildRooms(ids){
  if(has(190)){for(const [x,y,dx,dy,z]of [[2.2,10.3,23.6,9.3,4.5],[17,2.2,8.8,7.6,3.2],[8,2.2,5.8,5,2.6]])w.box(x,y,z,dx,dy,.12,p.wall,190,'ceiling');mark(190,14,12,'公共厅 4.5m／工作间 3.2m／私人边缘 2.6m');}
  if(has(191)){for(const x of [3,7,11])w.beam([x,11,3.5],[x,19,3.5],.055,p.wood,191);w.box(3,has(181)?11.4:11,.125,8,has(181)?7.6:8,.025,'#e3d1b2',191,'floor');mark(191,10.5,18,'矩形主室与对称顶面');}
  if(has(192)){w.path([[3,22],[25,22]],1.3,192);w.tree(5,23,192,.8);w.bench(21,22.8,192);mark(192,20,20.8,'窗口看见花园路径和停留活动');}
- if(has(193)){w.wall(11,10,.22,3,1,193);for(const y of [10,13])w.box(11,y,1.12,.22,.22,1.88,p.wood,193,'post');w.box(11,10,3,.22,3.2,.15,p.wood,193,'beam');mark(193,12,11,'半墙和柱保留联系与独立');}
+ if(has(193)){const edge=has(181)?11.3:11;w.wall(edge,10,.22,3,1,193);for(const y of [10,13])w.box(edge,y,1.12,.22,.22,1.88,p.wood,193,'post');w.box(edge,10,3,.22,3.2,.15,p.wood,193,'beam');mark(193,12,11,'半墙和柱保留联系与独立');}
  if(has(194)){
   // Cut a real hole in the existing interior wall before glazing it.
   w.boxes=w.boxes.filter(b=>!(b.kind==='wall'&&b.x===2.2&&b.y===10));

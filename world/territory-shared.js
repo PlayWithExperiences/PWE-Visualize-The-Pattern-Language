@@ -34,8 +34,9 @@ export function composeInstitution(w,ids){
  const home={id:homeId,x:2,y:2,width:28,depth:28};
  if(homeIds.length)buildInstitutionPattern({w,id:homeId,x:home.x,y:home.y,s:28});
  else if(has(79))base(w,buildInstitutionPattern,homeId,home.x,home.y);
- // Alternative household types are intentionally mutually exclusive on the same site.
- for(const id of homeIds.slice(1)){overridden.delete(id);}
+ // When alternatives are explicitly combined, compare them on adjacent lots;
+ // the selected primary household remains the site modified by resident control.
+ for(const [i,id]of homeIds.slice(1).entries())buildInstitutionPattern({w,id,x:34+i*32,y:2,s:28});
  if(has(79)){
   // Adaptation and stewardship touch the occupied home's southern edge.
   w.pergola(home.x+1,home.y+27,9,4,79);w.box(home.x+2,home.y+28,0,4,1,.85,P.wood,79,'resident-repair-bench');
@@ -44,13 +45,14 @@ export function composeInstitution(w,ids){
  }
  w.state.household=home;
  if(ids.some(id=>[80,82,83].includes(id))){
-  const units=has(82)?[{name:'A',x:66,y:4},{name:'B',x:80,y:4},{name:'C',x:66,y:24}]:[{name:'A',x:66,y:4},{name:'B',x:100,y:4},{name:'C',x:66,y:24}];
+  const units=has(82)?[{name:'A',x:66,y:44},{name:'B',x:80,y:44},{name:'C',x:66,y:64}]:[{name:'A',x:66,y:44},{name:'B',x:100,y:44},{name:'C',x:66,y:64}];
   const owner=has(80)?80:has(82)?82:83;
-  for(const u of units){w.room(u.x,u.y,10,8,owner,{sideDoor:true});w.table(u.x+1,u.y+2,owner,2.5);if(has(83)){w.table(u.x+1,u.y+5,83,2.5);w.chair(u.x+1,u.y+3,83);w.chair(u.x+2.5,u.y+3,83);w.box(u.x+6,u.y+2,0,2,1,.9,P.wood,83,'shared-apprenticeship-tool');}}
-  const [a,b,c]=units;w.path([[a.x+5,15],[b.x+5,15]],2,has(82)?82:owner);w.path([[a.x+5,15],[c.x+5,23]],2,owner);
-  if(has(82))w.pergola(a.x+10,6,4,4,82);
+  for(const u of units){const start=w.boxes.length;w.room(u.x,u.y,10,8,owner,{sideDoor:true});for(const shape of w.boxes.slice(start))shape.patterns=[80,82,83].filter(has);w.table(u.x+1,u.y+2,owner,2.5);if(has(83)){w.table(u.x+1,u.y+5,83,2.5);w.chair(u.x+1,u.y+3,83);w.chair(u.x+2.5,u.y+3,83);w.box(u.x+6,u.y+2,0,2,1,.9,P.wood,83,'shared-apprenticeship-tool');}}
+  for(const u of units)w.path([[u.x+5,u.y+8],[u.x+5,u.y+11]],2,owner);
+  const [a,b,c]=units;w.path([[a.x+5,a.y+11],[b.x+5,b.y+11]],2,has(82)?82:owner);w.path([[a.x+5,a.y+11],[a.x-2,a.y+11],[c.x-2,c.y+11],[c.x+5,c.y+11]],2,owner);
+  if(has(82))w.pergola(a.x+10,a.y+2,4,4,82);
   w.state.workUnits=units;w.state.contactDistances={AB:b.x-a.x,AC:c.y-a.y};
  }
- for(const id of overridden){w.marker(id,id<80?16:80,id<80?34:36,`#${id}`);w.state.patterns[id]={geometry:true,relation:id<80?'shared household and controllable edge':'shared autonomous workgroups'};}
+ for(const id of overridden){const homeIndex=Math.max(0,homeIds.indexOf(id)),focus=id<80?[2+homeIndex*32,2,28,28]:[66,44,46,32];w.marker(id,id<80?focus[0]+14:80,id<80?34:80,`#${id}`);w.state.patterns[id]={geometry:true,focus,relation:id<80?'household and controllable edge':'shared autonomous workgroups'};}
  return overridden;
 }
