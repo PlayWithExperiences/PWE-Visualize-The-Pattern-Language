@@ -1,9 +1,9 @@
-import {groupFor,encodeAtlas} from './atlas/compose.js?v=92d7972c59b4';
-import {patterns, SOURCE} from './data/patterns.js?v=92d7972c59b4';
-import {normalize, defaults, encode, decode, buildScene} from './model.js?v=92d7972c59b4';
-import {renderScene} from './scene.js?v=92d7972c59b4';
-import {createWalk} from './walk.js?v=92d7972c59b4';
-import {normalizeSun,sampleSun,formatHour} from './sun.js?v=92d7972c59b4';
+import {groupFor,encodeAtlas} from './atlas/compose.js?v=e16c31c774f1';
+import {patterns, SOURCE} from './data/patterns.js?v=e16c31c774f1';
+import {normalize, defaults, encode, decode, buildScene} from './model.js?v=e16c31c774f1';
+import {renderScene} from './scene.js?v=e16c31c774f1';
+import {createWalk} from './walk.js?v=e16c31c774f1';
+import {normalizeSun,sampleSun,formatHour} from './sun.js?v=e16c31c774f1';
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let {state,error}=decode(location.hash),focus=115,angle=-35,plan=false,cutaway=true,catalog=[],saved=null;
@@ -104,7 +104,7 @@ function catalogRender(){
  $('catalog-results').innerHTML=matches.length?matches.map(c=>{const p=patterns.find(p=>p.id===c.id);return `<article class="catalog-item"><span>${String(c.id).padStart(3,'0')}</span><div><h3>${esc(p?.zh||c.zh||c.name)}</h3><p>${esc(c.name)}</p></div>${p?`<button data-explore="${c.id}">探索 ↗</button>`:'<span class="index-only">目录条目</span>'}</article>`;}).join(''):'<p class="catalog-note">没有匹配的模式。试试其他名称或切换尺度。</p>';
 }
 async function loadCatalog(){
- try{const res=await fetch('./data/catalog.json?v=92d7972c59b4');if(!res.ok)throw Error('HTTP '+res.status);catalog=await res.json();if(catalog.length!==253)throw Error('目录数量异常');catalogRender();detail();}
+ try{const res=await fetch('./data/catalog.json?v=e16c31c774f1');if(!res.ok)throw Error('HTTP '+res.status);catalog=await res.json();if(catalog.length!==253)throw Error('目录数量异常');catalogRender();detail();}
  catch(e){$('catalog-count').textContent='目录加载失败';$('catalog-results').innerHTML='<p>无法读取目录，请检查网络后重试。<button id="retry-catalog" class="secondary">重新加载</button></p>';$('retry-catalog').onclick=loadCatalog;say('模式目录加载失败：'+e.message);}
 }
 const openCatalog=()=>{$('catalog-dialog').showModal();$('search').focus();};

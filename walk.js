@@ -1,9 +1,9 @@
-import {worldOverview,safeSpawn,observationPose,reconcilePerson} from './world/navigation.js?v=92d7972c59b4';
-import {EYE_HEIGHT,floorHeight,canStand,entryPose,movePlayer} from './walk-physics.js?v=92d7972c59b4';
-import {multiply,vertexSource,fragmentSource,createSunlight} from './lighting.js?v=92d7972c59b4';
-import {normalizeSun,advanceSun,sampleSun} from './sun.js?v=92d7972c59b4';
-import {overviewPose,moveFree} from './free-camera.js?v=92d7972c59b4';
-import {createRenderBuffers,emphasizedColor} from './render-buffers.js?v=92d7972c59b4';
+import {worldOverview,safeSpawn,observationPose,reconcilePerson} from './world/navigation.js?v=e16c31c774f1';
+import {EYE_HEIGHT,floorHeight,canStand,entryPose,movePlayer} from './walk-physics.js?v=e16c31c774f1';
+import {multiply,vertexSource,fragmentSource,createSunlight} from './lighting.js?v=e16c31c774f1';
+import {normalizeSun,advanceSun,sampleSun} from './sun.js?v=e16c31c774f1';
+import {overviewPose,moveFree} from './free-camera.js?v=e16c31c774f1';
+import {createRenderBuffers,emphasizedColor} from './render-buffers.js?v=e16c31c774f1';
 const dot=(a,b)=>a.reduce((s,n,i)=>s+n*b[i],0);
 const cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
 const unit=a=>{const n=Math.hypot(...a);return a.map(v=>v/n);};

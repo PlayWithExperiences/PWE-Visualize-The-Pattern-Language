@@ -1,4 +1,4 @@
-import {colors as C,gateway,route} from './primitives.js?v=92d7972c59b4';
+import {colors as C,gateway,route} from './primitives.js?v=e16c31c774f1';
 export function institution(d){
  const H=id=>d.has(id);d.text(500,38,'居住与机构 · 自主领域、共享空间和公共界面',0,18);
  d.rect(55,80,890,455,C.land);route(d,[[70,550],[930,550]],0,{width:14});d.text(500,600,'公共步行街',0);
