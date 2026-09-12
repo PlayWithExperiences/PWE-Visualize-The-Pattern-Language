@@ -6,5 +6,5 @@ export function prepareWorldComparison(key,current,saved){
  const bounds=scenes.map(worldGeometryBounds);
  const frameBounds={mins:[0,1,2].map(i=>Math.min(...bounds.map(b=>b.mins[i]))),maxs:[0,1,2].map(i=>Math.max(...bounds.map(b=>b.maxs[i])))};
  const cutaway=current.cutaway??['plan','room'].includes(key);
- return scenes.map(scene=>({...scene,frameBounds,cutaway,focus:0}));
+ return scenes.map(scene=>({...scene,frameBounds,cutaway,focus:null}));
 }

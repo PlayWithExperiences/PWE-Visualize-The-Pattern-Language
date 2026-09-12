@@ -8,8 +8,8 @@ test('all normalized contexts keep their active 3D rules and valid attributes',(
  for(const g of groups){const ids=normalizeIds(Array.from({length:g.to-g.from+1},(_,i)=>i+g.from)),s=buildWorld(g.key,ids);for(const id of ids)assert.ok(s.applied.includes(id),`${g.key}:${id}`);for(const b of s.boxes){assert.match(b.color,/^#[0-9a-f]{6}$/i);for(const k of ['x','y','z','dx','dy','dz'])assert.ok(Number.isFinite(b[k]));assert.ok(b.dx>0&&b.dy>0&&b.dz>0);}for(const m of s.meshes){assert.equal(m.points.length,3);assert.match(m.color,/^#[0-9a-f]{6}$/i);assert.ok(m.points.flat().every(Number.isFinite));}}
 });
 test('3D share captures camera mode and current sun while pausing playback and preserving old links',()=>{
- const state={group:'finish',ids:[250,252],focus:252,view:'combined',surface:'3d',camera:'walk',sun:{mode:'time',hour:22.3,playing:true,rate:40}};
- const restored=decodeAtlas(encodeAtlas(state));assert.equal(restored.surface,'3d');assert.equal(restored.camera,'walk');assert.equal(restored.sun.hour,22.3);assert.equal(restored.sun.playing,false);assert.equal(state.sun.playing,true);
+ const state={group:'finish',ids:[250,252],focus:252,view:'combined',surface:'3d',camera:'walk',emphasis:false,cutaway:true,sun:{mode:'time',hour:22.3,playing:true,rate:40}};
+ const restored=decodeAtlas(encodeAtlas(state));assert.equal(restored.surface,'3d');assert.equal(restored.camera,'walk');assert.equal(restored.emphasis,false);assert.equal(restored.cutaway,true);assert.equal(restored.sun.hour,22.3);assert.equal(restored.sun.playing,false);assert.equal(state.sun.playing,true);
  const old={group:'room',ids:[180],focus:180,view:'single'};assert.deepEqual(decodeAtlas(encodeAtlas(old)),old);
 });
 test('three-dimensional public source does not depend on private book files or generated SVG extrusion',()=>{

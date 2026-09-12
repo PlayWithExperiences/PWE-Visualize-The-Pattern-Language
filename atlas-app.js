@@ -17,7 +17,7 @@ async function renderWorld(){
  const use3d=state.surface==='3d';$('#surface-3d').setAttribute('aria-pressed',use3d);$('#surface-diagram').setAttribute('aria-pressed',!use3d);$('#drawing').hidden=use3d;$('#world-panel').hidden=!use3d;$('#baseline').disabled=use3d;$('#baseline-drawing').hidden=use3d||!$('#baseline').checked;
  if(!use3d){worldRequest++;worldViewer?.hide();return;}
  const request=++worldRequest;
- try{if(!worldViewer){worldImport??=import('./world/viewer.js');const {createWorldViewer}=await worldImport;if(request!==worldRequest)return;worldViewer=createWorldViewer({onSun:(sun,save)=>{state.sun=sun;if(save)persistURL();},onCamera:camera=>{state.camera=camera;render();},onSelect:select,onTitle:id=>guide(id)?.zh,onCutaway:value=>{state.cutaway=value;render();},onError:status});}
+ try{if(!worldViewer){worldImport??=import('./world/viewer.js');const {createWorldViewer}=await worldImport;if(request!==worldRequest)return;worldViewer=createWorldViewer({onSun:(sun,save)=>{state.sun=sun;if(save)persistURL();},onCamera:camera=>{state.camera=camera;render();},onSelect:select,onTitle:id=>guide(id)?.zh,onCutaway:value=>{state.cutaway=value;render();},onEmphasis:value=>{state.emphasis=value;render();},onError:status});}
  if(request!==worldRequest)return;const scene=worldViewer.update(state);worldViewer.show();$('#world-canvas').style.visibility='visible';renderWorldEffects(scene);
  }catch(error){worldViewer?.hide();$('#world-canvas').style.visibility='hidden';$('#world-error').hidden=false;$('#world-error').textContent='三维载入失败：'+error.message;status('三维载入失败，可切回图解继续查看。');}
 }
@@ -27,17 +27,21 @@ function select(id){state.focus=id;state.group=groupFor(id).key;render();}
 function toggle(id){const rival=alternatives.find(a=>a.includes(id))?.find(n=>state.ids.includes(n)&&n!==id);state.ids=toggleId(state.ids,id);render();if(rival)status(`#${id} 已替换另一种居住方案 #${rival}。`);}
 function geometry(result){return JSON.stringify(result.diagram.shapes.filter(s=>s.kind!=='text').map(s=>[s.kind,s.attrs]));}
 function activeDiagram(){return compose(state.group,state.view==='single'?[state.focus]:state.ids,state.focus);}
+let listedFocus=0,listedQuery='';
 function renderList(){
  const q=$('#search').value.trim().toLowerCase(),only=$('#only-selected').checked;
  const filtered=guides.filter(p=>(q?[p.id,p.zh,p.name,p.problem,p.principle].join(' ').toLowerCase().includes(q):p.group===state.group)&&(!only||state.ids.includes(p.id)));
  $('#result-count').textContent=`${filtered.length} 项`;$('#empty').hidden=filtered.length>0;
  $('#pattern-list').innerHTML=filtered.map(p=>`<div class="pattern-row" data-focus="${p.id===state.focus}"><input type="checkbox" data-toggle="${p.id}" aria-label="应用 ${p.id} ${esc(p.zh)}" ${state.ids.includes(p.id)?'checked':''}><button data-focus="${p.id}"><span class="num">${String(p.id).padStart(3,'0')}</span>${esc(p.zh)}<small>${esc(p.name)}${q?' · '+groupFor(p.id).name:''}</small></button></div>`).join('');
+ const list=$('#pattern-list');if(q!==listedQuery)list.scrollTop=0;const focused=list.querySelector('[data-focus="true"]');
+ if(focused&&listedFocus!==state.focus){const top=focused.getBoundingClientRect().top-list.getBoundingClientRect().top+list.scrollTop;list.scrollTop=Math.max(0,top-list.clientHeight*.25);}
+ listedFocus=state.focus;listedQuery=q;
 }
 function renderDetail(){
  const p=guide(state.focus)||guide(groups.find(g=>g.key===state.group).from);state.focus=p.id;
  const out=relations.edges.filter(([a])=>a===p.id).map(([,b])=>b),incoming=relations.edges.filter(([,b])=>b===p.id).map(([a])=>a);
  const buttons=ids=>ids.map(id=>`<button data-focus="${id}">#${id} ${esc(guide(id).zh)}</button>`).join('');
- $('#detail').innerHTML=`<div><span class="number">${String(p.id).padStart(3,'0')}</span><h3>${esc(p.zh)}</h3><p class="english">${esc(p.name)}</p><button class="toggle ${state.ids.includes(p.id)?'':'primary'}" data-toggle="${p.id}">${state.ids.includes(p.id)?'从方案移除 −':'加入我的方案 +'}</button></div><div><h4>它要解决什么</h4><p>${esc(p.problem)}</p><h4>原书原则 · 项目概括</h4><p>${esc(p.principle)}</p>${p.note?`<p class="note">${esc(p.note)}</p>`:''}<h4>在这里观察</h4><p>${esc(groupFor(p.id).description)}。可切换“单项”观察本项，再回到组合中比较。三维中可到模式附近漫游；图解中的橙色轮廓标出本项参与的图形。</p></div><div class="source"><strong>来源定位 · A Pattern Language (1977)</strong><p>扫描本 PDF 第 ${p.source.pdfPages.join('、')} 页<br>候选印刷页 ${p.source.printedStartCandidate}–${p.source.printedEndCandidate}${p.source.solutionPdfPage?' · 方案段 PDF 第 '+p.source.solutionPdfPage+' 页':''}</p><p>依据：${p.source.reviewBasis==='solution-section'?'方案段及相关正文':'现有正文（详见本项说明）'}。页界由文字页码恢复，非逐页校勘。图解是项目解释。</p><details><summary>原书提及 ${out.length} 项 / 被提及 ${incoming.length} 项</summary><p>匹配英文名与编号的有向引用；不是强制依赖，亦非完整关系网。</p><div class="relations">${buttons(out)}</div>${incoming.length?`<details><summary>查看哪些模式提及本项</summary><div class="relations">${buttons(incoming)}</div></details>`:''}</details></div>`;
+ $('#detail').innerHTML=`<div><span class="number">${String(p.id).padStart(3,'0')}</span><h3>${esc(p.zh)}</h3><p class="english">${esc(p.name)}</p><button class="toggle ${state.ids.includes(p.id)?'':'primary'}" data-toggle="${p.id}">${state.ids.includes(p.id)?'从方案移除 −':'加入我的方案 +'}</button></div><div><h4>它要解决什么</h4><p>${esc(p.problem)}</p><h4>原书原则 · 项目概括</h4><p>${esc(p.principle)}</p>${p.note?`<p class="note">${esc(p.note)}</p>`:''}<h4>在这里观察</h4><p>${esc(groupFor(p.id).description)}。可切换“单项”观察本项，再回到组合中比较。三维中可标出本项构件、拉近观察，或到附近漫游；图解用橙色轮廓标出作用。</p></div><div class="source"><strong>来源定位 · A Pattern Language (1977)</strong><p>扫描本 PDF 第 ${p.source.pdfPages.join('、')} 页<br>候选印刷页 ${p.source.printedStartCandidate}–${p.source.printedEndCandidate}${p.source.solutionPdfPage?' · 方案段 PDF 第 '+p.source.solutionPdfPage+' 页':''}</p><p>依据：${p.source.reviewBasis==='solution-section'?'方案段及相关正文':'现有正文（详见本项说明）'}。页界由文字页码恢复，非逐页校勘。图解是项目解释。</p><details><summary>原书提及 ${out.length} 项 / 被提及 ${incoming.length} 项</summary><p>匹配英文名与编号的有向引用；不是强制依赖，亦非完整关系网。</p><div class="relations">${buttons(out)}</div>${incoming.length?`<details><summary>查看哪些模式提及本项</summary><div class="relations">${buttons(incoming)}</div></details>`:''}</details></div>`;
 }
 function render(){
  const group=groups.find(g=>g.key===state.group);if(!guide(state.focus)||groupFor(state.focus).key!==state.group)state.focus=group.from;
@@ -48,7 +52,9 @@ function render(){
  $('#drawing-note').textContent=state.view==='single'?`单项示例 #${state.focus}（不改变方案选择）`:(state.ids.includes(state.focus)?`正在阅读 #${state.focus} · 橙色为本项作用`:`#${state.focus} 未加入组合，可切换单项图解预览`);
  const foreign=state.ids.filter(id=>groupFor(id).key!==state.group),influencing=foreign.filter(id=>(influences[state.group]||[]).includes(id));
  $('#context-note').textContent=(foreign.length?`另有 ${foreign.length} 项保留在其他尺度。`:'选择模式名称阅读，勾选方框组合。')+(influencing.length?`本图接收约束：${influencing.map(id=>'#'+id).join('、')}。`:'')+(state.group==='site'&&influencing.includes(21)?'#21 在 #96 层数示例中限制高度。':'')+(result.localIds.length>12?' 选项较多，部分空间会重叠；可逐项对照，工具不会自动解决所有冲突。':'');
- const current=presets[state.group];$('#preset').innerHTML=current.map(([name],i)=>`<option value="${i}">${name}</option>`).join('');
+ const current=presets[state.group],preset=$('#preset'),previous=preset.dataset.group===state.group?preset.value:'0';
+ const local=state.ids.filter(id=>groupFor(id).key===state.group).join(','),matching=current.findIndex(([,ids])=>[...ids].sort((a,b)=>a-b).join(',')===local);
+ preset.innerHTML=current.map(([name],i)=>`<option value="${i}">${name}</option>`).join('');preset.value=matching>=0?String(matching):previous;preset.dataset.group=state.group;
  $('#effects-title').textContent=`查看本图 ${result.localIds.length} 项的作用与覆盖关系`;
  const whole=geometry(result);
  $('#effects-list').innerHTML=result.localIds.map(id=>{const p=guide(id),suppressed=state.view==='combined'&&whole===geometry(compose(state.group,state.ids.filter(n=>n!==id),state.focus));const note=result.diagram.notes.find(n=>n.id===id)?.text;return `<div class="effect"><button data-focus="${id}">#${id} ${esc(p.zh)}</button><p>${esc(note||p.principle)}</p>${suppressed?'<p class="suppressed">当前组合中未产生额外图形变化，可能由另一规则覆盖；切换单项查看。</p>':''}</div>`;}).join('')||'<p>当前没有应用本尺度的模式。</p>';
