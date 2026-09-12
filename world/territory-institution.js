@@ -1,5 +1,5 @@
-import {palette as P} from './primitives.js?v=a08df7453e28';
-import {kit} from './territory.js?v=a08df7453e28';
+import {palette as P} from './primitives.js?v=92d7972c59b4';
+import {kit} from './territory.js?v=92d7972c59b4';
 export function buildInstitutionPattern(ctx){const {w,id,x,y,box,path,room,house,tree,bench,table,pergola,slab,gate,station,garden}=kit(ctx);
  const bed=(a,b)=>w.bed(x+a,y+b,id);
  const chairs=(a,b,count=3)=>{for(let n=0;n<count;n++)w.chair(x+a+n*1.2,y+b,id);};

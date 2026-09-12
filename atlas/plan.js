@@ -1,4 +1,4 @@
-import {colors as C,gateway,route,pane} from './primitives.js?v=a08df7453e28';
+import {colors as C,gateway,route,pane} from './primitives.js?v=92d7972c59b4';
 export function plan(d){
  const H=id=>d.has(id);d.text(500,36,'建筑平面 · 共同生活与私人领域',0,19);d.rect(80,85,840,440,C.land);
  // Keep left-hand children's rooms, the common core and the private wing separate.

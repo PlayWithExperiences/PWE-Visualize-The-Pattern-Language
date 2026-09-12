@@ -1,9 +1,9 @@
-import {prepareWorldComparison} from './comparison.js?v=a08df7453e28';
-import {createWalk} from '../walk.js?v=a08df7453e28';
-import {buildWorld} from './index.js?v=a08df7453e28';
-import {projectMarker} from './navigation.js?v=a08df7453e28';
-import {EYE_HEIGHT,floorHeight} from '../walk-physics.js?v=a08df7453e28';
-import {normalizeSun,formatHour} from '../sun.js?v=a08df7453e28';
+import {prepareWorldComparison} from './comparison.js?v=92d7972c59b4';
+import {createWalk} from '../walk.js?v=92d7972c59b4';
+import {buildWorld} from './index.js?v=92d7972c59b4';
+import {projectMarker} from './navigation.js?v=92d7972c59b4';
+import {EYE_HEIGHT,floorHeight} from '../walk-physics.js?v=92d7972c59b4';
+import {normalizeSun,formatHour} from '../sun.js?v=92d7972c59b4';
 const $=s=>document.querySelector(s);
 export function createWorldViewer({onSun,onCamera,onSelect,onTitle,onCutaway,onEmphasis,onError}){
  let scene=null,focus=0,lastKey='',currentState=null,engine=null,mode='free',speed=1,visible=false,lost=false;

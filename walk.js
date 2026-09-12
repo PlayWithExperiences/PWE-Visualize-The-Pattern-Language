@@ -1,9 +1,9 @@
-import {worldOverview,safeSpawn,observationPose,reconcilePerson} from './world/navigation.js?v=a08df7453e28';
-import {EYE_HEIGHT,floorHeight,canStand,entryPose,movePlayer} from './walk-physics.js?v=a08df7453e28';
-import {multiply,vertexSource,fragmentSource,createSunlight} from './lighting.js?v=a08df7453e28';
-import {normalizeSun,advanceSun,sampleSun} from './sun.js?v=a08df7453e28';
-import {overviewPose,moveFree} from './free-camera.js?v=a08df7453e28';
-import {createRenderBuffers,emphasizedColor} from './render-buffers.js?v=a08df7453e28';
+import {worldOverview,safeSpawn,observationPose,reconcilePerson} from './world/navigation.js?v=92d7972c59b4';
+import {EYE_HEIGHT,floorHeight,canStand,entryPose,movePlayer} from './walk-physics.js?v=92d7972c59b4';
+import {multiply,vertexSource,fragmentSource,createSunlight} from './lighting.js?v=92d7972c59b4';
+import {normalizeSun,advanceSun,sampleSun} from './sun.js?v=92d7972c59b4';
+import {overviewPose,moveFree} from './free-camera.js?v=92d7972c59b4';
+import {createRenderBuffers,emphasizedColor} from './render-buffers.js?v=92d7972c59b4';
 const dot=(a,b)=>a.reduce((s,n,i)=>s+n*b[i],0);
 const cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
 const unit=a=>{const n=Math.hypot(...a);return a.map(v=>v/n);};
@@ -24,7 +24,8 @@ export function createWalk(canvas,onError,onPose,onLight,options={}){
   return shader;
  };
  const vertex=compile(gl.VERTEX_SHADER,vertexSource);
- const fragment=compile(gl.FRAGMENT_SHADER,fragmentSource);
+ const derivatives=gl.getExtension('OES_standard_derivatives');
+ const fragment=compile(gl.FRAGMENT_SHADER,(derivatives?'#extension GL_OES_standard_derivatives : enable\n#define RECEIVER_PLANE_BIAS\n':'')+fragmentSource);
  const program=gl.createProgram();gl.attachShader(program,vertex);gl.attachShader(program,fragment);gl.linkProgram(program);
  if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw Error('三维场景初始化失败。');
  gl.deleteShader(vertex);gl.deleteShader(fragment);
