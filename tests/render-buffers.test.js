@@ -105,7 +105,7 @@ test(`${name} renderer integrates cached frames, emphasis, zoom, sunlight and co
  walk.update(scene,{freeMode:false});const person={...currentPose};walk.zoom(1);assert.deepEqual(currentPose,person);
  walk.update(scene,{freeMode:true,emphasis:{id:emphasis,enabled:true}});const preparedCount=uploads.length;walk.setEmphasis(emphasis,true);assert.equal(uploads.length,preparedCount,'initial emphasis is prepared without a second geometry upload');
  const shadowCount=uploads.filter(u=>u.target!=null).length;
- walk.setLighting({...defaults.sun,azimuth:90});callback(now+1000);
+ walk.setLighting({...defaults.sun,azimuth:90});callback(performance.now()+1000);
  assert.equal(uploads.filter(u=>u.target!=null).length,shadowCount+1,'sun change still updates shadow');
  events.get('webglcontextlost')({preventDefault(){}});assert.ok(error);assert.equal(callback,null);
  walk.dispose();assert.equal(new Set(deleted).size,3,'both display VBOs and sunlight VBO are released');assert.equal(events.size,0);

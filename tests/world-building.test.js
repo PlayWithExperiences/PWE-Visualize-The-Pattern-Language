@@ -30,7 +30,7 @@ test('kitchen, shared core and communal eating share exactly one dining table',(
 });
 test('roof garden has a continuous rising stair and roof-level landing',()=>{
  const w=buildBuilding('site',[118]);const stairs=w.boxes.filter(b=>b.kind==='step');assert.equal(stairs.length,18);assert.equal(stairs.at(-1).z+stairs.at(-1).dz,2.88);
- assert(w.boxes.some(b=>b.kind==='floor'&&b.x===32&&b.z===2.88));
+ const last=stairs.at(-1);assert(w.boxes.some(b=>b.kind==='floor'&&b.z===last.z+last.dz&&b.y<=last.y+last.dy+1e-6&&b.y+b.dy>last.y+last.dy&&b.x<=last.x&&b.x+b.dx>=last.x+last.dx),'stair width joins roof-height landing');
  const raised=w.boxes.filter(b=>b.kind==='planter');assert(raised.length>0&&raised.every(b=>b.z>=2.88));
 });
 test('gallery and deep balcony share upper access and a real room door',()=>{
