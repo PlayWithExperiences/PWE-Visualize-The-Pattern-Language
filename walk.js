@@ -1,9 +1,9 @@
-import {worldOverview,safeSpawn,observationPose,reconcilePerson} from './world/navigation.js?v=8207f127fbc7';
-import {EYE_HEIGHT,floorHeight,canStand,entryPose,movePlayer} from './walk-physics.js?v=8207f127fbc7';
-import {multiply,vertexSource,fragmentSource,createSunlight} from './lighting.js?v=8207f127fbc7';
-import {normalizeSun,advanceSun,sampleSun} from './sun.js?v=8207f127fbc7';
-import {overviewPose,moveFree} from './free-camera.js?v=8207f127fbc7';
-import {createRenderBuffers,emphasizedColor} from './render-buffers.js?v=8207f127fbc7';
+import {worldOverview,safeSpawn,observationPose,reconcilePerson} from './world/navigation.js?v=a08df7453e28';
+import {EYE_HEIGHT,floorHeight,canStand,entryPose,movePlayer} from './walk-physics.js?v=a08df7453e28';
+import {multiply,vertexSource,fragmentSource,createSunlight} from './lighting.js?v=a08df7453e28';
+import {normalizeSun,advanceSun,sampleSun} from './sun.js?v=a08df7453e28';
+import {overviewPose,moveFree} from './free-camera.js?v=a08df7453e28';
+import {createRenderBuffers,emphasizedColor} from './render-buffers.js?v=a08df7453e28';
 const dot=(a,b)=>a.reduce((s,n,i)=>s+n*b[i],0);
 const cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
 const unit=a=>{const n=Math.hypot(...a);return a.map(v=>v/n);};
@@ -42,6 +42,7 @@ export function createWalk(canvas,onError,onPose,onLight,options={}){
  const lampPositions=gl.getUniformLocation(program,'uLampPosition[0]'),lampColors=gl.getUniformLocation(program,'uLampColor[0]');
  let lampPositionData=new Float32Array(32),lampColorData=new Float32Array(24),speedMultiplier=1;
  const skyUniform=gl.getUniformLocation(program,'uSkyColor'),sunColorUniform=gl.getUniformLocation(program,'uSunColor');
+ const nightAidUniform=gl.getUniformLocation(program,'uNightAid');let nightAid=options.nightAid===true;
  const dayUniform=gl.getUniformLocation(program,'uDaylight'),strengthUniform=gl.getUniformLocation(program,'uSunStrength');
  let free=false,personPose=null,flyingPose=null,lightSettings=normalizeSun(),light=sampleSun(lightSettings),shadowDirty=false,shadowAt=0;
 
@@ -97,8 +98,8 @@ export function createWalk(canvas,onError,onPose,onLight,options={}){
   else{
    const forward=Number(keys.has('w'))-Number(keys.has('s'));
    const side=Number(keys.has('d'))-Number(keys.has('a'));
-   if(free){pose=moveFree(pose,forward,side,Number(keys.has('e'))-Number(keys.has('q')),(scene.navigation?.speed||4)*speedMultiplier*dt,scene.navigation);}
-   else if(forward||side){const norm=Math.hypot(forward,side);const speed=2*speedMultiplier*dt/norm;pose=movePlayer(scene.boxes,pose,(Math.sin(pose.yaw)*forward+Math.cos(pose.yaw)*side)*speed,(-Math.cos(pose.yaw)*forward+Math.sin(pose.yaw)*side)*speed);}
+   if(free){pose=moveFree(pose,forward,side,Number(keys.has('e'))-Number(keys.has('q')),(scene.navigation?.speed||4)*speedMultiplier*(keys.has('shift')?3:1)*dt,scene.navigation);}
+   else if(forward||side){const norm=Math.hypot(forward,side);const speed=2*speedMultiplier*(keys.has('shift')?3:1)*dt/norm;pose=movePlayer(scene.boxes,pose,(Math.sin(pose.yaw)*forward+Math.cos(pose.yaw)*side)*speed,(-Math.cos(pose.yaw)*forward+Math.sin(pose.yaw)*side)*speed);}
    pose.yaw+=(Number(keys.has('arrowright'))-Number(keys.has('arrowleft')))*dt*1.3;
    pose.pitch=Math.max(-1.05,Math.min(1.05,pose.pitch+(Number(keys.has('arrowup'))-Number(keys.has('arrowdown')))*dt));
   }
@@ -111,7 +112,7 @@ export function createWalk(canvas,onError,onPose,onLight,options={}){
   gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,sunlight.texture);gl.uniform1i(shadowUniform,0);gl.uniform1f(packedShadowUniform,sunlight.packed?1:0);gl.uniform2f(texelUniform,1/sunlight.size,1/sunlight.size);
   gl.uniform3f(eyeUniform,pose.x,eye,pose.y);gl.uniform3fv(directionUniform,light.direction);
   gl.uniform3fv(skyUniform,light.sky);gl.uniform3fv(sunColorUniform,scene.navigation?.world?light.color.map(v=>v*.8):light.color);gl.uniform2f(fogRangeUniform,scene.navigation?.world?Math.max(40,scene.state.width*.7):22,scene.navigation?.world?Math.max(120,scene.state.width*2):80);gl.uniform1f(dayUniform,light.daylight);gl.uniform1f(strengthUniform,light.strength);
-  gl.uniform4fv(lampPositions,lampPositionData);gl.uniform3fv(lampColors,lampColorData);
+  gl.uniform1f(nightAidUniform,nightAid?1:0);gl.uniform4fv(lampPositions,lampPositionData);gl.uniform3fv(lampColors,lampColorData);
   gl.uniformMatrix4fv(matrix,false,cameraMatrix(pose,eye,width/height,scene.navigation?.far||250,scene.navigation?.world&&free?Math.max(.06,Math.min(1,eye/50)):.06));
   gl.disable(gl.BLEND);gl.depthMask(true);batches.drawOpaque();
   gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);gl.depthMask(false);
@@ -120,7 +121,7 @@ export function createWalk(canvas,onError,onPose,onLight,options={}){
  }
  function stop(){active=false;keys.clear();drag=null;cancelAnimationFrame(frame);}
  function reset(){pose=scene.navigation?.world?(free?worldOverview(scene):safeSpawn(scene)):(free?overviewPose(scene):entryPose(scene));keys.clear();onPose?.(pose,free);onLight?.({...lightSettings});}
- const handled=new Set(['w','a','s','d','q','e','arrowleft','arrowright','arrowup','arrowdown']);
+ const handled=new Set(['w','a','s','d','q','e','arrowleft','arrowright','arrowup','arrowdown','shift']);
  listen(canvas,'keydown',e=>{const key=e.key.toLowerCase();if(handled.has(key)){e.preventDefault();keys.add(key);}if(key==='escape'){keys.clear();canvas.blur();}});
  listen(window,'keyup',e=>keys.delete(e.key.toLowerCase()));
  listen(window,'blur',()=>{keys.clear();drag=null;});
@@ -149,6 +150,7 @@ export function createWalk(canvas,onError,onPose,onLight,options={}){
    const amount=Math.max(-1,Math.min(1,Number(direction)||0)),forward=Math.sign(amount);if(!forward)return;
    pose=moveFree(pose,forward,0,0,(scene.navigation?.speed||4)*.5*Math.abs(amount),scene.navigation);onPose?.(pose,free);
   },
+  setNightAid(enabled){nightAid=Boolean(enabled);},
   setSpeed(multiplier){speedMultiplier=Math.max(.25,Math.min(20,Number(multiplier)||1));},
   goToPattern(id){if(scene?.navigation?.world){pose=observationPose(scene,id,free);keys.clear();onPose?.(pose,free);}},
   setLighting(next){const normalized=normalizeSun(next);if(Object.keys(normalized).every(key=>normalized[key]===lightSettings[key]))return;lightSettings=normalized;shadowDirty=true;},

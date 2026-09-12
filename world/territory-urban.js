@@ -1,5 +1,5 @@
-import {palette as P} from './primitives.js?v=8207f127fbc7';
-import {kit} from './territory.js?v=8207f127fbc7';
+import {palette as P} from './primitives.js?v=a08df7453e28';
+import {kit} from './territory.js?v=a08df7453e28';
 export function buildUrbanPattern(ctx){const {w,id,x,y,box,path,room,house,tree,bench,table,pergola,slab,gate,station,garden}=kit(ctx);
  switch(id){
  case 1: // Separate civic centres linked across a permeable natural boundary.

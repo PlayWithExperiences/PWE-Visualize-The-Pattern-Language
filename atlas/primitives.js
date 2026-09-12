@@ -5,7 +5,7 @@ export class Diagram{
  has(id){return this.ids.has(id);}
  add(kind,attrs,owner=0,label=''){this.shapes.push({kind,attrs,owner,label});if(owner)this.effects.add(owner);}
  rect(x,y,w,h,fill=colors.building,owner=0,label='',extra={}){this.add('rect',{x,y,width:w,height:h,fill,rx:2,...extra},owner,label);if(label)this.text(x+w/2,y+h/2+4,label,owner);}
- circle(x,y,r,fill=colors.active,owner=0,label=''){this.add('circle',{cx:x,cy:y,r,fill},owner,label);if(label)this.text(x,y+4,label,owner);}
+ circle(x,y,r,fill=colors.active,owner=0,label='',extra={}){this.add('circle',{cx:x,cy:y,r,fill,...extra},owner,label);if(label)this.text(x,y+4,label,owner);}
  line(x1,y1,x2,y2,owner=0,{stroke=colors.ink,width=2,dash='',arrow=false}={}){this.add('line',{x1,y1,x2,y2,stroke,'stroke-width':width,'stroke-dasharray':dash,...(arrow?{'marker-end':'url(#arrow)'}:{})},owner);}
  path(d,fill='none',owner=0,extra={}){this.add('path',{d,fill,stroke:colors.ink,'stroke-width':2,...extra},owner);}
  text(x,y,text,owner=0,size=12,extra={}){this.add('text',{x,y,fill:colors.ink,'font-size':size,'text-anchor':'middle',...extra},owner,text);}
@@ -18,9 +18,11 @@ export class Diagram{
  hatch(x,y,w,h,id=0,fill='url(#hatch)'){this.rect(x,y,w,h,fill,id);}
  toSVG(){
  const attrs=a=>Object.entries(a).filter(([,v])=>v!==''&&v!==undefined).map(([k,v])=>`${k}="${esc(v)}"`).join(' ');
- const body=this.shapes.map(s=>{
+ // Labels are annotations: later geometry must not erase earlier captions.
+ const ordered=[...this.shapes.filter(s=>s.kind!=='text'),...this.shapes.filter(s=>s.kind==='text')];
+ const body=ordered.map(s=>{
   const focused=this.focus&&s.owner===this.focus;
-  const attr={stroke:s.kind==='text'?'none':colors.ink,'stroke-width':s.kind==='text'?0:1.2,...s.attrs,...(focused&&s.kind!=='text'?{stroke:'#b4532b','stroke-width':2.7}:{}),...(this.focus&&s.owner&&s.owner!==this.focus?{opacity:.85}:{})};
+  const attr={stroke:s.kind==='text'?colors.paper:colors.ink,'stroke-width':s.kind==='text'?3:1.2,...(s.kind==='text'?{'paint-order':'stroke fill','stroke-linejoin':'round'}:{}),...s.attrs,...(focused&&s.kind!=='text'?{stroke:'#b4532b','stroke-width':2.7}:{}),...(this.focus&&s.owner&&s.owner!==this.focus?{opacity:.85}:{})};
   return `<${s.kind} ${attrs(attr)} data-pattern="${s.owner}">${s.kind==='text'?esc(s.label):''}</${s.kind}>`;
  }).join('');
  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" aria-label="${esc(this.group)}模式组合示意"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10Z" fill="#647264"/></marker><pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#e8dfcf"/><path d="M0,9 L9,0" stroke="#b6a890" stroke-width="1"/></pattern><pattern id="brick" width="28" height="16" patternUnits="userSpaceOnUse"><rect width="28" height="16" fill="#d7ad8d"/><path d="M0,0H28M0,8H28M0,16H28M14,0V8M0,8V16M28,8V16" fill="none" stroke="#f2e4d1"/></pattern></defs><rect width="1000" height="640" fill="#f5f2e9"/>${body}</svg>`;

@@ -1,9 +1,9 @@
-import {prepareWorldComparison} from './comparison.js?v=8207f127fbc7';
-import {createWalk} from '../walk.js?v=8207f127fbc7';
-import {buildWorld} from './index.js?v=8207f127fbc7';
-import {projectMarker} from './navigation.js?v=8207f127fbc7';
-import {EYE_HEIGHT,floorHeight} from '../walk-physics.js?v=8207f127fbc7';
-import {normalizeSun,formatHour} from '../sun.js?v=8207f127fbc7';
+import {prepareWorldComparison} from './comparison.js?v=a08df7453e28';
+import {createWalk} from '../walk.js?v=a08df7453e28';
+import {buildWorld} from './index.js?v=a08df7453e28';
+import {projectMarker} from './navigation.js?v=a08df7453e28';
+import {EYE_HEIGHT,floorHeight} from '../walk-physics.js?v=a08df7453e28';
+import {normalizeSun,formatHour} from '../sun.js?v=a08df7453e28';
 const $=s=>document.querySelector(s);
 export function createWorldViewer({onSun,onCamera,onSelect,onTitle,onCutaway,onEmphasis,onError}){
  let scene=null,focus=0,lastKey='',currentState=null,engine=null,mode='free',speed=1,visible=false,lost=false;
@@ -24,6 +24,20 @@ export function createWorldViewer({onSun,onCamera,onSelect,onTitle,onCutaway,onE
  }
  function applySun(patch){const sun=normalizeSun({...currentState.sun,...patch});currentState.sun=sun;engine?.setLighting(sun);lighting(sun);onSun(sun,true);}
  function controls(){
+  const panel=$('#world-panel');
+  const hideUI=value=>{panel.classList.toggle('ui-hidden',value);engine?.setEmphasis(focus,!value&&currentState?.emphasis!==false);canvas.focus({preventScroll:true});};
+  $('#world-hide-ui').onclick=()=>hideUI(true);
+  document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement&&panel.classList.contains('ui-hidden'))hideUI(false);});
+  $('#world-exit-fullscreen').onclick=()=>document.exitFullscreen().catch(error=>onError('退出全屏失败：'+error.message));
+  $('#world-night-aid').onchange=e=>engine?.setNightAid(e.target.checked);
+  canvas.addEventListener('dblclick',()=>{if(panel.classList.contains('ui-hidden'))hideUI(false);});
+  panel.addEventListener('keydown',e=>{
+   if(e.target.closest('input,select,textarea')||e.ctrlKey||e.metaKey||e.altKey)return;
+   const key=e.key.toLowerCase();
+   if(key==='f'&&!e.repeat&&!$('#world-focus').disabled){e.preventDefault();engine?.goToPattern(focus);canvas.focus({preventScroll:true});}
+   if(key==='h'&&!e.repeat){e.preventDefault();hideUI(!panel.classList.contains('ui-hidden'));}
+   if(key==='escape')hideUI(false);
+  });
   for(const button of document.querySelectorAll('[data-world-camera]'))button.onclick=()=>{onCamera(button.dataset.worldCamera);};
   $('#world-reset').onclick=()=>engine?.reset();$('#world-emphasis').onchange=e=>onEmphasis(e.target.checked);
   for(const [id,amount]of [['world-zoom-in',1],['world-zoom-out',-1]])$('#'+id).onclick=()=>{engine?.zoom(amount);canvas.focus({preventScroll:true});};
@@ -52,14 +66,14 @@ export function createWorldViewer({onSun,onCamera,onSelect,onTitle,onCutaway,onE
    if(!engine)engine=createWalk(canvas,message=>{visible=false;lost=true;$('#world-error').hidden=false;$('#world-error').textContent=message;onError(message);},locate,lighting);
    const engineKey=key+':'+mode+':'+scene.cutaway+':'+(scene.cutaway?focus:0);
    if(this.engineKey!==engineKey){engine.update(scene,{freeMode:mode==='free',resetView:changed&&state.view==='single',emphasis:{id:focus,enabled:state.emphasis!==false}});this.engineKey=engineKey;}else engine.setLighting(scene.state.sun);
-   engine.setEmphasis(focus,state.emphasis!==false);$('#world-emphasis').checked=state.emphasis!==false;$('#world-emphasis').disabled=!scene.applied.includes(focus);
+   engine.setEmphasis(focus,state.emphasis!==false&&!$('#world-panel').classList.contains('ui-hidden'));$('#world-emphasis').checked=state.emphasis!==false;$('#world-emphasis').disabled=!scene.applied.includes(focus);
    $('#world-zoom-in').disabled=mode!=='free';$('#world-zoom-out').disabled=mode!=='free';
-   canvas.dataset.worldKey=scene.key;canvas.dataset.modelPatterns=scene.applied.join(',');engine.setSpeed(speed);
-   $('#world-error').hidden=true;$('#world-focus').disabled=!scene.landmarks.some(m=>m.id===focus);$('#world-focus').textContent=`到 #${focus} 附近`;
+   canvas.dataset.worldKey=scene.key;canvas.dataset.modelPatterns=scene.applied.join(',');engine.setSpeed(speed);engine.setNightAid($('#world-night-aid').checked);
+   $('#world-error').hidden=true;$('#world-focus').disabled=!scene.landmarks.some(m=>m.id===focus);$('#world-focus').textContent=`到 #${focus} 附近 · F`;
    for(const b of document.querySelectorAll('[data-world-camera]'))b.setAttribute('aria-pressed',b.dataset.worldCamera===mode);
    for(const b of document.querySelectorAll('[data-world-lift]'))b.hidden=mode!=='free';
    const s=scene.state.sun;$('#world-sun-mode').value=s.mode;$('#world-time-controls').hidden=s.mode!=='time';$('#world-manual-controls').hidden=s.mode!=='manual';$('#world-hour').value=Math.round(s.hour*60);$('#world-rate').value=s.rate;$('#world-rate-label').textContent=s.rate+' 分钟 / 秒';$('#world-azimuth').value=s.azimuth;$('#world-azimuth-label').textContent=s.azimuth+'°';$('#world-elevation').value=s.elevation;$('#world-elevation-label').textContent=s.elevation+'°';lighting(s);
-   const mark=scene.landmarks.find(m=>m.id===focus);$('#world-observation').textContent=mark?`#${focus} · ${mark.label||'可点击“到附近”近看'}${state.emphasis!==false?' · 暖色为辅助标记':''}`:'当前组合未加入此模式，可切换单项预览。';
+   const mark=scene.landmarks.find(m=>m.id===focus);$('#world-observation').textContent=mark?`#${focus} · ${mark.label||'可点击“到附近”近看'}${state.emphasis!==false?' · 青蓝色为辅助标记':''}`:'当前组合未加入此模式，可切换单项预览。';
    if(visible)engine.start();return scene;
   },
   reset(){engine?.reset();},

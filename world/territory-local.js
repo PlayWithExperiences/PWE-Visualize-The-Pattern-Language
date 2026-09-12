@@ -1,5 +1,5 @@
-import {palette as P} from './primitives.js?v=8207f127fbc7';
-import {kit} from './territory.js?v=8207f127fbc7';
+import {palette as P} from './primitives.js?v=a08df7453e28';
+import {kit} from './territory.js?v=a08df7453e28';
 export function buildLocalPattern(ctx){const {w,id,x,y,box,path,room,house,tree,bench,table,pergola,slab,gate,station,garden}=kit(ctx);
  switch(id){
  case 30: slab(1,10,9,10);room(1,2,9,6);bench(2,17);path([[0,23],[5,15],[13,23],[27,23]],2);room(19,16,8,6);break;

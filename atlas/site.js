@@ -1,4 +1,4 @@
-import {colors as C,gateway,route} from './primitives.js?v=8207f127fbc7';
+import {colors as C,gateway,route} from './primitives.js?v=a08df7453e28';
 export function site(d){
  const H=id=>d.has(id);d.text(500,36,'建筑与场地 · 体量、入口和公共空间',0,19);d.rect(55,70,890,505,C.land);d.text(910,100,'北 ↑',0);
  route(d,[[75,540],[925,540]],0,{width:13});

@@ -1,4 +1,4 @@
-import {colors as C,gateway,route} from './primitives.js?v=8207f127fbc7';
+import {colors as C,gateway,route} from './primitives.js?v=a08df7453e28';
 export function neighborhood(d){
  const H=id=>d.has(id);d.text(500,38,'邻里 · 住宅、公共场所与慢行网络',0,19);d.rect(60,65,880,515,C.land);
  // Four residential clusters border a common public spine.
