@@ -1,8 +1,8 @@
 # 当前进展
 
-更新于 2026-09-12 13:10 +0800 · 记录者 Codex
+更新于 2026-09-12 13:27 +0800 · 记录者 Codex
 
-全部253项具有原书概括、来源定位、二维图解与对应尺度三维概念场景。当前实现6951c7c（高亮柔化，保留前轮几何/光影修复）；Pages 14ef281f37567f8572bfc9c3267f7285f230bc12，资源e16c31c774f1。已built，无构建错误。
+全部253项具有原书概括、来源定位、二维图解与对应尺度三维概念场景。当前实现07b5da1（F居中当前构件范围、V切换高亮）；Pages cd648bdd41afe0a3b6dc05bb589597103443abf0，资源77ac9ca8ff67。已built，无构建错误。
 
 公开地址：https://playwithexperiences.github.io/PWE-Visualize-The-Pattern-Language/
 
@@ -51,3 +51,5 @@
 边界：未穷举253模式任意组合；二维仍为独立概念示意，不保证任意组合空间冲突自动求解。低端WebGL缺导数扩展时使用原兼容阴影路径。详细证据和回退点见sessions/2026-0912-rendering-fixes.md、rollback.md。
 
 最新高亮已按用户反馈改为50%柔和灰蓝混合，保留原材质差异；6项相关测试通过，本地画面实查，Pages built，线上render-buffers.js与构建一致。
+
+最新F按实际几何中心取景，适配横竖视口；V切换柔和高亮。111项测试通过，F/V浏览器实查；线上navigation/viewer与构建一致。
