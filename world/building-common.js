@@ -1,4 +1,4 @@
-import {palette as p} from './primitives.js?v=e16c31c774f1';
+import {palette as p} from './primitives.js?v=77ac9ca8ff67';
 // Shared geometry carries every contributing pattern, without duplicating furniture.
 export function share(w,ids,start=0,meshStart=0){const active=ids.filter(id=>w.has(id));for(const b of [...w.boxes.slice(start),...w.meshes.slice(meshStart)])b.patterns=[...new Set([b.pattern,...active].filter(Boolean))];for(const id of active)w.applied.add(id);}
 export function note(w,id,x,y,label,observation){if(!w.has(id))return;w.marker(id,x,y,label);(w.state.observations??=[]).push({id,at:[x,y],observation,scope:'可漫游的空间概念；非日照、结构、消防或社会效果验证'});}

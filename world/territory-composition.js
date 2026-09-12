@@ -1,5 +1,5 @@
-import {World,palette as P} from './primitives.js?v=e16c31c774f1';
-import {buildUrbanPattern} from './territory-urban.js?v=e16c31c774f1';
+import {World,palette as P} from './primitives.js?v=77ac9ca8ff67';
+import {buildUrbanPattern} from './territory-urban.js?v=77ac9ca8ff67';
 const bounds={region:[1,7],city:[8,29]};
 export function composeTerritory(key,requested){
  const [lo,hi]=bounds[key],ids=[...new Set(requested)].filter(id=>id>=lo&&id<=hi).sort((a,b)=>a-b);

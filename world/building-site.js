@@ -1,5 +1,5 @@
-import {World,palette as p} from './primitives.js?v=e16c31c774f1';
-import {finishBuilding,share,note,car,rail} from './building-common.js?v=e16c31c774f1';
+import {World,palette as p} from './primitives.js?v=77ac9ca8ff67';
+import {finishBuilding,share,note,car,rail} from './building-common.js?v=77ac9ca8ff67';
 export function buildSite(ids){
  const w=new World('site',48,38,ids),h=id=>w.has(id),any=(...a)=>a.some(h);
  const mainH=h(99)?4:2.8, narrow=any(107,109),mw=narrow?8:12,md=h(109)?12:8,mx=24-mw/2;

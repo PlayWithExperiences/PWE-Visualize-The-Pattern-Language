@@ -1,6 +1,6 @@
-import {palette as P} from './primitives.js?v=e16c31c774f1';
-import {buildLocalPattern} from './territory-local.js?v=e16c31c774f1';
-import {buildInstitutionPattern} from './territory-institution.js?v=e16c31c774f1';
+import {palette as P} from './primitives.js?v=77ac9ca8ff67';
+import {buildLocalPattern} from './territory-local.js?v=77ac9ca8ff67';
+import {buildInstitutionPattern} from './territory-institution.js?v=77ac9ca8ff67';
 const localModifiers=new Set([30,31,49,50,52,53,54,60,67,68]);
 const institutionModifiers=new Set([75,76,77,78,79,80,82,83]);
 function base(w,builder,id,x,y){const b=w.boxes.length,m=w.meshes.length;builder({w,id,x,y,s:28});for(const v of w.boxes.slice(b))v.pattern=0;for(const v of w.meshes.slice(m))v.pattern=0;w.applied.delete(id);}
