@@ -4,7 +4,7 @@ export function buildPlan(ids){
  const w=new World('plan',48,43,ids),h=id=>w.has(id),any=(...a)=>a.some(h);
  w.room(10,8,24,22,0,{roof:false,sideDoor:h(153)});w.roof(9.7,7.7,24.6,22.6,0,3.1,2.2);w.path([[22,33],[22,29]],2.2);w.spawn={x:22,y:32,yaw:0,pitch:0,feet:0};w.navigation.speed=4;
  // Private rooms open onto a shared north passage. Their doors never open into beds.
- const privateRoom=(x,active,bed=false)=>{const used=active.filter(h);if(!used.length)return;const s=w.boxes.length,m=w.meshes.length;w.room(x,9,6,6,used[0],{roof:false});if(bed)w.bed(x+.7,10.2,used[0]);share(w,used,s,m);};
+ const privateRoom=(x,active,bed=false)=>{const used=active.filter(h);if(!used.length)return;const s=w.boxes.length,m=w.meshes.length;w.room(x,9,6,6,used[0],{roof:false,floor:false});if(bed)w.bed(x+.7,10.2,used[0]);share(w,used,s,m);};
  privateRoom(11,[127,136,138,141],any(136,138));privateRoom(19,[127,137,143],false);privateRoom(27,[127,144,145],false);
  if(h(127)){w.path([[22,30],[22,24],[25.6,19],[25.6,16],[14,16]],1.4,127,p.wood,.13);w.wall(16.8,20,.15,4,1.4,127);w.state.privacyGradient=['入口','共享起居','侧向过道','私人床位'];}
  if(h(128)){w.bench(27,28,128,2);w.box(27,28.8,.12,3,.6,.03,p.warm,128,'sun-location');w.state.orientation={south:'+y',east:'+x',sunSimulation:false};}

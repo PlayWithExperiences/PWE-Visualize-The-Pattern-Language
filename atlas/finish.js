@@ -14,7 +14,7 @@ export function finish(d){
  if(H(248)){for(const [x,y]of [[230,455],[530,495],[680,430]])d.path(`M${x},${y}l25,4l8,12l-21,3Z`,'#dcc9ad',248,{'stroke-width':.6});}
  if(H(249)){for(let x=180;x<785;x+=22)d.path(`M${x},157l8,9l8,-9`,'none',249,{stroke:'#9c704b'});for(let y=245;y<410;y+=20)d.circle(428,y,3,C.active,249);}
  if(H(250)){d.path('M235,315L300,395H390L360,315Z','#eddbb5',250,{'stroke-width':0});d.rect(690,335,30,45,'#829994',250);}
- if(H(252)){for(const [x,y,r]of [[290,340,55],[608,370,60]]){d.circle(x,y,r,'#f0dfa9',252);d.line(x,y-100,x,y-45,252);d.path(`M${x-13},${y-45}l13,-12l13,12Z`,C.active,252);d.circle(x,y,13,C.warm,252);}}
+ if(H(252)){for(const [x,y,r]of [[290,340,55],[608,370,60]]){d.circle(x,y,r,'#f0dfa9',252,'',{'fill-opacity':.32,stroke:'none'});d.line(x,y-100,x,y-45,252);d.path(`M${x-13},${y-45}l13,-12l13,12Z`,C.active,252);d.circle(x,y,13,C.warm,252);}}
  const chairs=H(251)?[[530,363,28,45],[575,360,40,26],[638,370,24,35]]:[[550,370,26,28],[590,370,26,28],[630,370,26,28]];
  for(const [i,[x,y,w,h]]of chairs.entries()){d.rect(x,y,w,h,H(251)?['#b89773','#cbbb9a','#92a59a'][i]:C.warm,H(251)?251:0);d.line(x,y+h,x,y+h+12,H(251)?251:0);d.line(x+w,y+h,x+w,y+h+12,H(251)?251:0);if(H(251)&&i===1)d.line(x-4,y+12,x+w+4,y+12,251,{width:5});}
  if(H(253)){for(const [x,y,w,h]of [[550,180,26,33],[600,168,35,40],[661,181,28,30]]){d.rect(x,y,w,h,C.active,253);d.rect(x+4,y+4,w-8,h-8,C.paper,253);d.circle(x+w/2,y+h/2,5,C.warm,253);}d.rect(550,325,150,8,C.active,253);d.path('M570,325v-20q12,-15 24,0v20Z',C.warm,253);d.text(620,447,'照片 · 收藏 · 生活记忆',253,11);}
