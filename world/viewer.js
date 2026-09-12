@@ -73,7 +73,7 @@ export function createWorldViewer({onSun,onCamera,onSelect,onTitle,onCutaway,onE
    for(const b of document.querySelectorAll('[data-world-camera]'))b.setAttribute('aria-pressed',b.dataset.worldCamera===mode);
    for(const b of document.querySelectorAll('[data-world-lift]'))b.hidden=mode!=='free';
    const s=scene.state.sun;$('#world-sun-mode').value=s.mode;$('#world-time-controls').hidden=s.mode!=='time';$('#world-manual-controls').hidden=s.mode!=='manual';$('#world-hour').value=Math.round(s.hour*60);$('#world-rate').value=s.rate;$('#world-rate-label').textContent=s.rate+' 分钟 / 秒';$('#world-azimuth').value=s.azimuth;$('#world-azimuth-label').textContent=s.azimuth+'°';$('#world-elevation').value=s.elevation;$('#world-elevation-label').textContent=s.elevation+'°';lighting(s);
-   const mark=scene.landmarks.find(m=>m.id===focus);$('#world-observation').textContent=mark?`#${focus} · ${mark.label||'可点击“到附近”近看'}${state.emphasis!==false?' · 青蓝色为辅助标记':''}`:'当前组合未加入此模式，可切换单项预览。';
+   const mark=scene.landmarks.find(m=>m.id===focus);$('#world-observation').textContent=mark?`#${focus} · ${mark.label||'可点击“到附近”近看'}${state.emphasis!==false?' · 灰蓝色为辅助标记':''}`:'当前组合未加入此模式，可切换单项预览。';
    if(visible)engine.start();return scene;
   },
   reset(){engine?.reset();},
