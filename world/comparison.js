@@ -1,5 +1,5 @@
-import {buildWorld} from './index.js?v=a8cc37458ddd';
-import {worldGeometryBounds} from './navigation.js?v=a8cc37458ddd';
+import {buildWorld} from './index.js?v=f839e046c358';
+import {worldGeometryBounds} from './navigation.js?v=f839e046c358';
 // Camera and cutaway are viewing choices, not design differences.
 export function prepareWorldComparison(key,current,saved){
  const scenes=[current,saved].map(s=>buildWorld(key,s.ids,s.sun));

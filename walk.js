@@ -1,10 +1,10 @@
-import {resolveBoxSurfaces} from './world/render-surfaces.js?v=a8cc37458ddd';
-import {worldOverview,safeSpawn,observationPose,reconcilePerson} from './world/navigation.js?v=a8cc37458ddd';
-import {EYE_HEIGHT,floorHeight,canStand,entryPose,movePlayer} from './walk-physics.js?v=a8cc37458ddd';
-import {multiply,vertexSource,fragmentSource,createSunlight} from './lighting.js?v=a8cc37458ddd';
-import {normalizeSun,advanceSun,sampleSun} from './sun.js?v=a8cc37458ddd';
-import {overviewPose,moveFree} from './free-camera.js?v=a8cc37458ddd';
-import {createRenderBuffers,emphasizedColor} from './render-buffers.js?v=a8cc37458ddd';
+import {resolveBoxSurfaces} from './world/render-surfaces.js?v=f839e046c358';
+import {worldOverview,safeSpawn,observationPose,reconcilePerson} from './world/navigation.js?v=f839e046c358';
+import {EYE_HEIGHT,floorHeight,canStand,entryPose,movePlayer} from './walk-physics.js?v=f839e046c358';
+import {multiply,vertexSource,fragmentSource,createSunlight} from './lighting.js?v=f839e046c358';
+import {normalizeSun,advanceSun,sampleSun} from './sun.js?v=f839e046c358';
+import {overviewPose,moveFree} from './free-camera.js?v=f839e046c358';
+import {createRenderBuffers,emphasizedColor} from './render-buffers.js?v=f839e046c358';
 const dot=(a,b)=>a.reduce((s,n,i)=>s+n*b[i],0);
 const cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
 const unit=a=>{const n=Math.hypot(...a);return a.map(v=>v/n);};

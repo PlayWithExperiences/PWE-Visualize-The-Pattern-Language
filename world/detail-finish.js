@@ -1,5 +1,5 @@
-import {World,palette as p} from './primitives.js?v=a8cc37458ddd';
-import {chairFacing} from './detail-furniture.js?v=a8cc37458ddd';
+import {World,palette as p} from './primitives.js?v=f839e046c358';
+import {chairFacing} from './detail-furniture.js?v=f839e046c358';
 
 function flower(w,x,y,z,id,color){
  w.beam([x,y,z],[x,y,z+.35],.014,p.plant,id);

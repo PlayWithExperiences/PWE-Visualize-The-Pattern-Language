@@ -1,6 +1,6 @@
-import {World,palette as p} from './primitives.js?v=a8cc37458ddd';
-import {share} from './building-common.js?v=a8cc37458ddd';
-import {partitionFloorFinish} from './detail-furniture.js?v=a8cc37458ddd';
+import {World,palette as p} from './primitives.js?v=f839e046c358';
+import {share} from './building-common.js?v=f839e046c358';
+import {partitionFloorFinish} from './detail-furniture.js?v=f839e046c358';
 
 function vault(w,x,y,width,depth,z,rise,id,kind='vault'){
  const count=18,point=(i,yy)=>[x+width*i/count,yy,z+rise*Math.sin(Math.PI*i/count)];
@@ -41,7 +41,11 @@ export function buildConstruction(ids){
   for(const [dx,dy]of [[-1,-1],[1,-1],[1,1],[-1,1]])w.beam([30.975,6.975,1],[30.975+dx*1.5,6.975+dy*1.5,.3],.14,p.stone,214);
   mark(214,31,9.8,'未解决：根状基础仅为形态假设');
  }
- if(has(215)){w.slab(12,16,6,2.1,215,p.stone,.24);w.box(14.9,18.1,0,1.6,.35,.24,p.stone,215,'step');w.box(14.9,18.45,0,1.6,.35,.12,p.stone,215,'step');w.box(17.7,15.8,0,.5,2.3,.36,p.stone,215,'slab-edge');mark(215,16,18.5,'首层平台、边缘基础与室外地面');}
+ if(has(215)){
+  w.slab(12,16,6,2.1,215,p.stone,.24);w.box(14.9,18.1,0,1.6,.35,.24,p.stone,215,'step');w.box(14.9,18.45,0,1.6,.35,.12,p.stone,215,'step');
+  // Give the eastbound route a real opening and two descending treads.
+  w.box(18,16.4,0,.4,1.2,.24,p.stone,215,'step');w.box(18.4,16.4,0,.4,1.2,.12,p.stone,215,'step');
+  for(const [y,depth]of [[15.8,.6],[17.6,.5]])w.box(17.7,y,0,.5,depth,.36,p.stone,215,'slab-edge');mark(215,16,18.5,'首层平台、边缘基础与室外地面');}
  if(has(216)){w.box(29,12,0,.15,1,3,p.wood,216,'column-shell');w.box(29,12,0,1,.15,3,p.wood,216,'column-shell');w.box(29.85,12,0,.15,1,3,p.wood,216,'column-shell');w.box(29.15,12.15,0,.7,.7,2,p.stone,216,'column-core');mark(216,30,13.8,'剖开箱柱：外壳与较低的可见芯材');}
  if(has(217)){for(const [a,b]of [[[6,6,3.6],[18,6,3.6]],[[18,6,3.6],[18,16,3.6]],[[18,16,3.6],[6,16,3.6]],[[6,16,3.6],[6,6,3.6]]])w.beam(a,b,.16,p.wood,217);mark(217,16,16.8,'连续周边梁跨过门窗开口');}
  if(has(218)){for(const [i,col]of [p.wall,p.soil,p.wood].entries())w.box(29+i*.65,16,0,.2,3.2,2.8-i*.3,col,218,'wall-layer');mark(218,30,20,'展开墙体：外表层／填充／内表层');}
@@ -62,7 +66,8 @@ export function buildConstruction(ids){
   [[wx,fy,top+.12],[wx+ww,fy,top+.12],[wx+ww+.35,fy-.65,top+.4],[wx-.35,fy-.65,top+.4]]])w.quad(a,b,c,d,p.wall,223,'splayed-reveal');mark(223,wx+ww/2,14.5,'窗洞向室内展开 · 真正斜面剖口');}
  if(has(224))mark(224,15.7,16.8,'较低门洞的过渡感 · 非现行规范尺寸');
  if(has(225)){for(const x of [wx-.12,wx+ww])w.box(x,fy-.1,sill,.12,.5,top-sill+.25,p.stone,225,'opening-frame');w.box(wx-.12,fy-.1,top+.12,ww+.24,.5,.12,p.stone,225,'opening-frame');mark(225,wx,17,'框作为墙体加厚的连续边缘');}
- if(has(226)){w.bench(20.8,13.8,226,2.1);mark(226,21.5,15,'可倚靠的粗柱与柱边座位');}
+ // The column-side bench ends before the side-room approach corridor.
+ if(has(226)){w.bench(20.8,13.8,226,1.4);mark(226,21.5,15,'可倚靠的粗柱与柱边座位');}
  if(has(227)){for(const x of [6.15,17.85])for(const dir of [x<10?1:-1]){w.beam([x,6.15,2.65],[x+dir*.9,6.15,3.6],.12,p.wood,227);w.box(x-.22,5.93,3.35,.44,.44,.25,p.stone,227,'capital');}mark(227,7,5,'柱头和斜撑连接梁柱转角');}
  if(has(228)){
   // Open undercroft: individual treads above a sloping curved shell, not solid wedges.

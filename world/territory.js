@@ -1,9 +1,9 @@
-import {composeLocal,composeInstitution} from './territory-shared.js?v=a8cc37458ddd';
-import {composeTerritory} from './territory-composition.js?v=a8cc37458ddd';
-import {World,palette as P} from './primitives.js?v=a8cc37458ddd';
-import {buildUrbanPattern} from './territory-urban.js?v=a8cc37458ddd';
-import {buildLocalPattern} from './territory-local.js?v=a8cc37458ddd';
-import {buildInstitutionPattern} from './territory-institution.js?v=a8cc37458ddd';
+import {composeLocal,composeInstitution} from './territory-shared.js?v=f839e046c358';
+import {composeTerritory} from './territory-composition.js?v=f839e046c358';
+import {World,palette as P} from './primitives.js?v=f839e046c358';
+import {buildUrbanPattern} from './territory-urban.js?v=f839e046c358';
+import {buildLocalPattern} from './territory-local.js?v=f839e046c358';
+import {buildInstitutionPattern} from './territory-institution.js?v=f839e046c358';
 const ranges={region:[1,7],city:[8,29],neighborhood:[30,74],institution:[75,94]};
 // Public facilities occupy stable sites; residential, mobility and workgroup
 // modifiers act on shared domains through the composition modules.

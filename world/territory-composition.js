@@ -1,5 +1,5 @@
-import {World,palette as P} from './primitives.js?v=a8cc37458ddd';
-import {buildUrbanPattern} from './territory-urban.js?v=a8cc37458ddd';
+import {World,palette as P} from './primitives.js?v=f839e046c358';
+import {buildUrbanPattern} from './territory-urban.js?v=f839e046c358';
 const bounds={region:[1,7],city:[8,29]};
 export function composeTerritory(key,requested){
  const [lo,hi]=bounds[key],ids=[...new Set(requested)].filter(id=>id>=lo&&id<=hi).sort((a,b)=>a-b);
@@ -13,7 +13,8 @@ function region(ids){
  let towns=has(2)?[{x:8,y:7,n:5},{x:83,y:7,n:3},{x:8,y:43,n:2},{x:83,y:43,n:2},{x:8,y:78,n:1}]:[{x:8,y:7,n:3},{x:83,y:7,n:3},{x:8,y:78,n:3}];
  if(has(3)&&!has(2))towns=[{x:8,y:7,n:3},{x:83,y:7,n:3},{x:8,y:43,n:3},{x:83,y:78,n:3}];
  const valley={x:43,y:0,w:32,d:108};w.slab(valley.x,valley.y,valley.w,valley.d,has(4)?4:0,P.soil);
- for(let x=46;x<74;x+=4)w.path([[x,2],[x,105]],.5,has(4)?4:0,P.plant);
+ // Crop rows are cultivated field surfaces, not authored circulation routes.
+ for(let x=46;x<74;x+=4)w.slab(x-.25,2,.5,103,has(4)?4:0,P.plant);
  if(has(3))for(const y of [32,67]){w.slab(0,y,120,8,3,P.ground);for(let x=3;x<118;x+=8)w.tree(x,y+4,3);}
  const settlements=[];
  for(const [index,t]of towns.entries()){
@@ -31,7 +32,7 @@ function region(ids){
   settlements.push({...t,z,localServices:has(6),civicDomain:has(1)});
  }
  // Rural roads border productive land and feed all settlements without occupying the valley.
- const roads=has(5)?[[[4,3],[36,3],[36,114],[4,114],[4,3]],[[79,3],[116,3],[116,114],[79,114],[79,3]],[[36,56],[79,56]]]:[[[36,0],[36,108]],[[79,0],[79,108]],[[36,56],[79,56]]];
+ const roads=has(5)?[[[4,3],[38,3],[38,114],[4,114],[4,3]],[[79,3],[116,3],[116,114],[79,114],[79,3]],[[38,56],[79,56]]]:[[[38,0],[38,108]],[[79,0],[79,108]],[[38,56],[79,56]]];
  for(const points of roads)w.path(points,has(5)?3:2,has(5)?5:0,P.stone);
  if(has(5))for(const x of [8,24,83,99])w.house(x,105,5,6,5,{floors:1});
  if(has(7)){w.path([[59,132],[59,123],[79,123],[79,56]],1.8,7,P.warm);w.room(84,117,8,6,7);w.bench(85,126,7);for(const x of [80,101,110])w.tree(x,126,7);w.box(60,125,0,.18,.18,2,P.wood,7,'stewardship-waypost');}
@@ -80,7 +81,8 @@ function city(ids){
  if(has(23)){for(const [n,y]of [7,71,135,199,263].entries()){const dir=n%2?-1:1;for(const x of [110,218])w.triangle([x+dir*1.5,y,.04],[x-dir*1.5,y-1,.04],[x-dir*1.5,y+1,.04],P.warm,23,'one-way-arrow');}w.state.cityRoadDirections=['east','west','east','west','east'];}
  if(has(23))for(const x of [68,196])for(const y of [7,135])w.path([[x,y],[x,y+35]],2.5,23,P.metal);
  for(const x of [4,68,132,196,260])w.path([[x,0],[x,285]],1.6,has(11)?11:0,P.stone);
- if(has(17)){w.path([[270,0],[270,288]],5,17,P.metal);for(let y=5;y<280;y+=8)w.box(264,y,0,2,5,1.8,P.ground,17,'noise-berm');}
+ // Noise protection is interrupted at actual cross streets so the connected road exits stay open.
+ if(has(17)){w.path([[270,0],[270,288]],5,17,P.metal);for(let y=5;y<280;y+=8)if(!roads.some(p=>p[0][1]===p[1][1]&&y<p[0][1]+3&&y+5>p[0][1]-3))w.box(264,y,0,2,5,1.8,P.ground,17,'noise-berm');}
  const parking=[];
  for(const x of [10,74,138,202]){const width=has(22)?5:19,depth=has(22)?6:12;w.slab(x,274,width,depth,has(22)?22:0,P.metal);for(let n=0;n<(has(22)?2:7);n++)w.box(x+.4+n*2.5,275,0,1.8,4,1.3,P.wood,has(22)?22:0,'parked-car');parking.push({x,y:274,width,depth});}
  for(const id of ids){const lot=utilityLots.get(id),point=lot?[lot.x+14,lot.y+29]:id===22?[20,282]:[28,29,10].includes(id)?[core.x,core.y]:id===23?[132,135]:id===17?[268,150]:[buildings[0].x+12,buildings[0].y+33];mark(w,id,...point,'shared mixed city blocks and transport skeleton');}

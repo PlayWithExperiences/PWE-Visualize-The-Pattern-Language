@@ -1,4 +1,4 @@
-import {colors as C,pane,route} from './primitives.js?v=a8cc37458ddd';
+import {colors as C,pane,route} from './primitives.js?v=f839e046c358';
 export function finish(d){
  const H=id=>d.has(id);d.text(500,36,'生活细节 · 门前、材料、座位与光',0,19);
  d.rect(70,415,860,160,C.land);d.rect(170,140,620,275,H(250)?'#e5c599':C.building,H(250)?250:0);d.roof(150,140,660,0,60);
