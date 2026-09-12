@@ -1,9 +1,10 @@
-import {worldOverview,safeSpawn,observationPose,reconcilePerson} from './world/navigation.js?v=b6146c2fbb37';
-import {EYE_HEIGHT,floorHeight,canStand,entryPose,movePlayer} from './walk-physics.js?v=b6146c2fbb37';
-import {multiply,vertexSource,fragmentSource,createSunlight} from './lighting.js?v=b6146c2fbb37';
-import {normalizeSun,advanceSun,sampleSun} from './sun.js?v=b6146c2fbb37';
-import {overviewPose,moveFree} from './free-camera.js?v=b6146c2fbb37';
-import {createRenderBuffers,emphasizedColor} from './render-buffers.js?v=b6146c2fbb37';
+import {resolveBoxSurfaces} from './world/render-surfaces.js?v=a8cc37458ddd';
+import {worldOverview,safeSpawn,observationPose,reconcilePerson} from './world/navigation.js?v=a8cc37458ddd';
+import {EYE_HEIGHT,floorHeight,canStand,entryPose,movePlayer} from './walk-physics.js?v=a8cc37458ddd';
+import {multiply,vertexSource,fragmentSource,createSunlight} from './lighting.js?v=a8cc37458ddd';
+import {normalizeSun,advanceSun,sampleSun} from './sun.js?v=a8cc37458ddd';
+import {overviewPose,moveFree} from './free-camera.js?v=a8cc37458ddd';
+import {createRenderBuffers,emphasizedColor} from './render-buffers.js?v=a8cc37458ddd';
 const dot=(a,b)=>a.reduce((s,n,i)=>s+n*b[i],0);
 const cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
 const unit=a=>{const n=Math.hypot(...a);return a.map(v=>v/n);};
@@ -47,30 +48,22 @@ export function createWalk(canvas,onError,onPose,onLight,options={}){
  const dayUniform=gl.getUniformLocation(program,'uDaylight'),strengthUniform=gl.getUniformLocation(program,'uSunStrength');
  let free=false,personPose=null,flyingPose=null,lightSettings=normalizeSun(),light=sampleSun(lightSettings),shadowDirty=false,shadowAt=0;
 
- let emphasisId=null,emphasisEnabled=false;
+ let emphasisId=null,emphasisEnabled=false,preparedBoxFaces=[];
  let scene=null,pose=null,opaque=[],shadowVertices=[],glass=[],active=false,frame=0,last=0,lastReadout=0,drag=null;
  const keys=new Set(), cleanup=[];
  const listen=(target,event,fn,options)=>{target.addEventListener(event,fn,options);cleanup.push(()=>target.removeEventListener(event,fn,options));};
- const faces=[[[0,1,2,3],[0,0,-1]],[[4,7,6,5],[0,0,1]],[[0,4,5,1],[0,-1,0]],[[3,2,6,7],[0,1,0]],[[0,3,7,4],[-1,0,0]],[[1,5,6,2],[1,0,0]]];
  function geometry(refreshEnvironment=true){
   opaque=[];shadowVertices=[];glass=[];
   // A simple level ceiling completes the enclosure for the person-height view.
   const ceilings=scene.autoCeiling===false?[]:scene.boxes.filter(b=>b.kind==='floor').map(b=>({...b,z:2.8,dz:.12,color:'#e8e3d7',kind:'ceiling'}));
-  for(const b of [...scene.boxes,...ceilings]){
-   if(b.collisionOnly||(scene.cutaway&&['roof','ceiling'].includes(b.kind)&&b.pattern!==scene.focus&&!b.patterns?.includes(scene.focus)))continue;
-   const {x,y,z,dx,dy,dz}=b;
-   const points=[[x,y,z],[x+dx,y,z],[x+dx,y+dy,z],[x,y+dy,z],[x,y,z+dz],[x+dx,y,z+dz],[x+dx,y+dy,z+dz],[x,y+dy,z+dz]];
-   const rgb=emphasizedColor(b,emphasisId,emphasisEnabled);
-   const isGlass=b.kind==='window';
-   for(const [indices,normal] of faces){
-    const material=b.kind==='emissive'?4:isGlass?3:['deck','post','pergola','window-seat','bench','trunk','furniture','filter','mullion','ceiling-panel'].includes(b.kind)?2:b.kind==='floor'?1:0;
-    const vertices=[];
-    for(const i of [0,1,2,0,2,3]){
-     const [px,py,pz]=points[indices[i]];
-     vertices.push(px,pz,py,...rgb,isGlass?.23:1,normal[0],normal[2],normal[1],material);
-    }
-    if(isGlass)glass.push({vertices,center:[x+dx/2,y+dy/2,z+dz/2]});else {opaque.push(...vertices);if(b.kind!=='ground'&&!(['floor','path','garden','deck'].includes(b.kind)&&b.z+b.dz<=.3))shadowVertices.push(...vertices);}
-   }
+  if(refreshEnvironment)preparedBoxFaces=resolveBoxSurfaces([...scene.boxes,...ceilings].filter(b=>!b.collisionOnly&&!(scene.cutaway&&['roof','ceiling'].includes(b.kind)&&b.pattern!==scene.focus&&!b.patterns?.includes(scene.focus))));
+  for(const face of preparedBoxFaces){
+   const b=face.item,points=face.points,rgb=emphasizedColor(b,emphasisId,emphasisEnabled),normal=face.normal,isGlass=b.kind==='window';
+   const material=b.kind==='emissive'?4:isGlass?3:['deck','post','pergola','window-seat','bench','trunk','furniture','filter','mullion','ceiling-panel'].includes(b.kind)?2:b.kind==='floor'?1:0;
+   const vertices=[];
+   for(const i of [0,1,2,0,2,3]){const [px,py,pz]=points[i];vertices.push(px,pz,py,...rgb,isGlass?.23:1,normal[0],normal[2],normal[1],material);}
+   if(isGlass)glass.push({vertices,center:points.reduce((sum,p)=>sum.map((v,i)=>v+p[i]/4),[0,0,0])});
+   else {opaque.push(...vertices);if(b.kind!=='ground'&&!(['floor','path','garden','deck'].includes(b.kind)&&b.z+b.dz<=.3))shadowVertices.push(...vertices);}
   }
   for(const mesh of scene.meshes||[]){
    if(scene.cutaway&&['roof','ceiling'].includes(mesh.kind)&&mesh.pattern!==scene.focus&&!mesh.patterns?.includes(scene.focus))continue;

@@ -1,4 +1,4 @@
-import {canStand,floorHeight,EYE_HEIGHT} from '../walk-physics.js?v=b6146c2fbb37';
+import {canStand,floorHeight,EYE_HEIGHT} from '../walk-physics.js?v=a8cc37458ddd';
 export function worldGeometryBounds(scene){
  // Frame active spatial content instead of empty reserved parcels or a full ground tile.
  const owned=b=>b.pattern>0||b.patterns?.length;

@@ -1,14 +1,14 @@
-import {normalizeSun} from '../sun.js?v=b6146c2fbb37';
-import {Diagram} from './primitives.js?v=b6146c2fbb37';
-import {region,city} from './region-city.js?v=b6146c2fbb37';
-import {neighborhood} from './neighborhood.js?v=b6146c2fbb37';
-import {institution} from './institution.js?v=b6146c2fbb37';
-import {site} from './site.js?v=b6146c2fbb37';
-import {plan} from './plan.js?v=b6146c2fbb37';
-import {edge} from './edge.js?v=b6146c2fbb37';
-import {room} from './room.js?v=b6146c2fbb37';
-import {construction} from './construction.js?v=b6146c2fbb37';
-import {finish} from './finish.js?v=b6146c2fbb37';
+import {normalizeSun} from '../sun.js?v=a8cc37458ddd';
+import {Diagram} from './primitives.js?v=a8cc37458ddd';
+import {region,city} from './region-city.js?v=a8cc37458ddd';
+import {neighborhood} from './neighborhood.js?v=a8cc37458ddd';
+import {institution} from './institution.js?v=a8cc37458ddd';
+import {site} from './site.js?v=a8cc37458ddd';
+import {plan} from './plan.js?v=a8cc37458ddd';
+import {edge} from './edge.js?v=a8cc37458ddd';
+import {room} from './room.js?v=a8cc37458ddd';
+import {construction} from './construction.js?v=a8cc37458ddd';
+import {finish} from './finish.js?v=a8cc37458ddd';
 export const groups=[
  {key:'region',name:'区域',from:1,to:7,render:region,description:'聚落分布、土地与治理联系'},
  {key:'city',name:'城市',from:8,to:29,render:city,description:'城市中心、社区与交通网络'},

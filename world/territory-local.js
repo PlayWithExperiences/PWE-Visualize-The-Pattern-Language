@@ -1,5 +1,5 @@
-import {palette as P} from './primitives.js?v=b6146c2fbb37';
-import {kit} from './territory.js?v=b6146c2fbb37';
+import {palette as P} from './primitives.js?v=a8cc37458ddd';
+import {kit} from './territory.js?v=a8cc37458ddd';
 export function buildLocalPattern(ctx){const {w,id,x,y,box,path,room,house,tree,bench,table,pergola,slab,gate,station,garden}=kit(ctx);
  switch(id){
  case 30: slab(1,10,9,10);room(1,2,9,6);bench(2,17);path([[0,23],[5,15],[13,23],[27,23]],2);room(19,16,8,6);break;
@@ -12,7 +12,7 @@ export function buildLocalPattern(ctx){const {w,id,x,y,box,path,room,house,tree,
  case 37: for(const [a,b]of [[0,0],[5,0],[19,0],[24,0],[0,19],[5,19],[19,19],[24,19]])house(a,b,4,5);slab(1,8,26,8,P.ground);path([[0,12],[28,12]],2);bench(4,10);break;
  case 38: for(const b of [1,10,19]){room(0,b,10,5);room(18,b,10,5);}path([[14,0],[14,28]],3);path([[0,27],[28,27]],3,P.metal);break;
  case 39: // Two stepped occupied levels and an open common stair, no impossible roof-only access.
-  room(1,1,9,12);w.room(x+1,y+1,9,6,id,{z:3});slab(1,7,9,6,P.stone,3);for(let n=0;n<19;n++)box(7,13+n*.32,0,2.5,.32,(19-n)*.16,P.stone,'step');garden(18,3,9,14);break;
+  room(1,1,9,12,{roof:false});w.room(x+1,y+1,9,6,id,{z:3});slab(1,7,9,6,P.stone,3);for(let n=0;n<19;n++)box(7,13+n*.32,0,2.5,.32,(19-n)*.16,P.stone,'step');garden(18,3,9,14);break;
  case 40: room(1,2,9,8);w.bed(x+2,y+3,id);room(19,2,8,6);room(19,18,8,6);path([[5,13],[23,13],[23,26]],2);bench(18,14);break;
  case 41: for(const [a,b]of [[1,1],[19,1],[1,17],[19,17]]){room(a,b,8,6);table(a+1,b+2);}slab(1,9,26,6);pergola(2,10,6,4);bench(19,11);break;
  case 42: path([[0,0],[28,0]],4,P.metal);for(const a of [1,19]){box(a,3,0,8,8,5,P.wall,'industrial-hall');room(a,13,8,6);}path([[0,23],[28,23]],3);break;

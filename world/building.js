@@ -1,6 +1,6 @@
-import { buildSite } from './building-site.js?v=b6146c2fbb37';
-import { buildPlan } from './building-plan.js?v=b6146c2fbb37';
-import { buildEdge } from './building-edge.js?v=b6146c2fbb37';
+import { buildSite } from './building-site.js?v=a8cc37458ddd';
+import { buildPlan } from './building-plan.js?v=a8cc37458ddd';
+import { buildEdge } from './building-edge.js?v=a8cc37458ddd';
 export function buildBuilding(key,ids=[]){
  if(key==='site')return buildSite(ids);
  if(key==='plan')return buildPlan(ids);
