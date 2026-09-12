@@ -1,14 +1,14 @@
-import {normalizeSun} from '../sun.js?v=3534622f64ec';
-import {Diagram} from './primitives.js?v=3534622f64ec';
-import {region,city} from './region-city.js?v=3534622f64ec';
-import {neighborhood} from './neighborhood.js?v=3534622f64ec';
-import {institution} from './institution.js?v=3534622f64ec';
-import {site} from './site.js?v=3534622f64ec';
-import {plan} from './plan.js?v=3534622f64ec';
-import {edge} from './edge.js?v=3534622f64ec';
-import {room} from './room.js?v=3534622f64ec';
-import {construction} from './construction.js?v=3534622f64ec';
-import {finish} from './finish.js?v=3534622f64ec';
+import {normalizeSun} from '../sun.js?v=8207f127fbc7';
+import {Diagram} from './primitives.js?v=8207f127fbc7';
+import {region,city} from './region-city.js?v=8207f127fbc7';
+import {neighborhood} from './neighborhood.js?v=8207f127fbc7';
+import {institution} from './institution.js?v=8207f127fbc7';
+import {site} from './site.js?v=8207f127fbc7';
+import {plan} from './plan.js?v=8207f127fbc7';
+import {edge} from './edge.js?v=8207f127fbc7';
+import {room} from './room.js?v=8207f127fbc7';
+import {construction} from './construction.js?v=8207f127fbc7';
+import {finish} from './finish.js?v=8207f127fbc7';
 export const groups=[
  {key:'region',name:'区域',from:1,to:7,render:region,description:'聚落分布、土地与治理联系'},
  {key:'city',name:'城市',from:8,to:29,render:city,description:'城市中心、社区与交通网络'},
@@ -27,5 +27,5 @@ export function groupFor(id){return groups.find(g=>id>=g.from&&id<=g.to);}
 export function normalizeIds(input){return [...new Set((Array.isArray(input)?input:[]).map(Number).filter(id=>Number.isInteger(id)&&id>=1&&id<=253))].sort((a,b)=>a-b).filter((id,_,all)=>!alternatives.some(set=>set.includes(id)&&all.some(other=>set.includes(other)&&other<id)));}
 export function toggleId(ids,id){if(ids.includes(id))return ids.filter(n=>n!==id);const rivals=alternatives.find(set=>set.includes(id))||[];return normalizeIds([...ids.filter(n=>!rivals.includes(n)),id]);}
 export function compose(key,ids=[],focus=0){const group=groups.find(g=>g.key===key)||groups[0];const selected=normalizeIds(ids);const d=new Diagram(group.name,selected,focus);group.render(d);return {group,diagram:d,svg:d.toSVG(),localIds:selected.filter(id=>groupFor(id)?.key===group.key),influencingIds:selected.filter(id=>(influences[group.key]||[]).includes(id))};}
-export function encodeAtlas(state){return '#atlas='+encodeURIComponent(JSON.stringify({group:state.group,ids:normalizeIds(state.ids),focus:state.focus||0,view:state.view==='single'?'single':'combined',...(state.surface?{surface:state.surface==='3d'?'3d':'diagram',camera:state.camera==='walk'?'walk':'free',...(typeof state.cutaway==='boolean'?{cutaway:state.cutaway}:{}),sun:{...normalizeSun(state.sun),playing:false}}:{})}));}
-export function decodeAtlas(hash){try{if(!hash.startsWith('#atlas='))return null;const s=JSON.parse(decodeURIComponent(hash.slice(7)));if(!s||Array.isArray(s)||!Array.isArray(s.ids)||!groups.some(g=>g.key===s.group))return null;return {group:groups.some(g=>g.key===s.group)?s.group:'site',ids:normalizeIds(s.ids),focus:Number.isInteger(s.focus)&&s.focus>=1&&s.focus<=253?s.focus:0,view:s.view==='single'?'single':'combined',...(s.surface?{surface:s.surface==='3d'?'3d':'diagram',camera:s.camera==='walk'?'walk':'free',...(typeof s.cutaway==='boolean'?{cutaway:s.cutaway}:{}),sun:{...normalizeSun(s.sun),playing:false}}:{})};}catch{return null;}}
+export function encodeAtlas(state){return '#atlas='+encodeURIComponent(JSON.stringify({group:state.group,ids:normalizeIds(state.ids),focus:state.focus||0,view:state.view==='single'?'single':'combined',...(state.surface?{surface:state.surface==='3d'?'3d':'diagram',camera:state.camera==='walk'?'walk':'free',...(typeof state.cutaway==='boolean'?{cutaway:state.cutaway}:{}),...(typeof state.emphasis==='boolean'?{emphasis:state.emphasis}:{}),sun:{...normalizeSun(state.sun),playing:false}}:{})}));}
+export function decodeAtlas(hash){try{if(!hash.startsWith('#atlas='))return null;const s=JSON.parse(decodeURIComponent(hash.slice(7)));if(!s||Array.isArray(s)||!Array.isArray(s.ids)||!groups.some(g=>g.key===s.group))return null;return {group:groups.some(g=>g.key===s.group)?s.group:'site',ids:normalizeIds(s.ids),focus:Number.isInteger(s.focus)&&s.focus>=1&&s.focus<=253?s.focus:0,view:s.view==='single'?'single':'combined',...(s.surface?{surface:s.surface==='3d'?'3d':'diagram',camera:s.camera==='walk'?'walk':'free',...(typeof s.cutaway==='boolean'?{cutaway:s.cutaway}:{}),...(typeof s.emphasis==='boolean'?{emphasis:s.emphasis}:{}),sun:{...normalizeSun(s.sun),playing:false}}:{})};}catch{return null;}}

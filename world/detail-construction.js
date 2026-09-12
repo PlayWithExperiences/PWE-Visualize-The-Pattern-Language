@@ -1,4 +1,4 @@
-import {World,palette as p} from './primitives.js?v=3534622f64ec';
+import {World,palette as p} from './primitives.js?v=8207f127fbc7';
 
 function vault(w,x,y,width,depth,z,rise,id,kind='vault'){
  const count=18,point=(i,yy)=>[x+width*i/count,yy,z+rise*Math.sin(Math.PI*i/count)];

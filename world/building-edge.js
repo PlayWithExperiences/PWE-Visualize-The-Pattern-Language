@@ -1,5 +1,5 @@
-import {World,palette as p} from './primitives.js?v=3534622f64ec';
-import {finishBuilding,share,note,eastWindow,rail,counter} from './building-common.js?v=3534622f64ec';
+import {World,palette as p} from './primitives.js?v=8207f127fbc7';
+import {finishBuilding,share,note,eastWindow,rail,counter} from './building-common.js?v=8207f127fbc7';
 export function buildEdge(ids){
  const w=new World('edge',42,39,ids),h=id=>w.has(id),any=(...a)=>a.some(h);
  w.room(10,8,12,8,0,{roof:false,sideDoor:h(175)});w.roof(9.7,7.7,12.6,8.6,0,2.92,1.5);w.path([[16,21],[16,16]],2);w.path([[3,22],[37,22]],2);w.spawn={x:16,y:20,yaw:0,pitch:0,feet:0};w.navigation.speed=4;

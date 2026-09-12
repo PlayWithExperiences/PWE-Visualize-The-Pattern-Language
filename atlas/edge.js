@@ -1,4 +1,4 @@
-import {colors as C,pane,route} from './primitives.js?v=3534622f64ec';
+import {colors as C,pane,route} from './primitives.js?v=8207f127fbc7';
 export function edge(d){
  const H=id=>d.has(id);d.text(500,36,'建筑边缘 · 房屋与花园的连续生活',0,19);d.rect(55,70,890,505,C.land);
  d.building(150,120,580,150,0,'室内');d.roof(135,120,610,0,40);d.rect(150,270,580,H(167)?120:50,C.building,H(167)?167:0);d.text(420,H(167)?370:303,H(167)?'可围坐的阳台进深':'室外边缘',H(167)?167:0);

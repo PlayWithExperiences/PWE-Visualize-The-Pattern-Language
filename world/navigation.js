@@ -1,5 +1,5 @@
-import {canStand,floorHeight,EYE_HEIGHT} from '../walk-physics.js?v=3534622f64ec';
-export function worldOverview(scene){
+import {canStand,floorHeight,EYE_HEIGHT} from '../walk-physics.js?v=8207f127fbc7';
+export function worldGeometryBounds(scene){
  // Frame active spatial content instead of empty reserved parcels or a full ground tile.
  const owned=b=>b.pattern>0||b.patterns?.length;
  let boxes=scene.boxes.filter(b=>b.kind!=='ground'&&!b.collisionOnly&&owned(b)),meshes=(scene.meshes||[]).filter(owned);
@@ -7,6 +7,10 @@ export function worldOverview(scene){
  const points=[...boxes.flatMap(b=>[[b.x,b.y,b.z],[b.x+b.dx,b.y+b.dy,b.z+b.dz]]),...meshes.flatMap(m=>m.points)];
  if(!points.length)points.push([0,0,0],[scene.state.width,scene.state.depth,0]);
  const mins=[0,1,2].map(i=>Math.min(...points.map(p=>p[i]))),maxs=[0,1,2].map(i=>Math.max(...points.map(p=>p[i])));
+ return {mins,maxs};
+}
+export function worldOverview(scene){
+ const {mins,maxs}=scene.frameBounds||worldGeometryBounds(scene);
  const minimum={region:40,city:30,neighborhood:24,institution:18,site:20,plan:16,edge:16,room:12,construction:12,finish:12}[scene.key]||15;
  const span=Math.max(minimum,maxs[0]-mins[0],maxs[1]-mins[1]),cx=(mins[0]+maxs[0])/2,cy=(mins[1]+maxs[1])/2;
  const x=cx+span*.6,y=cy+span*.75,z=Math.max(8,maxs[2]+span*.62),targetZ=Math.max(1,maxs[2]*.25);

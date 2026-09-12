@@ -4,3 +4,8 @@
 .comparison-world{width:100%;height:380px;display:block;background:#c7d5d8;touch-action:none}@media(max-width:720px){.comparison-world{height:280px}}
 .world-cut{display:flex;align-items:center;font-size:10px;gap:3px;white-space:nowrap}.world-cut input{accent-color:var(--green)}
 @media(max-width:720px){.world-buttons{grid-template-columns:repeat(3,44px);gap:4px}.world-buttons button{min-height:44px}}
+/* Keep the workspace, rather than the introduction, in the first desktop viewport. */
+@media(min-width:721px){header{padding-top:18px;padding-bottom:18px}.intro{padding:20px 0 18px;align-items:center}.intro h1{font-size:32px;margin:8px 0;line-height:1.3}.intro .eyebrow{margin-top:0}.edition strong{font-size:23px}.world-stage{height:clamp(310px,calc(100svh - 365px),500px)}}
+@media(min-width:1151px){.intro h1 br{display:none}.intro h1 em{margin-left:.55em}.intro{gap:20px}.intro>div:first-child{min-width:0}.intro p:last-child{font-size:12px}}
+@media(max-width:720px){.catalog #pattern-list{max-height:155px}}
+.world-zoom{display:flex;gap:2px}.world-zoom button{font-size:16px;min-width:29px;padding:3px 7px}.world-cut{cursor:pointer}.world-cut:has(input:disabled){opacity:.45}.world-help{line-height:1.7}@media(max-width:720px){.world-zoom button{min-width:44px;min-height:40px}}
