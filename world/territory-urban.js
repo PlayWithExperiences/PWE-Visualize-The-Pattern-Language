@@ -18,7 +18,7 @@ export function buildUrbanPattern(ctx){const {w,id,x,y,box,path,room,house,tree,
  case 13: room(1,1,8,7);room(19,1,8,7);slab(9,12,10,9,P.ground);pergola(10,13,7,5);table(11,15);path([[1,23],[27,23]],2);break;
  case 14: for(const [a,b]of [[1,1],[19,1],[1,17],[19,17]])house(a,b,7,6);garden(9,8,10,8);gate(11,25,4);break;
  case 15: for(let a=0;a<26;a+=5)if(a<10||a>16)tree(a,23);gate(11,23,4);room(1,10,8,6);pergola(18,20,7,4);bench(19,20);break;
- case 16: path([[0,4],[27,4]],2,P.metal);path([[23,0],[23,27]],2,P.wood);station(17,7);station(17,12);path([[19,10],[19,16]],2);break;
+ case 16: path([[0,4],[27,4]],2,P.metal);path([[23,0],[23,27]],2,P.wood);station(17,7);station(17,12);path([[19,10],[19,11],[23,11],[23,16],[19,16]],2);break;
  case 17: path([[0,0],[27,0],[27,27]],4,P.metal);for(let a=0;a<24;a+=4)box(a,3,0,3,2,1.7,P.ground,'noise-berm');room(2,10,8,7);garden(1,20,9,7);break;
  case 18: room(1,2,8,6);table(2,4);room(19,2,8,6);w.bed(x+20,y+3,id);pergola(1,18,8,6);table(3,20);path([[5,11],[23,11],[23,25],[5,25]],1.5,P.warm);break;
  case 19: house(1,1,8,6,2);house(19,1,8,6,2);room(1,17,8,6);room(19,17,8,6);box(19,22,2.6,8,1,.3,P.warm,'new-retail-awning');break;
@@ -26,8 +26,8 @@ export function buildUrbanPattern(ctx){const {w,id,x,y,box,path,room,house,tree,
  case 21: for(const [a,b,n]of [[1,1,4],[19,1,3],[1,18,2],[19,18,1]])house(a,b,8,6,n);w.state.heightLimitConcept=4;break;
  case 22: for(const [a,b]of [[1,1],[19,1],[1,17]])house(a,b,8,6,2);slab(20,18,5,5,P.metal);for(let j=0;j<2;j++)box(20.3+j*2.3,19,.1,1.8,3,1.3,P.wood,'parked-car');w.state.parkingParcelRatio=25/(28*28);break;
  case 23: for(const [b,dir]of [[5,1],[21,-1]]){path([[0,b],[27,b]],3,P.metal);w.triangle([x+12,y+b-dir, .05],[x+14,y+b,.05],[x+12,y+b+dir,.05],P.warm,id,'direction-arrow');}path([[7,5],[7,13]],2,P.metal);path([[21,21],[21,13]],2,P.metal);path([[1,13],[27,13]],1.5);break;
- case 24: box(3,4,0,5,5,4,P.stone,'historic-core');for(const b of [11,18,24])gate(3,b,5,3-(b/60));path([[5,9],[5,27]],2);bench(8,20);garden(18,3);break;
- case 25: slab(0,0,28,4,P.water);path([[0,7],[28,7]],3);for(const a of [4,23])path([[a,8],[a,27]],2);room(1,16,8,6);for(let a=1;a<28;a+=5)tree(a,10);break;
+ case 24: box(3,4,0,5,5,4,P.stone,'historic-core');for(const b of [11,18,24])gate(3,b,5,3-(b/60));path([[5,10],[5,27]],2);bench(8,20);garden(18,3);break;
+ case 25: slab(0,0,28,4,P.water);path([[0,7],[28,7]],3);for(const a of [12,23])path([[a,7],[a,27]],2);room(1,16,8,6);for(let a=1;a<28;a+=5)tree(a,10);break;
  case 26: room(1,1,8,6);w.bed(x+2,y+2,id);room(19,1,8,6);w.bed(x+20,y+2,id);pergola(1,18,8,6);table(3,20);box(20,19,0,4,4,.3,P.wood,'play-platform');break;
  case 27: room(1,1,9,7);table(2,3);for(let a=2;a<9;a+=2)w.chair(x+a,y+5,id);room(19,1,8,7);w.bed(x+20,y+2,id);slab(1,17,9,7);w.steps(x+1,y+19,4,3,id);path([[10,12],[22,12]],2);break;
  case 28: room(19,1,8,6);for(const [a,b,n]of [[19,10,4],[18,20,3],[1,19,2],[1,2,1]])house(a,b,8,6,n);path([[23,8],[23,18],[12,18],[5,12]],2);break;
