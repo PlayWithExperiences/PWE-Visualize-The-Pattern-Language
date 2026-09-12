@@ -24,7 +24,8 @@ export function createWalk(canvas,onError,onPose,onLight,options={}){
   return shader;
  };
  const vertex=compile(gl.VERTEX_SHADER,vertexSource);
- const fragment=compile(gl.FRAGMENT_SHADER,fragmentSource);
+ const derivatives=gl.getExtension('OES_standard_derivatives');
+ const fragment=compile(gl.FRAGMENT_SHADER,(derivatives?'#extension GL_OES_standard_derivatives : enable\n#define RECEIVER_PLANE_BIAS\n':'')+fragmentSource);
  const program=gl.createProgram();gl.attachShader(program,vertex);gl.attachShader(program,fragment);gl.linkProgram(program);
  if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw Error('三维场景初始化失败。');
  gl.deleteShader(vertex);gl.deleteShader(fragment);

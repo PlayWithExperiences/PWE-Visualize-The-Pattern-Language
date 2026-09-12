@@ -90,13 +90,21 @@ float noise(vec3 p){
 float unpackDepth(vec4 rgba){return dot(rgba.rg,vec2(1.0,1.0/255.0));}
 float visibility(vec3 normal){
  vec3 p=vShadow.xyz/vShadow.w*.5+.5;
+ vec2 gradient=vec2(0.0);
+ #ifdef RECEIVER_PLANE_BIAS
+ vec3 dx=dFdx(p),dy=dFdy(p);
+ float determinant=dx.x*dy.y-dx.y*dy.x;
+ if(abs(determinant)>1e-10)gradient=vec2(dy.y*dx.z-dx.y*dy.z,dx.x*dy.z-dy.x*dx.z)/determinant;
+ #endif
  if(p.x<=0.0||p.x>=1.0||p.y<=0.0||p.y>=1.0||p.z<=0.0||p.z>=1.0)return 1.0;
  float bias=.00015+.00055*(1.0-max(0.0,dot(normal,uSunDirection)));
+ bias=max(bias,dot(abs(gradient),uShadowTexel)*.75);
  float lit=0.0;
  for(int x=-1;x<=1;x++)for(int y=-1;y<=1;y++){
-  vec4 sampleDepth=texture2D(uShadow,p.xy+vec2(float(x),float(y))*uShadowTexel*1.2);
+  vec2 offset=vec2(float(x),float(y))*uShadowTexel*1.2;
+  vec4 sampleDepth=texture2D(uShadow,p.xy+offset);
   float depth=uPackedShadow>.5?unpackDepth(sampleDepth):sampleDepth.r;
-  lit+=step(p.z-bias,depth);
+  lit+=step(p.z+dot(gradient,offset)-bias,depth);
  }
  return lit/9.0;
 }
