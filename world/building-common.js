@@ -1,6 +1,6 @@
 import {palette as p} from './primitives.js';
 // Shared geometry carries every contributing pattern, without duplicating furniture.
-export function share(w,ids,start=0,meshStart=0){const active=ids.filter(id=>w.has(id));for(const b of [...w.boxes.slice(start),...w.meshes.slice(meshStart)])b.patterns=[...new Set([b.pattern,...(b.patterns||[]),...active].filter(Boolean))];for(const id of active)w.applied.add(id);}
+export function share(w,ids,start=0,meshStart=w.meshes.length){const active=ids.filter(id=>w.has(id));for(const b of [...w.boxes.slice(start),...w.meshes.slice(meshStart)])b.patterns=[...new Set([b.pattern,...(b.patterns||[]),...active].filter(Boolean))];for(const id of active)w.applied.add(id);}
 export function note(w,id,x,y,label,observation){if(!w.has(id))return;w.marker(id,x,y,label);(w.state.observations??=[]).push({id,at:[x,y],observation,scope:'可漫游的空间概念；非日照、结构、消防或社会效果验证'});}
 export function portal(w,x,y,width,id,height=2.8){const gap=1.4,side=(width-gap)/2;w.wall(x,y,side,.16,height,id);w.wall(x+side+gap,y,side,.16,height,id);w.wall(x+side,y,gap,.16,height-2.15,id,2.27);}
 export function eastWindow(w,x,y,length,id,z=.12,height=2.8){w.wall(x,y,.2,.35,height,id,z);w.wall(x,y+length-.35,.2,.35,height,id,z);w.wall(x,y+.35,.2,length-.7,.8,id,z);w.wall(x,y+.35,.2,length-.7,.4,id,z+height-.4);w.box(x+.08,y+.35,z+.8,.035,length-.7,height-1.2,p.glass,id,'window');}
