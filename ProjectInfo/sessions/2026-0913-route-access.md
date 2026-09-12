@@ -19,3 +19,7 @@
 十尺度全选191条声明路径/入口走廊的当前审计无命中，scripts/audit-routes.mjs可重跑；排除项仅物理上允许的地板/踏步/上方结构，未禁用碰撞。视觉复验本地全选场地113、120近景以及构造226近景；保持当前Space，未进入原生全屏。最终发布回执待补。
 
 原始对话：session01a08eee-e5f3-7130-b158-5ef69bce264e，本轮用户“你这个地方车道和主干道之间，中间有棵树挡着”及截图codex-clipboard-a49234e3-6247-49e2-b80f-c441aba7af67.png；完整历史以本场transcript及dialogues为准。
+
+## 2026-09-13 00:05 +0800 发布回执
+决策：無涘｜记录：Codex
+源码60243a9/132dc9a普通推送；Pages4c80d43b717506d6f0aa9a16742a1ee50bbb9e99 built/error=null，资源f839e046c358。公开index.html、building-site.js、route-audit.js、detail-construction.js与dist一致；实际线上script版本正确、scene.key=site、无WebGL错误。最终1.4m座椅近景确认退出画出路径宽度；测试证据保持234全套+最后1项定向。

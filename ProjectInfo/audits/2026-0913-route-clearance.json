@@ -1,0 +1,55 @@
+{
+  "scope": "Ten all-selected worlds; declared path centrelines with 0.6m walking clearance, continuous step height, and ground bounds. Exact traversal regression fixtures additionally use movePlayer in both directions.",
+  "results": [
+    {
+      "group": "region",
+      "routes": 4,
+      "issues": []
+    },
+    {
+      "group": "city",
+      "routes": 29,
+      "issues": []
+    },
+    {
+      "group": "neighborhood",
+      "routes": 67,
+      "issues": []
+    },
+    {
+      "group": "institution",
+      "routes": 35,
+      "issues": []
+    },
+    {
+      "group": "site",
+      "routes": 17,
+      "issues": []
+    },
+    {
+      "group": "plan",
+      "routes": 18,
+      "issues": []
+    },
+    {
+      "group": "edge",
+      "routes": 17,
+      "issues": []
+    },
+    {
+      "group": "room",
+      "routes": 2,
+      "issues": []
+    },
+    {
+      "group": "construction",
+      "routes": 1,
+      "issues": []
+    },
+    {
+      "group": "finish",
+      "routes": 1,
+      "issues": []
+    }
+  ]
+}
