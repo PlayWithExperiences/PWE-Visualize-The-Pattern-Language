@@ -1,5 +1,5 @@
-import {World,palette as p} from './primitives.js?v=77ac9ca8ff67';
-import {chairFacing} from './detail-furniture.js?v=77ac9ca8ff67';
+import {World,palette as p} from './primitives.js?v=b6146c2fbb37';
+import {chairFacing} from './detail-furniture.js?v=b6146c2fbb37';
 
 // Shared home: public south rooms, private north rooms, a clear central route.
 export function buildRooms(ids){
