@@ -35,6 +35,7 @@ export function createWorldViewer({onSun,onCamera,onSelect,onTitle,onCutaway,onE
    if(e.target.closest('input,select,textarea')||e.ctrlKey||e.metaKey||e.altKey)return;
    const key=e.key.toLowerCase();
    if(key==='f'&&!e.repeat&&!$('#world-focus').disabled){e.preventDefault();engine?.goToPattern(focus);canvas.focus({preventScroll:true});}
+   if(key==='v'&&!e.repeat&&!$('#world-emphasis').disabled){e.preventDefault();onEmphasis(currentState.emphasis===false);canvas.focus({preventScroll:true});}
    if(key==='h'&&!e.repeat){e.preventDefault();hideUI(!panel.classList.contains('ui-hidden'));}
    if(key==='escape')hideUI(false);
   });
@@ -69,7 +70,7 @@ export function createWorldViewer({onSun,onCamera,onSelect,onTitle,onCutaway,onE
    engine.setEmphasis(focus,state.emphasis!==false&&!$('#world-panel').classList.contains('ui-hidden'));$('#world-emphasis').checked=state.emphasis!==false;$('#world-emphasis').disabled=!scene.applied.includes(focus);
    $('#world-zoom-in').disabled=mode!=='free';$('#world-zoom-out').disabled=mode!=='free';
    canvas.dataset.worldKey=scene.key;canvas.dataset.modelPatterns=scene.applied.join(',');engine.setSpeed(speed);engine.setNightAid($('#world-night-aid').checked);
-   $('#world-error').hidden=true;$('#world-focus').disabled=!scene.landmarks.some(m=>m.id===focus);$('#world-focus').textContent=`到 #${focus} 附近 · F`;
+   $('#world-error').hidden=true;$('#world-focus').disabled=!scene.landmarks.some(m=>m.id===focus);$('#world-focus').textContent=`居中查看 #${focus} · F`;
    for(const b of document.querySelectorAll('[data-world-camera]'))b.setAttribute('aria-pressed',b.dataset.worldCamera===mode);
    for(const b of document.querySelectorAll('[data-world-lift]'))b.hidden=mode!=='free';
    const s=scene.state.sun;$('#world-sun-mode').value=s.mode;$('#world-time-controls').hidden=s.mode!=='time';$('#world-manual-controls').hidden=s.mode!=='manual';$('#world-hour').value=Math.round(s.hour*60);$('#world-rate').value=s.rate;$('#world-rate-label').textContent=s.rate+' 分钟 / 秒';$('#world-azimuth').value=s.azimuth;$('#world-azimuth-label').textContent=s.azimuth+'°';$('#world-elevation').value=s.elevation;$('#world-elevation-label').textContent=s.elevation+'°';lighting(s);

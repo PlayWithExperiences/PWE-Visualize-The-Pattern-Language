@@ -28,20 +28,32 @@ export function safeSpawn(scene){
  for(let y=ground.y+1;y<ground.y+ground.dy;y+=2)for(let x=ground.x+1;x<ground.x+ground.dx;x+=2)if(canStand(scene.boxes,x,y,0))return {...p,x,y,feet:floorHeight(scene.boxes,x,y,0)};
  throw Error('此三维场景没有找到安全的行走起点。');
 }
-export function observationPose(scene,id,free=true){
- const mark=scene.landmarks?.find(m=>m.id===id);if(!mark)return free?worldOverview(scene):safeSpawn(scene);
- const nearby=scene.boxes.filter(b=>(b.pattern===id||b.patterns?.includes(id))&&Math.hypot(b.x+b.dx/2-mark.x,b.y+b.dy/2-mark.y)<6&&!['floor','path','ground'].includes(b.kind));
- const targetHeight=nearby.length?Math.max(.4,Math.min(scene.key==='construction'||id===190?8:1.3,nearby.reduce((n,b)=>n+b.z+b.dz/2,0)/nearby.length)):(mark.z||1.2);
- if(free){const extent=Math.max(3,Math.min(12,scene.state.width*.07)),x=mark.x+extent,y=mark.y+extent,z=Math.max(2.8,(mark.z||1.5)+extent*.65);return {x,y,z,yaw:Math.atan2(mark.x-x,-(mark.y-y)),pitch:Math.atan2((mark.z||1.2)-z,Math.hypot(x-mark.x,y-mark.y))};}
- const interiorAngle=['room','plan'].includes(scene.key)?Math.atan2(scene.state.width/2-mark.x,scene.state.depth/2-mark.y):0;
- for(const radius of [2.5,4,6,9,14,22])for(const angle of [interiorAngle,0,Math.PI/4,-Math.PI/4,Math.PI/2,-Math.PI/2,Math.PI]){
-  const x=mark.x+Math.sin(angle)*radius,y=mark.y+Math.cos(angle)*radius,feet=Math.max(0,(mark.z||1.5)-EYE_HEIGHT);
-  if(canStand(scene.boxes,x,y,feet))return {x,y,feet:floorHeight(scene.boxes,x,y,feet),yaw:Math.atan2(mark.x-x,-(mark.y-y)),pitch:Math.max(-.75,Math.min(.75,Math.atan2(targetHeight-(floorHeight(scene.boxes,x,y,feet)+EYE_HEIGHT),radius)))};
+export function patternTarget(scene,id){
+ const owns=b=>b.pattern===id||b.patterns?.includes(id);
+ const visible=b=>!b.collisionOnly&&b.kind!=='ground'&&!(scene.cutaway&&['roof','ceiling'].includes(b.kind)&&!owns(b));
+ const boxes=scene.boxes.filter(b=>owns(b)&&visible(b)),meshes=(scene.meshes||[]).filter(m=>owns(m)&&visible(m));
+ const points=[...boxes.flatMap(b=>[[b.x,b.y,b.z],[b.x+b.dx,b.y+b.dy,b.z+b.dz]]),...meshes.flatMap(m=>m.points)];
+ if(!points.length){const m=scene.landmarks?.find(m=>m.id===id);return m?{x:m.x,y:m.y,z:m.z??1.5,radius:1,halfDepth:1,halfWidth:1,halfHeight:1}:null;}
+ const min=[0,1,2].map(i=>Math.min(...points.map(p=>p[i]))),max=[0,1,2].map(i=>Math.max(...points.map(p=>p[i])));
+ return {x:(min[0]+max[0])/2,y:(min[1]+max[1])/2,z:(min[2]+max[2])/2,radius:Math.max(.5,Math.hypot(...max.map((v,i)=>(v-min[i])/2))),halfWidth:(max[0]-min[0])/2,halfHeight:(max[2]-min[2])/2,halfDepth:(max[1]-min[1])/2};
+}
+export function observationPose(scene,id,free=true,aspect=1){
+ const target=patternTarget(scene,id);if(!target)return free?worldOverview(scene):safeSpawn(scene);
+ const aim=p=>({...p,yaw:Math.atan2(target.x-p.x,-(target.y-p.y)),pitch:Math.atan2(target.z-(free?p.z:p.feet+EYE_HEIGHT),Math.hypot(target.x-p.x,target.y-p.y))});
+ if(free){
+  const tangent=Math.tan(65*Math.PI/360),vertical=target.halfHeight*Math.cos(.3)+target.halfDepth*Math.sin(.3),depth=target.halfDepth*Math.cos(.3)+target.halfHeight*Math.sin(.3);
+  const distance=Math.max(2,(Math.max(target.halfWidth/(tangent*Math.max(.1,aspect)),vertical/tangent)+depth)*1.15);
+  return aim({x:target.x,y:target.y+distance*Math.cos(.3),z:target.z+distance*Math.sin(.3)});
  }
- return safeSpawn(scene);
+ const mark=scene.landmarks?.find(m=>m.id===id),start=Math.max(2.5,target.halfDepth+1.5,Math.abs(target.z-EYE_HEIGHT)/Math.tan(.9));
+ for(const radius of [start,start+3,start+7,start+14,start+22])for(const angle of [0,Math.PI/4,-Math.PI/4,Math.PI/2,-Math.PI/2,Math.PI]){
+  const x=target.x+Math.sin(angle)*radius,y=target.y+Math.cos(angle)*radius,feet=Math.max(0,(mark?.z??1.5)-EYE_HEIGHT);
+  if(canStand(scene.boxes,x,y,feet))return aim({x,y,feet:floorHeight(scene.boxes,x,y,feet)});
+ }
+ return aim(safeSpawn(scene));
 }
 export function projectMarker(point,pose,eye,width,height){
- const dx=point.x-pose.x,dy=point.y-pose.y,dz=(point.z||1.5)-eye,sy=Math.sin(pose.yaw),cy=Math.cos(pose.yaw),sp=Math.sin(pose.pitch),cp=Math.cos(pose.pitch);
+ const dx=point.x-pose.x,dy=point.y-pose.y,dz=(point.z??1.5)-eye,sy=Math.sin(pose.yaw),cy=Math.cos(pose.yaw),sp=Math.sin(pose.pitch),cp=Math.cos(pose.pitch);
  const depth=dx*sy*cp-dy*cy*cp+dz*sp;if(depth<.2)return null;
  const right=dx*cy+dy*sy,up=-dx*sy*sp+dy*cy*sp+dz*cp,f=height/(2*Math.tan(65*Math.PI/360));
  const x=width/2+right*f/depth,y=height/2-up*f/depth;

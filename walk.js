@@ -153,7 +153,7 @@ export function createWalk(canvas,onError,onPose,onLight,options={}){
   },
   setNightAid(enabled){nightAid=Boolean(enabled);},
   setSpeed(multiplier){speedMultiplier=Math.max(.25,Math.min(20,Number(multiplier)||1));},
-  goToPattern(id){if(scene?.navigation?.world){pose=observationPose(scene,id,free);keys.clear();onPose?.(pose,free);}},
+  goToPattern(id){if(scene?.navigation?.world){pose=observationPose(scene,id,free,canvas.clientWidth/Math.max(1,canvas.clientHeight));keys.clear();onPose?.(pose,free);}},
   setLighting(next){const normalized=normalizeSun(next);if(Object.keys(normalized).every(key=>normalized[key]===lightSettings[key]))return;lightSettings=normalized;shadowDirty=true;},
   start(){if(active)return;active=true;last=performance.now();frame=requestAnimationFrame(render);},
   stop,reset,

@@ -1,7 +1,8 @@
+import {buildWorld} from '../world/index.js';
 import test from 'node:test';import assert from 'node:assert/strict';
 import {World} from '../world/primitives.js';
-import {floorHeight,canStand,movePlayer} from '../walk-physics.js';
-import {safeSpawn,observationPose,worldOverview,projectMarker} from '../world/navigation.js';
+import {floorHeight,canStand,movePlayer,EYE_HEIGHT} from '../walk-physics.js';
+import {safeSpawn,observationPose,worldOverview,projectMarker,patternTarget} from '../world/navigation.js';
 import {sunMatrix} from '../lighting.js';import {moveFree} from '../free-camera.js';
 test('a person remains below an upper floor, walks through a real doorway, and climbs incremental steps',()=>{
  const w=new World('test',30,25,[]);w.room(5,5,8,8,1);w.slab(5,5,8,8,2,undefined,3);
@@ -50,4 +51,20 @@ test('single-pattern overview aims at the local scene and the construction stair
  const {buildWorld}=await import('../world/index.js');
  for(const [key,id]of [['neighborhood',30],['neighborhood',46],['institution',75]]){const scene=buildWorld(key,[id]),pose=worldOverview(scene),mark=scene.landmarks[0];assert.ok(projectMarker(mark,pose,pose.z,1000,640));}
  const scene=buildWorld('construction',[228]),pose=movePlayer(scene.boxes,{x:20.8,y:19.5,feet:0,yaw:Math.PI,pitch:0},0,5.5);assert.ok(pose.y>24.8);assert.ok(pose.feet>2.5);
+});
+
+test('F frames actual selected geometry at screen center, including flat targets and portrait views',()=>{
+ for(const [key,ids]of [['site',[104,105,106,110,112,115,119,120,125,126]],['room',[180,185,190]],['construction',[221,228]]]){
+  const scene=buildWorld(key,ids);
+  for(const id of ids)for(const aspect of [.5,1.6]){
+   const target=patternTarget(scene,id),pose=observationPose(scene,id,true,aspect);
+   const center=projectMarker(target,pose,pose.z,600*aspect,600);
+   assert.ok(center);assert.ok(Math.abs(center.x-300*aspect)<1e-7);assert.ok(Math.abs(center.y-300)<1e-7);
+   const owns=b=>b.pattern===id||b.patterns?.includes(id);
+   const corners=scene.boxes.filter(b=>owns(b)&&!b.collisionOnly&&b.kind!=='ground').flatMap(b=>[b.x,b.x+b.dx].flatMap(x=>[b.y,b.y+b.dy].flatMap(y=>[b.z,b.z+b.dz].map(z=>({x,y,z})))));
+   for(const point of corners)assert.ok(projectMarker(point,pose,pose.z,600*aspect,600),'selected box corner remains visible');
+  }
+ }
+ const scene=buildWorld('room',[185]),target=patternTarget(scene,185),person=observationPose(scene,185,false),center=projectMarker(target,person,person.feet+EYE_HEIGHT,1000,600);
+ assert.ok(canStand(scene.boxes,person.x,person.y,person.feet));assert.ok(Math.abs(center.x-500)<1e-7&&Math.abs(center.y-300)<1e-7);
 });
