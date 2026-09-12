@@ -20,3 +20,10 @@
 核心定向测试通过；各子任务报告十尺度全选及相关模式对的独立实体扫描，在各自明确排除地面承托/结构接合的范围内无未分类冲突。总体集成与浏览器检查进行中，最终回执另补。未声明任意2^253组合、同模式内部和任意三角面都已穷举。
 
 原始对话：session01a08eee-e5f3-7130-b158-5ef69bce264e，本场用户“看一下是不是一个系统性问题，整体修复”回合；前序原文见本场transcript和dialogues/2026-0911.md。
+
+## 2026-09-12 23:13 +0800 整体验收与发布
+决策：無涘（整体修复要求） ｜ 记录：Codex
+179/179测试通过。区域组1432双模式输入做独立实体体积检查；建筑组1182模式对验证尺寸/归属，三个全选及六个实际预设做实体体积检查；细节组1033模式对验证尺寸/归属，三个全选扫描含基础pattern0，结构接合有显式白名单。这些判据不相互冒充。
+十尺度全选同向共面候选合计1408对，统一分割后0；报告已入audits/2026-0912-composition-surfaces.json。该数字包含合理结构接触面，不是错误数。
+实景检查site默认/23项，region/city/neighborhood/institution/plan/room/construction/edge/finish全选代表视图、经典住宅人高画面。共享渲染材质法线正常，控制台无error，未进原生全屏。独立审查未发现阻塞问题。
+源码2597ac0、75fb1a4普通推送；Pages c43d71d5394bef43228087230031a9c95797c92b built/error=null；资源a8cc37458ddd。公开index.html、world/render-surfaces.js、walk.js、world/building-site.js、world/territory.js、world/detail-construction.js与dist逐字节一致，线上23项组合可用。
