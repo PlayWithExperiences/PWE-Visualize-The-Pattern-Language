@@ -29,13 +29,14 @@ const subtractPaving=(subject,clip)=>{
  return pieces;
 };
 export class World{
- constructor(key,width,depth,ids){this.key=key;this.ids=new Set(ids);this.boxes=[];this.meshes=[];this.pathRegions=[];this.lights=[];this.landmarks=[];this.applied=new Set();this.state={width,depth,court:0,ids:[...this.ids]};this.navigation={world:true,bounds:Math.max(width,depth)*2,maxHeight:Math.max(80,width),far:Math.max(250,width*5),speed:Math.max(4,width/18)};this.autoCeiling=false;this.box(-15,-15,-.3,width+30,depth+30,.3,palette.ground,0,'ground');this.spawn={x:width/2,y:depth+5,yaw:0,pitch:0,feet:0};this.overview={x:width*1.15,y:depth*1.3,z:Math.max(10,width*.7),yaw:-.6,pitch:-.6};}
+ constructor(key,width,depth,ids){this.key=key;this.ids=new Set(ids);this.boxes=[];this.meshes=[];this.pathRegions=[];this.routes=[];this.lights=[];this.landmarks=[];this.applied=new Set();this.state={width,depth,court:0,ids:[...this.ids]};this.navigation={world:true,bounds:Math.max(width,depth)*2,maxHeight:Math.max(80,width),far:Math.max(250,width*5),speed:Math.max(4,width/18)};this.autoCeiling=false;this.box(-15,-15,-.3,width+30,depth+30,.3,palette.ground,0,'ground');this.spawn={x:width/2,y:depth+5,yaw:0,pitch:0,feet:0};this.overview={x:width*1.15,y:depth*1.3,z:Math.max(10,width*.7),yaw:-.6,pitch:-.6};}
  has(id){return this.ids.has(id);}
  box(x,y,z,dx,dy,dz,color=palette.wall,id=0,kind='solid',extra={}){const b={x,y,z,dx,dy,dz,color,pattern:id,kind,...extra};this.boxes.push(b);if(id)this.applied.add(id);return b;}
  triangle(a,b,c,color,id=0,kind='solid'){this.meshes.push({points:[a,b,c],color,pattern:id,kind});if(id)this.applied.add(id);}
  quad(a,b,c,e,color,id=0,kind='solid'){this.triangle(a,b,c,color,id,kind);this.triangle(a,c,e,color,id,kind);}
  beam(a,b,r,color=palette.wood,id=0){const dx=b[0]-a[0],dy=b[1]-a[1],dz=b[2]-a[2],len=Math.hypot(dx,dy,dz);if(!len)return;const u=[dx/len,dy/len,dz/len],ref=Math.abs(u[2])<.9?[0,0,1]:[0,1,0];const cross=(v,w)=>[v[1]*w[2]-v[2]*w[1],v[2]*w[0]-v[0]*w[2],v[0]*w[1]-v[1]*w[0]];let v=cross(u,ref);const n=Math.hypot(...v);v=v.map(x=>x/n);const w=cross(u,v),corners=[];for(const p of [a,b])for(const [s,t]of [[-1,-1],[1,-1],[1,1],[-1,1]])corners.push(p.map((x,i)=>x+(v[i]*s+w[i]*t)*r));for(const f of [[0,3,2,1],[4,5,6,7],[0,1,5,4],[1,2,6,5],[2,3,7,6],[3,0,4,7]])this.quad(...f.map(i=>corners[i]),color,id);}
  path(points,width=1.5,id=0,color=palette.stone,z=.01){
+  this.routes.push({points:points.map(p=>[...p]),width,pattern:id,z});
   if(id)this.applied.add(id);
   for(let i=1;i<points.length;i++){
    const a=points[i-1],b=points[i],dx=b[0]-a[0],dy=b[1]-a[1],len=Math.hypot(dx,dy);if(!len)continue;
@@ -90,5 +91,5 @@ export class World{
     return [...subtractPaving(mesh.points,region.points).flatMap(poly=>triangulate(poly,mesh)),...triangulate(overlap,{...mesh,patterns:[...new Set([...(mesh.patterns??[mesh.pattern]),region.id].filter(Boolean))]})];
    });
   }
-  return {key:this.key,boxes:this.boxes,meshes:this.meshes,lights:this.lights,landmarks:this.landmarks,applied:[...this.applied],state:this.state,navigation:this.navigation,autoCeiling:false,spawn:this.spawn,overview:this.overview};}
+  return {key:this.key,boxes:this.boxes,meshes:this.meshes,routes:this.routes,lights:this.lights,landmarks:this.landmarks,applied:[...this.applied],state:this.state,navigation:this.navigation,autoCeiling:false,spawn:this.spawn,overview:this.overview};}
 }
