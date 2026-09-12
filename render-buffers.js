@@ -3,7 +3,7 @@ export const VERTEX_FLOATS=11;
 export function emphasizedColor(item,patternId,enabled){
  const rgb=item.color.slice(1).match(/../g).map(c=>parseInt(c,16)/255);
  const matches=patternId!=null&&(String(item.pattern)===String(patternId)||item.patterns?.some(id=>String(id)===String(patternId)));
- return enabled&&matches?rgb.map((v,i)=>v*.76+[1,.72,.32][i]*.24):rgb;
+ return enabled&&matches?rgb.map((v,i)=>v*.12+[.025,.80,1][i]*.88):rgb;
 }
 
 // Each buffer owns its upload lifetime. Binding attributes must follow binding

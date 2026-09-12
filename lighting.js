@@ -6,18 +6,41 @@ export function multiply(a,b){
  return out;
 }
 export function sunMatrix(scene,direction=SUN_DIRECTION){
- const base=scene.boxes.find(b=>b.kind==='ground');
- const height=Math.max(3,...scene.boxes.map(b=>b.z+b.dz),...(scene.meshes||[]).flatMap(m=>m.points.map(p=>p[2])));
- const center=[base.x+base.dx/2,scene.navigation?.world?height/2:1,base.y+base.dy/2];
- const radius=Math.hypot(base.dx,base.dy,height)/2+3,reach=Math.max(40,radius*1.5);
- const length=Math.hypot(...direction),back=direction.map(x=>x/length);
- const eye=center.map((x,i)=>x+back[i]*reach);
+ const ground=scene.boxes.find(b=>b.kind==='ground');
+ const boxes=scene.boxes.filter(b=>b.kind!=='ground'&&!b.collisionOnly);
+ const points=[];
+ for(const b of boxes){
+  for(const x of [b.x,b.x+b.dx])for(const y of [b.y,b.y+b.dy])for(const z of [b.z,b.z+b.dz])points.push([x,z,y]);
+  if(scene.autoCeiling!==false&&b.kind==='floor'){
+   for(const x of [b.x,b.x+b.dx])for(const y of [b.y,b.y+b.dy])for(const z of [2.8,2.92])points.push([x,z,y]);
+  }
+ }
+ for(const mesh of scene.meshes||[])for(const [x,y,z]of mesh.points)points.push([x,z,y]);
+ if(!points.length&&ground)for(const x of [ground.x,ground.x+ground.dx])for(const y of [ground.y,ground.y+ground.dy])points.push([x,ground.z,y]);
+ if(!points.length)points.push([0,0,0]);
+ const length=Math.hypot(...direction),back=length>1e-6?direction.map(x=>x/length):[0,1,0];
  const rightLength=Math.hypot(back[2],back[0]),right=rightLength<1e-6?[1,0,0]:[back[2]/rightLength,0,-back[0]/rightLength];
  const up=[back[1]*right[2],back[2]*right[0]-back[0]*right[2],-back[1]*right[0]];
  const dot=(a,b)=>a.reduce((sum,x,i)=>sum+x*b[i],0);
- const view=[right[0],up[0],back[0],0,right[1],up[1],back[1],0,right[2],up[2],back[2],0,-dot(right,eye),-dot(up,eye),-dot(back,eye),1];
- const near=.1,far=Math.max(90,reach+radius*2);
- return multiply([1/radius,0,0,0,0,1/radius,0,0,0,0,-2/(far-near),0,0,0,-(far+near)/(far-near),1],view);
+ // Fit real geometry, not the oversized presentation ground. Include receivers
+ // along sunlight rays so long shadows retain their depth range on that ground.
+ if(ground&&back[1]>.001){
+  const top=ground.z+ground.dz;
+  for(const p of points.slice()){
+   let t=Math.max(0,(p[1]-top)/back[1]);
+   for(const [axis,min,max]of [[0,ground.x,ground.x+ground.dx],[2,ground.y,ground.y+ground.dy]]){
+    if(back[axis]>1e-6)t=Math.min(t,Math.max(0,(p[axis]-min)/back[axis]));
+    else if(back[axis]<-1e-6)t=Math.min(t,Math.max(0,(p[axis]-max)/back[axis]));
+   }
+   points.push(p.map((v,i)=>v-back[i]*t));
+  }
+ }
+ const axes=[right,up,back],ranges=axes.map(axis=>{
+  let min=Infinity,max=-Infinity;for(const p of points){const v=dot(p,axis);min=Math.min(min,v);max=Math.max(max,v);}
+  const margin=Math.max(.5,(max-min)*.04);return [min-margin,max+margin];
+ });
+ const [x,y,z]=ranges,view=[right[0],up[0],back[0],0,right[1],up[1],back[1],0,right[2],up[2],back[2],0,0,0,0,1];
+ return multiply([2/(x[1]-x[0]),0,0,0,0,2/(y[1]-y[0]),0,0,0,0,-2/(z[1]-z[0]),0,-(x[1]+x[0])/(x[1]-x[0]),-(y[1]+y[0])/(y[1]-y[0]),(z[1]+z[0])/(z[1]-z[0]),1],view);
 }
 export const vertexSource=`
 attribute vec3 aPosition;
@@ -49,6 +72,7 @@ uniform vec3 uSkyColor;
 uniform vec3 uSunColor;
 uniform float uDaylight;
 uniform float uSunStrength;
+uniform float uNightAid;
 uniform vec4 uLampPosition[8];
 uniform vec3 uLampColor[8];
 varying vec4 vColor;
@@ -83,14 +107,22 @@ void main(){
  float n=noise(vWorld*80.0);
  vec3 albedo=pow(vColor.rgb,vec3(2.2));
  // Fine plaster / stone variation and restrained grain on wooden members.
- albedo*=.975+.05*n;
+ albedo*=1.0+(n-.5)*.035*(1.0-smoothstep(1.0,5.0,vDistance));
  if(vMaterial>1.5&&vMaterial<2.5){
   float grain=noise(vec3(vWorld.x*3.0,vWorld.y*50.0,vWorld.z*3.0));
-  albedo*=.92+.14*grain;
+  albedo*=1.0+(grain-.5)*.14*(1.0-smoothstep(3.0,12.0,vDistance));
  }
 
+ // Metre-scaled stone joints distinguish the walking surface from plaster.
+ // Fade at distance rather than turning subpixel joints into a moire grid.
+ if(vMaterial>.5&&vMaterial<1.5){
+  vec2 cell=abs(fract(vWorld.xz/.8)-.5)*.8;
+  float seam=min(cell.x,cell.y),footprint=.002+max(vDistance,0.0)*.0008;
+  float joint=1.0-smoothstep(.004,.004+footprint,seam);
+  albedo*=1.0-.18*joint*(1.0-smoothstep(8.0,24.0,vDistance));
+ }
  float hemisphere=normal.y*.5+.5;
- vec3 ambient=mix(vec3(.26,.235,.20),vec3(.42,.47,.52),hemisphere);
+ vec3 ambient=mix(vec3(.38,.39,.40),vec3(.53,.57,.62),hemisphere);
  ambient*=.025+.975*uDaylight;
  vec3 localLight=vec3(0.0);
  for(int i=0;i<8;i++){
@@ -98,6 +130,14 @@ void main(){
   float falloff=pow(max(0.0,1.0-distance/max(.01,uLampPosition[i].w)),2.0);
   localLight+=uLampColor[i]*falloff*max(.12,dot(normal,normalize(delta+vec3(.0001))));
  }
+ // Optional navigation aid, not a simulated fixture: a neutral camera light
+ // fades over the first 12 metres and is exactly off above the horizon.
+ float night=1.0-smoothstep(-.12,0.0,uSunDirection.y);
+ vec3 eyeDelta=uEye-vWorld;
+ float eyeDistance=length(eyeDelta);
+ float nearFill=pow(max(0.0,1.0-eyeDistance/12.0),2.0);
+ float facing=max(.25,dot(normal,normalize(eyeDelta+vec3(.0001))));
+ localLight+=vec3(1.05,1.08,1.15)*nearFill*facing*night*clamp(uNightAid,0.0,1.0);
  // Keep the PCF result out of the live range of the uniform-array light loop.
  // Computing it before that loop produced a reproducible WebGL backend shadow wedge.
  float sunlight=visibility(normal)*max(dot(normal,uSunDirection),0.0)*uSunStrength;

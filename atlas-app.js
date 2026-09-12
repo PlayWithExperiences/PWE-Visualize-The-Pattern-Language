@@ -14,7 +14,7 @@ function renderWorldEffects(scene){
  $('#drawing-note').textContent=state.view==='single'?`单项三维 · #${state.focus}`:`三维组合 · 标记定位 #${state.focus}`;
 }
 async function renderWorld(){
- const use3d=state.surface==='3d';$('#surface-3d').setAttribute('aria-pressed',use3d);$('#surface-diagram').setAttribute('aria-pressed',!use3d);$('#drawing').hidden=use3d;$('#world-panel').hidden=!use3d;$('#baseline').disabled=use3d;$('#baseline-drawing').hidden=use3d||!$('#baseline').checked;
+ const use3d=state.surface==='3d';$('#surface-3d').setAttribute('aria-pressed',use3d);$('#surface-diagram').setAttribute('aria-pressed',!use3d);$('#drawing').hidden=use3d;$('#world-panel').hidden=!use3d;$('#baseline').disabled=use3d;$('#baseline-control').hidden=use3d;$('#baseline-drawing').hidden=use3d||!$('#baseline').checked;
  if(!use3d){worldRequest++;worldViewer?.hide();return;}
  const request=++worldRequest;
  try{if(!worldViewer){worldImport??=import('./world/viewer.js');const {createWorldViewer}=await worldImport;if(request!==worldRequest)return;worldViewer=createWorldViewer({onSun:(sun,save)=>{state.sun=sun;if(save)persistURL();},onCamera:camera=>{state.camera=camera;render();},onSelect:select,onTitle:id=>guide(id)?.zh,onCutaway:value=>{state.cutaway=value;render();},onEmphasis:value=>{state.emphasis=value;render();},onError:status});}
@@ -51,7 +51,7 @@ function render(){
  $('#single').setAttribute('aria-pressed',state.view==='single');$('#combined').setAttribute('aria-pressed',state.view==='combined');
  $('#drawing-note').textContent=state.view==='single'?`单项示例 #${state.focus}（不改变方案选择）`:(state.ids.includes(state.focus)?`正在阅读 #${state.focus} · 橙色为本项作用`:`#${state.focus} 未加入组合，可切换单项图解预览`);
  const foreign=state.ids.filter(id=>groupFor(id).key!==state.group),influencing=foreign.filter(id=>(influences[state.group]||[]).includes(id));
- $('#context-note').textContent=(foreign.length?`另有 ${foreign.length} 项保留在其他尺度。`:'选择模式名称阅读，勾选方框组合。')+(influencing.length?`本图接收约束：${influencing.map(id=>'#'+id).join('、')}。`:'')+(state.group==='site'&&influencing.includes(21)?'#21 在 #96 层数示例中限制高度。':'')+(result.localIds.length>12?' 选项较多，部分空间会重叠；可逐项对照，工具不会自动解决所有冲突。':'');
+ $('#context-note').textContent=(foreign.length?`另有 ${foreign.length} 项保留在其他尺度。`:'二维图解表达概念关系，独立绘制，并非三维场景的投影。')+(influencing.length?`本图接收约束：${influencing.map(id=>'#'+id).join('、')}。`:'')+(state.group==='site'&&influencing.includes(21)?'#21 在 #96 层数示例中限制高度。':'')+(result.localIds.length>12?' 选项较多，部分空间会重叠；可逐项对照，工具不会自动解决所有冲突。':'');
  const current=presets[state.group],preset=$('#preset'),previous=preset.dataset.group===state.group?preset.value:'0';
  const local=state.ids.filter(id=>groupFor(id).key===state.group).join(','),matching=current.findIndex(([,ids])=>[...ids].sort((a,b)=>a-b).join(',')===local);
  preset.innerHTML=current.map(([name],i)=>`<option value="${i}">${name}</option>`).join('');preset.value=matching>=0?String(matching):previous;preset.dataset.group=state.group;
@@ -76,8 +76,8 @@ async function init(){
  $('#compare').onclick=async()=>{saved=loadSaved();if(saved===undefined)return;if(!saved){status('请先保存一个本机方案，再进行比较。');return;}disposeComparison?.();disposeComparison=null;const three=state.surface==='3d';$('#comparison').innerHTML=[['当前组合',state],['保存的组合',saved]].map(([label,s])=>`<section><h3>${label}</h3>${three?`<canvas class="comparison-world" aria-label="${label}三维总览"></canvas>`:compose(state.group,s.ids).svg}<p>${three?'光照：'+(s.sun?.mode==='manual'?`${s.sun.azimuth}° / ${s.sun.elevation}°`:formatHour(s.sun?.hour??15))+' · 三维总览<br>':''}本尺度：${s.ids.filter(id=>groupFor(id).key===state.group).join('、')||'未选模式'}</p></section>`).join('');$('#compare-dialog').showModal();if(three){const {mountWorldComparison}=await import('./world/viewer.js');if($('#compare-dialog').open)disposeComparison=mountWorldComparison($('#comparison'),state,saved,status);}};
  $('#compare-dialog').addEventListener('close',()=>{disposeComparison?.();disposeComparison=null;});
  $('#restore').onclick=()=>{if(saved){state={...saved,ids:[...saved.ids]};$('#compare-dialog').close();render();status('已载入保存方案。');}};
- $('#about').onclick=()=>$('#about-dialog').showModal();$('#fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('.drawing-panel').requestFullscreen();}catch(e){status('此浏览器未能进入全屏：'+e.message);}};
- document.addEventListener('fullscreenchange',()=>{$('#fullscreen').textContent=document.fullscreenElement?'退出全屏 ↙':'放大 ↗';});
+ $('#about').onclick=()=>$('#about-dialog').showModal();$('#fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await (state.surface==='3d'?$('#world-panel'):$('.drawing-panel')).requestFullscreen();}catch(e){status('此浏览器未能进入全屏：'+e.message);}};
+ document.addEventListener('fullscreenchange',()=>{$('#world-exit-fullscreen').hidden=document.fullscreenElement!==$('#world-panel');$('#fullscreen').textContent=document.fullscreenElement?'退出全屏 ↙':'全屏 ↗';});
  window.addEventListener('hashchange',()=>{const decoded=decodeAtlas(location.hash);if(decoded){state=decoded;render();}});
  render();if(invalidInitialHash)status('分享链接无法解析，已加载初始方案。');
 }

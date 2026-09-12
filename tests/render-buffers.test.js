@@ -47,12 +47,16 @@ test('geometry update invalidates both VBOs at the same eye, empty glass never d
 
 test('emphasis includes shared pattern contributors and is reversible without source mutation',()=>{
  const item=Object.freeze({color:'#808080',pattern:1,patterns:Object.freeze([1,2])});
- const base=emphasizedColor(item,2,false),warm=emphasizedColor(item,'2',true);
- assert.ok(warm[0]>base[0]);assert.ok(warm[2]<base[2]);
- assert.deepEqual(emphasizedColor(item,1,true),warm);
+ const base=emphasizedColor(item,2,false),cyan=emphasizedColor(item,'2',true);
+ assert.ok(base[0]-cyan[0]>.4,'selected cyan visibly separates from neutral material');assert.ok(cyan[2]-base[2]>.4,'selected blue is strongly saturated');
+ assert.deepEqual(emphasizedColor(item,1,true),cyan);
  assert.deepEqual(emphasizedColor(item,3,true),base);
  assert.deepEqual(emphasizedColor(item,null,true),base);
  assert.deepEqual(emphasizedColor(item,2,false),base);assert.equal(item.color,'#808080');
+ for(const color of ['#f1ebe0','#685343','#34464e']){
+  const selected=emphasizedColor({color,pattern:2},2,true);
+  assert.ok(selected[0]<.15&&selected[2]>.88,'light and dark materials share an unmistakable selection color');
+ }
 });
 
 import {createWalk} from '../walk.js';

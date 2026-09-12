@@ -15,9 +15,26 @@ test('safe spawn and mode inspection positions do not place a person in solids',
  for(const p of [safeSpawn(scene),observationPose(scene,1,false)])assert.ok(canStand(scene.boxes,p.x,p.y,p.feet));
  assert.ok(observationPose(scene,1,true).z>2);assert.ok(Number.isFinite(worldOverview(scene).pitch));
 });
-test('large worlds have navigation bounds and shadow projection containing their extent',()=>{
- const w=new World('region',500,400,[]);w.house(450,350,20,20,1,{floors:10});const scene=w.finish(),matrix=sunMatrix(scene);
- for(const [x,y,z]of [[-15,-15,0],[515,415,0],[470,370,31]]){const p=[x,z,y,1],q=[0,1,2,3].map(r=>p.reduce((sum,n,i)=>sum+matrix[i*4+r]*n,0));assert.ok(q.slice(0,3).every(n=>Math.abs(n/q[3])<=1.01));}
+test('large worlds retain navigation bounds and shadow coverage of architecture and its ground receivers',()=>{
+ const w=new World('region',500,400,[]);w.house(450,350,20,20,1,{floors:10});const scene=w.finish(),direction=[-.48,.67,.57],matrix=sunMatrix(scene,direction);
+ const ground=scene.boxes.find(b=>b.kind==='ground'),points=[];
+ for(const b of scene.boxes.filter(b=>b.kind!=='ground'&&!b.collisionOnly)){
+  for(const x of [b.x,b.x+b.dx])for(const y of [b.y,b.y+b.dy])for(const z of [b.z,b.z+b.dz])points.push([x,z,y]);
+ }
+ for(const mesh of scene.meshes||[])for(const [x,y,z]of mesh.points)points.push([x,z,y]);
+ assert.ok(points.length>0,'fixture contains actual architecture');
+ const inside=p=>{const q=[0,1,2,3].map(r=>[...p,1].reduce((sum,n,i)=>sum+matrix[i*4+r]*n,0));return q.slice(0,3).every(n=>Number.isFinite(n)&&Math.abs(n/q[3])<=1.00001);};
+ let receivers=0;
+ for(const point of points){
+  assert.ok(inside(point),'shadow camera includes every rendered architecture vertex');
+  const t=(point[1]-ground.z-ground.dz)/direction[1],receiver=point.map((v,i)=>v-direction[i]*t);
+  if(t>=0&&receiver[0]>=ground.x&&receiver[0]<=ground.x+ground.dx&&receiver[2]>=ground.y&&receiver[2]<=ground.y+ground.dy){
+   assert.ok(inside(receiver),'shadow camera includes sunlight projection onto surrounding ground');receivers++;
+  }
+ }
+ assert.ok(receivers>0,'fixture checks actual ground shadow receivers');
+ // Empty presentation-ground corners no longer consume the finite shadow map.
+ assert.ok(!inside([ground.x,ground.z+ground.dz,ground.y]));
  const moved=moveFree({x:180,y:200,z:100,yaw:0,pitch:0},0,1,1,10,scene.navigation);assert.ok(moved.x>180&&moved.z>100);
 });
 test('landmark projection hides points behind the camera',()=>{
